@@ -4,7 +4,9 @@
   <p align="center">A scaling dsign system using CSS Custom Properties.</p>
 </p>
 
-<br># Buldy
+<br>
+
+# Buldy
 If [Bulma](https://github.com/jgthms/bulma) and [CodyHouse's framework](https://github.com/CodyHouse/codyhouse-framework) would have children: This is one of them. Built using the best of both worlds this minimal css framework is a suitable companion and starter point for small web projects as well as big design systems.
 
 The framework serves the following purposes:
