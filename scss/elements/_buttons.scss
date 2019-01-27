@@ -1,0 +1,89 @@
+.button {
+  display: inline-flex;
+  position: relative;
+  line-height: 1;
+  padding: var(--space-xs) var(--space-sm);
+  border-radius: 0.25em;
+  font-size: var(--btn-font-size);
+  color: var(--color-primary);
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  white-space: nowrap;
+  text-decoration: none;
+
+  // Themes
+
+  &.is-primary {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+  
+    &:hover {
+      background-color: var(--color-primary-light);
+    }
+    &:focus {
+      background-color: var(--color-primary-light);
+      &:not(:active) {
+        box-shadow: 0 0 0 0.2em var(--color-primary-a50);
+      }
+    }
+  }
+
+  // Subtle version, used for secondary actions or in combination with
+  // primary or accent button
+  &.is-subtle {
+    background-color: var(--color-background);
+    color: var(--color-contrast-higher);
+    border: 1px solid var(--color-contrast-low);
+
+    &:hover {
+      background-color: var(--color-contrast-lower);
+    }
+    &:focus {
+      background-color: var(--color-contrast-lower);
+      &:not(:active) {
+        box-shadow: 0 0 0 0.2em var(--color-contrast-a50);
+      }
+    }
+  }
+
+  // Used to draw particular attention to the button (e.g. destructive actions)
+  &.is-accent {
+    background-color: var(--color-accent);
+    color: var(--color-white);
+  
+    &:hover {
+      background-color: var(--color-accent-light);
+    }
+    &:focus {
+      background-color: var(--color-accent-light);
+      &:not(:active) {
+        box-shadow: 0 0 0 0.2em var(--color-accent-a50);
+      }
+    }
+  }
+
+  &.is-disabled {
+    cursor: not-allowed;
+    box-shadow: none;
+    opacity: 0.6;
+  }
+
+  // Size modifiers
+  &.is-sm {
+    font-size: var(--btn-sm);
+  }
+
+  &.is-md {
+    font-size: var(--btn-md);
+  }
+
+  &.is-lg {
+    font-size: var(--btn-lg);
+  }
+
+  &.is-full-width {
+    display: flex;
+    width: 100%;
+  }
+}

@@ -1,0 +1,139 @@
+// Colors
+
+.has-text-primary {
+  color: var(--color-primary);
+}
+
+.has-background-primary {
+  background-color: var(--color-primary);
+}
+
+.has-text-accent {
+  color: var(--color-accent);
+}
+
+.has-background-accent {
+  background-color: var(--color-accent);
+}
+
+.has-text-subtle {
+  color: var(--color-contrast-medium);
+}
+
+.has-background-subtle {
+  background-color: var(--color-contrast-medium);
+}
+
+// Miscellaneous
+
+.is-marginless {
+  margin: 0 !important;
+}
+
+.is-paddingless {
+  padding: 0 !important;
+}
+
+.is-radiusless {
+  border-radius: 0 !important;
+}
+
+.is-shadowless {
+  box-shadow: none !important;
+}
+
+.is-unselectable {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+// Spacing
+
+.has-margin-top,
+.has-margin-top-md {
+  margin-top: var(--space-md);
+}
+
+.has-margin-top-xxxs {
+  margin-top: var(--space-xxxs);
+}
+
+.has-margin-top-xxs {
+  margin-top: var(--space-xxs);
+}
+
+.has-margin-top-xs {
+  margin-top: var(--space-xs);
+}
+
+.has-margin-top-sm {
+  margin-top: var(--space-sm);
+}
+
+.has-margin-top-lg {
+  margin-top: var(--space-lg);
+}
+
+.has-margin-top-xl {
+  margin-top: var(--space-xl);
+}
+
+.has-margin-top-xxl {
+  margin-top: var(--space-xxl);
+}
+
+.has-margin-top-xxxl {
+  margin-top: var(--space-xxxl);
+}
+
+.has-margin-bottom,
+.has-margin-bottom-md {
+  margin-bottom: var(--space-md);
+}
+
+.has-margin-bottom-xxxs {
+  margin-bottom: var(--space-xxxs);
+}
+
+.has-margin-bottom-xxs {
+  margin-bottom: var(--space-xxs);
+}
+
+.has-margin-bottom-xs {
+  margin-bottom: var(--space-xs);
+}
+
+.has-margin-bottom-sm {
+  margin-bottom: var(--space-sm);
+}
+
+.has-margin-bottom-lg {
+  margin-bottom: var(--space-lg);
+}
+
+.has-margin-bottom-xl {
+  margin-bottom: var(--space-xl);
+}
+
+.has-margin-bottom-xxl {
+  margin-bottom: var(--space-xxl);
+}
+
+.has-margin-bottom-xxxl {
+  margin-bottom: var(--space-xxxl);
+}
+
+// Typography
+
+@each $breakpoint in map-keys($grid-breakpoints) {
+  @include breakpoint($breakpoint) {
+    $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+
+    .has-text-#{$infix}-left   { text-align: left !important; }
+    .has-text-#{$infix}-right  { text-align: right !important; }
+    .has-text-#{$infix}-center { text-align: center !important; }
+  }
+}

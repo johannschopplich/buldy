@@ -1,0 +1,113 @@
+@function round-width($i) {
+  $width: floor(100 * $i * 100 / $grid-columns) / 100;
+  @return $width#{"%"};
+}
+
+$grid-columns: 12;
+
+.column {
+  display: block;
+  flex-basis: 0;
+  flex-grow: 1;
+  flex-shrink: 1;
+  padding: var(--component-padding);
+
+  &.is-narrow {
+    flex: none;
+  }
+
+  &.is-full {
+    flex: none;
+    width: 100%;
+  }
+
+  @for $i from 1 through $grid-columns {
+    &.is-#{$i} {
+      flex: none;
+      width: round-width($i); 
+    }
+  }
+
+  @each $breakpoint in map-keys($grid-breakpoints) {
+    @include breakpoint($breakpoint) {
+      $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+
+      &.is-#{$infix}-narrow {
+        flex: none;
+      }
+
+      @for $i from 1 through $grid-columns {
+        &.is-#{$infix}-#{$i} {
+          flex: none;
+          width: round-width($i); 
+        }
+      }
+    }
+  }
+}
+
+.columns {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: calc(var(--component-padding) * -1);
+  margin-right: calc(var(--component-padding) * -1);
+  margin-left: calc(var(--component-padding) * -1);
+  &:last-child {
+    margin-bottom: calc(var(--component-padding) * -1);
+  }
+  &:not(:last-child) {
+    margin-bottom: calc(var(--component-padding) * 2 - var(--component-padding));
+  }
+
+  // Modifiers
+
+  &.is-gapless {
+    margin-top: 0;
+    margin-right: 0;
+    margin-left: 0;
+    > .column {
+      margin: 0;
+      padding: 0 !important;
+    }
+    &:not(:last-child) {
+      margin-bottom: calc(2 * var(--component-padding))
+    }
+    &:last-child {
+      margin-bottom: 0
+    }
+  }
+
+  &.is-multiline {
+    flex-wrap: wrap;
+  }
+
+  &.is-centered {
+    justify-content: center;
+  }
+
+  &.is-vcentered {
+    align-items: center;
+  }
+
+  // Gap size modifiers
+
+  &.is-xs,
+  &.is-sm,
+  &.is-md,
+  &.is-lg,
+  &.is-xl {
+    --column-gap: var(--component-padding);
+    margin-right: calc(-1 * var(--column-gap));
+    margin-left: calc(-1 * var(--column-gap));
+    > .column {
+      padding-right: var(--column-gap);
+      padding-left: var(--column-gap);
+    }
+  }
+
+  &.is-xs { --column-gap: var(--space-xs); }
+  &.is-sm { --column-gap: var(--space-sm); }
+  &.is-md { --column-gap: var(--space-md); }
+  &.is-lg { --column-gap: var(--space-lg); }
+  &.is-xl { --column-gap: var(--space-xl); }
+}

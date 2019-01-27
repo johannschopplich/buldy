@@ -1,0 +1,75 @@
+// Section
+
+.section {
+  padding: var(--space-md) var(--space-xl)
+}
+
+// Hero
+
+.hero {
+  align-items: stretch;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  &.is-primary {
+    background-color: var(--color-primary);
+    //color: var(--color-primary-invert);
+    a:not(.button),
+    strong {
+      color: inherit;
+    }
+  }
+
+  &.is-accent {
+    background-color: var(--color-accent);
+    //color: var(--color-accent-invert);
+    a:not(.button),
+    strong {
+      color: inherit;
+    }
+  }
+
+  &.is-subtle {
+    background-color: var(--color-subtle);
+    //color: var(--color-subtle-invert);
+    a:not(.button),
+    strong {
+      color: inherit;
+    }
+  }
+
+  &.is-halfheight,
+  &.is-fullheight {
+    .hero-body {
+      align-items: center;
+      display: flex;
+      & > .container {
+        flex-grow: 1;
+        flex-shrink: 1;
+      }
+    }
+  }
+
+  &.is-halfheight {
+    min-height: 50vh;
+  }
+
+  &.is-fullheight {
+    min-height: 100vh;
+  }
+}
+
+// Hero containers
+
+.hero-head,
+.hero-foot {
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+
+.hero-body {
+  flex-grow: 1;
+  flex-shrink: 0;
+  padding: var(--space-md) var(--space-xl);
+}

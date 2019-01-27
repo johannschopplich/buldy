@@ -1,0 +1,13 @@
+.image {
+  display: block;
+  position: relative;
+
+  img {
+    display: block;
+    height: auto;
+    width: 100%;
+    &.is-rounded {
+      border-radius: var(--radius)
+    }
+  }
+}

@@ -1,0 +1,10 @@
+.box {
+  display: block;
+  background-color: var(--color-background);
+  border-radius: var(--radius);
+  box-shadow: 0 2px 8px var(--color-primary-a10), 0 0 0 1px var(--color-primary-a10);
+  padding: var(--space-md);
+  &:not(:last-child) {
+    margin-bottom: 1em;
+  }
+}

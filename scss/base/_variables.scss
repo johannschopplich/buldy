@@ -1,0 +1,104 @@
+// Color system
+
+:root,
+[data-theme="default"] {
+  // Main
+  --color-primary:         hsl(220, 90%, 56%);
+  --color-primary-light:   hsl(220, 90%, 63%);
+  --color-primary-a10:     hsla(220, 90%, 56%, 0.1);
+  --color-primary-a50:     hsla(220, 90%, 56%, 0.5);
+  --color-accent:          hsl(355, 90%, 61%);
+  --color-accent-light:    hsl(355, 90%, 68%);
+  --color-accent-a50:      hsla(355, 90%, 68%, 0.5);
+
+  // Black & white
+  --color-black:           hsl(0, 0%, 4%);
+  --color-white:           hsl(0, 0%, 100%);
+
+  // Grays
+  --gray-dark:             hsl(0, 0%, 21%);
+
+  // Color contrast
+  --color-background:      hsl(0, 0%, 100%);
+  --color-contrast-lower:  hsl(0, 0%, 95%);
+  --color-contrast-low:    hsl(0, 0%, 83%);
+  --color-contrast-medium: hsl(240, 1%, 47%);
+  --color-contrast-high:   hsl(255, 4%, 20%);
+  --color-contrast-higher: hsl(240, 7%, 12%);
+  --color-contrast-a50:    hsla(240, 7%, 12%, 0.5);
+
+  // Feedback
+  --color-error:           hsl(355, 90%, 61%);
+  --color-error-a20:       hsla(355, 90%, 61%, 0.2);
+
+  // Semantic
+  --color-border:          var(--color-contrast-low);
+}
+
+[data-theme] {
+  background-color: var(--color-background);
+  color: var(--color-contrast-high);
+}
+
+// Breakpoints
+
+$grid-breakpoints: (
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
+);
+
+// Spacing and Typography
+
+:root,
+body {
+  // Font families
+  --font-primary:        -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  --font-secondary:      var(--font-primary);
+
+  // Body font size
+  --text-base-size:      1em;
+  
+  // Type scale
+  --text-scale-ratio:    1.2;
+  //--text-6:            calc((1em / var(--text-scale-ratio)) / var(--text-scale-ratio));
+  --text-6:              1em;
+  --text-5:              calc(var(--text-6) * var(--text-scale-ratio));
+  --text-4:              calc(var(--text-5) * var(--text-scale-ratio) * var(--text-scale-ratio));
+  --text-3:              calc(var(--text-4) * var(--text-scale-ratio));
+  --text-2:              calc(var(--text-3) * var(--text-scale-ratio));
+  --text-1:              calc(var(--text-2) * var(--text-scale-ratio));
+  --text-display:        calc(var(--text-1) * var(--text-scale-ratio));
+
+  // Line height
+  --body-line-height:    1.4;
+  --heading-line-height: 1.2;
+
+  // Spacing
+  --space-unit:          1em;
+  //--space-xxxxs:       calc(0.125 * var(--space-unit));
+  --space-xxxs:          calc(0.25  * var(--space-unit));
+  --space-xxs:           calc(0.375 * var(--space-unit));
+  --space-xs:            calc(0.5   * var(--space-unit));
+  --space-sm:            calc(0.75  * var(--space-unit));
+  --space-md:            calc(1.25  * var(--space-unit));
+  --space-lg:            calc(2     * var(--space-unit));
+  --space-xl:            calc(3.25  * var(--space-unit));
+  --space-xxl:           calc(5.25  * var(--space-unit));
+  --space-xxxl:          calc(8.5   * var(--space-unit));
+  --component-padding:   var(--space-sm);
+}
+
+// Components
+
+:root {
+  --btn-font-size:       1em;
+  --btn-sm:              calc(var(--btn-font-size) - 0.2em);
+  --btn-md:              calc(var(--btn-font-size) + 0.2em);
+  --btn-lg:              calc(var(--btn-font-size) + 0.4em);
+
+  // Shared styles
+  --radius:              0.25em;
+  --transition-bounce:   cubic-bezier(0.25, 1.43, 0.35, 1.69);
+}

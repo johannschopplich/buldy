@@ -1,0 +1,159 @@
+// Improve font rendering on HiDPI devices.
+@media
+ screen and (-webkit-min-device-pixel-ratio: 2),
+ screen and (min-resolution: 2dppx) {
+ body {
+   -moz-osx-font-smoothing: grayscale;
+   -webkit-font-smoothing: antialiased;
+ }
+}
+
+html {
+  background-color: var(--color-background, white);
+  min-width: 240px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  text-rendering: optimizeLegibility;
+}
+
+body,
+button,
+input,
+select,
+textarea {
+  font-family: var(--font-primary);
+}
+
+body {
+  font-size: var(--text-base-size);
+  color: var(--color-contrast-high);
+}
+
+@include breakpoint(md) {
+  body {
+    --text-base-size: 1.25em;
+    --text-scale-ratio: 1.25;
+    --space-unit:  1.25em;
+  }
+}
+
+hr {
+	display: block;
+	margin: 1em 0;
+	border: 0;
+	border-top: 1px solid hsl(0, 0%, 80%); // #ccc
+}
+
+svg,
+img,
+canvas,
+video,
+audio,
+iframe {
+	vertical-align: middle;
+	max-width: 100%;
+}
+
+// Inline text elements
+
+a {
+  cursor: pointer;
+  color: var(--color-primary);
+  text-decoration: none;
+  &:hover {
+    color: var(--color-primary-light);
+    text-decoration: underline;
+  }
+}
+
+a:not([href]):not([tabindex]) {
+  color: inherit;
+  text-decoration: none;
+  &:hover,
+  &:focus {
+    color: inherit;
+    text-decoration: none;
+  }
+  &:focus {
+    outline: 0;
+  }
+}
+
+mark {
+  background-color: #fcf8e3;
+  color: inherit;
+}
+
+span {
+  font-style: inherit;
+  font-weight: inherit;
+}
+
+// Headings
+
+.title {
+  color: var(--color-contrast-higher);
+  line-height: var(--heading-line-height);
+}
+
+.is-size-display {
+  font-size: var(--text-display);
+}
+
+.title.is-1,
+.is-size-1,
+.content h1 {
+  font-size: var(--text-1);
+}
+
+.title.is-2,
+.has-text-2,
+.content h2 {
+  font-size: var(--text-2);
+}
+
+.title.is-3,
+.is-size-3,
+.content h3 {
+  font-size: var(--text-3);
+}
+
+.title.is-4,
+.is-size-4
+.content h4 {
+  font-size: var(--text-4);
+}
+
+.title.is-5,
+.is-size-5, 
+.content h5 {
+  font-size: var(--text-5);
+}
+
+.title.is-6,
+.is-size-6,
+.content h6 {
+  font-size: var(--text-6);
+}
+
+// Tables
+
+table {
+  td,
+  th {
+    text-align: left;
+    vertical-align: top;
+  }
+}
+
+// Forms
+
+.button,
+.form-control {
+  background-color: transparent;
+  color: inherit;
+  line-height: inherit;
+  border: 0;
+  border-radius: 0;
+  appearance: none;
+}
