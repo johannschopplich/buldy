@@ -209,7 +209,7 @@ template {
 
 [data-theme] {
   background-color: var(--color-background);
-  color: var(--color-contrast-high);
+  color: var(--color-text);
 }
 
 :root,
@@ -1107,7 +1107,7 @@ table th {
 }
 
 .button:active {
-  border-color: var(--color-contrast-high);
+  border-color: var(--color-text);
 }
 
 .button.is-primary, .button.is-accent {
