@@ -9,8 +9,8 @@
 .has-background-primary { background-color: var(--color-primary); }
 .has-background-accent  { background-color: var(--color-accent); }
 .has-background-white   { background-color: var(--color-white); }
-.has-background-light   { color: var(--color-contrast-low); }
-.has-background-dark    { color: var(--color-contrast-high); }
+.has-background-light   { background-color: var(--color-contrast-low); }
+.has-background-dark    { background-color: var(--color-contrast-high); }
 
 // Spacing
 
