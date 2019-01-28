@@ -10,7 +10,7 @@
 *.zip
 *~
 
-# OS folders
+# OS folders and files
 ._*
 .cache
 .DS_Store
