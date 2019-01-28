@@ -33,13 +33,13 @@ body {
   body {
     --text-base-size: 1.25em;
     --text-scale-ratio: 1.25;
-    --space-unit:  1.25em;
+    --space-unit: 1.25em;
   }
 }
 
 hr {
   display: block;
-  margin: 1em 0;
+  margin: var(--space-md) 0;
   border: 0;
   border-top: 1px solid hsl(0, 0%, 80%); // equals `#ccc`
 }
@@ -84,6 +84,7 @@ span {
 .title {
   color: var(--color-contrast-higher);
   line-height: var(--heading-line-height);
+  @extend %block;
 }
 
 .is-size-display {

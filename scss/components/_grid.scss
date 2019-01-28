@@ -10,7 +10,7 @@ $grid-columns: 12;
   flex-basis: 0;
   flex-grow: 1;
   flex-shrink: 1;
-  padding: var(--component-padding);
+  padding: var(--space-sm);
 
   &.is-narrow {
     flex: none;
@@ -49,14 +49,14 @@ $grid-columns: 12;
 .columns {
   display: flex;
   flex-wrap: wrap;
-  margin-top: calc(var(--component-padding) * -1);
-  margin-right: calc(var(--component-padding) * -1);
-  margin-left: calc(var(--component-padding) * -1);
+  margin-top: calc(var(--space-sm) * -1);
+  margin-right: calc(var(--space-sm) * -1);
+  margin-left: calc(var(--space-sm) * -1);
   &:last-child {
-    margin-bottom: calc(var(--component-padding) * -1);
+    margin-bottom: calc(var(--space-sm) * -1);
   }
   &:not(:last-child) {
-    margin-bottom: calc(var(--component-padding) * 2 - var(--component-padding));
+    margin-bottom: calc(var(--space-sm) * 2 - var(--space-sm));
   }
 
   // Modifiers
@@ -70,7 +70,7 @@ $grid-columns: 12;
       padding: 0 !important;
     }
     &:not(:last-child) {
-      margin-bottom: calc(2 * var(--component-padding))
+      margin-bottom: calc(2 * var(--space-sm))
     }
     &:last-child {
       margin-bottom: 0
@@ -96,7 +96,7 @@ $grid-columns: 12;
   &.is-md,
   &.is-lg,
   &.is-xl {
-    --column-gap: var(--component-padding);
+    --column-gap: var(--space-sm);
     margin-right: calc(-1 * var(--column-gap));
     margin-left: calc(-1 * var(--column-gap));
     > .column {

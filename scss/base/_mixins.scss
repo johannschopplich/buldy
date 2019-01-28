@@ -1,3 +1,13 @@
+@mixin block {
+  &:not(:last-child) {
+    margin-bottom: var(--space-md);
+  }
+}
+
+%block {
+  @include block;
+}
+
 @mixin breakpoint($name, $breakpoints: $grid-breakpoints) {
   $min: breakpoint-min($name, $breakpoints);
   @if $min {

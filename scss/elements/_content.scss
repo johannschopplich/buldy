@@ -3,7 +3,7 @@
   --component-heading-line-height: calc(var(--heading-line-height) * var(--line-height-multiplier));
   --line-height-multiplier: 1;
   --text-vspace-multiplier: 1;
-  display: block;
+  @extend %block;
 
   // Inline
 
@@ -29,7 +29,7 @@
   pre,
   table {
     &:not(:last-child) {
-      margin-bottom: calc(1em * var(--text-vspace-multiplier));
+      margin-bottom: calc(var(--space-md) * var(--text-vspace-multiplier));
     }
   }
 
@@ -37,7 +37,7 @@
     border-top: 0;
     height: 1px;
     background: var(--color-contrast-low);
-    margin: calc(var(--space-lg) * var(--text-vspace-multiplier)) auto;
+    margin: calc(var(--space-md) * var(--text-vspace-multiplier)) auto;
   }
 
   h1,
@@ -52,7 +52,7 @@
   h3,
   h4 {
     &:not(:first-child) {
-      margin-top: calc(1em * var(--text-vspace-multiplier));
+      margin-top: calc(var(--space-md) * var(--text-vspace-multiplier));
     }
   }
 
@@ -64,7 +64,7 @@
 
   ol,
   ul {
-    margin-top: calc(1em * var(--text-vspace-multiplier));
+    margin-top: calc(var(--space-md) * var(--text-vspace-multiplier));
   }
 
   ol {
@@ -85,7 +85,7 @@
   }
 
   blockquote {
-    padding: calc(1em * var(--text-vspace-multiplier)) var(--space-md);
+    padding-left: 2em;
     border-left: 5px solid var(--color-contrast-low);
   }
 
@@ -94,10 +94,10 @@
     margin-right: 2em;
     margin-left: 2em;
     &:not(:first-child) {
-      margin-top: calc(var(--space-lg) * var(--text-vspace-multiplier));
+      margin-top: calc(var(--space-md) * var(--text-vspace-multiplier));
     }
     &:not(:last-child) {
-      margin-bottom: calc(var(--space-lg) * var(--text-vspace-multiplier));
+      margin-bottom: calc(var(--space-md) * var(--text-vspace-multiplier));
     }
 
     img {
@@ -112,7 +112,7 @@
 
 .article.content {
   // Line height for articles (e.g., blog posts)
-  --line-height-multiplier: 1.13;
+  --line-height-multiplier: 1.125;
 }
 
 @include breakpoint(sm) {

@@ -21,17 +21,11 @@
   &:-moz-placeholder {
     color: var(--color-contrast-medium);
   }
-}
-
-.form-control[disabled],
-.form-control[readonly] {
-  cursor: not-allowed;
-}
-
-.form-control[aria-invalid="true"] {
-  border-color: var(--color-error);
-  &:focus {
-    box-shadow: 0 0 0 3px var(--color-error-a25);
+  &[aria-invalid="true"] {
+    border-color: var(--color-error);
+    &:focus {
+      box-shadow: 0 0 0 3px var(--color-error-a25);
+    }
   }
 }
 
@@ -52,9 +46,9 @@
 
 .message.is-error {
   background-color: var(--color-error);
+  border-radius: var(--radius);
   color: var(--color-white);
   font-size: var(--text-sm);
-  border-radius: var(--radius);
   margin-top: var(--space-sm);
   padding: var(--space-xs);
 }
@@ -76,12 +70,12 @@
     -webkit-user-select: none;
     -moz-user-select: none;
     user-select: none;
-    }
+  }
 
   input {
-    vertical-align: top;
-    margin-right: var(--space-xxxs);
     flex-shrink: 0;
+    margin-right: var(--space-xxxs);
+    vertical-align: top;
   }
 
   &.is-inlined {

@@ -1,7 +1,7 @@
 // Section
 
 .section {
-  padding: var(--space-md) var(--space-xl)
+  padding: var(--space-xl) var(--space-md)
 }
 
 // Hero
@@ -60,5 +60,5 @@
 .hero-body {
   flex-grow: 1;
   flex-shrink: 0;
-  padding: var(--space-md) var(--space-xl);
+  padding: var(--space-xl) var(--space-md)
 }

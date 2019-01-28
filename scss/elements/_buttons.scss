@@ -95,17 +95,9 @@
 
   // Sizes
 
-  &.is-sm {
-    font-size: var(--button-sm);
-  }
-
-  &.is-md {
-    font-size: var(--button-md);
-  }
-
-  &.is-lg {
-    font-size: var(--button-lg);
-  }
+  &.is-sm { font-size: var(--button-sm); }
+  &.is-md { font-size: var(--button-md); }
+  &.is-lg { font-size: var(--button-lg); }
 
   // Modifiers
 
