@@ -1,7 +1,7 @@
 <p align="center">
   <h3 align="center">Buldy</h3>
 
-  <p align="center">A scaling dsign system using CSS Custom Properties.</p>
+  <p align="center">A scaling design system utilizing CSS custom properties.</p>
 </p>
 
 <br>
