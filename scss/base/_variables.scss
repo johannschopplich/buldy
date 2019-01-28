@@ -93,10 +93,10 @@ body {
 // Components
 
 :root {
-  --btn-font-size:       1em;
-  --btn-sm:              calc(var(--btn-font-size) - 0.2em);
-  --btn-md:              calc(var(--btn-font-size) + 0.2em);
-  --btn-lg:              calc(var(--btn-font-size) + 0.4em);
+  --button-font-size:       1em;
+  --button-sm:              calc(var(--button-font-size) - 0.2em);
+  --button-md:              calc(var(--button-font-size) + 0.2em);
+  --button-lg:              calc(var(--button-font-size) + 0.4em);
 
   // Shared styles
   --radius:              0.25em;

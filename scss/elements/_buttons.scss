@@ -1,88 +1,78 @@
 .button {
   display: inline-flex;
   position: relative;
+  font-size: var(--button-font-size);
   line-height: 1;
-  padding: var(--space-xs) var(--space-sm);
-  border-radius: 0.25em;
-  font-size: var(--btn-font-size);
   color: var(--color-primary);
+  border-radius: 0.25em;
+  padding: var(--space-xs) var(--space-sm);
+  cursor: pointer;
   justify-content: center;
   align-items: center;
   text-align: center;
   white-space: nowrap;
   text-decoration: none;
+  vertical-align: top;
 
   // Themes
 
-  &.is-primary {
-    background-color: var(--color-primary);
-    color: var(--color-white);
-  
-    &:hover {
-      background-color: var(--color-primary-light);
-    }
-    &:focus {
-      background-color: var(--color-primary-light);
-      &:not(:active) {
-        box-shadow: 0 0 0 0.2em var(--color-primary-a50);
-      }
-    }
-  }
-
-  // Subtle version, used for secondary actions or in combination with
-  // primary or accent button
+  &.is-primary,
+  &.is-accent,
   &.is-subtle {
-    background-color: var(--color-background);
-    color: var(--color-contrast-higher);
-    border: 1px solid var(--color-contrast-low);
-
+    background-color: var(--button-color);
+    border-color: transparent;
+    color: var(--button-color);
     &:hover {
-      background-color: var(--color-contrast-lower);
+      background-color: var(--button-color-hover);
     }
     &:focus {
-      background-color: var(--color-contrast-lower);
+      background-color: var(--button-color-hover);
       &:not(:active) {
-        box-shadow: 0 0 0 0.2em var(--color-contrast-a50);
+        box-shadow: 0 0 0 0.2em var(--button-color-shadow);
       }
+    }
+    &[disabled] {
+      background-color: var(--button-color);
+      border-color: transparent;
+      box-shadow: none;
     }
   }
 
-  // Used to draw particular attention to the button (e.g. destructive actions)
+  &.is-primary {
+    --button-color: var(--color-primary);
+    --button-color-hover: var(--color-primary-light);
+    --button-color-shadow: var(--color-primary-a50);
+  }
+
   &.is-accent {
-    background-color: var(--color-accent);
+    --button-color: var(--color-accent);
+    --button-color-hover: var(--color-accent-light);
+    --button-color-shadow: var(--color-accent-a50);
     color: var(--color-white);
-  
-    &:hover {
-      background-color: var(--color-accent-light);
-    }
-    &:focus {
-      background-color: var(--color-accent-light);
-      &:not(:active) {
-        box-shadow: 0 0 0 0.2em var(--color-accent-a50);
-      }
-    }
   }
 
-  &.is-disabled {
-    cursor: not-allowed;
-    box-shadow: none;
-    opacity: 0.6;
+  &.is-subtle {
+    --button-color: var(--color-background);
+    --button-color-hover: var(--color-contrast-lower);
+    --button-color-shadow: var(--color-contrast-a50);
+    border: 1px solid var(--color-contrast-low);
+    color: var(--color-contrast-higher);
   }
 
   // Size modifiers
   &.is-sm {
-    font-size: var(--btn-sm);
+    font-size: var(--button-sm);
   }
 
   &.is-md {
-    font-size: var(--btn-md);
+    font-size: var(--button-md);
   }
 
   &.is-lg {
-    font-size: var(--btn-lg);
+    font-size: var(--button-lg);
   }
 
-  &.is-full-width {
+  &.is-fullwidth {
     display: flex;
     width: 100%;
   }
