@@ -16,7 +16,7 @@ The framework serves the following purposes:
 3. **Design system** - It simplifies the process of creating the base of your design system.
 
 ## What's included
-- A reset built on top of Bootstrap's [`reboot.scss`](https://github.com/twbs/bootstrap/blob/v4-dev/scss/_reboot.scss), Jeremy Thomas' (creator of Bulma) [`minireset.sass`](https://github.com/jgthms/minireset.css/blob/master/minireset.css) and ' [`modern-normalize.css`](https://github.com/sindresorhus/modern-normalize/blob/master/modern-normalize.css)
+- A reset built on top of Bootstrap's [`reboot.scss`](https://github.com/twbs/bootstrap/blob/v4-dev/scss/_reboot.scss), Jeremy Thomas' (creator of Bulma) [`minireset.sass`](https://github.com/jgthms/minireset.css/blob/master/minireset.css) and [`modern-normalize.css`](https://github.com/sindresorhus/modern-normalize/blob/master/modern-normalize.css)
 - Color (primary, accent and subtle theme color variations), spacing and component **variables**
 - Container, hero and section classes
 - A content class based on Bulma's approach
