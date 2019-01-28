@@ -5,33 +5,32 @@
   // Main
   --color-primary:         hsl(220, 90%, 56%);
   --color-primary-light:   hsl(220, 90%, 63%);
-  --color-primary-a10:     hsla(220, 90%, 56%, 0.1);
-  --color-primary-a50:     hsla(220, 90%, 56%, 0.5);
+  --color-primary-dark:    hsl(220, 90%, 48%);
+  --color-primary-a25:     hsla(220, 90%, 56%, 0.25);
   --color-accent:          hsl(355, 90%, 61%);
   --color-accent-light:    hsl(355, 90%, 68%);
-  --color-accent-a50:      hsla(355, 90%, 68%, 0.5);
+  --color-accent-dark:    hsl(355, 90%, 54%);
+  --color-accent-a25:      hsla(355, 90%, 68%, 0.25);
 
-  // Black & white
+  // Shades
   --color-black:           hsl(0, 0%, 4%);
   --color-white:           hsl(0, 0%, 100%);
-
-  // Grays
-  --gray-dark:             hsl(0, 0%, 21%);
 
   // Color contrast
   --color-background:      hsl(0, 0%, 100%);
   --color-contrast-lower:  hsl(0, 0%, 95%);
   --color-contrast-low:    hsl(0, 0%, 83%);
   --color-contrast-medium: hsl(240, 1%, 47%);
-  --color-contrast-high:   hsl(255, 4%, 20%);
+  --color-contrast-high:   hsl(240, 4%, 20%);
   --color-contrast-higher: hsl(240, 7%, 12%);
-  --color-contrast-a50:    hsla(240, 7%, 12%, 0.5);
+  --color-contrast-a25:    hsla(240, 7%, 12%, 0.25);
 
   // Feedback
   --color-error:           hsl(355, 90%, 61%);
-  --color-error-a20:       hsla(355, 90%, 61%, 0.2);
+  --color-error-a25:       hsla(355, 90%, 61%, 0.25);
 
   // Semantic
+  --color-text:            var(--color-contrast-higher)
   --color-border:          var(--color-contrast-low);
 }
 
@@ -97,8 +96,5 @@ body {
   --button-sm:              calc(var(--button-font-size) - 0.2em);
   --button-md:              calc(var(--button-font-size) + 0.2em);
   --button-lg:              calc(var(--button-font-size) + 0.4em);
-
-  // Shared styles
   --radius:              0.25em;
-  --transition-bounce:   cubic-bezier(0.25, 1.43, 0.35, 1.69);
 }

@@ -17,7 +17,7 @@ The framework serves the following purposes:
 
 ## What's included
 - A reset built on top of Bootstrap's [`reboot.scss`](https://github.com/twbs/bootstrap/blob/v4-dev/scss/_reboot.scss), Jeremy Thomas' (creator of Bulma) [`minireset.sass`](https://github.com/jgthms/minireset.css/blob/master/minireset.css) and [`modern-normalize.css`](https://github.com/sindresorhus/modern-normalize/blob/master/modern-normalize.css)
-- Color (primary, accent and subtle theme color variations), spacing and component **variables**
+- Color (primary, accent, light and dark theme color variations), spacing and component **variables**
 - Container, hero and section classes
 - A content class based on Bulma's approach
 - Minimal grid – heavily inspired by Bulma's

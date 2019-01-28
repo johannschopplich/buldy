@@ -186,23 +186,24 @@ template {
 [data-theme="default"] {
   --color-primary:         hsl(220, 90%, 56%);
   --color-primary-light:   hsl(220, 90%, 63%);
-  --color-primary-a10:     hsla(220, 90%, 56%, 0.1);
-  --color-primary-a50:     hsla(220, 90%, 56%, 0.5);
+  --color-primary-dark:    hsl(220, 90%, 48%);
+  --color-primary-a25:     hsla(220, 90%, 56%, 0.25);
   --color-accent:          hsl(355, 90%, 61%);
   --color-accent-light:    hsl(355, 90%, 68%);
-  --color-accent-a50:      hsla(355, 90%, 68%, 0.5);
+  --color-accent-dark:    hsl(355, 90%, 54%);
+  --color-accent-a25:      hsla(355, 90%, 68%, 0.25);
   --color-black:           hsl(0, 0%, 4%);
   --color-white:           hsl(0, 0%, 100%);
-  --gray-dark:             hsl(0, 0%, 21%);
   --color-background:      hsl(0, 0%, 100%);
   --color-contrast-lower:  hsl(0, 0%, 95%);
   --color-contrast-low:    hsl(0, 0%, 83%);
   --color-contrast-medium: hsl(240, 1%, 47%);
-  --color-contrast-high:   hsl(255, 4%, 20%);
+  --color-contrast-high:   hsl(240, 4%, 20%);
   --color-contrast-higher: hsl(240, 7%, 12%);
-  --color-contrast-a50:    hsla(240, 7%, 12%, 0.5);
+  --color-contrast-a25:    hsla(240, 7%, 12%, 0.25);
   --color-error:           hsl(355, 90%, 61%);
-  --color-error-a20:       hsla(355, 90%, 61%, 0.2);
+  --color-error-a25:       hsla(355, 90%, 61%, 0.25);
+  --color-text:            var(--color-contrast-higher)
   --color-border:          var(--color-contrast-low);
 }
 
@@ -245,7 +246,6 @@ body {
   --button-md:              calc(var(--button-font-size) + 0.2em);
   --button-lg:              calc(var(--button-font-size) + 0.4em);
   --radius:              0.25em;
-  --transition-bounce:   cubic-bezier(0.25, 1.43, 0.35, 1.69);
 }
 
 @media screen and (-webkit-min-device-pixel-ratio: 2), screen and (min-resolution: 2dppx) {
@@ -379,15 +379,16 @@ table th {
 
 .button,
 .form-control {
-  background-color: transparent;
-  color: inherit;
-  line-height: inherit;
-  border: 0;
-  border-radius: 0;
-  box-shadow: none;
+  position: relative;
   -moz-appearance: none;
   -webkit-appearance: none;
   appearance: none;
+  background-color: transparent;
+  border: 0;
+  color: inherit;
+  border-radius: 0;
+  line-height: inherit;
+  box-shadow: none;
 }
 
 .button:focus, .button:active,
@@ -405,48 +406,40 @@ table th {
   color: var(--color-primary);
 }
 
-.has-background-primary {
-  background-color: var(--color-primary);
-}
-
 .has-text-accent {
   color: var(--color-accent);
+}
+
+.has-text-white {
+  color: var(--color-white);
+}
+
+.has-text-light {
+  color: var(--color-contrast-low);
+}
+
+.has-text-dark {
+  color: var(--color-contrast-high);
+}
+
+.has-background-primary {
+  background-color: var(--color-primary);
 }
 
 .has-background-accent {
   background-color: var(--color-accent);
 }
 
-.has-text-subtle {
-  color: var(--color-contrast-medium);
+.has-background-white {
+  background-color: var(--color-white);
 }
 
-.has-background-subtle {
-  background-color: var(--color-contrast-medium);
+.has-background-light {
+  color: var(--color-contrast-low);
 }
 
-.is-marginless {
-  margin: 0 !important;
-}
-
-.is-paddingless {
-  padding: 0 !important;
-}
-
-.is-radiusless {
-  border-radius: 0 !important;
-}
-
-.is-shadowless {
-  box-shadow: none !important;
-}
-
-.is-unselectable {
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
+.has-background-dark {
+  color: var(--color-contrast-high);
 }
 
 .has-margin-top,
@@ -569,6 +562,50 @@ table th {
   .has-text-xl-center {
     text-align: center !important;
   }
+}
+
+.is-marginless {
+  margin: 0 !important;
+}
+
+.is-paddingless {
+  padding: 0 !important;
+}
+
+.is-radiusless {
+  border-radius: 0 !important;
+}
+
+.is-shadowless {
+  box-shadow: none !important;
+}
+
+.is-unselectable {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.is-sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.is-sr-only-focusable:active, .is-sr-only-focusable:focus {
+  position: static;
+  width: auto;
+  height: auto;
+  overflow: visible;
+  clip: auto;
+  white-space: normal;
 }
 
 :root {
@@ -989,28 +1026,19 @@ table th {
 
 .hero.is-primary {
   background-color: var(--color-primary);
+  color: var(--color-white);
 }
 
-.hero.is-primary a:not(.button),
-.hero.is-primary strong {
+.hero.is-primary a:not(.button) {
   color: inherit;
 }
 
 .hero.is-accent {
   background-color: var(--color-accent);
+  color: var(--color-white);
 }
 
-.hero.is-accent a:not(.button),
-.hero.is-accent strong {
-  color: inherit;
-}
-
-.hero.is-subtle {
-  background-color: var(--color-subtle);
-}
-
-.hero.is-subtle a:not(.button),
-.hero.is-subtle strong {
+.hero.is-accent a:not(.button) {
   color: inherit;
 }
 
@@ -1046,64 +1074,104 @@ table th {
 
 .button {
   display: inline-flex;
-  position: relative;
   font-size: var(--button-font-size);
   line-height: 1;
-  color: var(--color-primary);
+  background-color: var(--color-background);
+  border: 1px solid var(--color-contrast-low);
+  color: var(--color-text);
+  cursor: pointer;
   border-radius: 0.25em;
   padding: var(--space-xs) var(--space-sm);
-  cursor: pointer;
-  justify-content: center;
-  align-items: center;
   text-align: center;
   white-space: nowrap;
   text-decoration: none;
+  justify-content: center;
+  align-items: center;
   vertical-align: top;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
 }
 
-.button.is-primary, .button.is-accent, .button.is-subtle {
+.button:hover {
+  border-color: var(--color-contrast-medium);
+}
+
+.button:focus {
+  border-color: var(--color-contrast-low);
+}
+
+.button:focus:not(:active) {
+  box-shadow: 0 0 0 3px var(--color-primary-a25);
+}
+
+.button:active {
+  border-color: var(--color-contrast-high);
+}
+
+.button.is-primary, .button.is-accent {
   background-color: var(--button-color);
   border-color: transparent;
-  color: var(--button-color);
+  color: var(--color-background);
 }
 
-.button.is-primary:hover, .button.is-accent:hover, .button.is-subtle:hover {
+.button.is-primary:hover, .button.is-accent:hover {
   background-color: var(--button-color-hover);
+  border-color: transparent;
 }
 
-.button.is-primary:focus, .button.is-accent:focus, .button.is-subtle:focus {
+.button.is-primary:focus, .button.is-accent:focus {
   background-color: var(--button-color-hover);
+  border-color: transparent;
 }
 
-.button.is-primary:focus:not(:active), .button.is-accent:focus:not(:active), .button.is-subtle:focus:not(:active) {
-  box-shadow: 0 0 0 0.2em var(--button-color-shadow);
+.button.is-primary:focus:not(:active), .button.is-accent:focus:not(:active) {
+  box-shadow: 0 0 0 3px var(--button-color-shadow);
 }
 
-.button.is-primary[disabled], .button.is-accent[disabled], .button.is-subtle[disabled] {
+.button.is-primary:active, .button.is-accent:active {
+  background-color: var(--button-color-active);
+  border-color: transparent;
+}
+
+.button.is-primary[disabled], .button.is-accent[disabled] {
   background-color: var(--button-color);
   border-color: transparent;
   box-shadow: none;
 }
 
+.button.is-primary.is-outlined, .button.is-accent.is-outlined {
+  background-color: transparent;
+  border-color: var(--button-color);
+  color: var(--button-color);
+}
+
+.button.is-primary.is-outlined:hover, .button.is-primary.is-outlined:focus, .button.is-accent.is-outlined:hover, .button.is-accent.is-outlined:focus {
+  background-color: var(--button-color);
+  border-color: var(--button-color);
+  color: var(--color-background);
+}
+
+.button.is-primary.is-outlined[disabled], .button.is-accent.is-outlined[disabled] {
+  background-color: transparent;
+  border-color: var(--button-color);
+  box-shadow: none;
+  color: var(--button-color);
+}
+
 .button.is-primary {
   --button-color: var(--color-primary);
   --button-color-hover: var(--color-primary-light);
-  --button-color-shadow: var(--color-primary-a50);
+  --button-color-active: var(--color-primary-dark);
+  --button-color-shadow: var(--color-primary-a25);
 }
 
 .button.is-accent {
   --button-color: var(--color-accent);
   --button-color-hover: var(--color-accent-light);
-  --button-color-shadow: var(--color-accent-a50);
-  color: var(--color-white);
-}
-
-.button.is-subtle {
-  --button-color: var(--color-background);
-  --button-color-hover: var(--color-contrast-lower);
-  --button-color-shadow: var(--color-contrast-a50);
-  border: 1px solid var(--color-contrast-low);
-  color: var(--color-contrast-higher);
+  --button-color-active: var(--color-accent-dark);
+  --button-color-shadow: var(--color-accent-a25);
 }
 
 .button.is-sm {
@@ -1116,6 +1184,13 @@ table th {
 
 .button.is-lg {
   font-size: var(--button-lg);
+}
+
+.button[disabled] {
+  background-color: var(--color-background);
+  border-color: var(--color-contrast-lower);
+  box-shadow: none;
+  opacity: 0.5;
 }
 
 .button.is-fullwidth {
@@ -1140,7 +1215,7 @@ table th {
 .content ul li,
 .content blockquote {
   line-height: var(--component-body-line-height);
-  color: var(--color-contrast-high);
+  color: var(--color-text);
 }
 
 .content p:not(:last-child),
@@ -1266,7 +1341,7 @@ table th {
   display: block;
   background-color: var(--color-background);
   border-radius: var(--radius);
-  box-shadow: 0 2px 8px var(--color-primary-a10), 0 0 0 1px var(--color-primary-a10);
+  box-shadow: 0 2px 8px var(--color-contrast-low), 0 0 0 1px var(--color-contrast-medium);
   padding: var(--space-md);
 }
 

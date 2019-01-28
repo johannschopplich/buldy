@@ -140,21 +140,20 @@ table {
 
 .button,
 .form-control {
-  background-color: transparent;
-  color: inherit;
-  line-height: inherit;
-  border: 0;
-  border-radius: 0;
-  box-shadow: none;
+  position: relative;
   -moz-appearance: none;
   -webkit-appearance: none;
   appearance: none;
-
+  background-color: transparent;
+  border: 0;
+  color: inherit;
+  border-radius: 0;
+  line-height: inherit;
+  box-shadow: none;
   &:focus,
   &:active {
     outline: none;
   }
-
   &[disabled] {
     cursor: not-allowed;
   }
