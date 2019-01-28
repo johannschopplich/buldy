@@ -125,15 +125,20 @@ sup {
 
 // Images and content
 
-img {
-  vertical-align: middle;
+svg,
+img,
+audio,
+video,
+canvas,
+iframe {
+	vertical-align: middle;
+	max-width: 100%;
 }
 
 img,
 audio,
 video {
   height: auto;
-  max-width: 100%;
 }
 
 // Tables

@@ -1,4 +1,4 @@
-// Improve font rendering on HiDPI devices.
+// Improve font rendering on HiDPI devices
 @media
  screen and (-webkit-min-device-pixel-ratio: 2),
  screen and (min-resolution: 2dppx) {
@@ -41,17 +41,7 @@ hr {
 	display: block;
 	margin: 1em 0;
 	border: 0;
-	border-top: 1px solid hsl(0, 0%, 80%); // #ccc
-}
-
-svg,
-img,
-canvas,
-video,
-audio,
-iframe {
-	vertical-align: middle;
-	max-width: 100%;
+	border-top: 1px solid hsl(0, 0%, 80%); // equals `#ccc`
 }
 
 // Inline text elements

@@ -3,26 +3,21 @@
   background: var(--color-background);
   border: 2px solid var(--color-contrast-low);
   width: 100%;
-
   &:focus {
     outline: none;
     border-color: var(--color-primary);
     box-shadow: 0 0 0 3px var(--color-primary-a20);
   }
-
   &::-webkit-input-placeholder {
     color: var(--color-contrast-medium);
   }
-
   &::-moz-placeholder {
     opacity: 1;
     color: var(--color-contrast-medium);
   }
-
   &:-ms-input-placeholder {
     color: var(--color-contrast-medium);
   }
-
   &:-moz-placeholder {
     color: var(--color-contrast-medium);
   }
@@ -35,7 +30,6 @@
 
 .form-control[aria-invalid="true"] {
   border-color: var(--color-error);
-
   &:focus {
     box-shadow: 0 0 0 3px var(--color-error-a20);
   }
