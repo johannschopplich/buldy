@@ -35,8 +35,8 @@
 }
 
 [data-theme] {
-  background-color: var(--color-background);
-  color: var(--color-text);
+  background-color:        var(--color-background);
+  color:                   var(--color-text);
 }
 
 // Breakpoints
@@ -53,48 +53,48 @@ $grid-breakpoints: (
 :root,
 body {
   // Font families
-  --font-primary:        -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-  --font-secondary:      var(--font-primary);
+  --font-primary:          -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  --font-secondary:        var(--font-primary);
 
   // Body font size
-  --text-base-size:      1em;
+  --text-base-size:        1em;
   
   // Type scale
-  --text-scale-ratio:    1.2;
-  //--text-6:            calc((1em / var(--text-scale-ratio)) / var(--text-scale-ratio));
-  --text-6:              1em;
-  --text-5:              calc(var(--text-6) * var(--text-scale-ratio));
-  --text-4:              calc(var(--text-5) * var(--text-scale-ratio) * var(--text-scale-ratio));
-  --text-3:              calc(var(--text-4) * var(--text-scale-ratio));
-  --text-2:              calc(var(--text-3) * var(--text-scale-ratio));
-  --text-1:              calc(var(--text-2) * var(--text-scale-ratio));
-  --text-display:        calc(var(--text-1) * var(--text-scale-ratio));
+  --text-scale-ratio:      1.2;
+  //--text-6:              calc((1em / var(--text-scale-ratio)) / var(--text-scale-ratio));
+  --text-6:                1em;
+  --text-5:                calc(var(--text-6) * var(--text-scale-ratio));
+  --text-4:                calc(var(--text-5) * var(--text-scale-ratio) * var(--text-scale-ratio));
+  --text-3:                calc(var(--text-4) * var(--text-scale-ratio));
+  --text-2:                calc(var(--text-3) * var(--text-scale-ratio));
+  --text-1:                calc(var(--text-2) * var(--text-scale-ratio));
+  --text-display:          calc(var(--text-1) * var(--text-scale-ratio));
 
   // Line height
-  --body-line-height:    1.4;
-  --heading-line-height: 1.2;
+  --body-line-height:      1.4;
+  --heading-line-height:   1.2;
 
   // Spacing
-  --space-unit:          1em;
-  //--space-xxxxs:       calc(0.125 * var(--space-unit));
-  --space-xxxs:          calc(0.25  * var(--space-unit));
-  --space-xxs:           calc(0.375 * var(--space-unit));
-  --space-xs:            calc(0.5   * var(--space-unit));
-  --space-sm:            calc(0.75  * var(--space-unit));
-  --space-md:            calc(1.25  * var(--space-unit));
-  --space-lg:            calc(2     * var(--space-unit));
-  --space-xl:            calc(3.25  * var(--space-unit));
-  --space-xxl:           calc(5.25  * var(--space-unit));
-  --space-xxxl:          calc(8.5   * var(--space-unit));
-  --component-padding:   var(--space-sm);
+  --space-unit:            1em;
+  //--space-xxxxs:         calc(0.125 * var(--space-unit));
+  --space-xxxs:            calc(0.25  * var(--space-unit));
+  --space-xxs:             calc(0.375 * var(--space-unit));
+  --space-xs:              calc(0.5   * var(--space-unit));
+  --space-sm:              calc(0.75  * var(--space-unit));
+  --space-md:              calc(1.25  * var(--space-unit));
+  --space-lg:              calc(2     * var(--space-unit));
+  --space-xl:              calc(3.25  * var(--space-unit));
+  --space-xxl:             calc(5.25  * var(--space-unit));
+  --space-xxxl:            calc(8.5   * var(--space-unit));
+  --component-padding:     var(--space-sm);
 }
 
 // Components
 
 :root {
-  --button-font-size:       1em;
-  --button-sm:              calc(var(--button-font-size) - 0.2em);
-  --button-md:              calc(var(--button-font-size) + 0.2em);
-  --button-lg:              calc(var(--button-font-size) + 0.4em);
-  --radius:              0.25em;
+  --button-font-size:      1em;
+  --button-sm:             calc(var(--button-font-size) - 0.2em);
+  --button-md:             calc(var(--button-font-size) + 0.2em);
+  --button-lg:             calc(var(--button-font-size) + 0.4em);
+  --radius:                0.25em;
 }
