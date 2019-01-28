@@ -214,38 +214,38 @@ template {
 
 :root,
 body {
-  --font-primary:        -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-  --font-secondary:      var(--font-primary);
-  --text-base-size:      1em;
-  --text-scale-ratio:    1.2;
-  --text-6:              1em;
-  --text-5:              calc(var(--text-6) * var(--text-scale-ratio));
-  --text-4:              calc(var(--text-5) * var(--text-scale-ratio) * var(--text-scale-ratio));
-  --text-3:              calc(var(--text-4) * var(--text-scale-ratio));
-  --text-2:              calc(var(--text-3) * var(--text-scale-ratio));
-  --text-1:              calc(var(--text-2) * var(--text-scale-ratio));
-  --text-display:        calc(var(--text-1) * var(--text-scale-ratio));
-  --body-line-height:    1.4;
-  --heading-line-height: 1.2;
-  --space-unit:          1em;
-  --space-xxxs:          calc(0.25  * var(--space-unit));
-  --space-xxs:           calc(0.375 * var(--space-unit));
-  --space-xs:            calc(0.5   * var(--space-unit));
-  --space-sm:            calc(0.75  * var(--space-unit));
-  --space-md:            calc(1.25  * var(--space-unit));
-  --space-lg:            calc(2     * var(--space-unit));
-  --space-xl:            calc(3.25  * var(--space-unit));
-  --space-xxl:           calc(5.25  * var(--space-unit));
-  --space-xxxl:          calc(8.5   * var(--space-unit));
-  --component-padding:   var(--space-sm);
+  --font-primary:          -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  --font-secondary:        var(--font-primary);
+  --text-base-size:        1em;
+  --text-scale-ratio:      1.2;
+  --text-6:                1em;
+  --text-5:                calc(var(--text-6) * var(--text-scale-ratio));
+  --text-4:                calc(var(--text-5) * var(--text-scale-ratio) * var(--text-scale-ratio));
+  --text-3:                calc(var(--text-4) * var(--text-scale-ratio));
+  --text-2:                calc(var(--text-3) * var(--text-scale-ratio));
+  --text-1:                calc(var(--text-2) * var(--text-scale-ratio));
+  --text-display:          calc(var(--text-1) * var(--text-scale-ratio));
+  --body-line-height:      1.4;
+  --heading-line-height:   1.2;
+  --space-unit:            1em;
+  --space-xxxs:            calc(0.25  * var(--space-unit));
+  --space-xxs:             calc(0.375 * var(--space-unit));
+  --space-xs:              calc(0.5   * var(--space-unit));
+  --space-sm:              calc(0.75  * var(--space-unit));
+  --space-md:              calc(1.25  * var(--space-unit));
+  --space-lg:              calc(2     * var(--space-unit));
+  --space-xl:              calc(3.25  * var(--space-unit));
+  --space-xxl:             calc(5.25  * var(--space-unit));
+  --space-xxxl:            calc(8.5   * var(--space-unit));
+  --component-padding:     var(--space-sm);
 }
 
 :root {
-  --button-font-size:       1em;
-  --button-sm:              calc(var(--button-font-size) - 0.2em);
-  --button-md:              calc(var(--button-font-size) + 0.2em);
-  --button-lg:              calc(var(--button-font-size) + 0.4em);
-  --radius:              0.25em;
+  --button-font-size:      1em;
+  --button-sm:             calc(var(--button-font-size) - 0.2em);
+  --button-md:             calc(var(--button-font-size) + 0.2em);
+  --button-lg:             calc(var(--button-font-size) + 0.4em);
+  --radius:                0.25em;
 }
 
 @media screen and (-webkit-min-device-pixel-ratio: 2), screen and (min-resolution: 2dppx) {
