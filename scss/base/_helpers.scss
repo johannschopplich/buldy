@@ -1,50 +1,41 @@
 // Colors
 
-.has-text-primary { color: var(--color-primary); }
-.has-text-accent  { color: var(--color-accent); }
-.has-text-white   { color: var(--color-white); }
-.has-text-light   { color: var(--color-contrast-low); }
-.has-text-dark    { color: var(--color-contrast-high); }
+.has-text-primary { color: var(--color-primary) !important; }
+.has-text-accent  { color: var(--color-accent) !important; }
+.has-text-white   { color: var(--color-white) !important; }
+.has-text-light   { color: var(--color-contrast-low) !important; }
+.has-text-dark    { color: var(--color-contrast-high) !important; }
 
-.has-background-primary { background-color: var(--color-primary); }
-.has-background-accent  { background-color: var(--color-accent); }
-.has-background-white   { background-color: var(--color-white); }
-.has-background-light   { background-color: var(--color-contrast-low); }
-.has-background-dark    { background-color: var(--color-contrast-high); }
+.has-background-primary { background-color: var(--color-primary) !important; }
+.has-background-accent  { background-color: var(--color-accent) !important; }
+.has-background-white   { background-color: var(--color-white) !important; }
+.has-background-light   { background-color: var(--color-contrast-low) !important; }
+.has-background-dark    { background-color: var(--color-contrast-high) !important; }
 
-// Spacing
+// Common spacing values
 
-.has-margin-top,
-.has-margin-top-md   { margin-top: var(--space-md); }
-.has-margin-top-xxxs { margin-top: var(--space-xxxs); }
-.has-margin-top-xxs  { margin-top: var(--space-xxs); }
-.has-margin-top-xs   { margin-top: var(--space-xs); }
-.has-margin-top-sm   { margin-top: var(--space-sm); }
-.has-margin-top-lg   { margin-top: var(--space-lg); }
-.has-margin-top-xl   { margin-top: var(--space-xl); }
-.has-margin-top-xxl  { margin-top: var(--space-xxl); }
-.has-margin-top-xxxl { margin-top: var(--space-xxxl); }
+$sizes: xxxs, xxs, xs, sm, lg, xl, xxl, xxxl;
+@each $size in $sizes {
+  .has-padding-top-#{$size}    { padding-top: var(--space-#{$size}) !important; }
+  .has-padding-bottom-#{$size} { padding-bottom: var(--space-#{$size}) !important; }
+  .has-margin-top-#{$size}     { margin-top: var(--space-#{$size}) !important; }
+  .has-margin-bottom-#{$size}  { margin-bottom: var(--space-#{$size}) !important; }
+}
 
-.has-margin-bottom,
-.has-margin-bottom-md   { margin-bottom: var(--space-md); }
-.has-margin-bottom-xxxs { margin-bottom: var(--space-xxxs); }
-.has-margin-bottom-xxs  { margin-bottom: var(--space-xxs); }
-.has-margin-bottom-xs   { margin-bottom: var(--space-xs); }
-.has-margin-bottom-sm   { margin-bottom: var(--space-sm); }
-.has-margin-bottom-lg   { margin-bottom: var(--space-lg); }
-.has-margin-bottom-xl   { margin-bottom: var(--space-xl); }
-.has-margin-bottom-xxl  { margin-bottom: var(--space-xxl); }
-.has-margin-bottom-xxxl { margin-bottom: var(--space-xxxl); }
-
+// Standard distances if no sizes is given
+.has-padding-top              { padding-top: var(--space-md) !important; }
+.has-padding-bottom           { padding-bottom: var(--space-md) !important; }
+.has-margin-top               { margin-top: var(--space-md) !important; }
+.has-margin-bottom            { margin-bottom: var(--space-md) !important; }
 
 // Typography
 
 @each $breakpoint in map-keys($grid-breakpoints) {
   @include breakpoint($breakpoint) {
     $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
-    .has-text-#{$infix}-left   { text-align: left !important; }
-    .has-text-#{$infix}-right  { text-align: right !important; }
-    .has-text-#{$infix}-center { text-align: center !important; }
+    .has-text-#{$infix}-left     { text-align: left !important; }
+    .has-text-#{$infix}-right    { text-align: right !important; }
+    .has-text-#{$infix}-centered { text-align: center !important; }
   }
 }
 
