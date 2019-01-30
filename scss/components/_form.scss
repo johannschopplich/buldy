@@ -1,12 +1,11 @@
 .form-control {
   padding: var(--space-xs) var(--space-sm);
   background: var(--color-background);
-  border: 2px solid var(--color-contrast-low);
+  border-color: var(--color-contrast-low);
   width: 100%;
   &:focus {
-    outline: none;
     border-color: var(--color-primary);
-    box-shadow: 0 0 0 3px var(--color-primary-a20);
+    box-shadow: 0 0 0 3px var(--color-primary-a50);
   }
   &::-webkit-input-placeholder {
     color: var(--color-contrast-medium);
@@ -24,7 +23,7 @@
   &[aria-invalid="true"] {
     border-color: var(--color-error);
     &:focus {
-      box-shadow: 0 0 0 3px var(--color-error-a25);
+      box-shadow: 0 0 0 3px var(--color-error-a50);
     }
   }
 }

@@ -184,14 +184,16 @@ template {
 
 :root,
 [data-theme="default"] {
-  --color-primary:         hsl(220, 90%, 56%);
-  --color-primary-light:   hsl(220, 90%, 63%);
-  --color-primary-dark:    hsl(220, 90%, 48%);
-  --color-primary-a25:     hsla(220, 90%, 56%, 0.25);
-  --color-accent:          hsl(355, 90%, 61%);
-  --color-accent-light:    hsl(355, 90%, 68%);
-  --color-accent-dark:     hsl(355, 90%, 54%);
-  --color-accent-a25:      hsla(355, 90%, 68%, 0.25);
+  --color-primary:         hsl(171, 100%, 41%);
+  --color-primary-light:   hsl(171, 100%, 44%);
+  --color-primary-dark:    hsl(171, 100%, 38%);
+  --color-primary-darker:  hsl(171, 100%, 35%);
+  --color-primary-a50:     hsla(171, 100%, 56%, 0.5);
+  --color-accent:          hsl(217, 71%, 53%);
+  --color-accent-light:    hsl(217, 71%, 56%);
+  --color-accent-dark:     hsl(217, 71%, 50%);
+  --color-accent-darker:   hsl(217, 71%, 47%);
+  --color-accent-a50:      hsla(217, 71%, 53%, 0.5);
   --color-black:           hsl(0, 0%, 4%);
   --color-white:           hsl(0, 0%, 100%);
   --color-background:      hsl(0, 0%, 100%);
@@ -200,9 +202,9 @@ template {
   --color-contrast-medium: hsl(240, 1%, 47%);
   --color-contrast-high:   hsl(240, 4%, 20%);
   --color-contrast-higher: hsl(240, 7%, 12%);
-  --color-contrast-a25:    hsla(240, 7%, 12%, 0.25);
-  --color-error:           hsl(355, 90%, 61%);
-  --color-error-a25:       hsla(355, 90%, 61%, 0.25);
+  --color-contrast-a50:    hsla(240, 7%, 12%, 0.5);
+  --color-error:           hsl(348, 100%, 61%);
+  --color-error-a50:       hsla(348, 100%, 61%, 0.5);
   --color-text:            var(--color-contrast-higher)
   --color-border:          var(--color-contrast-low);
 }
@@ -383,15 +385,20 @@ table th {
 .button,
 .form-control {
   position: relative;
-  -moz-appearance: none;
   -webkit-appearance: none;
+  -moz-appearance: none;
   appearance: none;
   background-color: transparent;
-  border: 0;
+  border: 1px solid transparent;
   color: inherit;
-  border-radius: 0;
   line-height: inherit;
+  border-radius: var(--radius);
   box-shadow: none;
+}
+
+.button:hover,
+.form-control:hover {
+  text-decoration: none;
 }
 
 .button:focus, .button:active,
@@ -1071,17 +1078,15 @@ table th {
   font-size: var(--button-font-size);
   line-height: 1;
   background-color: var(--color-background);
-  border: 1px solid var(--color-contrast-low);
+  border-color: var(--color-contrast-low);
   color: var(--color-text);
   cursor: pointer;
-  border-radius: 0.25em;
   padding: var(--space-xs) var(--space-sm);
   text-align: center;
   white-space: nowrap;
-  text-decoration: none;
   justify-content: center;
   align-items: center;
-  vertical-align: top;
+  vertical-align: middle;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -1090,18 +1095,21 @@ table th {
 
 .button:hover {
   border-color: var(--color-contrast-medium);
+  color: var(--color-text);
 }
 
 .button:focus {
-  border-color: var(--color-contrast-low);
+  border-color: var(--color-contrast-medium);
+  color: var(--color-text);
 }
 
 .button:focus:not(:active) {
-  box-shadow: 0 0 0 3px var(--color-primary-a25);
+  box-shadow: 0 0 0 3px var(--color-primary-a50);
 }
 
 .button:active {
   border-color: var(--color-text);
+  color: var(--color-text);
 }
 
 .button.is-primary, .button.is-accent {
@@ -1113,20 +1121,22 @@ table th {
 .button.is-primary:hover, .button.is-accent:hover {
   background-color: var(--button-color-hover);
   border-color: transparent;
+  color: var(--color-background);
 }
 
 .button.is-primary:focus, .button.is-accent:focus {
-  background-color: var(--button-color-hover);
   border-color: transparent;
+  color: var(--color-background);
 }
 
 .button.is-primary:focus:not(:active), .button.is-accent:focus:not(:active) {
-  box-shadow: 0 0 0 3px var(--button-color-shadow);
+  box-shadow: 0 0 0 3px var(--button-shadow);
 }
 
 .button.is-primary:active, .button.is-accent:active {
   background-color: var(--button-color-active);
   border-color: transparent;
+  color: var(--color-background);
 }
 
 .button.is-primary[disabled], .button.is-accent[disabled] {
@@ -1156,16 +1166,16 @@ table th {
 
 .button.is-primary {
   --button-color: var(--color-primary);
-  --button-color-hover: var(--color-primary-light);
-  --button-color-active: var(--color-primary-dark);
-  --button-color-shadow: var(--color-primary-a25);
+  --button-color-hover: var(--color-primary-dark);
+  --button-color-active: var(--color-primary-darker);
+  --button-shadow: var(--color-primary-a50);
 }
 
 .button.is-accent {
   --button-color: var(--color-accent);
-  --button-color-hover: var(--color-accent-light);
-  --button-color-active: var(--color-accent-dark);
-  --button-color-shadow: var(--color-accent-a25);
+  --button-color-hover: var(--color-accent-dark);
+  --button-color-active: var(--color-accent-darker);
+  --button-shadow: var(--color-accent-a50);
 }
 
 .button.is-sm {
@@ -1182,7 +1192,7 @@ table th {
 
 .button[disabled] {
   background-color: var(--color-background);
-  border-color: var(--color-contrast-lower);
+  border-color: var(--color-contrast-low);
   box-shadow: none;
   opacity: 0.5;
 }

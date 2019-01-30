@@ -3,14 +3,17 @@
 :root,
 [data-theme="default"] {
   // Main
-  --color-primary:         hsl(220, 90%, 56%);
-  --color-primary-light:   hsl(220, 90%, 63%);
-  --color-primary-dark:    hsl(220, 90%, 48%);
-  --color-primary-a25:     hsla(220, 90%, 56%, 0.25);
-  --color-accent:          hsl(355, 90%, 61%);
-  --color-accent-light:    hsl(355, 90%, 68%);
-  --color-accent-dark:     hsl(355, 90%, 54%);
-  --color-accent-a25:      hsla(355, 90%, 68%, 0.25);
+  --color-primary:         hsl(171, 100%, 41%);
+  --color-primary-light:   hsl(171, 100%, 44%);
+  --color-primary-dark:    hsl(171, 100%, 38%);
+  --color-primary-darker:  hsl(171, 100%, 35%);
+  --color-primary-a50:     hsla(171, 100%, 56%, 0.5);
+
+  --color-accent:          hsl(217, 71%, 53%);
+  --color-accent-light:    hsl(217, 71%, 56%);
+  --color-accent-dark:     hsl(217, 71%, 50%);
+  --color-accent-darker:   hsl(217, 71%, 47%);
+  --color-accent-a50:      hsla(217, 71%, 53%, 0.5);
 
   // Shades
   --color-black:           hsl(0, 0%, 4%);
@@ -23,11 +26,11 @@
   --color-contrast-medium: hsl(240, 1%, 47%);
   --color-contrast-high:   hsl(240, 4%, 20%);
   --color-contrast-higher: hsl(240, 7%, 12%);
-  --color-contrast-a25:    hsla(240, 7%, 12%, 0.25);
+  --color-contrast-a50:    hsla(240, 7%, 12%, 0.5);
 
   // Feedback
-  --color-error:           hsl(355, 90%, 61%);
-  --color-error-a25:       hsla(355, 90%, 61%, 0.25);
+  --color-error:           hsl(348, 100%, 61%);
+  --color-error-a50:       hsla(348, 100%, 61%, 0.5);
 
   // Semantic
   --color-text:            var(--color-contrast-higher)

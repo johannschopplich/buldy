@@ -142,15 +142,18 @@ table {
 .button,
 .form-control {
   position: relative;
-  -moz-appearance: none;
   -webkit-appearance: none;
+  -moz-appearance: none;
   appearance: none;
   background-color: transparent;
-  border: 0;
+  border: 1px solid transparent;
   color: inherit;
-  border-radius: 0;
   line-height: inherit;
+  border-radius: var(--radius);
   box-shadow: none;
+  &:hover {
+    text-decoration: none;
+  }
   &:focus,
   &:active {
     outline: none;
