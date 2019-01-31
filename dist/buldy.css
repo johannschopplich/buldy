@@ -200,7 +200,6 @@ template {
   --color-contrast-medium: hsl(240, 1%, 47%);
   --color-contrast-high:   hsl(240, 4%, 20%);
   --color-contrast-higher: hsl(240, 7%, 12%);
-  --color-contrast-a25:    hsla(240, 7%, 12%, 0.25);
   --color-error:           hsl(348, 100%, 61%);
   --color-error-a25:       hsla(348, 100%, 61%, 0.25);
   --color-text:            var(--color-contrast-higher)
@@ -1268,10 +1267,6 @@ table th {
 .button:focus {
   border-color: var(--color-contrast-medium);
   color: var(--color-text);
-}
-
-.button:focus:not(:active) {
-  box-shadow: 0 0 0 3px var(--color-contrast-a25);
 }
 
 .button:active {
