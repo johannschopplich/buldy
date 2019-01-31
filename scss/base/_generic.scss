@@ -51,12 +51,13 @@ a {
   color: var(--color-primary);
   text-decoration: none;
   &:hover {
-    color: var(--color-primary-light);
-    text-decoration: underline;
+    color: var(--color-text);
+    text-decoration: none;
   }
 }
 
-a:not([href]):not([tabindex]) {
+//a:not([href]):not([tabindex]) {
+a:not([href]):not([tabindex]):not(.form-control):not(.button) {
   color: inherit;
   text-decoration: none;
   &:hover,
@@ -65,7 +66,7 @@ a:not([href]):not([tabindex]) {
     text-decoration: none;
   }
   &:focus {
-    outline: 0;
+    outline: none;
   }
 }
 
@@ -151,6 +152,7 @@ table {
   line-height: inherit;
   border-radius: var(--radius);
   box-shadow: none;
+  text-decoration: none;
   &:hover {
     text-decoration: none;
   }

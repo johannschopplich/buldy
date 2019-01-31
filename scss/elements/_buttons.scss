@@ -25,7 +25,7 @@
     border-color: var(--color-contrast-medium);
     color: var(--color-text);
     &:not(:active) {
-      box-shadow: 0 0 0 3px var(--color-primary-a50);
+      box-shadow: 0 0 0 3px var(--color-contrast-a25);
     }
   }
   &:active {
@@ -87,14 +87,14 @@
     --button-color: var(--color-primary);
     --button-color-hover: var(--color-primary-dark);
     --button-color-active: var(--color-primary-darker);
-    --button-shadow: var(--color-primary-a50);
+    --button-shadow: var(--color-primary-a25);
   }
 
   &.is-accent {
     --button-color: var(--color-accent);
     --button-color-hover: var(--color-accent-dark);
     --button-color-active: var(--color-accent-darker);
-    --button-shadow: var(--color-accent-a50);
+    --button-shadow: var(--color-accent-a25);
   }
 
   // Sizes

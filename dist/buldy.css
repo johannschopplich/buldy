@@ -184,16 +184,14 @@ template {
 
 :root,
 [data-theme="default"] {
-  --color-primary:         hsl(171, 100%, 41%);
-  --color-primary-light:   hsl(171, 100%, 44%);
-  --color-primary-dark:    hsl(171, 100%, 38%);
-  --color-primary-darker:  hsl(171, 100%, 35%);
-  --color-primary-a50:     hsla(171, 100%, 56%, 0.5);
+  --color-primary:         hsl(220, 90%, 56%);
+  --color-primary-dark:    hsl(220, 90%, 52%);
+  --color-primary-darker:  hsl(220, 90%, 49%);
+  --color-primary-a25:     hsla(220, 90%, 56%, 0.25);
   --color-accent:          hsl(217, 71%, 53%);
-  --color-accent-light:    hsl(217, 71%, 56%);
   --color-accent-dark:     hsl(217, 71%, 50%);
   --color-accent-darker:   hsl(217, 71%, 47%);
-  --color-accent-a50:      hsla(217, 71%, 53%, 0.5);
+  --color-accent-a25:      hsla(217, 71%, 53%, 0.25);
   --color-black:           hsl(0, 0%, 4%);
   --color-white:           hsl(0, 0%, 100%);
   --color-background:      hsl(0, 0%, 100%);
@@ -202,9 +200,9 @@ template {
   --color-contrast-medium: hsl(240, 1%, 47%);
   --color-contrast-high:   hsl(240, 4%, 20%);
   --color-contrast-higher: hsl(240, 7%, 12%);
-  --color-contrast-a50:    hsla(240, 7%, 12%, 0.5);
+  --color-contrast-a25:    hsla(240, 7%, 12%, 0.25);
   --color-error:           hsl(348, 100%, 61%);
-  --color-error-a50:       hsla(348, 100%, 61%, 0.5);
+  --color-error-a25:       hsla(348, 100%, 61%, 0.25);
   --color-text:            var(--color-contrast-higher)
   --color-border:          var(--color-contrast-low);
 }
@@ -304,22 +302,22 @@ a {
 }
 
 a:hover {
-  color: var(--color-primary-light);
-  text-decoration: underline;
+  color: var(--color-text);
+  text-decoration: none;
 }
 
-a:not([href]):not([tabindex]) {
+a:not([href]):not([tabindex]):not(.form-control):not(.button) {
   color: inherit;
   text-decoration: none;
 }
 
-a:not([href]):not([tabindex]):hover, a:not([href]):not([tabindex]):focus {
+a:not([href]):not([tabindex]):not(.form-control):not(.button):hover, a:not([href]):not([tabindex]):not(.form-control):not(.button):focus {
   color: inherit;
   text-decoration: none;
 }
 
-a:not([href]):not([tabindex]):focus {
-  outline: 0;
+a:not([href]):not([tabindex]):not(.form-control):not(.button):focus {
+  outline: none;
 }
 
 mark {
@@ -394,6 +392,7 @@ table th {
   line-height: inherit;
   border-radius: var(--radius);
   box-shadow: none;
+  text-decoration: none;
 }
 
 .button:hover,
@@ -1143,6 +1142,104 @@ table th {
   padding: var(--space-xl) var(--space-md);
 }
 
+.form-control {
+  width: 100%;
+  background-color: var(--color-background);
+  border-color: var(--color-contrast-low);
+  padding: var(--space-xs) var(--space-sm);
+}
+
+.form-control:focus {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px var(--color-primary-a25);
+}
+
+.form-control::-webkit-input-placeholder {
+  color: var(--color-contrast-medium);
+}
+
+.form-control::-moz-placeholder {
+  opacity: 1;
+  color: var(--color-contrast-medium);
+}
+
+.form-control:-ms-input-placeholder {
+  color: var(--color-contrast-medium);
+}
+
+.form-control:-moz-placeholder {
+  color: var(--color-contrast-medium);
+}
+
+.form-control[aria-invalid="true"] {
+  border-color: var(--color-error);
+}
+
+.form-control[aria-invalid="true"]:focus {
+  box-shadow: 0 0 0 3px var(--color-error-a25);
+}
+
+.form-legend {
+  color: var(--color-text);
+  line-height: var(--heading-line-height);
+  font-size: var(--text-md);
+  margin-bottom: var(--space-xxs);
+}
+
+.form-label {
+  display: inline-block;
+  font-size: var(--text-sm);
+  margin-bottom: var(--space-xxxs);
+}
+
+.message.is-error {
+  background-color: var(--color-error);
+  border-radius: var(--radius);
+  color: var(--color-white);
+  font-size: var(--text-sm);
+  margin-top: var(--space-sm);
+  padding: var(--space-xs);
+}
+
+.radio-list > *,
+.checkbox-list > * {
+  position: relative;
+  display: flex;
+  align-items: baseline;
+}
+
+.radio-list > *:not(:last-of-type),
+.checkbox-list > *:not(:last-of-type) {
+  margin-bottom: var(--space-xxs);
+}
+
+.radio-list label,
+.checkbox-list label {
+  line-height: var(--body-line-height);
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+.radio-list input,
+.checkbox-list input {
+  flex-shrink: 0;
+  margin-right: var(--space-xxxs);
+  vertical-align: top;
+}
+
+.radio-list.is-inlined,
+.checkbox-list.is-inlined {
+  display: flex;
+  margin-bottom: calc(-1 * var(--space-md));
+}
+
+.radio-list.is-inlined > *,
+.checkbox-list.is-inlined > * {
+  margin: 0 var(--space-md) var(--space-md) 0;
+}
+
 .button {
   display: inline-flex;
   font-size: var(--button-font-size);
@@ -1174,7 +1271,7 @@ table th {
 }
 
 .button:focus:not(:active) {
-  box-shadow: 0 0 0 3px var(--color-primary-a50);
+  box-shadow: 0 0 0 3px var(--color-contrast-a25);
 }
 
 .button:active {
@@ -1238,14 +1335,14 @@ table th {
   --button-color: var(--color-primary);
   --button-color-hover: var(--color-primary-dark);
   --button-color-active: var(--color-primary-darker);
-  --button-shadow: var(--color-primary-a50);
+  --button-shadow: var(--color-primary-a25);
 }
 
 .button.is-accent {
   --button-color: var(--color-accent);
   --button-color-hover: var(--color-accent-dark);
   --button-color-active: var(--color-accent-darker);
-  --button-shadow: var(--color-accent-a50);
+  --button-shadow: var(--color-accent-a25);
 }
 
 .button.is-sm {

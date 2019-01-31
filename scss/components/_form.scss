@@ -1,11 +1,11 @@
 .form-control {
-  padding: var(--space-xs) var(--space-sm);
-  background: var(--color-background);
-  border-color: var(--color-contrast-low);
   width: 100%;
+  background-color: var(--color-background);
+  border-color: var(--color-contrast-low);
+  padding: var(--space-xs) var(--space-sm);
   &:focus {
     border-color: var(--color-primary);
-    box-shadow: 0 0 0 3px var(--color-primary-a50);
+    box-shadow: 0 0 0 3px var(--color-primary-a25);
   }
   &::-webkit-input-placeholder {
     color: var(--color-contrast-medium);
@@ -23,14 +23,14 @@
   &[aria-invalid="true"] {
     border-color: var(--color-error);
     &:focus {
-      box-shadow: 0 0 0 3px var(--color-error-a50);
+      box-shadow: 0 0 0 3px var(--color-error-a25);
     }
   }
 }
 
 .form-legend {
   color: var(--color-text);
-  line-height: 1.2;
+  line-height: var(--heading-line-height);
   font-size: var(--text-md);
   margin-bottom: var(--space-xxs);
 }
@@ -78,7 +78,6 @@
   }
 
   &.is-inlined {
-    // Inline distribution for checkboxes and radio buttons
     display: flex;
     margin-bottom: calc(-1 * var(--space-md));
 
