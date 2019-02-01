@@ -182,6 +182,23 @@ template {
   display: none !important;
 }
 
+.title:not(:last-child), .content:not(:last-child), .box:not(:last-child) {
+  margin-bottom: var(--space-md);
+}
+
+.is-unselectable, .radio-list label,
+.checkbox-list label, .button {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+.content a:focus:not(.button) {
+  outline: 3px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
 :root,
 [data-theme="default"] {
   --color-primary:         hsl(220, 90%, 56%);
@@ -239,29 +256,20 @@ body {
   --component-padding:     var(--space-sm);
 }
 
+@media (min-width: 768px) {
+  body {
+    --text-base-size: 1.15em;
+    --text-scale-ratio: 1.25;
+    --space-unit: 1.15em;
+  }
+}
+
 :root {
   --button-font-size:      1em;
   --button-sm:             calc(var(--button-font-size) - 0.2em);
   --button-md:             calc(var(--button-font-size) + 0.2em);
   --button-lg:             calc(var(--button-font-size) + 0.4em);
   --radius:                0.25em;
-}
-
-.title:not(:last-child), .content:not(:last-child), .box:not(:last-child) {
-  margin-bottom: var(--space-md);
-}
-
-.is-unselectable, .radio-list label,
-.checkbox-list label, .button {
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  user-select: none;
-}
-
-.content a:not(.button) {
-  outline: 3px solid var(--color-primary);
-  outline-offset: 2px;
 }
 
 @media screen and (-webkit-min-device-pixel-ratio: 2), screen and (min-resolution: 2dppx) {
@@ -290,14 +298,6 @@ textarea {
 body {
   font-size: var(--text-base-size);
   color: var(--color-contrast-high);
-}
-
-@media (min-width: 768px) {
-  body {
-    --text-base-size: 1.25em;
-    --text-scale-ratio: 1.25;
-    --space-unit: 1.25em;
-  }
 }
 
 hr {

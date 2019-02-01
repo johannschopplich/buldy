@@ -29,14 +29,6 @@ body {
   color: var(--color-contrast-high);
 }
 
-@include breakpoint(md) {
-  body {
-    --text-base-size: 1.25em;
-    --text-scale-ratio: 1.25;
-    --space-unit: 1.25em;
-  }
-}
-
 hr {
   display: block;
   margin: var(--space-md) 0;

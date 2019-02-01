@@ -80,14 +80,13 @@ body {
   --component-padding:     var(--space-sm);
 }
 
-// Breakpoints
-
-$grid-breakpoints: (
-  sm: 576px,
-  md: 768px,
-  lg: 992px,
-  xl: 1200px
-);
+@include breakpoint(md) {
+  body {
+    --text-base-size: 1.15em;
+    --text-scale-ratio: 1.25;
+    --space-unit: 1.15em;
+  }
+}
 
 // Components
 

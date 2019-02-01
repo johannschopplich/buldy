@@ -1,3 +1,14 @@
+// Breakpoints
+
+$grid-breakpoints: (
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
+);
+
+// Blocks
+
 @mixin block {
   &:not(:last-child) {
     margin-bottom: var(--space-md);
@@ -20,8 +31,10 @@
 }
 
 @mixin focus-outlined {
-  outline: 3px solid var(--color-primary);
-  outline-offset: 2px;
+  &:focus {
+    outline: 3px solid var(--color-primary);
+    outline-offset: 2px;
+  }
 }
 
 %focus-outlined {
