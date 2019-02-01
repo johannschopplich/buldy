@@ -39,6 +39,11 @@ $sizes: xxxs, xxs, xs, sm, md, lg, xl, xxl, xxxl;
   }
 }
 
+.has-text-weight-light    { font-weight: 300 !important; }
+.has-text-weight-normal   { font-weight: 400 !important; }
+.has-text-weight-semibold { font-weight: 600 !important; }
+.has-text-weight-bold     { font-weight: 700 !important; }
+
 // Miscellaneous
 
 .is-marginless {
