@@ -19,6 +19,8 @@
   @include unselectable;
 }
 
+// Add transitions where needed
+
 @mixin transition($transition...) {
   @if length($transition) == 0 {
     transition: all 0.2s ease-in-out;
