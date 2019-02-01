@@ -11,6 +11,10 @@
     margin-top: calc(var(--space-xxxs) * var(--text-vspace-multiplier));
   }
 
+  a:not(.button) {
+    @extend %focus-outlined;
+  }
+
   // Block
 
   p,

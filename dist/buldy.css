@@ -259,6 +259,11 @@ body {
   user-select: none;
 }
 
+.content a:not(.button) {
+  outline: 3px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
 @media screen and (-webkit-min-device-pixel-ratio: 2), screen and (min-resolution: 2dppx) {
   body {
     -moz-osx-font-smoothing: grayscale;

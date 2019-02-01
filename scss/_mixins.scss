@@ -19,6 +19,15 @@
   @include unselectable;
 }
 
+@mixin focus-outlined {
+  outline: 3px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+%focus-outlined {
+  @include focus-outlined;
+}
+
 // Add transitions where needed
 
 @mixin transition($transition...) {
