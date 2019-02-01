@@ -1,15 +1,3 @@
-.title:not(:last-child), .content:not(:last-child), .box:not(:last-child) {
-  margin-bottom: var(--space-md);
-}
-
-.is-unselectable, .radio-list label,
-.checkbox-list label, .button {
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  user-select: none;
-}
-
 html,
 body,
 h1,
@@ -257,6 +245,18 @@ body {
   --button-md:             calc(var(--button-font-size) + 0.2em);
   --button-lg:             calc(var(--button-font-size) + 0.4em);
   --radius:                0.25em;
+}
+
+.title:not(:last-child), .content:not(:last-child), .box:not(:last-child) {
+  margin-bottom: var(--space-md);
+}
+
+.is-unselectable, .radio-list label,
+.checkbox-list label, .button {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
 }
 
 @media screen and (-webkit-min-device-pixel-ratio: 2), screen and (min-resolution: 2dppx) {
