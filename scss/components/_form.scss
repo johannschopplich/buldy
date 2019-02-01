@@ -21,9 +21,9 @@
     color: var(--color-contrast-medium);
   }
   &[aria-invalid="true"] {
-    border-color: var(--color-error);
+    border-color: var(--color-red);
     &:focus {
-      box-shadow: 0 0 0 3px var(--color-error-a25);
+      box-shadow: 0 0 0 3px var(--color-red-a25);
     }
   }
 }
@@ -44,7 +44,7 @@
 // Error message
 
 .message.is-error {
-  background-color: var(--color-error);
+  background-color: var(--color-red);
   border-radius: var(--radius);
   color: var(--color-white);
   font-size: var(--text-sm);

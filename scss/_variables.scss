@@ -8,10 +8,10 @@
   --color-primary-darker:  hsl(220, 90%, 49%);
   --color-primary-a25:     hsla(220, 90%, 56%, 0.25);
 
-  --color-accent:          hsl(217, 71%, 53%);
-  --color-accent-dark:     hsl(217, 71%, 50%);
-  --color-accent-darker:   hsl(217, 71%, 47%);
-  --color-accent-a25:      hsla(217, 71%, 53%, 0.25);
+  --color-accent:          hsl(171, 100%, 41%);
+  --color-accent-dark:     hsl(171, 100%, 37%);
+  --color-accent-darker:   hsl(171, 100%, 33%);
+  --color-accent-a25:      hsla(171, 100%, 41%, 0.25);
 
   // Shades
   --color-black:           hsl(0, 0%, 4%);
@@ -26,8 +26,8 @@
   --color-contrast-higher: hsl(240, 7%, 12%);
 
   // Feedback
-  --color-error:           hsl(348, 100%, 61%);
-  --color-error-a25:       hsla(348, 100%, 61%, 0.25);
+  --color-red:             hsl(348, 100%, 61%);
+  --color-red-a25:         hsla(348, 100%, 61%, 0.25);
 
   // Semantic
   --color-text:            var(--color-contrast-higher)
@@ -38,15 +38,6 @@
   background-color:        var(--color-background);
   color:                   var(--color-text);
 }
-
-// Breakpoints
-
-$grid-breakpoints: (
-  sm: 576px,
-  md: 768px,
-  lg: 992px,
-  xl: 1200px
-);
 
 // Spacing and typography
 
@@ -88,6 +79,15 @@ body {
   --space-xxxl:            calc(8.5   * var(--space-unit));
   --component-padding:     var(--space-sm);
 }
+
+// Breakpoints
+
+$grid-breakpoints: (
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
+);
 
 // Components
 

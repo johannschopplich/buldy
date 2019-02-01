@@ -1,3 +1,7 @@
+.title:not(:last-child), .content:not(:last-child), .box:not(:last-child) {
+  margin-bottom: var(--space-md);
+}
+
 html,
 body,
 h1,
@@ -188,10 +192,10 @@ template {
   --color-primary-dark:    hsl(220, 90%, 52%);
   --color-primary-darker:  hsl(220, 90%, 49%);
   --color-primary-a25:     hsla(220, 90%, 56%, 0.25);
-  --color-accent:          hsl(217, 71%, 53%);
-  --color-accent-dark:     hsl(217, 71%, 50%);
-  --color-accent-darker:   hsl(217, 71%, 47%);
-  --color-accent-a25:      hsla(217, 71%, 53%, 0.25);
+  --color-accent:          hsl(171, 100%, 41%);
+  --color-accent-dark:     hsl(171, 100%, 37%);
+  --color-accent-darker:   hsl(171, 100%, 33%);
+  --color-accent-a25:      hsla(171, 100%, 41%, 0.25);
   --color-black:           hsl(0, 0%, 4%);
   --color-white:           hsl(0, 0%, 100%);
   --color-background:      hsl(0, 0%, 100%);
@@ -200,8 +204,8 @@ template {
   --color-contrast-medium: hsl(240, 1%, 47%);
   --color-contrast-high:   hsl(240, 4%, 20%);
   --color-contrast-higher: hsl(240, 7%, 12%);
-  --color-error:           hsl(348, 100%, 61%);
-  --color-error-a25:       hsla(348, 100%, 61%, 0.25);
+  --color-red:             hsl(348, 100%, 61%);
+  --color-red-a25:         hsla(348, 100%, 61%, 0.25);
   --color-text:            var(--color-contrast-higher)
   --color-border:          var(--color-contrast-low);
 }
@@ -245,10 +249,6 @@ body {
   --button-md:             calc(var(--button-font-size) + 0.2em);
   --button-lg:             calc(var(--button-font-size) + 0.4em);
   --radius:                0.25em;
-}
-
-.title:not(:last-child), .content:not(:last-child), .box:not(:last-child) {
-  margin-bottom: var(--space-md);
 }
 
 @media screen and (-webkit-min-device-pixel-ratio: 2), screen and (min-resolution: 2dppx) {
@@ -691,7 +691,7 @@ table th {
   margin-right: auto;
 }
 
-.container.is-fluid {
+.container.is-fullwidth {
   width: 100%;
 }
 
@@ -1171,11 +1171,11 @@ table th {
 }
 
 .form-control[aria-invalid="true"] {
-  border-color: var(--color-error);
+  border-color: var(--color-red);
 }
 
 .form-control[aria-invalid="true"]:focus {
-  box-shadow: 0 0 0 3px var(--color-error-a25);
+  box-shadow: 0 0 0 3px var(--color-red-a25);
 }
 
 .form-legend {
@@ -1192,7 +1192,7 @@ table th {
 }
 
 .message.is-error {
-  background-color: var(--color-error);
+  background-color: var(--color-red);
   border-radius: var(--radius);
   color: var(--color-white);
   font-size: var(--text-sm);
