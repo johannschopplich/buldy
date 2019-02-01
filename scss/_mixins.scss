@@ -11,7 +11,7 @@ $grid-breakpoints: (
 
 @mixin block {
   &:not(:last-child) {
-    margin-bottom: var(--space-md);
+    margin-bottom: var(--space-sm);
   }
 }
 
@@ -32,7 +32,7 @@ $grid-breakpoints: (
 
 @mixin focus-outlined {
   &:focus {
-    outline: 3px solid var(--color-primary);
+    outline: 3px solid var(--color-primary-a25);
     outline-offset: 2px;
   }
 }

@@ -183,7 +183,7 @@ template {
 }
 
 .title:not(:last-child), .content:not(:last-child), .box:not(:last-child) {
-  margin-bottom: var(--space-md);
+  margin-bottom: var(--space-sm);
 }
 
 .is-unselectable, .radio-list label,
@@ -195,7 +195,7 @@ template {
 }
 
 .content a:focus:not(.button) {
-  outline: 3px solid var(--color-primary);
+  outline: 3px solid var(--color-primary-a25);
   outline-offset: 2px;
 }
 
