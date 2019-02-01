@@ -58,11 +58,7 @@ $sizes: xxxs, xxs, xs, sm, lg, xl, xxl, xxxl;
 }
 
 .is-unselectable {
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
+  @extend %unselectable;
 }
 
 // Only display content to screen readers

@@ -65,10 +65,7 @@
 
   label {
     line-height: var(--body-line-height);
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    user-select: none;
+    @extend %unselectable;
   }
 
   input {
