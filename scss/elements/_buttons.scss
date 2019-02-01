@@ -13,6 +13,8 @@
   align-items: center;
   vertical-align: middle;
   @extend %unselectable;
+  @include transition(color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out);
+
   &:hover {
     border-color: var(--color-contrast-medium);
     color: var(--color-text);

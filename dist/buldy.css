@@ -1146,6 +1146,13 @@ table th {
   background-color: var(--color-background);
   border-color: var(--color-contrast-low);
   padding: var(--space-xs) var(--space-sm);
+  transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .form-control {
+    transition: none;
+  }
 }
 
 .form-control:focus {
@@ -1249,6 +1256,13 @@ table th {
   justify-content: center;
   align-items: center;
   vertical-align: middle;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .button {
+    transition: none;
+  }
 }
 
 .button:hover {
