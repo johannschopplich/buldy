@@ -55,7 +55,7 @@ body {
   //--text-6:              calc((1em / var(--text-scale-ratio)) / var(--text-scale-ratio));
   --text-6:                1em;
   --text-5:                calc(var(--text-6) * var(--text-scale-ratio));
-  --text-4:                calc(var(--text-5) * var(--text-scale-ratio) * var(--text-scale-ratio));
+  --text-4:                calc(var(--text-5) * var(--text-scale-ratio));
   --text-3:                calc(var(--text-4) * var(--text-scale-ratio));
   --text-2:                calc(var(--text-3) * var(--text-scale-ratio));
   --text-1:                calc(var(--text-2) * var(--text-scale-ratio));
