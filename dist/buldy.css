@@ -358,7 +358,7 @@ span {
 }
 
 .title.is-2,
-.has-text-2,
+.is-size-2,
 .content h2 {
   font-size: var(--text-2);
 }
@@ -370,7 +370,8 @@ span {
 }
 
 .title.is-4,
-.is-size-4 .content h4 {
+.is-size-4,
+.content h4 {
   font-size: var(--text-4);
 }
 
@@ -1416,13 +1417,13 @@ table th {
 .content h3,
 .content h4 {
   line-height: var(--component-heading-line-height);
-  margin-bottom: calc(var(--space-xs) * var(--text-vspace-multiplier));
+  margin-bottom: calc(var(--space-xxs) * var(--text-vspace-multiplier));
 }
 
 .content h2:not(:first-child),
 .content h3:not(:first-child),
 .content h4:not(:first-child) {
-  margin-top: calc(var(--space-md) * var(--text-vspace-multiplier));
+  margin-top: calc(var(--space-sm) * var(--text-vspace-multiplier));
 }
 
 .content ol,

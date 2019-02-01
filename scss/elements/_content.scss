@@ -49,14 +49,14 @@
   h3,
   h4 {
     line-height: var(--component-heading-line-height);
-    margin-bottom: calc(var(--space-xs) * var(--text-vspace-multiplier));
+    margin-bottom: calc(var(--space-xxs) * var(--text-vspace-multiplier));
   }
 
   h2,
   h3,
   h4 {
     &:not(:first-child) {
-      margin-top: calc(var(--space-md) * var(--text-vspace-multiplier));
+      margin-top: calc(var(--space-sm) * var(--text-vspace-multiplier));
     }
   }
 
