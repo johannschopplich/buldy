@@ -624,6 +624,18 @@ table th {
   margin-bottom: var(--space-md) !important;
 }
 
+.has-text-left {
+  text-align: left !important;
+}
+
+.has-text-right {
+  text-align: right !important;
+}
+
+.has-text-centered {
+  text-align: center !important;
+}
+
 @media (min-width: 576px) {
   .has-text-sm-left {
     text-align: left !important;

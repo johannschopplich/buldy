@@ -30,6 +30,10 @@ $sizes: xxxs, xxs, xs, sm, md, lg, xl, xxl, xxxl;
 
 // Typography
 
+.has-text-left     { text-align: left !important; }
+.has-text-right    { text-align: right !important; }
+.has-text-centered { text-align: center !important; }
+
 @each $breakpoint in map-keys($grid-breakpoints) {
   @include breakpoint($breakpoint) {
     $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
