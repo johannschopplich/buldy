@@ -528,6 +528,22 @@ table th {
   margin-bottom: var(--space-sm) !important;
 }
 
+.has-padding-top-md {
+  padding-top: var(--space-md) !important;
+}
+
+.has-padding-bottom-md {
+  padding-bottom: var(--space-md) !important;
+}
+
+.has-margin-top-md {
+  margin-top: var(--space-md) !important;
+}
+
+.has-margin-bottom-md {
+  margin-bottom: var(--space-md) !important;
+}
+
 .has-padding-top-lg {
   padding-top: var(--space-lg) !important;
 }

@@ -14,7 +14,7 @@
 
 // Common spacing values
 
-$sizes: xxxs, xxs, xs, sm, lg, xl, xxl, xxxl;
+$sizes: xxxs, xxs, xs, sm, md, lg, xl, xxl, xxxl;
 @each $size in $sizes {
   .has-padding-top-#{$size}    { padding-top: var(--space-#{$size}) !important; }
   .has-padding-bottom-#{$size} { padding-bottom: var(--space-#{$size}) !important; }
