@@ -83,15 +83,15 @@
 
   &.is-primary {
     --button-color: var(--color-primary);
-    --button-color-hover: var(--color-primary-dark);
-    --button-color-active: var(--color-primary-darker);
+    --button-color-hover: var(--color-primary-hover);
+    --button-color-active: var(--color-primary-active);
     --button-shadow: var(--color-primary-a25);
   }
 
   &.is-accent {
     --button-color: var(--color-accent);
-    --button-color-hover: var(--color-accent-dark);
-    --button-color-active: var(--color-accent-darker);
+    --button-color-hover: var(--color-accent-hover);
+    --button-color-active: var(--color-accent-active);
     --button-shadow: var(--color-accent-a25);
   }
 

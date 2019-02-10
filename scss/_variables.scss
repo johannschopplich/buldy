@@ -4,13 +4,13 @@
 [data-theme="default"] {
   // Main
   --color-primary:         hsl(220, 90%, 56%);
-  --color-primary-dark:    hsl(220, 90%, 52%);
-  --color-primary-darker:  hsl(220, 90%, 49%);
+  --color-primary-hover:   hsl(220, 90%, 52%);
+  --color-primary-active:  hsl(220, 90%, 49%);
   --color-primary-a25:     hsla(220, 90%, 56%, 0.25);
 
   --color-accent:          hsl(171, 100%, 41%);
-  --color-accent-dark:     hsl(171, 100%, 37%);
-  --color-accent-darker:   hsl(171, 100%, 33%);
+  --color-accent-hover:     hsl(171, 100%, 37%);
+  --color-accent-active:   hsl(171, 100%, 33%);
   --color-accent-a25:      hsla(171, 100%, 41%, 0.25);
 
   // Shades
