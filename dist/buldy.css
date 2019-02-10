@@ -1136,6 +1136,10 @@ table th {
   padding: var(--space-xl) var(--space-md);
 }
 
+.section.is-distant {
+  margin: var(--space-xl) 0;
+}
+
 .hero {
   align-items: stretch;
   display: flex;

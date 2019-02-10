@@ -1,7 +1,11 @@
 // Section
 
 .section {
-  padding: var(--space-xl) var(--space-md)
+  padding: var(--space-xl) var(--space-md);
+
+  &.is-distant {
+    margin: var(--space-xl) 0;
+  }
 }
 
 // Hero
