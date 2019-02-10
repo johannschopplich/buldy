@@ -5,12 +5,14 @@
 .has-text-white   { color: var(--color-white) !important; }
 .has-text-light   { color: var(--color-contrast-low) !important; }
 .has-text-dark    { color: var(--color-contrast-high) !important; }
+.has-text-black   { color: var(--color-contrast-higher) !important; }
 
 .has-background-primary { background-color: var(--color-primary) !important; }
 .has-background-accent  { background-color: var(--color-accent) !important; }
 .has-background-white   { background-color: var(--color-white) !important; }
 .has-background-light   { background-color: var(--color-contrast-low) !important; }
 .has-background-dark    { background-color: var(--color-contrast-high) !important; }
+.has-background-black   { background-color: var(--color-contrast-higher) !important; }
 
 // Common spacing values
 
