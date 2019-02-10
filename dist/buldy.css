@@ -1538,7 +1538,7 @@ table th {
 }
 
 .article.content {
-  --line-height-multiplier: 1.125;
+  --line-height-multiplier: 1.25;
 }
 
 @media (min-width: 576px) {

@@ -116,7 +116,7 @@
 
 // Adapted variables for articles (e.g. blog posts)
 .article.content {
-  --line-height-multiplier: 1.125;
+  --line-height-multiplier: 1.25;
 }
 
 @include breakpoint(sm) {
