@@ -4,7 +4,6 @@
   border-color: var(--color-contrast-low);
   padding: var(--space-xs) var(--space-sm);
   @include transition(background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out);
-
   &:focus {
     border-color: var(--color-primary);
     box-shadow: 0 0 0 3px var(--color-primary-a25);
@@ -14,12 +13,6 @@
   }
   &::-moz-placeholder {
     opacity: 1;
-    color: var(--color-contrast-medium);
-  }
-  &:-ms-input-placeholder {
-    color: var(--color-contrast-medium);
-  }
-  &:-moz-placeholder {
     color: var(--color-contrast-medium);
   }
   &[aria-invalid="true"] {
