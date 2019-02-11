@@ -22,9 +22,6 @@
   &:focus {
     border-color: var(--color-contrast-medium);
     color: var(--color-text);
-    //&:not(:active) {
-      //box-shadow: 0 0 0 3px var(--color-contrast-a25);
-    //}
   }
   &:active {
     border-color: var(--color-text);
