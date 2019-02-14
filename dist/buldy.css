@@ -195,7 +195,7 @@ template {
 }
 
 .content a:focus:not(.button) {
-  outline: 3px solid var(--color-primary-a25);
+  outline: 3px solid var(--color-primary-a50);
   outline-offset: 1px;
 }
 
@@ -205,16 +205,17 @@ template {
   --color-primary-hover:   hsl(220, 90%, 52%);
   --color-primary-active:  hsl(220, 90%, 49%);
   --color-primary-a25:     hsla(220, 90%, 56%, 0.25);
+  --color-primary-a50:     hsla(220, 90%, 56%, 0.5);
   --color-accent:          hsl(171, 100%, 41%);
-  --color-accent-hover:     hsl(171, 100%, 37%);
+  --color-accent-hover:    hsl(171, 100%, 37%);
   --color-accent-active:   hsl(171, 100%, 33%);
   --color-accent-a25:      hsla(171, 100%, 41%, 0.25);
   --color-black:           hsl(0, 0%, 4%);
   --color-white:           hsl(0, 0%, 100%);
   --color-background:      hsl(0, 0%, 100%);
   --color-contrast-lower:  hsl(0, 0%, 95%);
-  --color-contrast-low:    hsl(0, 0%, 83%);
-  --color-contrast-medium: hsl(240, 1%, 47%);
+  --color-contrast-low:    hsl(0, 0%, 80%);
+  --color-contrast-medium: hsl(240, 1%, 46%);
   --color-contrast-high:   hsl(240, 4%, 20%);
   --color-contrast-higher: hsl(240, 7%, 12%);
   --color-red:             hsl(348, 100%, 61%);
@@ -1224,14 +1225,6 @@ table th {
 
 .form-control::-moz-placeholder {
   opacity: 1;
-  color: var(--color-contrast-medium);
-}
-
-.form-control:-ms-input-placeholder {
-  color: var(--color-contrast-medium);
-}
-
-.form-control:-moz-placeholder {
   color: var(--color-contrast-medium);
 }
 
