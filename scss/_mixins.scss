@@ -33,7 +33,7 @@ $grid-breakpoints: (
 @mixin focus-outlined {
   &:focus {
     outline: 3px solid var(--color-primary-a50);
-    outline-offset: 1px;
+    outline-offset: 2px;
   }
 }
 

@@ -196,7 +196,7 @@ template {
 
 .content a:focus:not(.button) {
   outline: 3px solid var(--color-primary-a50);
-  outline-offset: 1px;
+  outline-offset: 2px;
 }
 
 :root,
