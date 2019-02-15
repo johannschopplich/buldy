@@ -95,8 +95,8 @@
 
   figure {
     text-align: center;
-    margin-right: 2em;
-    margin-left: 2em;
+    //margin-right: 2em;
+    //margin-left: 2em;
     &:not(:first-child) {
       margin-top: calc(var(--space-md) * var(--text-vspace-multiplier));
     }

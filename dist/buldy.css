@@ -1506,8 +1506,6 @@ table th {
 
 .content figure {
   text-align: center;
-  margin-right: 2em;
-  margin-left: 2em;
 }
 
 .content figure:not(:first-child) {
