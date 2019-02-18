@@ -214,10 +214,10 @@ template {
   --color-white:           hsl(0, 0%, 100%);
   --color-background:      hsl(0, 0%, 100%);
   --color-contrast-lower:  hsl(0, 0%, 95%);
-  --color-contrast-low:    hsl(0, 0%, 82%);
-  --color-contrast-medium: hsl(240, 1%, 46%);
+  --color-contrast-low:    hsl(240, 1%, 82%);
+  --color-contrast-medium: hsl(240, 1%, 48%);
   --color-contrast-high:   hsl(240, 4%, 20%);
-  --color-contrast-higher: hsl(240, 7%, 12%);
+  --color-contrast-higher: hsl(240, 6%, 12%);
   --color-red:             hsl(348, 100%, 61%);
   --color-red-a25:         hsla(348, 100%, 61%, 0.25);
   --color-text:            var(--color-contrast-higher);
@@ -734,6 +734,66 @@ table th {
   clip: rect(0, 0, 0, 0);
   white-space: nowrap;
   border: 0;
+}
+
+@media (min-width: 576px) {
+  .is-hidden-sm {
+    display: inline !important;
+  }
+  .is-inline-sm {
+    display: inline !important;
+  }
+  .is-hidden-sm {
+    display: block !important;
+  }
+  .is-block-sm {
+    display: block !important;
+  }
+}
+
+@media (min-width: 768px) {
+  .is-hidden-md {
+    display: inline !important;
+  }
+  .is-inline-md {
+    display: inline !important;
+  }
+  .is-hidden-md {
+    display: block !important;
+  }
+  .is-block-md {
+    display: block !important;
+  }
+}
+
+@media (min-width: 992px) {
+  .is-hidden-lg {
+    display: inline !important;
+  }
+  .is-inline-lg {
+    display: inline !important;
+  }
+  .is-hidden-lg {
+    display: block !important;
+  }
+  .is-block-lg {
+    display: block !important;
+  }
+}
+
+@media (min-width: 1200px) {
+  .is-hidden-xl {
+    display: inline !important;
+  }
+  .is-inline-xl {
+    display: inline !important;
+  }
+  .is-hidden-xl {
+    display: block !important;
+  }
+  .is-block-xl {
+    display: block !important;
+  }
 }
 
 :root {
@@ -1422,14 +1482,14 @@ table th {
 }
 
 .content {
-  --component-body-line-height: calc(var(--body-line-height) * var(--line-height-multiplier));
-  --component-heading-line-height: calc(var(--heading-line-height) * var(--line-height-multiplier));
+  --component-body-line-height: calc(var(--body-line-height) * var(--line-height-multiplier, 1));
+  --component-heading-line-height: calc(var(--heading-line-height) * var(--line-height-multiplier, 1));
   --line-height-multiplier: 1;
   --text-vspace-multiplier: 1;
 }
 
 .content li + li {
-  margin-top: calc(var(--space-xxxs) * var(--text-vspace-multiplier));
+  margin-top: calc(var(--space-xxxs) * var(--text-vspace-multiplier, 1));
 }
 
 .content p,
@@ -1447,14 +1507,14 @@ table th {
 .content blockquote:not(:last-child),
 .content pre:not(:last-child),
 .content table:not(:last-child) {
-  margin-bottom: calc(var(--space-md) * var(--text-vspace-multiplier));
+  margin-bottom: calc(var(--space-md) * var(--text-vspace-multiplier, 1));
 }
 
 .content hr {
   border-top: 0;
   height: 1px;
   background: var(--color-contrast-low);
-  margin: calc(var(--space-md) * var(--text-vspace-multiplier)) auto;
+  margin: calc(var(--space-md) * var(--text-vspace-multiplier, 1)) auto;
 }
 
 .content h1,
@@ -1462,13 +1522,13 @@ table th {
 .content h3,
 .content h4 {
   line-height: var(--component-heading-line-height);
-  margin-bottom: calc(var(--space-xxs) * var(--text-vspace-multiplier));
+  margin-bottom: calc(var(--space-xxs) * var(--text-vspace-multiplier, 1));
 }
 
 .content h2:not(:first-child),
 .content h3:not(:first-child),
 .content h4:not(:first-child) {
-  margin-top: calc(var(--space-sm) * var(--text-vspace-multiplier));
+  margin-top: calc(var(--space-sm) * var(--text-vspace-multiplier, 1));
 }
 
 .content ol,
@@ -1479,7 +1539,7 @@ table th {
 
 .content ol,
 .content ul {
-  margin-top: calc(var(--space-md) * var(--text-vspace-multiplier));
+  margin-top: calc(var(--space-md) * var(--text-vspace-multiplier, 1));
 }
 
 .content ol {
@@ -1492,7 +1552,7 @@ table th {
 
 .content ul ul {
   list-style-type: circle;
-  margin-top: calc(var(--space-xs) * var(--text-vspace-multiplier));
+  margin-top: calc(var(--space-xs) * var(--text-vspace-multiplier, 1));
 }
 
 .content ul ul ul {
@@ -1509,11 +1569,11 @@ table th {
 }
 
 .content figure:not(:first-child) {
-  margin-top: calc(var(--space-md) * var(--text-vspace-multiplier));
+  margin-top: calc(var(--space-md) * var(--text-vspace-multiplier, 1));
 }
 
 .content figure:not(:last-child) {
-  margin-bottom: calc(var(--space-md) * var(--text-vspace-multiplier));
+  margin-bottom: calc(var(--space-md) * var(--text-vspace-multiplier, 1));
 }
 
 .content figure img {
@@ -1534,11 +1594,11 @@ table th {
   }
   .content .image.is-pulled-left {
     float: left;
-    margin-right: calc(var(--space-md) * var(--text-vspace-multiplier));
+    margin-right: calc(var(--space-md) * var(--text-vspace-multiplier, 1));
   }
   .content .image.is-pulled-right {
     float: right;
-    margin-left: calc(var(--space-md) * var(--text-vspace-multiplier));
+    margin-left: calc(var(--space-md) * var(--text-vspace-multiplier, 1));
   }
 }
 

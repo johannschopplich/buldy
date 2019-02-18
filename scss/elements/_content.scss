@@ -1,6 +1,6 @@
 .content {
-  --component-body-line-height: calc(var(--body-line-height) * var(--line-height-multiplier));
-  --component-heading-line-height: calc(var(--heading-line-height) * var(--line-height-multiplier));
+  --component-body-line-height: calc(var(--body-line-height) * var(--line-height-multiplier, 1));
+  --component-heading-line-height: calc(var(--heading-line-height) * var(--line-height-multiplier, 1));
   --line-height-multiplier: 1;
   --text-vspace-multiplier: 1;
   @extend %block;
@@ -8,7 +8,7 @@
   // Inline
 
   li + li {
-    margin-top: calc(var(--space-xxxs) * var(--text-vspace-multiplier));
+    margin-top: calc(var(--space-xxxs) * var(--text-vspace-multiplier, 1));
   }
 
   a:not(.button) {
@@ -33,7 +33,7 @@
   pre,
   table {
     &:not(:last-child) {
-      margin-bottom: calc(var(--space-md) * var(--text-vspace-multiplier));
+      margin-bottom: calc(var(--space-md) * var(--text-vspace-multiplier, 1));
     }
   }
 
@@ -41,7 +41,7 @@
     border-top: 0;
     height: 1px;
     background: var(--color-contrast-low);
-    margin: calc(var(--space-md) * var(--text-vspace-multiplier)) auto;
+    margin: calc(var(--space-md) * var(--text-vspace-multiplier, 1)) auto;
   }
 
   h1,
@@ -49,14 +49,14 @@
   h3,
   h4 {
     line-height: var(--component-heading-line-height);
-    margin-bottom: calc(var(--space-xxs) * var(--text-vspace-multiplier));
+    margin-bottom: calc(var(--space-xxs) * var(--text-vspace-multiplier, 1));
   }
 
   h2,
   h3,
   h4 {
     &:not(:first-child) {
-      margin-top: calc(var(--space-sm) * var(--text-vspace-multiplier));
+      margin-top: calc(var(--space-sm) * var(--text-vspace-multiplier, 1));
     }
   }
 
@@ -68,7 +68,7 @@
 
   ol,
   ul {
-    margin-top: calc(var(--space-md) * var(--text-vspace-multiplier));
+    margin-top: calc(var(--space-md) * var(--text-vspace-multiplier, 1));
   }
 
   ol {
@@ -80,7 +80,7 @@
 
     ul {
       list-style-type: circle;
-      margin-top: calc(var(--space-xs) * var(--text-vspace-multiplier));
+      margin-top: calc(var(--space-xs) * var(--text-vspace-multiplier, 1));
 
       ul {
         list-style-type: square;
@@ -98,10 +98,10 @@
     //margin-right: 2em;
     //margin-left: 2em;
     &:not(:first-child) {
-      margin-top: calc(var(--space-md) * var(--text-vspace-multiplier));
+      margin-top: calc(var(--space-md) * var(--text-vspace-multiplier, 1));
     }
     &:not(:last-child) {
-      margin-bottom: calc(var(--space-md) * var(--text-vspace-multiplier));
+      margin-bottom: calc(var(--space-md) * var(--text-vspace-multiplier, 1));
     }
 
     img {
@@ -129,12 +129,12 @@
 
       &.is-pulled-left {
         float: left;
-        margin-right: calc(var(--space-md) * var(--text-vspace-multiplier));
+        margin-right: calc(var(--space-md) * var(--text-vspace-multiplier, 1));
       }
 
       &.is-pulled-right {
         float: right;
-        margin-left: calc(var(--space-md) * var(--text-vspace-multiplier));
+        margin-left: calc(var(--space-md) * var(--text-vspace-multiplier, 1));
       }
     }
   }

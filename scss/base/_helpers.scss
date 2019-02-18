@@ -83,3 +83,18 @@ $sizes: xxxs, xxs, xs, sm, md, lg, xl, xxl, xxxl;
   white-space: nowrap;
   border: 0;
 }
+
+// Utilities for common `display` values
+
+$displays: inline, block;
+
+@each $breakpoint in map-keys($grid-breakpoints) {
+  @include breakpoint($breakpoint) {
+    $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+
+    @each $value in $displays {
+      .is-hidden-#{$infix}    { display: $value !important; }
+      .is-#{$value}-#{$infix} { display: $value !important; }
+    }
+  }
+}
