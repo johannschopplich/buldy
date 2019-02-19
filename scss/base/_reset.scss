@@ -2,7 +2,7 @@
 // Document
 //
 
-// Remove default spacing
+// Remove default spacing (opinionated).
 html,
 body,
 h1,
@@ -30,14 +30,8 @@ iframe {
   padding: 0;
 }
 
-html {
-  box-sizing: border-box;
-  line-height: 1.15;
-  -webkit-text-size-adjust: 100%;
-  //-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-}
-
-// Change from `box-sizing: content-box` so that `width` is not affected by `padding` or `border`.
+// Change from `box-sizing: content-box` so that `width` is not affected by
+// `padding` or `border` in all browsers (opinionated).
 * {
   &,
   &::before,
@@ -46,9 +40,18 @@ html {
   }
 }
 
+// Use a more readable tab size (opinionated).
 :root {
   -moz-tab-size: 4;
   tab-size: 4;
+}
+
+html {
+  box-sizing: border-box;
+  // Correct the line height in all browsers.
+  line-height: 1.15;
+  // Prevent adjustments of font size after orientation changes in iOS.
+  -webkit-text-size-adjust: 100%;
 }
 
 // Suppress the focus outline on elements that cannot be accessed via keyboard.
@@ -62,6 +65,7 @@ html {
 // Sections
 //
 
+// Reset all headings to inherit font size and weight (opinionated).
 h1,
 h2,
 h3,
@@ -76,6 +80,7 @@ h6 {
 // Text-level semantics
 //
 
+// Remove list style in all browsers (opinionated).
 ol,
 ul {
   list-style: none;
@@ -90,11 +95,6 @@ abbr[title] {
   text-decoration-skip-ink: none;
 }
 
-address {
-  font-style: normal;
-  line-height: inherit;
-}
-
 b,
 strong {
   font-weight: bolder;
@@ -106,10 +106,6 @@ samp,
 pre {
   font-size: 1em;
   font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-}
-
-pre {
-  overflow: auto;
 }
 
 small {
@@ -203,10 +199,6 @@ button,
   -webkit-appearance: button;
 }
 
-textarea {
-  resize: vertical;
-}
-
 fieldset {
   // Browsers set a default `min-width: min-content;` on fieldsets,
   // unlike e.g. `<div>`s, which have `min-width: 0;` by default.
@@ -214,6 +206,11 @@ fieldset {
   min-width: 0;
   // Reset the default outline behavior of fieldsets so they don't affect page layout.
   border: 0;
+}
+
+// Change the resize direction on textareas in all browsers (opinionated).
+textarea {
+  resize: vertical;
 }
 
 //
@@ -228,6 +225,7 @@ iframe {
 // Interactive
 //
 
+// Add the correct display in all browsers.
 summary {
   display: list-item;
   cursor: pointer;
@@ -254,6 +252,7 @@ summary {
   cursor: not-allowed;
 }
 
+// Change the display on visually hidden accessible elements
 // in all browsers (opinionated).
 [aria-hidden="false"][hidden]:not(:focus) {
   clip: rect(0, 0, 0, 0);

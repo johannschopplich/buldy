@@ -25,12 +25,6 @@ iframe {
   padding: 0;
 }
 
-html {
-  box-sizing: border-box;
-  line-height: 1.15;
-  -webkit-text-size-adjust: 100%;
-}
-
 *, *::before, *::after {
   box-sizing: inherit;
 }
@@ -38,6 +32,12 @@ html {
 :root {
   -moz-tab-size: 4;
   tab-size: 4;
+}
+
+html {
+  box-sizing: border-box;
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
 }
 
 [tabindex="-1"]:focus {
@@ -65,11 +65,6 @@ abbr[title] {
   text-decoration-skip-ink: none;
 }
 
-address {
-  font-style: normal;
-  line-height: inherit;
-}
-
 b,
 strong {
   font-weight: bolder;
@@ -81,10 +76,6 @@ samp,
 pre {
   font-size: 1em;
   font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-}
-
-pre {
-  overflow: auto;
 }
 
 small {
@@ -160,13 +151,13 @@ button,
   -webkit-appearance: button;
 }
 
-textarea {
-  resize: vertical;
-}
-
 fieldset {
   min-width: 0;
   border: 0;
+}
+
+textarea {
+  resize: vertical;
 }
 
 iframe {
@@ -299,7 +290,6 @@ html {
   min-width: 240px;
   overflow-x: hidden;
   overflow-y: scroll;
-  text-rendering: optimizeLegibility;
 }
 
 body,
