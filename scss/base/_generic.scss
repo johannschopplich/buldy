@@ -8,6 +8,10 @@
  }
 }
 
+//
+// Document
+//
+
 html {
   background-color: var(--color-background, white);
   min-width: 240px;
@@ -29,6 +33,10 @@ body {
   color: var(--color-contrast-high);
 }
 
+//
+// Grouping content
+//
+
 hr {
   display: block;
   margin: var(--space-md) 0;
@@ -36,7 +44,9 @@ hr {
   border-top: 1px solid hsl(0, 0%, 80%); // equals `#ccc`
 }
 
-// Inline text elements
+//
+// Text-level semantics
+//
 
 a {
   cursor: pointer;
@@ -44,11 +54,15 @@ a {
   text-decoration: none;
   &:hover {
     color: var(--color-text);
-    text-decoration: none;
+    text-decoration: underline;
   }
 }
 
-a:not([href]):not([tabindex]):not(.button) {
+// And undo these styles for placeholder links/named anchors (without href)
+// which have not been made explicitly keyboard-focusable (without tabindex).
+// It would be more straightforward to just use a[href] in previous block, but that
+// causes specificity issues in many other styles that are too complex to fix.
+a:not([href]):not([tabindex]) {
   color: inherit;
   text-decoration: none;
   &:hover,
@@ -71,7 +85,9 @@ span {
   font-weight: inherit;
 }
 
+//
 // Headings
+//
 
 .title {
   color: var(--color-contrast-higher);
@@ -79,47 +95,44 @@ span {
   @extend %block;
 }
 
+.title.is-display,
 .is-size-display {
   font-size: var(--text-display);
 }
 
 .title.is-1,
-.is-size-1,
-.content h1 {
+.is-size-1 {
   font-size: var(--text-1);
 }
 
 .title.is-2,
-.is-size-2,
-.content h2 {
+.is-size-2 {
   font-size: var(--text-2);
 }
 
 .title.is-3,
-.is-size-3,
-.content h3 {
+.is-size-3 {
   font-size: var(--text-3);
 }
 
 .title.is-4,
-.is-size-4,
-.content h4 {
+.is-size-4 {
   font-size: var(--text-4);
 }
 
 .title.is-5,
-.is-size-5, 
-.content h5 {
+.is-size-5 {
   font-size: var(--text-5);
 }
 
 .title.is-6,
-.is-size-6,
-.content h6 {
+.is-size-6 {
   font-size: var(--text-6);
 }
 
-// Tables
+//
+// Tabular data
+//
 
 table {
   td,
@@ -129,7 +142,9 @@ table {
   }
 }
 
+//
 // Form controls
+//
 
 .button,
 .form-control {

@@ -1,6 +1,8 @@
+//
 // Document
+//
 
-// Reset block margins and paddings
+// Remove default spacing
 html,
 body,
 h1,
@@ -28,7 +30,38 @@ iframe {
   padding: 0;
 }
 
-// Headings
+html {
+  box-sizing: border-box;
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+  //-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+// Change from `box-sizing: content-box` so that `width` is not affected by `padding` or `border`.
+* {
+  &,
+  &::before,
+  &::after {
+    box-sizing: inherit;
+  }
+}
+
+:root {
+  -moz-tab-size: 4;
+  tab-size: 4;
+}
+
+// Suppress the focus outline on elements that cannot be accessed via keyboard.
+// This prevents an unwanted focus outline from appearing around elements that
+// might still respond to pointer events.
+[tabindex="-1"]:focus {
+  outline: 0 !important;
+}
+
+//
+// Sections
+//
+
 h1,
 h2,
 h3,
@@ -39,36 +72,9 @@ h6 {
   font-weight: normal;
 }
 
-html {
-  box-sizing: border-box;
-  line-height: 1.15;
-  -webkit-text-size-adjust: 100%;
-  //-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-}
-
-* {
-  &,
-  &::before,
-  &::after {
-    box-sizing: inherit;
-  }
-}
-
-:root {
-  tab-size: 4;
-}
-
-// Body
-
-body {
-  text-align: left;
-}
-
-[tabindex="-1"]:focus {
-  outline: 0 !important;
-}
-
+//
 // Text-level semantics
+//
 
 ol,
 ul {
@@ -123,12 +129,15 @@ sup {
   top: -0.5em;
 }
 
-// Images and content
+//
+// Embedded content
+//
 
-svg,
 img,
+svg,
 audio,
 video,
+canvas,
 iframe {
   vertical-align: middle;
   max-width: 100%;
@@ -139,7 +148,14 @@ video {
   height: auto;
 }
 
-// Tables
+// Change the fill color to match the text color in all browsers (opinionated).
+svg:not([fill]) {
+  fill: currentColor;
+}
+
+//
+// Tabular data
+//
 
 table {
   border-collapse: collapse;
@@ -152,12 +168,21 @@ th {
   text-align: left;
 }
 
+//
 // Forms
+//
 
-input,
+label {
+  display: inline-block;
+}
+
+button {
+  border-radius: 0;
+}
+
 button,
+input,
 select,
-optgroup,
 textarea {
   font-family: inherit;
   font-size: inherit;
@@ -165,10 +190,11 @@ textarea {
   margin: 0;
 }
 
-legend {
-  display: block;
-  width: 100%;
-  line-height: inherit;
+// Correct the inability to style clickable types in iOS and Safari.
+button,
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
 }
 
 textarea {
@@ -180,27 +206,47 @@ fieldset {
   border: 0;
 }
 
+//
 // Iframes
+//
 
 iframe {
   border: 0;
 }
 
-// Correct element displays
-
-output {
-  display: inline-block;
-}
+//
+// Interactive
+//
 
 summary {
   display: list-item;
   cursor: pointer;
 }
 
-template {
-  display: none;
+//
+// Accessibility
+//
+
+// Change the cursor on busy elements in all browsers (opinionated).
+[aria-busy="true"] {
+  cursor: progress;
 }
 
-[hidden] {
-  display: none !important;
+// Change the cursor on control elements in all browsers (opinionated).
+[aria-controls] {
+  cursor: pointer;
+}
+
+// Change the cursor on disabled, not-editable, or otherwise
+// inoperable elements in all browsers (opinionated).
+[aria-disabled="true"],
+[disabled] {
+  cursor: not-allowed;
+}
+
+// in all browsers (opinionated).
+[aria-hidden="false"][hidden]:not(:focus) {
+  clip: rect(0, 0, 0, 0);
+  display: inherit;
+  position: absolute;
 }

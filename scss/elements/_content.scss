@@ -3,19 +3,62 @@
   --component-heading-line-height: calc(var(--heading-line-height) * var(--line-height-multiplier, 1));
   --line-height-multiplier: 1;
   --text-vspace-multiplier: 1;
+
   @extend %block;
 
-  // Inline
+  // Headings
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    line-height: var(--component-heading-line-height);
+    margin-bottom: calc(var(--space-xxs) * var(--text-vspace-multiplier, 1));
+  }
+
+  h2,
+  h3,
+  h4 {
+    &:not(:first-child) {
+      margin-top: calc(var(--space-sm) * var(--text-vspace-multiplier, 1));
+    }
+  }
+
+  .content h1 {
+    font-size: var(--text-1);
+  }
+  
+  .content h2 {
+    font-size: var(--text-2);
+  }
+  
+  .content h3 {
+    font-size: var(--text-3);
+  }
+  
+  .content h4 {
+    font-size: var(--text-4);
+  }
+  
+  .content h5 {
+    font-size: var(--text-5);
+  }
+  
+  .content h6 {
+    font-size: var(--text-6);
+  }
+
+  // Text-level semantics
 
   li + li {
     margin-top: calc(var(--space-xxxs) * var(--text-vspace-multiplier, 1));
   }
 
-  a:not(.button) {
+  a {
     @extend %focus-outlined;
   }
 
-  // Block
+  // Block elements
 
   p,
   ol li,
@@ -42,22 +85,6 @@
     height: 1px;
     background: var(--color-contrast-low);
     margin: calc(var(--space-md) * var(--text-vspace-multiplier, 1)) auto;
-  }
-
-  h1,
-  h2,
-  h3,
-  h4 {
-    line-height: var(--component-heading-line-height);
-    margin-bottom: calc(var(--space-xxs) * var(--text-vspace-multiplier, 1));
-  }
-
-  h2,
-  h3,
-  h4 {
-    &:not(:first-child) {
-      margin-top: calc(var(--space-sm) * var(--text-vspace-multiplier, 1));
-    }
   }
 
   ol,

@@ -1,10 +1,14 @@
+//
 // Section
+//
 
 .section {
   padding: var(--space-xl) var(--space-md);
 }
 
+//
 // Hero
+//
 
 .hero {
   align-items: stretch;
@@ -49,7 +53,9 @@
   }
 }
 
+//
 // Hero containers
+//
 
 .hero-head,
 .hero-foot {
