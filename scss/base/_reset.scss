@@ -36,22 +36,21 @@ iframe {
   &,
   &::before,
   &::after {
-    box-sizing: inherit;
+    box-sizing: border-box;
   }
+}
+
+html {
+  // Correct the line height in all browsers.
+  line-height: 1.15;
+  // Prevent adjustments of font size after orientation changes in iOS.
+  -webkit-text-size-adjust: 100%;
 }
 
 // Use a more readable tab size (opinionated).
 :root {
   -moz-tab-size: 4;
   tab-size: 4;
-}
-
-html {
-  box-sizing: border-box;
-  // Correct the line height in all browsers.
-  line-height: 1.15;
-  // Prevent adjustments of font size after orientation changes in iOS.
-  -webkit-text-size-adjust: 100%;
 }
 
 // Suppress the focus outline on elements that cannot be accessed via keyboard.

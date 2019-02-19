@@ -26,18 +26,17 @@ iframe {
 }
 
 *, *::before, *::after {
-  box-sizing: inherit;
+  box-sizing: border-box;
+}
+
+html {
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
 }
 
 :root {
   -moz-tab-size: 4;
   tab-size: 4;
-}
-
-html {
-  box-sizing: border-box;
-  line-height: 1.15;
-  -webkit-text-size-adjust: 100%;
 }
 
 [tabindex="-1"]:focus {
@@ -264,18 +263,18 @@ body {
 
 @media (min-width: 768px) {
   body {
-    --text-base-size: 1.15em;
-    --text-scale-ratio: 1.25;
-    --space-unit: 1.15em;
+    --text-base-size:      1.15em;
+    --text-scale-ratio:    1.25;
+    --space-unit:          1.15em;
   }
 }
 
 :root {
+  --radius:                0.25em;
   --button-font-size:      1em;
   --button-sm:             calc(var(--button-font-size) - 0.2em);
   --button-md:             calc(var(--button-font-size) + 0.2em);
   --button-lg:             calc(var(--button-font-size) + 0.4em);
-  --radius:                0.25em;
 }
 
 @media screen and (-webkit-min-device-pixel-ratio: 2), screen and (min-resolution: 2dppx) {
@@ -300,9 +299,9 @@ body {
 
 hr {
   display: block;
-  margin: var(--space-md) 0;
   border: 0;
   border-top: 1px solid var(--color-border);
+  margin: var(--space-md) 0;
 }
 
 a {

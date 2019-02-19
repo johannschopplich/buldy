@@ -1,4 +1,6 @@
+//
 // Color system
+//
 
 :root,
 [data-theme="default"] {
@@ -39,7 +41,9 @@
   color:                   var(--color-text);
 }
 
+//
 // Spacing and typography
+//
 
 :root,
 body {
@@ -82,18 +86,23 @@ body {
 
 @include breakpoint(md) {
   body {
-    --text-base-size: 1.15em;
-    --text-scale-ratio: 1.25;
-    --space-unit: 1.15em;
+    --text-base-size:      1.15em;
+    --text-scale-ratio:    1.25;
+    --space-unit:          1.15em;
   }
 }
 
+//
 // Components
+//
 
 :root {
+  // Radius for various elements
+  --radius:                0.25em;
+
+  // Buttons
   --button-font-size:      1em;
   --button-sm:             calc(var(--button-font-size) - 0.2em);
   --button-md:             calc(var(--button-font-size) + 0.2em);
   --button-lg:             calc(var(--button-font-size) + 0.4em);
-  --radius:                0.25em;
 }

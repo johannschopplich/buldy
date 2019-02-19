@@ -1,4 +1,6 @@
-// Breakpoints
+//
+// Breakpoints and container widths
+//
 
 $grid-breakpoints: (
   sm: 576px,
@@ -7,7 +9,16 @@ $grid-breakpoints: (
   xl: 1200px
 );
 
+$container-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px
+);
+
+//
 // Blocks
+//
 
 @mixin block {
   &:not(:last-child) {
@@ -55,7 +66,9 @@ $grid-breakpoints: (
   }
 }
 
+//
 // Breakpoint mixins
+//
 
 @mixin breakpoint($name, $breakpoints: $grid-breakpoints) {
   $min: breakpoint-min($name, $breakpoints);
