@@ -292,15 +292,8 @@ html {
   overflow-y: scroll;
 }
 
-body,
-button,
-input,
-select,
-textarea {
-  font-family: var(--font-primary);
-}
-
 body {
+  font-family: var(--font-primary);
   font-size: var(--text-base-size);
   color: var(--color-contrast-high);
 }
@@ -309,7 +302,7 @@ hr {
   display: block;
   margin: var(--space-md) 0;
   border: 0;
-  border-top: 1px solid #cccccc;
+  border-top: 1px solid var(--color-border);
 }
 
 a {
