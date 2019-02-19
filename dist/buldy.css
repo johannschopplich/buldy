@@ -134,7 +134,6 @@ table {
 td,
 th {
   padding: 0;
-  text-align: left;
 }
 
 label {
@@ -332,7 +331,7 @@ a {
 
 a:hover {
   color: var(--color-text);
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 a:not([href]):not([tabindex]) {
