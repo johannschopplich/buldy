@@ -228,10 +228,10 @@ summary {
   --color-white:           hsl(0, 0%, 100%);
   --color-background:      hsl(0, 0%, 100%);
   --color-contrast-lower:  hsl(0, 0%, 95%);
-  --color-contrast-low:    hsl(240, 1%, 82%);
-  --color-contrast-medium: hsl(240, 1%, 48%);
-  --color-contrast-high:   hsl(240, 4%, 20%);
-  --color-contrast-higher: hsl(240, 6%, 12%);
+  --color-contrast-low:    hsl(0, 0%, 82%);
+  --color-contrast-medium: hsl(0, 0%, 48%);
+  --color-contrast-high:   hsl(0, 0%, 20%);
+  --color-contrast-higher: hsl(0, 0%, 12%);
   --color-red:             hsl(348, 100%, 61%);
   --color-red-a25:         hsla(348, 100%, 61%, 0.25);
   --color-text:            var(--color-contrast-higher);
@@ -454,8 +454,12 @@ table th {
   color: var(--color-contrast-high) !important;
 }
 
-.has-text-black {
+.has-text-darker {
   color: var(--color-contrast-higher) !important;
+}
+
+.has-text-black {
+  color: var(--color-black) !important;
 }
 
 .has-background-primary {
@@ -478,8 +482,12 @@ table th {
   background-color: var(--color-contrast-high) !important;
 }
 
-.has-background-black {
+.has-background-darker {
   background-color: var(--color-contrast-higher) !important;
+}
+
+.has-background-black {
+  background-color: var(--color-black) !important;
 }
 
 .has-padding-top-xxxs {
