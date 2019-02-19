@@ -201,7 +201,7 @@ summary {
 }
 
 .content a:focus {
-  outline: 3px solid var(--color-border);
+  outline: 3px solid var(--color-primary);
   outline-offset: 2px;
 }
 
