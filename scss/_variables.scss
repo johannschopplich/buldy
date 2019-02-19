@@ -7,7 +7,6 @@
   --color-primary-hover:   hsl(220, 90%, 52%);
   --color-primary-active:  hsl(220, 90%, 49%);
   --color-primary-a25:     hsla(220, 90%, 56%, 0.25);
-  --color-primary-a50:     hsla(220, 90%, 56%, 0.5);
 
   --color-accent:          hsl(171, 100%, 41%);
   --color-accent-hover:    hsl(171, 100%, 37%);
@@ -32,6 +31,7 @@
 
   // Semantic
   --color-text:            var(--color-contrast-higher);
+  --color-text-outline:    var(--color-contrast-low);
   --color-border:          var(--color-contrast-low);
 }
 
