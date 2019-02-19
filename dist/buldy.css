@@ -400,7 +400,7 @@ table th {
   padding: var(--space-xs) var(--space-sm);
   align-items: center;
   justify-content: flex-start;
-  vertical-align: middle;
+  vertical-align: top;
 }
 
 .button:focus, .button:active,
