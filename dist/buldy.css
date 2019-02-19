@@ -391,18 +391,16 @@ table th {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+  display: inline-flex;
   background-color: transparent;
   border: 1px solid transparent;
-  color: inherit;
-  line-height: inherit;
   border-radius: var(--radius);
+  color: inherit;
   box-shadow: none;
-  text-decoration: none;
-}
-
-.button:hover,
-.form-control:hover {
-  text-decoration: none;
+  padding: var(--space-xs) var(--space-sm);
+  align-items: center;
+  justify-content: flex-start;
+  vertical-align: middle;
 }
 
 .button:focus, .button:active,
@@ -1262,7 +1260,6 @@ table th {
   width: 100%;
   background-color: var(--color-background);
   border-color: var(--color-contrast-low);
-  padding: var(--space-xs) var(--space-sm);
   transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 
@@ -1272,8 +1269,8 @@ table th {
   }
 }
 
-.form-control:focus {
-  border-color: var(--color-primary);
+.form-control:focus, .form-control:active {
+  border-color: var(--color-contrast-medium);
   box-shadow: 0 0 0 3px var(--color-primary-a25);
 }
 
@@ -1283,6 +1280,17 @@ table th {
 
 .form-control::-moz-placeholder {
   opacity: 1;
+  color: var(--color-contrast-medium);
+}
+
+.form-control[readonly] {
+  box-shadow: none;
+}
+
+.form-control[disabled] {
+  background-color: var(--color-white);
+  border-color: var(--color-contrast-low);
+  box-shadow: none;
   color: var(--color-contrast-medium);
 }
 
@@ -1352,20 +1360,21 @@ table th {
 }
 
 .button {
-  display: inline-flex;
   background-color: var(--color-white);
   border-color: var(--color-contrast-low);
   color: var(--color-text);
   font-size: var(--button-font-size);
   line-height: 1;
   cursor: pointer;
-  padding: var(--space-xs) var(--space-sm);
+  justify-content: center;
   text-align: center;
   white-space: nowrap;
-  justify-content: center;
-  align-items: center;
-  vertical-align: middle;
+  text-decoration: none;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.button:hover {
+  text-decoration: none;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -1374,12 +1383,7 @@ table th {
   }
 }
 
-.button:hover {
-  border-color: var(--color-contrast-medium);
-  color: var(--color-text);
-}
-
-.button:focus {
+.button:hover, .button:focus {
   border-color: var(--color-contrast-medium);
   color: var(--color-text);
 }

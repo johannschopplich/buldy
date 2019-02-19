@@ -1,24 +1,21 @@
 .button {
-  display: inline-flex;
   background-color: var(--color-white);
   border-color: var(--color-contrast-low);
   color: var(--color-text);
   font-size: var(--button-font-size);
   line-height: 1;
   cursor: pointer;
-  padding: var(--space-xs) var(--space-sm);
+  justify-content: center;
   text-align: center;
   white-space: nowrap;
-  justify-content: center;
-  align-items: center;
-  vertical-align: middle;
+  text-decoration: none;
+  &:hover {
+    text-decoration: none;
+  }
+
   @extend %unselectable;
   @include transition(color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out);
-
-  &:hover {
-    border-color: var(--color-contrast-medium);
-    color: var(--color-text);
-  }
+  &:hover,
   &:focus {
     border-color: var(--color-contrast-medium);
     color: var(--color-text);

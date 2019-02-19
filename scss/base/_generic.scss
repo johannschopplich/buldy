@@ -144,16 +144,16 @@ table {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+  display: inline-flex;
   background-color: transparent;
   border: 1px solid transparent;
-  color: inherit;
-  line-height: inherit;
   border-radius: var(--radius);
+  color: inherit;
   box-shadow: none;
-  text-decoration: none;
-  &:hover {
-    text-decoration: none;
-  }
+  padding: var(--space-xs) var(--space-sm);
+  align-items: center;
+  justify-content: flex-start;
+  vertical-align: middle;
   &:focus,
   &:active {
     outline: none;

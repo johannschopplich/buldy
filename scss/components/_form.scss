@@ -2,10 +2,11 @@
   width: 100%;
   background-color: var(--color-background);
   border-color: var(--color-contrast-low);
-  padding: var(--space-xs) var(--space-sm);
+
   @include transition(background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out);
-  &:focus {
-    border-color: var(--color-primary);
+  &:focus,
+  &:active {
+    border-color: var(--color-contrast-medium);
     box-shadow: 0 0 0 3px var(--color-primary-a25);
   }
   &::-webkit-input-placeholder {
@@ -13,6 +14,15 @@
   }
   &::-moz-placeholder {
     opacity: 1;
+    color: var(--color-contrast-medium);
+  }
+  &[readonly] {
+    box-shadow: none;
+  }
+  &[disabled] {
+    background-color: var(--color-white);
+    border-color: var(--color-contrast-low);
+    box-shadow: none;
     color: var(--color-contrast-medium);
   }
   &[aria-invalid="true"] {
