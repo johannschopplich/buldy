@@ -100,9 +100,11 @@ body {
   // Radius for various elements
   --radius:                0.25em;
 
+  // Form controls
+  --control-text-size:     1em;
+
   // Buttons
-  --button-font-size:      1em;
-  --button-sm:             calc(var(--button-font-size) - 0.2em);
-  --button-md:             calc(var(--button-font-size) + 0.2em);
-  --button-lg:             calc(var(--button-font-size) + 0.4em);
+  --button-sm:             calc(var(--control-text-size) - 0.2em);
+  --button-md:             calc(var(--control-text-size) + 0.2em);
+  --button-lg:             calc(var(--control-text-size) + 0.4em);
 }

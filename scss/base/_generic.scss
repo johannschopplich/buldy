@@ -140,19 +140,18 @@ table {
 
 .button,
 .form-control {
-  position: relative;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+  position: relative;
   display: inline-flex;
-  background-color: transparent;
   border: 1px solid transparent;
   border-radius: var(--radius);
-  color: inherit;
+  font-size: var(--control-text-size);
   box-shadow: none;
   padding: var(--space-xs) var(--space-sm);
-  align-items: center;
   justify-content: flex-start;
+  align-items: center;
   vertical-align: top;
   &:focus,
   &:active {

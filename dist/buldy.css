@@ -271,10 +271,10 @@ body {
 
 :root {
   --radius:                0.25em;
-  --button-font-size:      1em;
-  --button-sm:             calc(var(--button-font-size) - 0.2em);
-  --button-md:             calc(var(--button-font-size) + 0.2em);
-  --button-lg:             calc(var(--button-font-size) + 0.4em);
+  --control-text-size:     1em;
+  --button-sm:             calc(var(--control-text-size) - 0.2em);
+  --button-md:             calc(var(--control-text-size) + 0.2em);
+  --button-lg:             calc(var(--control-text-size) + 0.4em);
 }
 
 @media screen and (-webkit-min-device-pixel-ratio: 2), screen and (min-resolution: 2dppx) {
@@ -387,19 +387,18 @@ table th {
 
 .button,
 .form-control {
-  position: relative;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+  position: relative;
   display: inline-flex;
-  background-color: transparent;
   border: 1px solid transparent;
   border-radius: var(--radius);
-  color: inherit;
+  font-size: var(--control-text-size);
   box-shadow: none;
   padding: var(--space-xs) var(--space-sm);
-  align-items: center;
   justify-content: flex-start;
+  align-items: center;
   vertical-align: top;
 }
 
@@ -1260,6 +1259,7 @@ table th {
   width: 100%;
   background-color: var(--color-background);
   border-color: var(--color-contrast-low);
+  color: var(--color-text);
   transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 
@@ -1360,10 +1360,9 @@ table th {
 }
 
 .button {
-  background-color: var(--color-white);
+  background-color: var(--color-background);
   border-color: var(--color-contrast-low);
   color: var(--color-text);
-  font-size: var(--button-font-size);
   line-height: 1;
   cursor: pointer;
   justify-content: center;
