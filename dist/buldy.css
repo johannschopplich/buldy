@@ -1288,7 +1288,7 @@ table th {
 }
 
 .form-control[disabled] {
-  background-color: var(--color-white);
+  background-color: var(--color-background);
   border-color: var(--color-contrast-low);
   box-shadow: none;
   color: var(--color-contrast-medium);
@@ -1468,7 +1468,7 @@ table th {
 }
 
 .button[disabled] {
-  background-color: var(--color-white);
+  background-color: var(--color-background);
   border-color: var(--color-contrast-low);
   box-shadow: none;
   opacity: 0.5;
