@@ -43,9 +43,7 @@
     &:focus {
       border-color: transparent;
       color: var(--color-white);
-      &:not(:active) {
-        box-shadow: 0 0 0 3px var(--button-shadow);
-      }
+      box-shadow: 0 0 0 3px var(--button-shadow);
     }
     &:active {
       background-color: var(--button-color-active);
@@ -59,6 +57,7 @@
     }
 
     // Outlined version
+
     &.is-outlined {
       background-color: transparent;
       border-color: var(--button-color);

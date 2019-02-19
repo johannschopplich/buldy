@@ -1,4 +1,6 @@
+//
 // Colors
+//
 
 .has-text-primary { color: var(--color-primary) !important; }
 .has-text-accent  { color: var(--color-accent) !important; }
@@ -14,7 +16,9 @@
 .has-background-dark    { background-color: var(--color-contrast-high) !important; }
 .has-background-black   { background-color: var(--color-contrast-higher) !important; }
 
+//
 // Common spacing values
+//
 
 $sizes: xxxs, xxs, xs, sm, md, lg, xl, xxl, xxxl;
 @each $size in $sizes {
@@ -25,12 +29,15 @@ $sizes: xxxs, xxs, xs, sm, md, lg, xl, xxl, xxxl;
 }
 
 // Standard distances if no sizes is given
+
 .has-padding-top               { padding-top: var(--space-md) !important; }
 .has-padding-bottom            { padding-bottom: var(--space-md) !important; }
 .has-margin-top                { margin-top: var(--space-md) !important; }
 .has-margin-bottom             { margin-bottom: var(--space-md) !important; }
 
+//
 // Typography
+//
 
 .has-text-left     { text-align: left !important; }
 .has-text-right    { text-align: right !important; }
@@ -50,7 +57,9 @@ $sizes: xxxs, xxs, xs, sm, md, lg, xl, xxl, xxxl;
 .has-text-weight-semibold { font-weight: 600 !important; }
 .has-text-weight-bold     { font-weight: 700 !important; }
 
+//
 // Miscellaneous
+//
 
 .is-marginless {
   margin: 0 !important;
@@ -84,17 +93,16 @@ $sizes: xxxs, xxs, xs, sm, md, lg, xl, xxl, xxxl;
   border: 0;
 }
 
+//
 // Utilities for common `display` values
-
-$displays: inline, block;
+//
 
 @each $breakpoint in map-keys($grid-breakpoints) {
   @include breakpoint($breakpoint) {
     $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
 
-    @each $value in $displays {
-      .is-hidden-#{$infix}    { display: $value !important; }
-      .is-#{$value}-#{$infix} { display: $value !important; }
-    }
+    .is-hidden-#{$infix} { display: none !important; }
+    .is-inline-#{$infix} { display: inline !important; }
+    .is-block-#{$infix}  { display: block !important; }
   }
 }

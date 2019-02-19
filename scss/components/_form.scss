@@ -36,7 +36,9 @@
   margin-bottom: var(--space-xxxs);
 }
 
+//
 // Error message
+//
 
 .message.is-error {
   background-color: var(--color-red);
@@ -46,6 +48,10 @@
   margin-top: var(--space-sm);
   padding: var(--space-xs);
 }
+
+//
+// List
+//
 
 .radio-list,
 .checkbox-list {

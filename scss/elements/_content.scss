@@ -6,7 +6,9 @@
 
   @extend %block;
 
+  //
   // Headings
+  //
 
   h1,
   h2,
@@ -48,7 +50,9 @@
     font-size: var(--text-6);
   }
 
+  //
   // Text-level semantics
+  //
 
   li + li {
     margin-top: calc(var(--space-xxxs) * var(--text-vspace-multiplier, 1));
@@ -58,7 +62,9 @@
     @extend %focus-outlined;
   }
 
+  //
   // Block elements
+  //
 
   p,
   ol li,

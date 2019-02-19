@@ -60,8 +60,8 @@ ul {
 }
 
 abbr[title] {
-  cursor: help;
   text-decoration: underline dotted;
+  cursor: help;
   text-decoration-skip-ink: none;
 }
 
@@ -748,13 +748,10 @@ table th {
 
 @media (min-width: 576px) {
   .is-hidden-sm {
-    display: inline !important;
+    display: none !important;
   }
   .is-inline-sm {
     display: inline !important;
-  }
-  .is-hidden-sm {
-    display: block !important;
   }
   .is-block-sm {
     display: block !important;
@@ -763,13 +760,10 @@ table th {
 
 @media (min-width: 768px) {
   .is-hidden-md {
-    display: inline !important;
+    display: none !important;
   }
   .is-inline-md {
     display: inline !important;
-  }
-  .is-hidden-md {
-    display: block !important;
   }
   .is-block-md {
     display: block !important;
@@ -778,13 +772,10 @@ table th {
 
 @media (min-width: 992px) {
   .is-hidden-lg {
-    display: inline !important;
+    display: none !important;
   }
   .is-inline-lg {
     display: inline !important;
-  }
-  .is-hidden-lg {
-    display: block !important;
   }
   .is-block-lg {
     display: block !important;
@@ -793,13 +784,10 @@ table th {
 
 @media (min-width: 1200px) {
   .is-hidden-xl {
-    display: inline !important;
+    display: none !important;
   }
   .is-inline-xl {
     display: inline !important;
-  }
-  .is-hidden-xl {
-    display: block !important;
   }
   .is-block-xl {
     display: block !important;
@@ -1416,9 +1404,6 @@ table th {
 .button.is-primary:focus, .button.is-accent:focus {
   border-color: transparent;
   color: var(--color-white);
-}
-
-.button.is-primary:focus:not(:active), .button.is-accent:focus:not(:active) {
   box-shadow: 0 0 0 3px var(--button-shadow);
 }
 
