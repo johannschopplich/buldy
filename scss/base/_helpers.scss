@@ -103,9 +103,9 @@ $sizes: xxxs, xxs, xs, sm, md, lg, xl, xxl, xxxl;
   @include breakpoint($breakpoint) {
     $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
 
-    .is-hidden-#{$infix} { display: none !important; }
-    .is-inline-#{$infix} { display: inline !important; }
-    .is-block-#{$infix}  { display: block !important; }
+    .is-#{$infix}-hidden { display: none !important; }
+    .is-#{$infix}-inline { display: inline !important; }
+    .is-#{$infix}-block  { display: block !important; }
   }
 }
 

@@ -736,49 +736,49 @@ table th {
 }
 
 @media (min-width: 576px) {
-  .is-hidden-sm {
+  .is-sm-hidden {
     display: none !important;
   }
-  .is-inline-sm {
+  .is-sm-inline {
     display: inline !important;
   }
-  .is-block-sm {
+  .is-sm-block {
     display: block !important;
   }
 }
 
 @media (min-width: 768px) {
-  .is-hidden-md {
+  .is-md-hidden {
     display: none !important;
   }
-  .is-inline-md {
+  .is-md-inline {
     display: inline !important;
   }
-  .is-block-md {
+  .is-md-block {
     display: block !important;
   }
 }
 
 @media (min-width: 992px) {
-  .is-hidden-lg {
+  .is-lg-hidden {
     display: none !important;
   }
-  .is-inline-lg {
+  .is-lg-inline {
     display: inline !important;
   }
-  .is-block-lg {
+  .is-lg-block {
     display: block !important;
   }
 }
 
 @media (min-width: 1200px) {
-  .is-hidden-xl {
+  .is-xl-hidden {
     display: none !important;
   }
-  .is-inline-xl {
+  .is-xl-inline {
     display: inline !important;
   }
-  .is-block-xl {
+  .is-xl-block {
     display: block !important;
   }
 }
@@ -1169,34 +1169,33 @@ table th {
   align-items: center;
 }
 
-.columns.is-xs, .columns.is-sm, .columns.is-md, .columns.is-lg, .columns.is-xl {
-  --column-gap: var(--space-sm);
+.columns.has-gap-xsmall, .columns.has-gap-small, .columns.has-gap-medium, .columns.has-gap-large, .columns.has-gap-xlarge {
   margin-right: calc(-1 * var(--column-gap));
   margin-left: calc(-1 * var(--column-gap));
 }
 
-.columns.is-xs > .column, .columns.is-sm > .column, .columns.is-md > .column, .columns.is-lg > .column, .columns.is-xl > .column {
+.columns.has-gap-xsmall > .column, .columns.has-gap-small > .column, .columns.has-gap-medium > .column, .columns.has-gap-large > .column, .columns.has-gap-xlarge > .column {
   padding-right: var(--column-gap);
   padding-left: var(--column-gap);
 }
 
-.columns.is-xs {
+.columns.has-gap-xsmall {
   --column-gap: var(--space-xs);
 }
 
-.columns.is-sm {
+.columns.has-gap-small {
   --column-gap: var(--space-sm);
 }
 
-.columns.is-md {
+.columns.has-gap-medium {
   --column-gap: var(--space-md);
 }
 
-.columns.is-lg {
+.columns.has-gap-large {
   --column-gap: var(--space-lg);
 }
 
-.columns.is-xl {
+.columns.has-gap-xlarge {
   --column-gap: var(--space-xl);
 }
 
@@ -1453,15 +1452,15 @@ table th {
   --button-shadow: var(--color-accent-a25);
 }
 
-.button.is-sm {
+.button.is-small {
   font-size: var(--button-sm);
 }
 
-.button.is-md {
+.button.is-medium {
   font-size: var(--button-md);
 }
 
-.button.is-lg {
+.button.is-large {
   font-size: var(--button-lg);
 }
 

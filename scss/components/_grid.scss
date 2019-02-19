@@ -91,12 +91,11 @@ $grid-columns: 12;
 
   // Gap size modifiers
 
-  &.is-xs,
-  &.is-sm,
-  &.is-md,
-  &.is-lg,
-  &.is-xl {
-    --column-gap: var(--space-sm);
+  &.has-gap-xsmall,
+  &.has-gap-small,
+  &.has-gap-medium,
+  &.has-gap-large,
+  &.has-gap-xlarge {
     margin-right: calc(-1 * var(--column-gap));
     margin-left: calc(-1 * var(--column-gap));
     > .column {
@@ -105,9 +104,9 @@ $grid-columns: 12;
     }
   }
 
-  &.is-xs { --column-gap: var(--space-xs); }
-  &.is-sm { --column-gap: var(--space-sm); }
-  &.is-md { --column-gap: var(--space-md); }
-  &.is-lg { --column-gap: var(--space-lg); }
-  &.is-xl { --column-gap: var(--space-xl); }
+  &.has-gap-xsmall { --column-gap: var(--space-xs); }
+  &.has-gap-small  { --column-gap: var(--space-sm); }
+  &.has-gap-medium { --column-gap: var(--space-md); }
+  &.has-gap-large  { --column-gap: var(--space-lg); }
+  &.has-gap-xlarge { --column-gap: var(--space-xl); }
 }
