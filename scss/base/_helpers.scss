@@ -102,7 +102,6 @@ $sizes: xxxs, xxs, xs, sm, md, lg, xl, xxl, xxxl;
 @each $breakpoint in map-keys($grid-breakpoints) {
   @include breakpoint($breakpoint) {
     $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
-
     .is-#{$infix}-hidden { display: none !important; }
     .is-#{$infix}-inline { display: inline !important; }
     .is-#{$infix}-block  { display: block !important; }
