@@ -144,17 +144,8 @@
     figcaption {
       color: var(--color-contrast-medium);
     }
-  }
-}
 
-// Adapted variables for articles (e.g. blog posts)
-.article.content {
-  --line-height-multiplier: 1.25;
-}
-
-@include breakpoint(sm) {
-  .content {
-    .image {
+    @include breakpoint(sm) {
       &.is-pulled-left,
       &.is-pulled-right {
         width: 45%;
@@ -170,12 +161,8 @@
         margin-left: calc(var(--space-md) * var(--text-vspace-multiplier, 1));
       }
     }
-  }
-}
-
-@include breakpoint(xl) {
-  .content {
-    .image {
+    
+    @include breakpoint(xl) {
       &.is-pulled-left,
       &.is-pulled-right {
         width: 50%;
@@ -188,6 +175,32 @@
         }
         &.is-pulled-right {
           margin-right: calc(-1 * var(--space-xxl));
+        }
+      }
+    } 
+  }
+}
+
+// Adapted variables for articles (e.g. blog posts)
+.article.content {
+  --line-height-multiplier: 1.25;
+}
+
+.content-columns {
+  column-gap: var(--component-padding);
+
+  @for $i from 1 through 2 {
+    &.is-#{$i} {
+      column-count: #{$i};
+    }
+  }
+
+  @each $breakpoint in map-keys($grid-breakpoints) {
+    @include breakpoint($breakpoint) {
+      $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+      @for $i from 1 through 2 {
+        &.is-#{$infix}-#{$i} {
+          column-count: #{$i};
         }
       }
     }

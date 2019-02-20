@@ -1556,36 +1556,84 @@ table th {
   color: var(--color-contrast-medium);
 }
 
-.article.content {
-  --line-height-multiplier: 1.25;
-}
-
 @media (min-width: 576px) {
-  .content .image.is-pulled-left, .content .image.is-pulled-right {
+  .content figure.is-pulled-left, .content figure.is-pulled-right {
     width: 45%;
   }
-  .content .image.is-pulled-left {
+  .content figure.is-pulled-left {
     float: left;
     margin-right: calc(var(--space-md) * var(--text-vspace-multiplier, 1));
   }
-  .content .image.is-pulled-right {
+  .content figure.is-pulled-right {
     float: right;
     margin-left: calc(var(--space-md) * var(--text-vspace-multiplier, 1));
   }
 }
 
 @media (min-width: 1200px) {
-  .content .image.is-pulled-left, .content .image.is-pulled-right {
+  .content figure.is-pulled-left, .content figure.is-pulled-right {
     width: 50%;
   }
-  .content .image.is-outset {
+  .content figure.is-outset {
     width: calc(100% + 2 * var(--space-xxl));
   }
-  .content .image.is-outset:not(.is-pulled-right) {
+  .content figure.is-outset:not(.is-pulled-right) {
     margin-left: calc(-1 * var(--space-xxl));
   }
-  .content .image.is-outset.is-pulled-right {
+  .content figure.is-outset.is-pulled-right {
     margin-right: calc(-1 * var(--space-xxl));
+  }
+}
+
+.article.content {
+  --line-height-multiplier: 1.25;
+}
+
+.content-columns {
+  column-gap: var(--component-padding);
+}
+
+.content-columns.is-1 {
+  column-count: 1;
+}
+
+.content-columns.is-2 {
+  column-count: 2;
+}
+
+@media (min-width: 576px) {
+  .content-columns.is-sm-1 {
+    column-count: 1;
+  }
+  .content-columns.is-sm-2 {
+    column-count: 2;
+  }
+}
+
+@media (min-width: 768px) {
+  .content-columns.is-md-1 {
+    column-count: 1;
+  }
+  .content-columns.is-md-2 {
+    column-count: 2;
+  }
+}
+
+@media (min-width: 992px) {
+  .content-columns.is-lg-1 {
+    column-count: 1;
+  }
+  .content-columns.is-lg-2 {
+    column-count: 2;
+  }
+}
+
+@media (min-width: 1200px) {
+  .content-columns.is-xl-1 {
+    column-count: 1;
+  }
+  .content-columns.is-xl-2 {
+    column-count: 2;
   }
 }
 
