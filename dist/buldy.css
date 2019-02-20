@@ -40,7 +40,7 @@ html {
 }
 
 [tabindex="-1"]:focus {
-  outline: 0 !important;
+  outline: none !important;
 }
 
 h1,
@@ -1388,8 +1388,9 @@ table th {
 }
 
 .button:active {
+  background-color: var(--color-text);
   border-color: var(--color-text);
-  color: var(--color-text);
+  color: var(--color-white);
 }
 
 .button.is-primary, .button.is-accent {
@@ -1437,8 +1438,8 @@ table th {
 .button.is-primary.is-outlined[disabled], .button.is-accent.is-outlined[disabled] {
   background-color: transparent;
   border-color: var(--button-color);
-  box-shadow: none;
   color: var(--button-color);
+  box-shadow: none;
 }
 
 .button.is-primary {
@@ -1500,27 +1501,27 @@ table th {
   margin-top: calc(var(--space-sm) * var(--text-vspace-multiplier, 1));
 }
 
-.content .content h1 {
+.content h1 {
   font-size: var(--text-1);
 }
 
-.content .content h2 {
+.content h2 {
   font-size: var(--text-2);
 }
 
-.content .content h3 {
+.content h3 {
   font-size: var(--text-3);
 }
 
-.content .content h4 {
+.content h4 {
   font-size: var(--text-4);
 }
 
-.content .content h5 {
+.content h5 {
   font-size: var(--text-5);
 }
 
-.content .content h6 {
+.content h6 {
   font-size: var(--text-6);
 }
 

@@ -51,13 +51,15 @@
 // Error message
 //
 
-.message.is-error {
-  background-color: var(--color-red);
-  border-radius: var(--radius);
-  color: var(--color-white);
-  font-size: var(--text-sm);
-  margin-top: var(--space-sm);
-  padding: var(--space-xs);
+.message {
+  &.is-error {
+    background-color: var(--color-red);
+    border-radius: var(--radius);
+    color: var(--color-white);
+    font-size: var(--text-sm);
+    margin-top: var(--space-sm);
+    padding: var(--space-xs);
+  }
 }
 
 //

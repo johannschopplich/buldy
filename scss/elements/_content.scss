@@ -26,27 +26,27 @@
     }
   }
 
-  .content h1 {
+  h1 {
     font-size: var(--text-1);
   }
   
-  .content h2 {
+  h2 {
     font-size: var(--text-2);
   }
   
-  .content h3 {
+  h3 {
     font-size: var(--text-3);
   }
   
-  .content h4 {
+  h4 {
     font-size: var(--text-4);
   }
   
-  .content h5 {
+  h5 {
     font-size: var(--text-5);
   }
   
-  .content h6 {
+  h6 {
     font-size: var(--text-6);
   }
 
@@ -63,7 +63,7 @@
   }
 
   //
-  // Block elements
+  // Other content elements
   //
 
   p,

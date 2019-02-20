@@ -57,7 +57,7 @@ html {
 // This prevents an unwanted focus outline from appearing around elements that
 // might still respond to pointer events.
 [tabindex="-1"]:focus {
-  outline: 0 !important;
+  outline: none !important;
 }
 
 //

@@ -20,11 +20,14 @@
     color: var(--color-text);
   }
   &:active {
+    background-color: var(--color-text);
     border-color: var(--color-text);
-    color: var(--color-text);
+    color: var(--color-white);
   }
 
+  //
   // Themes
+  //
 
   &.is-primary,
   &.is-accent {
@@ -52,7 +55,9 @@
       box-shadow: none;
     }
 
+    //
     // Outlined version
+    //
 
     &.is-outlined {
       background-color: transparent;
@@ -67,8 +72,8 @@
       &[disabled] {
         background-color: transparent;
         border-color: var(--button-color);
-        box-shadow: none;
         color: var(--button-color);
+        box-shadow: none;
       }
     }
   }
@@ -87,13 +92,17 @@
     --button-shadow: var(--color-accent-a25);
   }
 
+  //
   // Sizes
+  //
 
   &.is-small  { font-size: var(--button-sm); }
   &.is-medium { font-size: var(--button-md); }
   &.is-large  { font-size: var(--button-lg); }
 
+  //
   // Modifiers
+  //
 
   &[disabled] {
     background-color: var(--color-background);
