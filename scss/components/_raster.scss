@@ -8,13 +8,17 @@ grid {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   --grid-cs: 1; // Start
-  --grid-ce: -1 // End
+  --grid-ce: -1; // End
 }
 
 //
 // `c` – cell or column
 //
-grid > c { display: block; appearance: none; -webkit-appearance: none }
+grid > c {
+  -webkit-appearance: none;
+  appearance: none;
+  display: block;
+}
 
 grid[columns="1"] { grid-template-columns: repeat(1, 1fr) }
 grid[columns="2"] { grid-template-columns: repeat(2, 1fr) }
@@ -74,8 +78,8 @@ grid > c[span*=".."] {
 
 grid > c[span="row"] { grid-column: 1 / -1 }
 
-// For window width <= 600
-@media (max-width: 576px) {
+// For window width <= 575 px
+@media (max-width: 575px) {
   grid[columns-md="1"] { grid-template-columns: repeat(1, 1fr) }
   grid[columns-md="2"] { grid-template-columns: repeat(2, 1fr) }
   grid[columns-md="3"] { grid-template-columns: repeat(3, 1fr) }
@@ -135,8 +139,8 @@ grid > c[span="row"] { grid-column: 1 / -1 }
   grid > c[span-md="row"] { grid-column: 1 / -1 }
 }
 
-// For window width >= 1200
-@media (min-width: 1199px) {
+// For window width >= 1200 px
+@media (min-width: 1200px) {
   grid[columns-xl="1"] { grid-template-columns: repeat(1, 1fr) }
   grid[columns-xl="2"] { grid-template-columns: repeat(2, 1fr) }
   grid[columns-xl="3"] { grid-template-columns: repeat(3, 1fr) }
@@ -203,6 +207,7 @@ grid.debug > * {
   --color-debug: rgba(248,110,91 ,0.3);
   background-image: linear-gradient(to bottom, var(--color-debug) 0%, var(--color-debug) 100%);
 }
+
 grid.debug > :nth-child(6n+2) { --color-debug: rgba(103, 126, 208, 0.3) }
 grid.debug > :nth-child(6n+3) { --color-debug: rgba(224, 174, 72, 0.3) }
 grid.debug > :nth-child(6n+4) { --color-debug: rgba(77, 214, 115, 0.3) }
