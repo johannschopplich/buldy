@@ -203,14 +203,15 @@ grid > c[span="row"] { grid-column: 1 / -1 }
 //
 // Debug class to visualize its effective cells
 //
-grid.debug > * {
-  --color-debug: rgba(248,110,91 ,0.3);
-  background-image: linear-gradient(to bottom, var(--color-debug) 0%, var(--color-debug) 100%);
+grid.debug {
+  > * {
+    --color-debug: rgba(248,110,91 ,0.3);
+    background-image: linear-gradient(to bottom, var(--color-debug) 0%, var(--color-debug) 100%);
+  }
+  > :nth-child(6n+2) { --color-debug: rgba(103, 126, 208, 0.3) }
+  > :nth-child(6n+3) { --color-debug: rgba(224, 174, 72, 0.3) }
+  > :nth-child(6n+4) { --color-debug: rgba(77, 214, 115, 0.3) }
+  > :nth-child(6n+5) { --color-debug: rgba(217, 103, 219, 0.3) }
+  > :nth-child(6n+6) { --color-debug: rgba(94, 204, 211, 0.3) }
+  > :nth-child(6n+7) { --color-debug: rgba(248, 110, 91, 0.3) }
 }
-
-grid.debug > :nth-child(6n+2) { --color-debug: rgba(103, 126, 208, 0.3) }
-grid.debug > :nth-child(6n+3) { --color-debug: rgba(224, 174, 72, 0.3) }
-grid.debug > :nth-child(6n+4) { --color-debug: rgba(77, 214, 115, 0.3) }
-grid.debug > :nth-child(6n+5) { --color-debug: rgba(217, 103, 219, 0.3) }
-grid.debug > :nth-child(6n+6) { --color-debug: rgba(94, 204, 211, 0.3) }
-grid.debug > :nth-child(6n+7) { --color-debug: rgba(248, 110, 91, 0.3) }
