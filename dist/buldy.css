@@ -314,20 +314,6 @@ a:hover {
   text-decoration: none;
 }
 
-a:not([href]):not([tabindex]) {
-  color: inherit;
-  text-decoration: none;
-}
-
-a:not([href]):not([tabindex]):hover, a:not([href]):not([tabindex]):focus {
-  color: inherit;
-  text-decoration: none;
-}
-
-a:not([href]):not([tabindex]):focus {
-  outline: none;
-}
-
 mark {
   background-color: #fcf8e3;
   color: inherit;

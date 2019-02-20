@@ -1,19 +1,20 @@
-flow {
-  display: block;
-  -webkit-appearance: none;
-  appearance: none;
+.columned {
+  column-gap: var(--component-padding);
 
-  &[columns] {
-    column-gap: var(--component-padding);
+  @for $i from 1 through 2 {
+    &.is-#{$i} {
+      column-count: #{$i};
+    }
   }
 
-  &[columns="2"] {
-    column-count: 2;
-  }
-}
-
-@media (max-width: 575px) {
-  flow[columns-sm="1"] {
-    column-count: 1;
+  @each $breakpoint in map-keys($grid-breakpoints) {
+    @include breakpoint($breakpoint) {
+      $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+      @for $i from 1 through 2 {
+        &.is-#{$infix}-#{$i} {
+          column-count: #{$i};
+        }
+      }
+    }
   }
 }
