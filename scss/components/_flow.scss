@@ -1,19 +1,15 @@
-//
-// FLow
-//
-
 flow {
   display: block;
   -webkit-appearance: none;
   appearance: none;
-}
 
-flow[columns] {
-  column-gap: var(--spacing);
-}
+  &[columns] {
+    column-gap: var(--component-padding);
+  }
 
-flow[columns="2"] {
-  column-count: 2;
+  &[columns="2"] {
+    column-count: 2;
+  }
 }
 
 @media (max-width: 575px) {
