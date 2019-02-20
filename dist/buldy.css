@@ -191,8 +191,7 @@ summary {
   margin-bottom: var(--space-sm);
 }
 
-.is-unselectable, .radio-list label,
-.checkbox-list label, .button {
+.is-unselectable, .button {
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -388,7 +387,6 @@ table th {
 .button,
 .form-control {
   -webkit-appearance: none;
-  -moz-appearance: none;
   appearance: none;
   position: relative;
   display: inline-flex;
@@ -629,18 +627,6 @@ table th {
   margin-bottom: var(--space-md) !important;
 }
 
-.has-text-left {
-  text-align: left !important;
-}
-
-.has-text-right {
-  text-align: right !important;
-}
-
-.has-text-centered {
-  text-align: center !important;
-}
-
 @media (min-width: 576px) {
   .has-text-sm-left {
     text-align: left !important;
@@ -687,6 +673,18 @@ table th {
   .has-text-xl-centered {
     text-align: center !important;
   }
+}
+
+.has-text-left {
+  text-align: left !important;
+}
+
+.has-text-right {
+  text-align: right !important;
+}
+
+.has-text-centered {
+  text-align: center !important;
 }
 
 .has-text-weight-light {
@@ -1310,9 +1308,8 @@ table th {
 }
 
 .form-label {
-  display: inline-block;
   font-size: var(--text-sm);
-  margin-bottom: var(--space-xxxs);
+  margin-bottom: var(--space-xxs);
 }
 
 .message.is-error {
@@ -1322,41 +1319,6 @@ table th {
   font-size: var(--text-sm);
   margin-top: var(--space-sm);
   padding: var(--space-xs);
-}
-
-.radio-list > *,
-.checkbox-list > * {
-  position: relative;
-  display: flex;
-  align-items: baseline;
-}
-
-.radio-list > *:not(:last-of-type),
-.checkbox-list > *:not(:last-of-type) {
-  margin-bottom: var(--space-xxs);
-}
-
-.radio-list label,
-.checkbox-list label {
-  line-height: var(--body-line-height);
-}
-
-.radio-list input,
-.checkbox-list input {
-  flex-shrink: 0;
-  margin-right: var(--space-xxxs);
-  vertical-align: top;
-}
-
-.radio-list.is-inlined,
-.checkbox-list.is-inlined {
-  display: flex;
-  margin-bottom: calc(-1 * var(--space-md));
-}
-
-.radio-list.is-inlined > *,
-.checkbox-list.is-inlined > * {
-  margin: 0 var(--space-md) var(--space-md) 0;
 }
 
 .button {
