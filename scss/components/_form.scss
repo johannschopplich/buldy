@@ -42,7 +42,6 @@
 }
 
 .form-label {
-  display: inline-block;
   font-size: var(--text-sm);
   margin-bottom: var(--space-xxxs);
 }
@@ -59,41 +58,5 @@
     font-size: var(--text-sm);
     margin-top: var(--space-sm);
     padding: var(--space-xs);
-  }
-}
-
-//
-// Lists
-//
-
-.radio-list,
-.checkbox-list {
-  > * {
-    position: relative;
-    display: flex;
-    align-items: baseline;
-    &:not(:last-of-type) {
-      margin-bottom: var(--space-xxs);
-    }
-  }
-
-  label {
-    line-height: var(--body-line-height);
-    @extend %unselectable;
-  }
-
-  input {
-    flex-shrink: 0;
-    margin-right: var(--space-xxxs);
-    vertical-align: top;
-  }
-
-  &.is-inlined {
-    display: flex;
-    margin-bottom: calc(-1 * var(--space-md));
-
-    > * {
-      margin: 0 var(--space-md) var(--space-md) 0;
-    }
   }
 }
