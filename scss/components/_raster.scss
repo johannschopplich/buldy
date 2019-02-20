@@ -6,7 +6,7 @@
 
 grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(6, 1fr);
   --grid-cs: 1; // Start
   --grid-ce: -1 // End
 }
