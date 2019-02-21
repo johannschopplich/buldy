@@ -1313,12 +1313,7 @@ table th {
   justify-content: center;
   text-align: center;
   white-space: nowrap;
-  text-decoration: none;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-}
-
-.button:hover {
-  text-decoration: none;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -1336,6 +1331,22 @@ table th {
   background-color: var(--color-text);
   border-color: var(--color-text);
   color: var(--color-white);
+}
+
+.button.is-text {
+  background-color: transparent;
+  border-color: transparent;
+  color: var(--color-text);
+}
+
+.button.is-text:hover, .button.is-text:focus {
+  text-decoration: underline;
+}
+
+.button.is-text[disabled] {
+  background-color: transparent;
+  border-color: transparent;
+  box-shadow: none;
 }
 
 .button.is-primary, .button.is-accent {

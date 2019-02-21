@@ -7,11 +7,6 @@
   justify-content: center;
   text-align: center;
   white-space: nowrap;
-  text-decoration: none;
-  &:hover {
-    text-decoration: none;
-  }
-
   @extend %unselectable;
   @include transition(color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out);
   &:hover,
@@ -26,7 +21,26 @@
   }
 
   //
-  // Themes
+  // Text
+  //
+
+  &.is-text {
+    background-color: transparent;
+    border-color: transparent;
+    color: var(--color-text);
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+    }
+    &[disabled] {
+      background-color: transparent;
+      border-color: transparent;
+      box-shadow: none;
+    }
+  }
+
+  //
+  // Colors
   //
 
   &.is-primary,
