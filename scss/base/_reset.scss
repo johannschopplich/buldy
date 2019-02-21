@@ -64,14 +64,14 @@ html {
 // Sections
 //
 
-// Normalize all headings to text-level (opinionated).
+// Normalize all headings to text-level size (opinionated).
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-  font-size: 100%;
+  font-size: 1em;
   font-weight: normal;
 }
 
@@ -210,14 +210,6 @@ fieldset {
 // Change the resize direction on textareas in all browsers (opinionated).
 textarea {
   resize: vertical;
-}
-
-//
-// Iframes
-//
-
-iframe {
-  border: 0;
 }
 
 //
