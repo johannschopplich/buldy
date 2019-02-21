@@ -59,7 +59,9 @@ $grid-columns: 12;
     margin-bottom: calc(var(--space-sm) * 2 - var(--space-sm));
   }
 
+  //
   // Modifiers
+  //
 
   &.is-gapless {
     margin-top: 0;
@@ -89,7 +91,9 @@ $grid-columns: 12;
     align-items: center;
   }
 
+  //
   // Gap size modifiers
+  //
 
   &.has-gap-xsmall,
   &.has-gap-small,
