@@ -116,7 +116,7 @@ grid > c[span*="-"], grid > c[span*=".."] {
   grid-column-end: var(--grid-ce) }
 grid > c[span="row"] { grid-column: 1 / -1 }
 
-// For window width >= 575
+// For window width <= 575 px
 @media (max-width: 575px) {
   grid[columns-sm="1"] { --grid-tc: repeat(1, 1fr) }
   grid[columns-sm="2"] { --grid-tc: repeat(2, 1fr) }
@@ -223,7 +223,7 @@ grid > c[span="row"] { grid-column: 1 / -1 }
   grid > c[span-sm="row"] { grid-column: 1 / -1 }
 }
 
-// For window width >= 1200
+// For window width >= 1200 px
 @media (min-width: 1200px) {
   grid[columns-xl="1"] { --grid-tc: repeat(1, 1fr) }
   grid[columns-xl="2"] { --grid-tc: repeat(2, 1fr) }
