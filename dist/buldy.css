@@ -1454,7 +1454,7 @@ table th {
 }
 
 .icon-text > *:nth-child(2) {
-  margin-left: var(--space-xxs);
+  margin-left: var(--space-xxxs);
 }
 
 .content {
