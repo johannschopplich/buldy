@@ -1448,6 +1448,15 @@ table th {
   width: 100%;
 }
 
+.icon-text {
+  display: inline-flex;
+  align-items: center;
+}
+
+.icon-text > *:nth-child(2) {
+  margin-left: var(--space-xxs);
+}
+
 .content {
   --component-body-line-height: calc(var(--body-line-height) * var(--line-height-multiplier, 1));
   --component-heading-line-height: calc(var(--heading-line-height) * var(--line-height-multiplier, 1));
