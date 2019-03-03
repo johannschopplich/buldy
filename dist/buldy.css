@@ -150,6 +150,13 @@ button,
   -webkit-appearance: button;
 }
 
+button:not(:disabled),
+[type="button"]:not(:disabled),
+[type="reset"]:not(:disabled),
+[type="submit"]:not(:disabled) {
+  cursor: pointer;
+}
+
 fieldset {
   min-width: 0;
   border: 0;
@@ -1321,7 +1328,6 @@ table th {
   border-color: var(--color-contrast-low);
   color: var(--color-text);
   line-height: 1;
-  cursor: pointer;
   justify-content: center;
   text-align: center;
   white-space: nowrap;
