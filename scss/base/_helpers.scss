@@ -9,6 +9,7 @@
 .has-text-dark    { color: var(--color-contrast-high) !important; }
 .has-text-darker  { color: var(--color-contrast-higher) !important; }
 .has-text-black   { color: var(--color-black) !important; }
+.has-text-current-color { color: currentColor !important; }
 
 .has-background-primary { background-color: var(--color-primary) !important; }
 .has-background-accent  { background-color: var(--color-accent) !important; }
@@ -17,6 +18,7 @@
 .has-background-dark    { background-color: var(--color-contrast-high) !important; }
 .has-background-darker  { background-color: var(--color-contrast-higher) !important; }
 .has-background-black   { background-color: var(--color-black) !important; }
+.has-background-current-color { background-color: currentColor !important; }
 
 //
 // Common spacing values

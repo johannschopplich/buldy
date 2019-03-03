@@ -440,6 +440,10 @@ table th {
   color: var(--color-black) !important;
 }
 
+.has-text-current-color {
+  color: currentColor !important;
+}
+
 .has-background-primary {
   background-color: var(--color-primary) !important;
 }
@@ -466,6 +470,10 @@ table th {
 
 .has-background-black {
   background-color: var(--color-black) !important;
+}
+
+.has-background-current-color {
+  background-color: currentColor !important;
 }
 
 .has-padding-top-xxxsmall {
