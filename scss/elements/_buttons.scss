@@ -109,9 +109,9 @@
   // Sizes
   //
 
-  &.is-small  { font-size: var(--button-sm); }
-  &.is-medium { font-size: var(--button-md); }
-  &.is-large  { font-size: var(--button-lg); }
+  &.is-small  { font-size: var(--button-small); }
+  &.is-medium { font-size: var(--button-medium); }
+  &.is-large  { font-size: var(--button-large); }
 
   //
   // Modifiers

@@ -71,16 +71,16 @@ body {
 
   // Spacing
   --space-unit:            1em;
-  //--space-xxxxs:         calc(0.125 * var(--space-unit));
-  --space-xxxs:            calc(0.25  * var(--space-unit));
-  --space-xxs:             calc(0.375 * var(--space-unit));
-  --space-xs:              calc(0.5   * var(--space-unit));
-  --space-sm:              calc(0.75  * var(--space-unit));
-  --space-md:              calc(1.25  * var(--space-unit));
-  --space-lg:              calc(2     * var(--space-unit));
-  --space-xl:              calc(3.25  * var(--space-unit));
-  --space-xxl:             calc(5.25  * var(--space-unit));
-  --space-xxxl:            calc(8.5   * var(--space-unit));
+  //--space-xxxxsmall:     calc(0.125 * var(--space-unit));
+  --space-xxxsmall:        calc(0.25  * var(--space-unit));
+  --space-xxsmall:         calc(0.375 * var(--space-unit));
+  --space-xsmall:          calc(0.5   * var(--space-unit));
+  --space-small:           calc(0.75  * var(--space-unit));
+  --space-medium:          calc(1.25  * var(--space-unit));
+  --space-large:           calc(2     * var(--space-unit));
+  --space-xlarge:          calc(3.25  * var(--space-unit));
+  --space-xxlarge:         calc(5.25  * var(--space-unit));
+  --space-xxxlarge:        calc(8.5   * var(--space-unit));
   --component-padding:     var(--space-sm);
 }
 
@@ -104,7 +104,7 @@ body {
   --control-text-size:     1em;
 
   // Buttons
-  --button-sm:             calc(var(--control-text-size) - 0.2em);
-  --button-md:             calc(var(--control-text-size) + 0.2em);
-  --button-lg:             calc(var(--control-text-size) + 0.4em);
+  --button-small:          calc(var(--control-text-size) - 0.2em);
+  --button-medium:         calc(var(--control-text-size) + 0.2em);
+  --button-large:          calc(var(--control-text-size) + 0.4em);
 }

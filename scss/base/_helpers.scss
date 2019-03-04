@@ -24,24 +24,12 @@
 // Common spacing values
 //
 
-$spacing-sizes: (
-  xxxs: "xxxsmall",
-  xxs: "xxsmall",
-  xs: "xsmall",
-  sm: "small",
-  md: "medium",
-  lg: "large",
-  xl: "xlarge",
-  xxl: "xxlarge",
-  xxxl: "xxxlarge"
-);
-
-@each $size in map-keys($spacing-sizes) {
-  $size-name: map-get($spacing-sizes, $size);
-  .has-padding-top-#{$size-name}    { padding-top: var(--space-#{$size}) !important; }
-  .has-padding-bottom-#{$size-name} { padding-bottom: var(--space-#{$size}) !important; }
-  .has-margin-top-#{$size-name}     { margin-top: var(--space-#{$size}) !important; }
-  .has-margin-bottom-#{$size-name}  { margin-bottom: var(--space-#{$size}) !important; }
+$spacing-sizes: xxxsmall, xxsmall, xsmall, small, medium, large, xlarge, xxlarge, xxxlarge;
+@each $size in $spacing-sizes {
+  .has-padding-top-#{$size}    { padding-top: var(--space-#{$size}) !important; }
+  .has-padding-bottom-#{$size} { padding-bottom: var(--space-#{$size}) !important; }
+  .has-margin-top-#{$size}     { margin-top: var(--space-#{$size}) !important; }
+  .has-margin-bottom-#{$size}  { margin-bottom: var(--space-#{$size}) !important; }
 }
 
 // Standard distances if no sizes is given
