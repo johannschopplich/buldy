@@ -1,3 +1,11 @@
+/*
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.001s !important;
+    transition-duration: 0.001s !important;
+  }
+}
+*/
 html,
 body,
 h1,
@@ -104,11 +112,11 @@ video,
 canvas,
 iframe {
   vertical-align: middle;
-  max-width: 100%;
 }
 
 img,
 video {
+  max-width: 100%;
   height: auto;
 }
 

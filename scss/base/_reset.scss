@@ -2,6 +2,18 @@
 // Document
 //
 
+// Immediately jump any animation to the end point if the user has set their
+// device to "prefers reduced motion". This could create bad, unintended
+// consequences. Use as needed, or write your own appropriate code.
+/*
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.001s !important;
+    transition-duration: 0.001s !important;
+  }
+}
+*/
+
 // Remove default spacing (opinionated).
 html,
 body,
@@ -133,6 +145,7 @@ sup {
 // Embedded content
 //
 
+// Change the alignment on media elements in all browers (opinionated).
 img,
 svg,
 audio,
@@ -140,12 +153,15 @@ video,
 canvas,
 iframe {
   vertical-align: middle;
-  max-width: 100%;
 }
 
+// Responsive image and video:
+// Keep both elements from scaling beyond the width of their parents.
 img,
 video {
-  height: auto;
+  max-width: 100%; // Set a maximum relative to the parent.
+  height: auto; // Override the height to `auto`, otherwise the elements
+  // will be stretched when setting a width and height attribute on them.
 }
 
 // Change the fill color to match the text color in all browsers (opinionated).
