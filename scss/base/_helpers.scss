@@ -5,7 +5,7 @@
 .has-text-primary { color: var(--color-primary) !important; }
 .has-text-accent  { color: var(--color-accent) !important; }
 .has-text-white   { color: var(--color-white) !important; }
-.has-text-light   { color: var(--color-contrast-low) !important; }
+.has-text-light   { color: var(--color-contrast-light) !important; }
 .has-text-dark    { color: var(--color-contrast-high) !important; }
 .has-text-darker  { color: var(--color-contrast-higher) !important; }
 .has-text-black   { color: var(--color-black) !important; }
@@ -14,7 +14,7 @@
 .has-background-primary { background-color: var(--color-primary) !important; }
 .has-background-accent  { background-color: var(--color-accent) !important; }
 .has-background-white   { background-color: var(--color-white) !important; }
-.has-background-light   { background-color: var(--color-contrast-low) !important; }
+.has-background-light   { background-color: var(--color-contrast-light) !important; }
 .has-background-dark    { background-color: var(--color-contrast-high) !important; }
 .has-background-darker  { background-color: var(--color-contrast-higher) !important; }
 .has-background-black   { background-color: var(--color-black) !important; }
@@ -33,10 +33,10 @@ $spacing-sizes: xxxsmall, xxsmall, xsmall, small, medium, large, xlarge, xxlarge
 }
 
 // Standard distances if no sizes is given
-.has-padding-top               { padding-top: var(--space-md) !important; }
-.has-padding-bottom            { padding-bottom: var(--space-md) !important; }
-.has-margin-top                { margin-top: var(--space-md) !important; }
-.has-margin-bottom             { margin-bottom: var(--space-md) !important; }
+.has-padding-top               { padding-top: var(--space-medium) !important; }
+.has-padding-bottom            { padding-bottom: var(--space-medium) !important; }
+.has-margin-top                { margin-top: var(--space-medium) !important; }
+.has-margin-bottom             { margin-bottom: var(--space-medium) !important; }
 
 //
 // Typography

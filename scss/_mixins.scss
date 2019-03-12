@@ -4,7 +4,7 @@
 
 @mixin block {
   &:not(:last-child) {
-    margin-bottom: var(--space-sm);
+    margin-bottom: var(--space-small);
   }
 }
 

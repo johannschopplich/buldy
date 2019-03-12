@@ -41,6 +41,7 @@ $container-widths: (
   --color-background:      hsl(0, 0%, 100%);
   --color-contrast-lower:  hsl(0, 0%, 95%);
   --color-contrast-low:    hsl(0, 0%, 82%);
+  --color-contrast-light:  hsl(0, 0%, 70%);
   --color-contrast-medium: hsl(0, 0%, 48%);
   --color-contrast-high:   hsl(0, 0%, 20%);
   --color-contrast-higher: hsl(0, 0%, 12%);
@@ -99,7 +100,7 @@ body {
   --space-xlarge:          calc(3.25  * var(--space-unit));
   --space-xxlarge:         calc(5.25  * var(--space-unit));
   --space-xxxlarge:        calc(8.5   * var(--space-unit));
-  --component-padding:     var(--space-sm);
+  --component-padding:     var(--space-small);
 }
 
 @include breakpoint(md) {

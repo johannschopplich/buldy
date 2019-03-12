@@ -10,7 +10,7 @@ $grid-columns: 12;
   flex-basis: 0;
   flex-grow: 1;
   flex-shrink: 1;
-  padding: var(--space-sm);
+  padding: var(--space-small);
 
   &.is-narrow {
     flex: none;
@@ -49,14 +49,14 @@ $grid-columns: 12;
 .columns {
   display: flex;
   flex-wrap: wrap;
-  margin-top: calc(var(--space-sm) * -1);
-  margin-right: calc(var(--space-sm) * -1);
-  margin-left: calc(var(--space-sm) * -1);
+  margin-top: calc(var(--space-small) * -1);
+  margin-right: calc(var(--space-small) * -1);
+  margin-left: calc(var(--space-small) * -1);
   &:last-child {
-    margin-bottom: calc(var(--space-sm) * -1);
+    margin-bottom: calc(var(--space-small) * -1);
   }
   &:not(:last-child) {
-    margin-bottom: calc(var(--space-sm) * 2 - var(--space-sm));
+    margin-bottom: calc(var(--space-small) * 2 - var(--space-small));
   }
 
   //
@@ -72,7 +72,7 @@ $grid-columns: 12;
       padding: 0 !important;
     }
     &:not(:last-child) {
-      margin-bottom: calc(2 * var(--space-sm))
+      margin-bottom: calc(2 * var(--space-small))
     }
     &:last-child {
       margin-bottom: 0
@@ -108,9 +108,9 @@ $grid-columns: 12;
     }
   }
 
-  &.has-gap-xsmall { --column-gap: var(--space-xs); }
-  &.has-gap-small  { --column-gap: var(--space-sm); }
-  &.has-gap-medium { --column-gap: var(--space-md); }
-  &.has-gap-large  { --column-gap: var(--space-lg); }
-  &.has-gap-xlarge { --column-gap: var(--space-xl); }
+  &.has-gap-xsmall { --column-gap: var(--space-xsmall); }
+  &.has-gap-small  { --column-gap: var(--space-small); }
+  &.has-gap-medium { --column-gap: var(--space-medium); }
+  &.has-gap-large  { --column-gap: var(--space-large); }
+  &.has-gap-xlarge { --column-gap: var(--space-xlarge); }
 }

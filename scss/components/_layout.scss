@@ -3,7 +3,7 @@
 //
 
 .section {
-  padding: var(--space-xl) var(--space-md);
+  padding: var(--space-xlarge) var(--space-medium);
 }
 
 //
@@ -66,5 +66,5 @@
 .hero-body {
   flex-grow: 1;
   flex-shrink: 0;
-  padding: var(--space-xl) var(--space-md)
+  padding: var(--space-xlarge) var(--space-medium)
 }
