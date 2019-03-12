@@ -14,7 +14,6 @@
 ._*
 .cache
 .DS_Store
-Thumbs.db
 
 # Folders to ignore
-node_modules
+/node_modules
