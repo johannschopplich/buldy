@@ -4,6 +4,7 @@
 
 <p align="center">
   A beautiful minimal CSS framework utilizing custom properties.<br>
+  <br>
   <a href="https://github.com/jschopplich/buldy/issues"><img src="https://img.shields.io/github/issues/jschopplich/buldy.svg"></a>
 </p>
 
