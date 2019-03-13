@@ -1,6 +1,13 @@
 <p align="center">
+  <img src="docs/logo.svg" alt="Buldy logo" width="173" height="86">
+</p>
+
+<p align="center">
   <h3 align="center">Buldy</h3>
-  <p align="center">A beautiful minimal CSS framework utilizing custom properties.</p>
+  <p align="center">
+    A beautiful minimal CSS framework utilizing custom properties.
+    <a href="https://github.com/jschopplich/buldy/issues"><img src="https://img.shields.io/github/issues/jschopplich/buldy.svg"></a>
+  </p>
 </p>
 
 <br>
