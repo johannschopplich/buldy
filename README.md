@@ -10,20 +10,21 @@
 The framework serves the following purposes:
 
 - ⚡️&nbsp; Everything you need to create a solid project
-- 🌈&nbsp; Easy to edit and extend with CSS variables (no preprocessor necessary!)
+- 🌈&nbsp; Easy editable and extendable CSS variables
+- 🏓&nbsp; No preprocessor necessary if unwanted — [just plug'n'play](https://github.com/jschopplich/buldy/blob/master/dist/buldy.css)
 - 🎈&nbsp; Tiny modern CSS reset that covers the basics
 - 📐&nbsp; Magical 12 column grid plus [iota grid](https://github.com/korywakefield/iota) included
-- 🎲&nbsp; Comes with a handful of components &amp; utilities
+- 🏗&nbsp; Comes with a handful of components &amp; utilities
 - ✅&nbsp; Good Semantics
 
 Buldy is a CSS framework. As such, the sole output is a single CSS file: [buldy.css](https://github.com/jschopplich/buldy/blob/master/dist/buldy.css)
-You can use that file out of the box and adapt it to your colors, spacing etc. as you need it thanks to CSS variables.
+You can use that file out of the box and adapt it to your needs by changing the corresponding colors, typography, spacing etc. CSS variables.
 
 If [Bulma](https://github.com/jgthms/bulma) and [CodyHouse's framework](https://github.com/CodyHouse/codyhouse-framework) would have children: This is the one. Built using the best of both worlds this minimal css framework is a suitable companion and starter point for small web projects as well as big design systems.
 
 ## What's included
 
-- A reset built on top of Bootstrap's [`reboot.scss`](https://github.com/twbs/bootstrap/blob/v4-dev/scss/_reboot.scss), Jeremy Thomas' (creator of Bulma) [`minireset.sass`](https://github.com/jgthms/minireset.css/blob/master/minireset.css) and [`modern-normalize.css`](https://github.com/sindresorhus/modern-normalize/blob/master/modern-normalize.css)
+- A reset built on top of Bootstrap's [`reboot.scss`](https://github.com/twbs/bootstrap/blob/master/scss/_reboot.scss), Jeremy Thomas' (creator of Bulma) [`minireset.sass`](https://github.com/jgthms/minireset.css/blob/master/minireset.css), Jonathan Neal's [`sanitize.css`](https://github.com/csstools/sanitize.css/blob/master/sanitize.css) and Sindre Sorhus' [`modern-normalize.css`](https://github.com/sindresorhus/modern-normalize/blob/master/modern-normalize.css)
 - Color (primary, accent, light and dark theme variations), spacing and component **variables**
 - `container`, `hero` and `section` elements
 - Minimal grid – heavily inspired by Bulma's
