@@ -10,10 +10,11 @@
 The framework serves the following purposes:
 
 - ⚡️&nbsp; Everything you need to create a solid project
+- 𝐓&nbsp; Typography system where all font sizes are intertwined 
+- 📐️&nbsp; Powerful **responsive spacing system** using multipliers of the unit value
 - 🌈&nbsp; Easy editable and extendable CSS variables
-- 🏓&nbsp; No preprocessor necessary if unwanted — [just plug'n'play](https://github.com/jschopplich/buldy/blob/master/dist/buldy.css)
-- 🎈&nbsp; Tiny modern CSS reset that covers the basics
-- 📐&nbsp; Magical 12 column grid plus [iota grid](https://github.com/korywakefield/iota) included
+- 🎈&nbsp; No preprocessor necessary if unwanted — [just plug'n'play](https://github.com/jschopplich/buldy/blob/master/dist/buldy.css)
+- 📖&nbsp; Magical 12 column grid plus [iota grid](https://github.com/korywakefield/iota) included
 - 🏗&nbsp; Comes with a handful of components &amp; utilities
 - ✅&nbsp; Good Semantics
 
@@ -24,12 +25,14 @@ If [Bulma](https://github.com/jgthms/bulma) and [CodyHouse's framework](https://
 
 ## What's included
 
-- A reset built on top of Bootstrap's [`reboot.scss`](https://github.com/twbs/bootstrap/blob/master/scss/_reboot.scss), Jeremy Thomas' (creator of Bulma) [`minireset.sass`](https://github.com/jgthms/minireset.css/blob/master/minireset.css), Jonathan Neal's [`sanitize.css`](https://github.com/csstools/sanitize.css/blob/master/sanitize.css) and Sindre Sorhus' [`modern-normalize.css`](https://github.com/sindresorhus/modern-normalize/blob/master/modern-normalize.css)
-- Color (primary, accent, light and dark theme variations), spacing and component **variables**
-- `container`, `hero` and `section` elements
-- Minimal grid – heavily inspired by Bulma's
+- A Tiny modern CSS reset that covers the basics, built on top of Bootstrap's [`reboot.scss`](https://github.com/twbs/bootstrap/blob/master/scss/_reboot.scss), Jeremy Thomas' (creator of Bulma) [`minireset.sass`](https://github.com/jgthms/minireset.css/blob/master/minireset.css), Jonathan Neal's [`sanitize.css`](https://github.com/csstools/sanitize.css/blob/master/sanitize.css) and Sindre Sorhus' [`modern-normalize.css`](https://github.com/sindresorhus/modern-normalize/blob/master/modern-normalize.css)
+Powerful responsive spacing system are multipliers of the unit value
+- Color (primary, accent, light and dark variations), spacing and component variables
 - Four different Basic button styles (normal, primary, accent and text)
-- A `content` element based on Bulma's approach
+- A simple container to center your content horizontally
+- Hero, section, form and image elements
+- Single class to handle WYSIWYG generated content, where HTML should be available 
+- Responsive columns layout powered by Flexbox (heavily inspired by Bulma)
 - Essential helpers
 
 ## How did we get here
