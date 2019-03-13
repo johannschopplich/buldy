@@ -58,6 +58,10 @@ The use of CSS custom properties for a framework blew my mind. But again, some d
 
 Improvements and suggestions are always welcome.
 
+## Credits
+
+Big shoutout to [@CodyHouse](https://github.com/CodyHouse) and [@jgthms](jgthms) for their inspiring frameworks.
+
 ## License
 
 Code released under the [MIT License](https://github.com/jschopplich/buldy/blob/master/LICENSE).
