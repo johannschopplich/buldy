@@ -16,7 +16,7 @@ The framework serves the following purposes:
 
 - ⚡️&nbsp; Everything you need to create a solid project
 - 🗨&nbsp; Typography system where all font sizes are intertwined 
-- 📐️&nbsp; Powerful **responsive spacing system** using multipliers of the unit value
+- 📐️&nbsp; Powerful **responsive spacing system** using multipliers of a unit value
 - 🌈&nbsp; Easy editable and extendable CSS variables
 - 🎈&nbsp; No preprocessor necessary if unwanted — [just plug'n'play](https://github.com/jschopplich/buldy/blob/master/dist/buldy.css)
 - 📖&nbsp; Magical 12 column grid plus [iota grid](https://github.com/korywakefield/iota) included
@@ -31,14 +31,14 @@ If [Bulma](https://github.com/jgthms/bulma) and [CodyHouse's framework](https://
 ## What's included
 
 - A Tiny modern CSS reset that covers the basics, built on top of Bootstrap's [`reboot.scss`](https://github.com/twbs/bootstrap/blob/master/scss/_reboot.scss), Jeremy Thomas' (creator of Bulma) [`minireset.sass`](https://github.com/jgthms/minireset.css/blob/master/minireset.css), Jonathan Neal's [`sanitize.css`](https://github.com/csstools/sanitize.css/blob/master/sanitize.css) and Sindre Sorhus' [`modern-normalize.css`](https://github.com/sindresorhus/modern-normalize/blob/master/modern-normalize.css)
-Powerful responsive spacing system are multipliers of the unit value
-- Color (primary, accent, light and dark variations), spacing and component variables
-- Four different Basic button styles (normal, primary, accent and text)
-- A simple container to center your content horizontally
-- Hero, section, form and image elements
-- Single class to handle WYSIWYG generated content, where HTML should be available 
-- Responsive columns layout powered by Flexbox (heavily inspired by Bulma)
-- Essential helpers
+- Color (primary, accent, light and dark variations), typography, spacing and component variables
+- Different basic `.button` styles (normal, primary, accent and text)
+- A simple `.container` to center your content horizontally
+- Components like `.hero`, `.section`, `.form-control` and `.box`
+- Single `.content` class to handle WYSIWYG generated content where HTML should be available 
+- Responsive `.columns` layout powered by Flexbox (heavily inspired by Bulma)
+- Responsive `.image` container with 16 ratio modifiers
+- Essential color, typography, spacing and display helper classes in order to alter every element's style 
 
 ## How did we get here
 
