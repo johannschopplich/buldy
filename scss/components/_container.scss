@@ -1,7 +1,7 @@
 :root {
-  @each $breakpoint in map-keys($container-widths) {
-    $width: map-get($container-widths, $breakpoint);
-    --container-width-#{$breakpoint}: #{$width};
+  @each $size in map-keys($container-sizes) {
+    $width: map-get($container-sizes, $size);
+    --container-width-#{$size}: #{$width};
   }
 }
 
@@ -15,7 +15,13 @@
     width: 100%;
   }
 
-  @each $breakpoint in map-keys($container-widths) {
-    &.is-#{$breakpoint} { max-width: var(--container-width-#{$breakpoint}); }
+  @each $breakpoint in map-keys($grid-breakpoints) {
+    @include breakpoint($breakpoint) {
+      & { max-width: var(--container-width-#{$breakpoint}); }
+    }
+  }
+
+  @each $size in map-keys($container-sizes) {
+    &.is-#{$size} { max-width: var(--container-width-#{$size}); }
   }
 }

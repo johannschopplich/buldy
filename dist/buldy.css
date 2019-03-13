@@ -797,6 +797,26 @@ table th {
 .container.is-fullwidth {
   width: 100%;
 }
+@media (min-width: 576px) {
+  .container {
+    max-width: var(--container-width-sm);
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    max-width: var(--container-width-md);
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    max-width: var(--container-width-lg);
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    max-width: var(--container-width-xl);
+  }
+}
 .container.is-sm {
   max-width: var(--container-width-sm);
 }
