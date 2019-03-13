@@ -2,18 +2,6 @@
 // Document
 //
 
-// Immediately jump any animation to the end point if the user has set their
-// device to "prefers reduced motion". This could create bad, unintended
-// consequences. Use as needed, or write your own appropriate code.
-/*
-@media (prefers-reduced-motion: reduce) {
-  * {
-    animation-duration: 0.001s !important;
-    transition-duration: 0.001s !important;
-  }
-}
-*/
-
 // Remove default spacing (opinionated).
 html,
 body,

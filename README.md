@@ -15,7 +15,7 @@
 The framework serves the following purposes:
 
 - ⚡️&nbsp; Everything you need to create a solid project
-- 🗨&nbsp; Typography system where all font sizes are intertwined 
+- 🗨&nbsp; **Typography system** where all font sizes are intertwined 
 - 📐️&nbsp; Powerful **responsive spacing system** using multipliers of a unit value
 - 🌈&nbsp; Easy editable and extendable CSS variables
 - 🎈&nbsp; No preprocessor necessary if unwanted — [just plug'n'play](https://github.com/jschopplich/buldy/blob/master/dist/buldy.css)
@@ -26,7 +26,7 @@ The framework serves the following purposes:
 Buldy is a CSS framework. As such, the sole output is a single CSS file: [buldy.css](https://github.com/jschopplich/buldy/blob/master/dist/buldy.css)
 You can use that file out of the box and adapt it to your needs by changing the corresponding colors, typography, spacing etc. CSS variables.
 
-If [Bulma](https://github.com/jgthms/bulma) and [CodyHouse's framework](https://github.com/CodyHouse/codyhouse-framework) would have children: This is the one. Built using the best of both worlds this minimal css framework is a suitable companion and starter point for small web projects as well as big design systems.
+If [Bulma](https://github.com/jgthms/bulma) and [CodyHouse's framework](https://github.com/CodyHouse/codyhouse-framework) would have children: This might be one of them. Built using the tastiest flavours of both worlds this minimal css framework is a suitable companion and starter point for small web projects as well as big design systems.
 
 ## What's included
 

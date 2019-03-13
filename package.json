@@ -1,7 +1,7 @@
 {
   "name": "buldy-framework",
   "description": "A beautiful minimal CSS framework utilizing custom properties",
-  "version": "0.5.0",
+  "version": "0.6.0",
   "author": "Johann Schopplich",
   "license": "MIT",
   "keywords": [
@@ -15,15 +15,15 @@
   ],
   "scripts": {
     "build": "npm run css-compile && npm run css-minify",
-    "css-compile": "node-sass --output-style expanded --source-map true --source-map-contents true scss/buldy.scss dist/buldy.css",
+    "css-compile": "sass --embed-sources scss/buldy.scss dist/buldy.css",
     "css-minify": "cleancss --level 1 --source-map --source-map-inline-sources --output dist/buldy.min.css dist/buldy.css",
     "deploy": "npm run build",
-    "watch": "watch-css",
+    "watch": "npm run watch-css",
     "watch-css": "nodemon -e scss -x \"npm run build\""
   },
   "devDependencies": {
     "clean-css-cli": "^4.2.1",
-    "node-sass": "^4.11.0",
+    "sass": "^1.17.2",
     "nodemon": "^1.18.9"
   },
   "files": [

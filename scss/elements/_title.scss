@@ -1,0 +1,33 @@
+.title,
+.subtitle {
+  @extend %block;
+}
+
+.title {
+  color: var(--color-contrast-higher);
+  line-height: var(--heading-line-height);
+  font-size: var(--text-3);
+  font-weight: 600;
+
+  & + .subtitle {
+    margin-top: calc(var(--space-medium) * -1);
+  }
+}
+
+.subtitle {
+  font-size: var(--text-5)
+}
+
+//
+// Sizes
+// 
+
+.title,
+.subtitle {
+  &.is-display { font-size: var(--text-display); }
+  @for $i from 1 through 6 {
+    &.is-#{$i} {
+      font-size: var(--text-#{$i});
+    }
+  }
+}

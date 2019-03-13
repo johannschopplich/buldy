@@ -1,0 +1,21 @@
+# editorconfig.org
+
+root = true
+
+[*]
+charset = utf-8
+end_of_line = lf
+indent_style = space
+indent_size = 2
+trim_trailing_whitespace = false
+insert_final_newline = false
+
+[*.md]
+insert_final_newline = false
+trim_trailing_whitespace = false
+
+# PHP PSR-2 Coding Standards
+# http://www.php-fig.org/psr/psr-2/
+
+[*.php]
+indent_size = 4
