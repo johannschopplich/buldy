@@ -84,13 +84,13 @@
   }
 
   &::before {
-    height: 2px;
     width: 50%;
+    height: 2px;
   }
 
   &::after {
-    height: 50%;
     width: 2px;
+    height: 50%;
   }
 
   &:hover,

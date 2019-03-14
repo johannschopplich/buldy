@@ -13,6 +13,15 @@
   h1,
   h2,
   h3,
+  h4,
+  h5,
+  h6 {
+    font-weight: 600;
+  }
+
+  h1,
+  h2,
+  h3,
   h4 {
     line-height: var(--component-heading-line-height);
     margin-bottom: calc(var(--space-xxsmall) * var(--text-vspace-multiplier, 1));
@@ -109,6 +118,7 @@
   }
 
   ul {
+    list-style-type: disc;
     list-style-type: disc outside;
 
     ul {
@@ -177,13 +187,13 @@
           margin-right: calc(-1 * var(--space-xxlarge));
         }
       }
-    } 
+    }
   }
-}
 
-// Adapted variables for articles (e.g. blog posts)
-.article.content {
-  --line-height-multiplier: 1.25;
+  // Adapted variables for articles (e.g. blog posts)
+  &.is-article {
+    --line-height-multiplier: 1.25;
+  }
 }
 
 .content-columns {
