@@ -1,5 +1,5 @@
 //
-// Blocks
+// Placeholders
 //
 
 @mixin block {
@@ -35,7 +35,6 @@
 }
 
 // Add transitions where needed
-
 @mixin transition($transition...) {
   @if length($transition) == 0 {
     transition: all 0.2s ease-in-out;
@@ -46,6 +45,78 @@
   @media (prefers-reduced-motion: reduce) {
     transition: none;
   }
+}
+
+@mixin delete {
+  @extend %unselectable;
+
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  display: inline-block;
+  width: 20px;
+  min-width: 20px;
+  max-width: 20px;
+  height: 20px;
+  min-height: 20px;
+  max-height: 20px;
+  background-color: rgba(0, 0, 0, 0.2);
+  border: none;
+  border-radius: var(--radius-rounded);
+  cursor: pointer;
+  pointer-events: auto;
+  flex-grow: 0;
+  flex-shrink: 0;
+  font-size: 0;
+  outline: none;
+  position: relative;
+  vertical-align: top;
+
+  &::before,
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    background-color: white;
+    transform: translateX(-50%) translateY(-50%) rotate(45deg);
+    transform-origin: center center;
+  }
+
+  &::before {
+    height: 2px;
+    width: 50%;
+  }
+
+  &::after {
+    height: 50%;
+    width: 2px;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+
+  &:active {
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+}
+
+%delete {
+  @include delete;
+}
+
+@mixin overlay($offset: 0) {
+  position: absolute;
+  top: $offset;
+  right: $offset;
+  bottom: $offset;
+  left: $offset;
+}
+
+%overlay {
+  @include overlay;
 }
 
 //

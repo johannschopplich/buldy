@@ -83,7 +83,7 @@ body {
   --text-1:                calc(var(--text-2) * var(--text-scale-ratio));
   --text-display:          calc(var(--text-1) * var(--text-scale-ratio));
 
-  // Line height
+  // Line heights
   --body-line-height:      1.4;
   --heading-line-height:   1.2;
 
@@ -117,6 +117,7 @@ body {
 :root {
   // Radius for various elements
   --radius:                0.25em;
+  --radius-rounded:        50em;
 
   // Form controls
   --control-text-size:     1em;
