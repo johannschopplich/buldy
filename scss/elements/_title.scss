@@ -1,6 +1,8 @@
 .title,
 .subtitle {
-  @extend %block;
+  &.is-spaced {
+    @extend %block;
+  }
 }
 
 .title {
@@ -8,10 +10,6 @@
   line-height: var(--heading-line-height);
   font-size: var(--text-3);
   font-weight: 600;
-
-  & + .subtitle {
-    margin-top: calc(var(--space-medium) * -1);
-  }
 }
 
 .subtitle {

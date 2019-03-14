@@ -1,4 +1,30 @@
-.icon-text {
+.icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 1.5em;
+  width: 1.5em;
+
+  //
+  // Sizes
+  //
+  &.is-small {
+    height: 1em;
+    width: 1em;
+  }
+
+  &.is-medium {
+    height: 2em;
+    width: 2em;
+  }
+
+  &.is-large {
+    height: 2.5em;
+    width: 2.5em;
+  }
+}
+
+.inline-icon {
   display: inline-flex;
   align-items: center;
   
