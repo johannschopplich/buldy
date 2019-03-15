@@ -108,6 +108,14 @@ $spacing-sizes: xxxsmall, xxsmall, xsmall, small, medium, large, xlarge, xxlarge
   border: 0;
 }
 
+.is-contained {
+  object-fit: contain !important;
+}
+
+.is-covered {
+  object-fit: cover !important;
+}
+
 //
 // Common `display` values
 //

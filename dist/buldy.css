@@ -801,6 +801,14 @@ table th {
   border: 0;
 }
 
+.is-contained {
+  object-fit: contain !important;
+}
+
+.is-covered {
+  object-fit: cover !important;
+}
+
 @media (min-width: 576px) {
   .is-sm-hidden {
     display: none !important;
