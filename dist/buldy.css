@@ -240,12 +240,12 @@ summary {
   transform-origin: center center;
 }
 .modal-close::before {
-  height: 2px;
   width: 50%;
+  height: 2px;
 }
 .modal-close::after {
-  height: 50%;
   width: 2px;
+  height: 50%;
 }
 .modal-close:hover, .modal-close:focus {
   background-color: rgba(0, 0, 0, 0.3);
@@ -345,7 +345,7 @@ body {
 }
 :root {
   --radius: 0.25em;
-  --radius-rounded: 50em;
+  --radius-rounded: 290486px;
   --control-text-size: 1em;
   --button-small: calc(var(--control-text-size) - 0.2em);
   --button-medium: calc(var(--control-text-size) + 0.2em);
@@ -1455,7 +1455,11 @@ table th {
   right: 20px;
   background: none;
   width: 40px;
+  min-width: 40px;
+  max-width: 40px;
   height: 40px;
+  min-height: 40px;
+  max-height: 40px;
 }
 
 .form-control {
@@ -1677,6 +1681,14 @@ table th {
 .content h1,
 .content h2,
 .content h3,
+.content h4,
+.content h5,
+.content h6 {
+  font-weight: 600;
+}
+.content h1,
+.content h2,
+.content h3,
 .content h4 {
   line-height: var(--component-heading-line-height);
   margin-bottom: calc(var(--space-xxsmall) * var(--text-vspace-multiplier, 1));
@@ -1742,6 +1754,7 @@ table th {
   list-style-type: decimal;
 }
 .content ul {
+  list-style-type: disc;
   list-style-type: disc outside;
 }
 .content ul ul {
@@ -1797,8 +1810,7 @@ table th {
     margin-right: calc(-1 * var(--space-xxlarge));
   }
 }
-
-.article.content {
+.content.is-article {
   --line-height-multiplier: 1.25;
 }
 
