@@ -2,25 +2,25 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  height: 1.5em;
-  width: 1.5em;
+  height: var(--text-5);
+  width: var(--text-5);
 
   //
   // Sizes
   //
   &.is-small {
-    height: 1em;
-    width: 1em;
+    width: var(--text-6);
+    height: var(--text-6);
   }
 
   &.is-medium {
-    height: 2em;
-    width: 2em;
+    width: var(--text-4);
+    height: var(--text-4);
   }
 
   &.is-large {
-    height: 2.5em;
-    width: 2.5em;
+    width: var(--text-3);
+    height: var(--text-3);
   }
 }
 

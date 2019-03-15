@@ -50,7 +50,7 @@ $container-sizes: (
   --color-red:             hsl(348, 100%, 61%);
   --color-red-a25:         hsla(348, 100%, 61%, 0.25);
 
-  // Semantic
+  // Semantic definitions
   --color-text:            var(--color-contrast-higher);
   --color-border:          var(--color-contrast-low);
 }
@@ -117,7 +117,7 @@ body {
 :root {
   // Radius for various elements
   --radius:                0.25em;
-  --radius-rounded:        290486px;
+  --radius-rounded:        50rem;
 
   // Form controls
   --control-text-size:     1em;
