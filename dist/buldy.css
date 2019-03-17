@@ -1482,9 +1482,9 @@ table th {
 }
 
 .hero {
-  align-items: stretch;
   display: flex;
   flex-direction: column;
+  align-items: stretch;
   justify-content: space-between;
 }
 .hero.is-primary {
@@ -1525,7 +1525,7 @@ table th {
 .hero-body {
   flex-grow: 1;
   flex-shrink: 0;
-  padding: var(--space-xlarge) var(--space-medium);
+  padding: var(--space-xlarge) var(--space-small);
 }
 
 .modal {
