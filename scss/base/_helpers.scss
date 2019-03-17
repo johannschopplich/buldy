@@ -24,6 +24,11 @@
 // Common spacing values
 //
 
+.has-padding-top               { padding-top: var(--space-medium) !important; }
+.has-padding-bottom            { padding-bottom: var(--space-medium) !important; }
+.has-margin-top                { margin-top: var(--space-medium) !important; }
+.has-margin-bottom             { margin-bottom: var(--space-medium) !important; }
+
 $spacing-sizes: xxxsmall, xxsmall, xsmall, small, medium, large, xlarge, xxlarge, xxxlarge;
 @each $size in $spacing-sizes {
   .has-padding-top-#{$size}    { padding-top: var(--space-#{$size}) !important; }
@@ -32,15 +37,24 @@ $spacing-sizes: xxxsmall, xxsmall, xsmall, small, medium, large, xlarge, xxlarge
   .has-margin-bottom-#{$size}  { margin-bottom: var(--space-#{$size}) !important; }
 }
 
-// Standard distances if no sizes is given
-.has-padding-top               { padding-top: var(--space-medium) !important; }
-.has-padding-bottom            { padding-bottom: var(--space-medium) !important; }
-.has-margin-top                { margin-top: var(--space-medium) !important; }
-.has-margin-bottom             { margin-bottom: var(--space-medium) !important; }
-
 //
 // Typography
 //
+
+@each $breakpoint in map-keys($grid-breakpoints) {
+  @include breakpoint($breakpoint) {
+    $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+    @for $i from 1 through 6 {
+      .is-size-#{$infix}-#{$i} {
+        font-size: var(--text-#{$i});
+      }
+    }
+  }
+}
+
+.has-text-left     { text-align: left !important; }
+.has-text-right    { text-align: right !important; }
+.has-text-centered { text-align: center !important; }
 
 @each $breakpoint in map-keys($grid-breakpoints) {
   @include breakpoint($breakpoint) {
@@ -50,10 +64,6 @@ $spacing-sizes: xxxsmall, xxsmall, xsmall, small, medium, large, xlarge, xxlarge
     .has-text-#{$infix}-centered { text-align: center !important; }
   }
 }
-
-.has-text-left     { text-align: left !important; }
-.has-text-right    { text-align: right !important; }
-.has-text-centered { text-align: center !important; }
 
 .has-text-weight-light    { font-weight: 300 !important; }
 .has-text-weight-normal   { font-weight: 400 !important; }

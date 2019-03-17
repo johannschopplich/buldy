@@ -518,6 +518,22 @@ table th {
   background-color: currentColor !important;
 }
 
+.has-padding-top {
+  padding-top: var(--space-medium) !important;
+}
+
+.has-padding-bottom {
+  padding-bottom: var(--space-medium) !important;
+}
+
+.has-margin-top {
+  margin-top: var(--space-medium) !important;
+}
+
+.has-margin-bottom {
+  margin-bottom: var(--space-medium) !important;
+}
+
 .has-padding-top-xxxsmall {
   padding-top: var(--space-xxxsmall) !important;
 }
@@ -662,20 +678,116 @@ table th {
   margin-bottom: var(--space-xxxlarge) !important;
 }
 
-.has-padding-top {
-  padding-top: var(--space-medium) !important;
+@media (min-width: 576px) {
+  .is-size-sm-1 {
+    font-size: var(--text-1);
+  }
+
+  .is-size-sm-2 {
+    font-size: var(--text-2);
+  }
+
+  .is-size-sm-3 {
+    font-size: var(--text-3);
+  }
+
+  .is-size-sm-4 {
+    font-size: var(--text-4);
+  }
+
+  .is-size-sm-5 {
+    font-size: var(--text-5);
+  }
+
+  .is-size-sm-6 {
+    font-size: var(--text-6);
+  }
+}
+@media (min-width: 768px) {
+  .is-size-md-1 {
+    font-size: var(--text-1);
+  }
+
+  .is-size-md-2 {
+    font-size: var(--text-2);
+  }
+
+  .is-size-md-3 {
+    font-size: var(--text-3);
+  }
+
+  .is-size-md-4 {
+    font-size: var(--text-4);
+  }
+
+  .is-size-md-5 {
+    font-size: var(--text-5);
+  }
+
+  .is-size-md-6 {
+    font-size: var(--text-6);
+  }
+}
+@media (min-width: 992px) {
+  .is-size-lg-1 {
+    font-size: var(--text-1);
+  }
+
+  .is-size-lg-2 {
+    font-size: var(--text-2);
+  }
+
+  .is-size-lg-3 {
+    font-size: var(--text-3);
+  }
+
+  .is-size-lg-4 {
+    font-size: var(--text-4);
+  }
+
+  .is-size-lg-5 {
+    font-size: var(--text-5);
+  }
+
+  .is-size-lg-6 {
+    font-size: var(--text-6);
+  }
+}
+@media (min-width: 1200px) {
+  .is-size-xl-1 {
+    font-size: var(--text-1);
+  }
+
+  .is-size-xl-2 {
+    font-size: var(--text-2);
+  }
+
+  .is-size-xl-3 {
+    font-size: var(--text-3);
+  }
+
+  .is-size-xl-4 {
+    font-size: var(--text-4);
+  }
+
+  .is-size-xl-5 {
+    font-size: var(--text-5);
+  }
+
+  .is-size-xl-6 {
+    font-size: var(--text-6);
+  }
+}
+.has-text-left {
+  text-align: left !important;
 }
 
-.has-padding-bottom {
-  padding-bottom: var(--space-medium) !important;
+.has-text-right {
+  text-align: right !important;
 }
 
-.has-margin-top {
-  margin-top: var(--space-medium) !important;
-}
-
-.has-margin-bottom {
-  margin-bottom: var(--space-medium) !important;
+.has-text-centered {
+  text-align: center !important;
 }
 
 @media (min-width: 576px) {
@@ -730,18 +842,6 @@ table th {
     text-align: center !important;
   }
 }
-.has-text-left {
-  text-align: left !important;
-}
-
-.has-text-right {
-  text-align: right !important;
-}
-
-.has-text-centered {
-  text-align: center !important;
-}
-
 .has-text-weight-light {
   font-weight: 300 !important;
 }
@@ -981,8 +1081,11 @@ table th {
   width: 100%;
 }
 @media (min-width: 576px) {
-  .column.is-sm-narrow {
+  .column.is-sm-narrow, .column.is-sm-full {
     flex: none;
+  }
+  .column.is-sm-full {
+    width: 100%;
   }
   .column.is-sm-1 {
     flex: none;
@@ -1034,8 +1137,11 @@ table th {
   }
 }
 @media (min-width: 768px) {
-  .column.is-md-narrow {
+  .column.is-md-narrow, .column.is-md-full {
     flex: none;
+  }
+  .column.is-md-full {
+    width: 100%;
   }
   .column.is-md-1 {
     flex: none;
@@ -1087,8 +1193,11 @@ table th {
   }
 }
 @media (min-width: 992px) {
-  .column.is-lg-narrow {
+  .column.is-lg-narrow, .column.is-lg-full {
     flex: none;
+  }
+  .column.is-lg-full {
+    width: 100%;
   }
   .column.is-lg-1 {
     flex: none;
@@ -1140,8 +1249,11 @@ table th {
   }
 }
 @media (min-width: 1200px) {
-  .column.is-xl-narrow {
+  .column.is-xl-narrow, .column.is-xl-full {
     flex: none;
+  }
+  .column.is-xl-full {
+    width: 100%;
   }
   .column.is-xl-1 {
     flex: none;
@@ -1220,9 +1332,6 @@ table th {
 }
 .columns.is-gapless:last-child {
   margin-bottom: 0;
-}
-.columns.is-multiline {
-  flex-wrap: wrap;
 }
 .columns.is-centered {
   justify-content: center;
@@ -1369,7 +1478,7 @@ table th {
 }
 
 .section {
-  padding: var(--space-xlarge) var(--space-medium);
+  padding: var(--space-xlarge) var(--space-small);
 }
 
 .hero {

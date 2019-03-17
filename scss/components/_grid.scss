@@ -25,8 +25,13 @@
     @include breakpoint($breakpoint) {
       $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
 
-      &.is-#{$infix}-narrow {
+      &.is-#{$infix}-narrow,
+      &.is-#{$infix}-full {
         flex: none;
+      }
+
+      &.is-#{$infix}-full {
+        width: 100%;
       }
 
       @for $i from 1 through 12 {
@@ -72,10 +77,6 @@
     }
   }
 
-  &.is-multiline {
-    flex-wrap: wrap;
-  }
-
   &.is-centered {
     justify-content: center;
   }
@@ -85,7 +86,7 @@
   }
 
   //
-  // Gap size modifiers
+  // Gap sizes
   //
 
   &.has-gap-xsmall,
