@@ -38,19 +38,29 @@ $spacing-sizes: xxxsmall, xxsmall, xsmall, small, medium, large, xlarge, xxlarge
 }
 
 //
-// Typography
+// Text sizes
 //
+
+@for $i from 1 through 6 {
+  .is-size-#{$i} {
+    font-size: var(--text-#{$i}) !important;
+  }
+}
 
 @each $breakpoint in map-keys($grid-breakpoints) {
   @include breakpoint($breakpoint) {
     $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
     @for $i from 1 through 6 {
       .is-size-#{$infix}-#{$i} {
-        font-size: var(--text-#{$i});
+        font-size: var(--text-#{$i}) !important;
       }
     }
   }
 }
+
+//
+// Typography
+//
 
 .has-text-left     { text-align: left !important; }
 .has-text-right    { text-align: right !important; }

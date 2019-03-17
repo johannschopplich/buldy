@@ -319,7 +319,6 @@ summary {
   --text-3: calc(var(--text-4) * var(--text-scale-ratio));
   --text-2: calc(var(--text-3) * var(--text-scale-ratio));
   --text-1: calc(var(--text-2) * var(--text-scale-ratio));
-  --text-display: calc(var(--text-1) * var(--text-scale-ratio));
   --body-line-height: 1.4;
   --heading-line-height: 1.2;
   --space-unit: 1em;
@@ -393,34 +392,6 @@ mark {
 span {
   font-style: inherit;
   font-weight: inherit;
-}
-
-.is-size-display {
-  font-size: var(--text-display);
-}
-
-.is-size-1 {
-  font-size: var(--text-1);
-}
-
-.is-size-2 {
-  font-size: var(--text-2);
-}
-
-.is-size-3 {
-  font-size: var(--text-3);
-}
-
-.is-size-4 {
-  font-size: var(--text-4);
-}
-
-.is-size-5 {
-  font-size: var(--text-5);
-}
-
-.is-size-6 {
-  font-size: var(--text-6);
 }
 
 table td,
@@ -678,104 +649,128 @@ table th {
   margin-bottom: var(--space-xxxlarge) !important;
 }
 
+.is-size-1 {
+  font-size: var(--text-1) !important;
+}
+
+.is-size-2 {
+  font-size: var(--text-2) !important;
+}
+
+.is-size-3 {
+  font-size: var(--text-3) !important;
+}
+
+.is-size-4 {
+  font-size: var(--text-4) !important;
+}
+
+.is-size-5 {
+  font-size: var(--text-5) !important;
+}
+
+.is-size-6 {
+  font-size: var(--text-6) !important;
+}
+
 @media (min-width: 576px) {
   .is-size-sm-1 {
-    font-size: var(--text-1);
+    font-size: var(--text-1) !important;
   }
 
   .is-size-sm-2 {
-    font-size: var(--text-2);
+    font-size: var(--text-2) !important;
   }
 
   .is-size-sm-3 {
-    font-size: var(--text-3);
+    font-size: var(--text-3) !important;
   }
 
   .is-size-sm-4 {
-    font-size: var(--text-4);
+    font-size: var(--text-4) !important;
   }
 
   .is-size-sm-5 {
-    font-size: var(--text-5);
+    font-size: var(--text-5) !important;
   }
 
   .is-size-sm-6 {
-    font-size: var(--text-6);
+    font-size: var(--text-6) !important;
   }
 }
 @media (min-width: 768px) {
   .is-size-md-1 {
-    font-size: var(--text-1);
+    font-size: var(--text-1) !important;
   }
 
   .is-size-md-2 {
-    font-size: var(--text-2);
+    font-size: var(--text-2) !important;
   }
 
   .is-size-md-3 {
-    font-size: var(--text-3);
+    font-size: var(--text-3) !important;
   }
 
   .is-size-md-4 {
-    font-size: var(--text-4);
+    font-size: var(--text-4) !important;
   }
 
   .is-size-md-5 {
-    font-size: var(--text-5);
+    font-size: var(--text-5) !important;
   }
 
   .is-size-md-6 {
-    font-size: var(--text-6);
+    font-size: var(--text-6) !important;
   }
 }
 @media (min-width: 992px) {
   .is-size-lg-1 {
-    font-size: var(--text-1);
+    font-size: var(--text-1) !important;
   }
 
   .is-size-lg-2 {
-    font-size: var(--text-2);
+    font-size: var(--text-2) !important;
   }
 
   .is-size-lg-3 {
-    font-size: var(--text-3);
+    font-size: var(--text-3) !important;
   }
 
   .is-size-lg-4 {
-    font-size: var(--text-4);
+    font-size: var(--text-4) !important;
   }
 
   .is-size-lg-5 {
-    font-size: var(--text-5);
+    font-size: var(--text-5) !important;
   }
 
   .is-size-lg-6 {
-    font-size: var(--text-6);
+    font-size: var(--text-6) !important;
   }
 }
 @media (min-width: 1200px) {
   .is-size-xl-1 {
-    font-size: var(--text-1);
+    font-size: var(--text-1) !important;
   }
 
   .is-size-xl-2 {
-    font-size: var(--text-2);
+    font-size: var(--text-2) !important;
   }
 
   .is-size-xl-3 {
-    font-size: var(--text-3);
+    font-size: var(--text-3) !important;
   }
 
   .is-size-xl-4 {
-    font-size: var(--text-4);
+    font-size: var(--text-4) !important;
   }
 
   .is-size-xl-5 {
-    font-size: var(--text-5);
+    font-size: var(--text-5) !important;
   }
 
   .is-size-xl-6 {
-    font-size: var(--text-6);
+    font-size: var(--text-6) !important;
   }
 }
 .has-text-left {
