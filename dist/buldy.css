@@ -308,8 +308,7 @@ summary {
   color: var(--color-text);
 }
 
-:root,
-body {
+:root {
   --font-primary: -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   --font-secondary: var(--font-primary);
   --text-base-size: 1em;
@@ -334,24 +333,21 @@ body {
   --space-xxlarge: calc(5.25 * var(--space-unit));
   --space-xxxlarge: calc(8.5 * var(--space-unit));
   --component-padding: var(--space-small);
+  --radius: 0.25em;
+  --radius-rounded: 50rem;
+  --button-small: calc(var(--control-text-size) - 0.2em);
+  --button-medium: calc(var(--control-text-size) + 0.2em);
+  --button-large: calc(var(--control-text-size) + 0.4em);
+  --control-text-size: 1em;
 }
 
 @media (min-width: 768px) {
-  body {
+  :root {
     --text-base-size: 1.15em;
     --text-scale-ratio: 1.25;
     --space-unit: 1.15em;
   }
 }
-:root {
-  --radius: 0.25em;
-  --radius-rounded: 50rem;
-  --control-text-size: 1em;
-  --button-small: calc(var(--control-text-size) - 0.2em);
-  --button-medium: calc(var(--control-text-size) + 0.2em);
-  --button-large: calc(var(--control-text-size) + 0.4em);
-}
-
 @media screen and (-webkit-min-device-pixel-ratio: 2), screen and (min-resolution: 2dppx) {
   body {
     -moz-osx-font-smoothing: grayscale;
@@ -809,6 +805,18 @@ table th {
   object-fit: cover !important;
 }
 
+.is-hidden {
+  display: none !important;
+}
+
+.is-inline {
+  display: inline !important;
+}
+
+.is-block {
+  display: block !important;
+}
+
 @media (min-width: 576px) {
   .is-sm-hidden {
     display: none !important;
@@ -861,18 +869,6 @@ table th {
     display: block !important;
   }
 }
-.is-hidden {
-  display: none !important;
-}
-
-.is-inline {
-  display: inline !important;
-}
-
-.is-block {
-  display: block !important;
-}
-
 :root {
   --container-width-sm: 540px;
   --container-width-md: 720px;

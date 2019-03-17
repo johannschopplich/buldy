@@ -61,11 +61,10 @@ $container-sizes: (
 }
 
 //
-// Spacing and typography
+// Typography, spacing and components
 //
 
-:root,
-body {
+:root {
   // Font families
   --font-primary:          -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   --font-secondary:        var(--font-primary);
@@ -100,30 +99,28 @@ body {
   --space-xxlarge:         calc(5.25  * var(--space-unit));
   --space-xxxlarge:        calc(8.5   * var(--space-unit));
   --component-padding:     var(--space-small);
-}
 
-@include breakpoint(md) {
-  body {
-    --text-base-size:      1.15em;
-    --text-scale-ratio:    1.25;
-    --space-unit:          1.15em;
-  }
-}
-
-//
-// Components
-//
-
-:root {
-  // Radius for various elements
+  // Various components
   --radius:                0.25em;
   --radius-rounded:        50rem;
-
-  // Form controls
-  --control-text-size:     1em;
 
   // Buttons
   --button-small:          calc(var(--control-text-size) - 0.2em);
   --button-medium:         calc(var(--control-text-size) + 0.2em);
   --button-large:          calc(var(--control-text-size) + 0.4em);
+
+  // Form controls
+  --control-text-size:     1em;
+}
+
+//
+// Responsiveness
+//
+
+@include breakpoint(md) {
+  :root {
+    --text-base-size:      1.15em;
+    --text-scale-ratio:    1.25;
+    --space-unit:          1.15em;
+  }
 }
