@@ -38,7 +38,7 @@ If [Bulma](https://github.com/jgthms/bulma) and [CodyHouse's framework](https://
 - Single `.content` class to handle WYSIWYG generated content where HTML should be available 
 - Responsive `.columns` layout powered by Flexbox (heavily inspired by Bulma)
 - Responsive `.image` container with 16 ratio modifiers
-- Essential color, typography, spacing and display helper classes in order to alter every element's style 
+- Essential color, typography, spacing and display helpers in order to alter every element's style 
 
 ## How did we get here
 
@@ -66,7 +66,7 @@ Improvements and suggestions are always welcome.
 
 ## Credits
 
-Big shoutout to [@CodyHouse](https://github.com/CodyHouse) and [@jgthms](jgthms) for their inspiring frameworks.
+Big shoutout to [@CodyHouse](https://github.com/CodyHouse) and [@jgthms](jgthms) for their inspiring frameworks as well as [@korywakefield](https://github.com/korywakefield) for his grid spec powered micro-framework.
 
 ## License
 
