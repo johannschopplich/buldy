@@ -178,24 +178,3 @@
     --line-height-multiplier: 1.25;
   }
 }
-
-.content-columns {
-  column-gap: var(--component-padding);
-
-  @for $i from 1 through 2 {
-    &.is-#{$i} {
-      column-count: #{$i};
-    }
-  }
-
-  @each $breakpoint in map-keys($grid-breakpoints) {
-    @include breakpoint($breakpoint) {
-      $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
-      @for $i from 1 through 2 {
-        &.is-#{$infix}-#{$i} {
-          column-count: #{$i};
-        }
-      }
-    }
-  }
-}
