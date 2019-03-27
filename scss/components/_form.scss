@@ -54,9 +54,9 @@
 //
 
 .help {
+  font-size: var(--text-sm);
+  margin-top: var(--space-small);
   &.is-error {
     color: var(--color-red);
-    font-size: var(--text-sm);
-    margin-top: var(--space-small);
   }
 }

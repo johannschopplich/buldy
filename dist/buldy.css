@@ -1652,10 +1652,12 @@ table th {
   margin-bottom: var(--space-xxsmall);
 }
 
-.help.is-error {
-  color: var(--color-red);
+.help {
   font-size: var(--text-sm);
   margin-top: var(--space-small);
+}
+.help.is-error {
+  color: var(--color-red);
 }
 
 .title {
