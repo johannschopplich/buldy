@@ -2066,45 +2066,76 @@ table th {
   margin-left: var(--space-xxxsmall);
 }
 
-.flow {
-  column-gap: var(--component-padding);
+.flow-columns {
+  column-gap: var(--space-xlarge);
+  column-fill: balance;
 }
-.flow.is-1 {
+.flow-columns.is-1 {
   column-count: 1;
 }
-.flow.is-2 {
+.flow-columns.is-2 {
   column-count: 2;
 }
+.flow-columns.is-3 {
+  column-count: 3;
+}
+.flow-columns.is-4 {
+  column-count: 4;
+}
 @media (min-width: 576px) {
-  .flow.is-sm-1 {
+  .flow-columns.is-sm-1 {
     column-count: 1;
   }
-  .flow.is-sm-2 {
+  .flow-columns.is-sm-2 {
     column-count: 2;
+  }
+  .flow-columns.is-sm-3 {
+    column-count: 3;
+  }
+  .flow-columns.is-sm-4 {
+    column-count: 4;
   }
 }
 @media (min-width: 768px) {
-  .flow.is-md-1 {
+  .flow-columns.is-md-1 {
     column-count: 1;
   }
-  .flow.is-md-2 {
+  .flow-columns.is-md-2 {
     column-count: 2;
+  }
+  .flow-columns.is-md-3 {
+    column-count: 3;
+  }
+  .flow-columns.is-md-4 {
+    column-count: 4;
   }
 }
 @media (min-width: 992px) {
-  .flow.is-lg-1 {
+  .flow-columns.is-lg-1 {
     column-count: 1;
   }
-  .flow.is-lg-2 {
+  .flow-columns.is-lg-2 {
     column-count: 2;
+  }
+  .flow-columns.is-lg-3 {
+    column-count: 3;
+  }
+  .flow-columns.is-lg-4 {
+    column-count: 4;
   }
 }
 @media (min-width: 1200px) {
-  .flow.is-xl-1 {
+  .flow-columns.is-xl-1 {
     column-count: 1;
   }
-  .flow.is-xl-2 {
+  .flow-columns.is-xl-2 {
     column-count: 2;
+  }
+  .flow-columns.is-xl-3 {
+    column-count: 3;
+  }
+  .flow-columns.is-xl-4 {
+    column-count: 4;
   }
 }
 

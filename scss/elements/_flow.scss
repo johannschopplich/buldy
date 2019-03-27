@@ -1,7 +1,8 @@
-.flow {
-  column-gap: var(--component-padding);
+.flow-columns {
+  column-gap: var(--space-xlarge);
+  column-fill: balance;
 
-  @for $i from 1 through 2 {
+  @for $i from 1 through 4 {
     &.is-#{$i} {
       column-count: #{$i};
     }
@@ -10,7 +11,7 @@
   @each $breakpoint in map-keys($grid-breakpoints) {
     @include breakpoint($breakpoint) {
       $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
-      @for $i from 1 through 2 {
+      @for $i from 1 through 4 {
         &.is-#{$infix}-#{$i} {
           column-count: #{$i};
         }
