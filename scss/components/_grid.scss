@@ -1,8 +1,8 @@
 .column {
   display: block;
-  flex-basis: 0;
   flex-grow: 1;
   flex-shrink: 1;
+  flex-basis: 0;
   padding: var(--space-small);
 
   &.is-narrow {
@@ -12,6 +12,11 @@
   &.is-full {
     flex: none;
     width: 100%;
+  }
+
+  &.is-auto {
+    flex: 0 0 auto;
+    width: auto;
   }
 
   @for $i from 1 through 12 {
@@ -25,13 +30,18 @@
     @include breakpoint($breakpoint) {
       $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
 
-      &.is-#{$infix}-narrow,
-      &.is-#{$infix}-full {
+      &.is-#{$infix}-narrow {
         flex: none;
       }
 
       &.is-#{$infix}-full {
+        flex: none;
         width: 100%;
+      }
+
+      &.is-#{$infix}-auto {
+        flex: 0 0 auto;
+        width: auto;
       }
 
       @for $i from 1 through 12 {

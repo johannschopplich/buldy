@@ -22,7 +22,6 @@
 
 .title,
 .subtitle {
-  &.is-display { font-size: var(--text-display); }
   @for $i from 1 through 6 {
     &.is-#{$i} {
       font-size: var(--text-#{$i});
