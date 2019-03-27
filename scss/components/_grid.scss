@@ -5,47 +5,26 @@
   flex-basis: 0;
   padding: var(--space-small);
 
-  &.is-narrow {
-    flex: none;
-  }
-
-  &.is-full {
-    flex: none;
-    width: 100%;
-  }
-
-  &.is-auto {
-    flex: 0 0 auto;
-    width: auto;
-  }
-
-  @for $i from 1 through 12 {
-    &.is-#{$i} {
-      flex: none;
-      width: percentage($i / 12);
-    }
-  }
-
   @each $breakpoint in map-keys($grid-breakpoints) {
-    @include breakpoint($breakpoint) {
+    @include media-breakpoint-up($breakpoint) {
       $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
 
-      &.is-#{$infix}-narrow {
+      &.is#{$infix}-narrow {
         flex: none;
       }
 
-      &.is-#{$infix}-full {
+      &.is#{$infix}-full {
         flex: none;
         width: 100%;
       }
 
-      &.is-#{$infix}-auto {
+      &.is#{$infix}-auto {
         flex: 0 0 auto;
         width: auto;
       }
 
       @for $i from 1 through 12 {
-        &.is-#{$infix}-#{$i} {
+        &.is#{$infix}-#{$i} {
           flex: none;
           width: percentage($i / 12);
         }

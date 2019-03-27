@@ -1,7 +1,3 @@
-//
-// Placeholders
-//
-
 @mixin block {
   &:not(:last-child) {
     margin-bottom: var(--space-small);
@@ -32,19 +28,6 @@
 
 %focus-outlined {
   @include focus-outlined;
-}
-
-// Add transitions where needed
-@mixin transition($transition...) {
-  @if length($transition) == 0 {
-    transition: all 0.2s ease-in-out;
-  } @else {
-    transition: $transition;
-  }
-
-  @media (prefers-reduced-motion: reduce) {
-    transition: none;
-  }
 }
 
 @mixin delete {
@@ -117,28 +100,4 @@
 
 %overlay {
   @include overlay;
-}
-
-//
-// Breakpoint mixins
-//
-
-@mixin breakpoint($name, $breakpoints: $grid-breakpoints) {
-  $min: breakpoint-min($name, $breakpoints);
-  @if $min {
-    @media (min-width: $min) {
-      @content;
-    }
-  } @else {
-    @content;
-  }
-}
-
-@function breakpoint-min($name, $breakpoints: $grid-breakpoints) {
-  $min: map-get($breakpoints, $name);
-  @return if($min != 0, $min, null);
-}
-
-@function breakpoint-infix($name, $breakpoints: $grid-breakpoints) {
-  @return if(breakpoint-min($name, $breakpoints) == null, "", "#{$name}");
 }

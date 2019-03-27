@@ -1,5 +1,7 @@
 @import "base/reset";
-@import "mixins";
+@import "mixins/breakpoints";
+@import "mixins/placeholders";
+@import "mixins/transitions";
 @import "variables";
 
 @import "base/generic";

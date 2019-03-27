@@ -3,6 +3,7 @@
 //
 
 $grid-breakpoints: (
+  xs: 0,
   sm: 576px,
   md: 768px,
   lg: 992px,
@@ -116,7 +117,7 @@ $container-sizes: (
 // Responsiveness
 //
 
-@include breakpoint(md) {
+@include media-breakpoint-up(md) {
   :root {
     --text-base-size:      1.15em;
     --text-scale-ratio:    1.25;

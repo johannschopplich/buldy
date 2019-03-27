@@ -2,17 +2,11 @@
   column-gap: var(--space-xlarge);
   column-fill: balance;
 
-  @for $i from 1 through 4 {
-    &.is-#{$i} {
-      column-count: #{$i};
-    }
-  }
-
   @each $breakpoint in map-keys($grid-breakpoints) {
-    @include breakpoint($breakpoint) {
+    @include media-breakpoint-up($breakpoint) {
       $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
       @for $i from 1 through 4 {
-        &.is-#{$infix}-#{$i} {
+        &.is#{$infix}-#{$i} {
           column-count: #{$i};
         }
       }
