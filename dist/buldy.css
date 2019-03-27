@@ -457,6 +457,10 @@ table th {
   color: currentColor !important;
 }
 
+.has-text-inherit {
+  color: inherit !important;
+}
+
 .has-background-primary {
   background-color: var(--color-primary) !important;
 }
