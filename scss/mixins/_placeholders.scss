@@ -21,7 +21,7 @@
 
 @mixin focus-outlined {
   &:focus {
-    outline: 3px solid var(--color-primary);
+    outline: 3px solid currentColor;
     outline-offset: 2px;
   }
 }
