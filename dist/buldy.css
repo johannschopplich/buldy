@@ -77,6 +77,10 @@ pre {
   font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
+pre {
+  overflow-x: auto;
+}
+
 small {
   font-size: 80%;
 }
@@ -1901,6 +1905,10 @@ table th {
 .content blockquote {
   padding-left: 2em;
   border-left: 5px solid var(--color-contrast-low);
+}
+.content pre {
+  background-color: var(--color-contrast-lower);
+  padding: var(--space-small) 1em;
 }
 .content figure {
   text-align: center;

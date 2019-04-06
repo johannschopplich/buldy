@@ -1,7 +1,7 @@
 {
   "name": "buldy-framework",
   "description": "A beautiful minimal CSS framework utilizing custom properties",
-  "version": "0.7.0",
+  "version": "0.8.0",
   "author": "Johann Schopplich",
   "license": "MIT",
   "keywords": [

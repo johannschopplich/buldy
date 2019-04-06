@@ -119,6 +119,11 @@
     border-left: 5px solid var(--color-contrast-low);
   }
 
+  pre {
+    background-color: var(--color-contrast-lower);
+    padding: var(--space-small) 1em;
+  }
+  
   figure {
     text-align: center;
     //margin-right: 2em;
