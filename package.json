@@ -16,15 +16,11 @@
   "scripts": {
     "build": "npm run css-compile && npm run css-minify",
     "css-compile": "sass --embed-sources scss/buldy.scss dist/buldy.css",
-    "css-minify": "cleancss --level 1 --source-map --source-map-inline-sources --output dist/buldy.min.css dist/buldy.css",
-    "deploy": "npm run build",
-    "watch": "npm run watch-css",
-    "watch-css": "nodemon -e scss -x \"npm run build\""
+    "css-minify": "cleancss --level 1 --source-map --source-map-inline-sources --output dist/buldy.min.css dist/buldy.css"
   },
   "devDependencies": {
-    "clean-css-cli": "^4.2.1",
-    "sass": "^1.17.2",
-    "nodemon": "^1.18.9"
+    "clean-css-cli": "^4.3.0",
+    "sass": "^1.17.4"
   },
   "files": [
     "dist/*.{css,map}",

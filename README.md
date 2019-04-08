@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="docs/logo.svg" alt="Buldy logo" width="173" height="86">
+  <img src="docs/logo.svg" alt="Buldy logo" height="114">
 </p>
 
 <p align="center">
