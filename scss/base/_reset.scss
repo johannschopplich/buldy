@@ -260,11 +260,3 @@ summary {
 [disabled] {
   cursor: not-allowed;
 }
-
-// Change the display on visually hidden accessible elements
-// in all browsers (opinionated).
-[aria-hidden="false"][hidden]:not(:focus) {
-  clip: rect(0, 0, 0, 0);
-  display: inherit;
-  position: absolute;
-}

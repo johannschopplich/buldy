@@ -188,12 +188,6 @@ summary {
   cursor: not-allowed;
 }
 
-[aria-hidden=false][hidden]:not(:focus) {
-  clip: rect(0, 0, 0, 0);
-  display: inherit;
-  position: absolute;
-}
-
 .box:not(:last-child), .content:not(:last-child), .title.is-spaced:not(:last-child),
 .subtitle.is-spaced:not(:last-child) {
   margin-bottom: var(--space-small);
@@ -890,14 +884,24 @@ table th {
 }
 
 .is-sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border: 0;
+  position: fixed !important;
+  /* Keep it in viewport */
+  top: 0px !important;
+  left: 0px !important;
+  /* Give it non-zero size, VoiceOver on Safari requires at least 2 pixels
+     before allowing buttons to be activated. */
+  width: 4px !important;
+  height: 4px !important;
+  /* Visually hide it with overflow and opacity */
+  opacity: 0 !important;
+  overflow: hidden !important;
+  /* Remove any margin or padding */
+  border: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  /* Ensure no other style sets display to none */
+  display: block !important;
+  visibility: visible !important;
 }
 
 .is-contained {
