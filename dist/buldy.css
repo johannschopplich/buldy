@@ -867,6 +867,21 @@ table th {
   font-style: italic !important;
 }
 
+.is-sr-only {
+  position: fixed !important;
+  top: 0px !important;
+  left: 0px !important;
+  width: 4px !important;
+  height: 4px !important;
+  opacity: 0 !important;
+  overflow: hidden !important;
+  border: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  display: block !important;
+  visibility: visible !important;
+}
+
 .is-marginless {
   margin: 0 !important;
 }
@@ -881,27 +896,6 @@ table th {
 
 .is-shadowless {
   box-shadow: none !important;
-}
-
-.is-sr-only {
-  position: fixed !important;
-  /* Keep it in viewport */
-  top: 0px !important;
-  left: 0px !important;
-  /* Give it non-zero size, VoiceOver on Safari requires at least 2 pixels
-     before allowing buttons to be activated. */
-  width: 4px !important;
-  height: 4px !important;
-  /* Visually hide it with overflow and opacity */
-  opacity: 0 !important;
-  overflow: hidden !important;
-  /* Remove any margin or padding */
-  border: none !important;
-  margin: 0 !important;
-  padding: 0 !important;
-  /* Ensure no other style sets display to none */
-  display: block !important;
-  visibility: visible !important;
 }
 
 .is-contained {
