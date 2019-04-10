@@ -362,7 +362,7 @@ body {
   font-family: var(--font-primary);
   font-size: var(--text-base-size);
   line-height: var(--body-line-height);
-  color: var(--color-contrast-high);
+  color: var(--color-text);
 }
 
 hr {
