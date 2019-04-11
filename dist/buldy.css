@@ -1737,6 +1737,19 @@ table th {
   border-color: transparent;
   box-shadow: none;
 }
+.button.is-link {
+  background-color: transparent;
+  border-color: transparent;
+  color: var(--color-text);
+}
+.button.is-link:hover, .button.is-link:focus {
+  background-color: var(--color-contrast-low);
+}
+.button.is-link[disabled] {
+  background-color: transparent;
+  border-color: transparent;
+  box-shadow: none;
+}
 .button.is-primary, .button.is-accent {
   background-color: var(--button-color);
   border-color: transparent;

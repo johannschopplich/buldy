@@ -39,6 +39,25 @@
   }
 
   //
+  // Link (slightly modified text version)
+  //
+
+  &.is-link {
+    background-color: transparent;
+    border-color: transparent;
+    color: var(--color-text);
+    &:hover,
+    &:focus {
+      background-color: var(--color-contrast-low);
+    }
+    &[disabled] {
+      background-color: transparent;
+      border-color: transparent;
+      box-shadow: none;
+    }
+  }
+
+  //
   // Colors
   //
 
