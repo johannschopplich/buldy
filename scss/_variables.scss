@@ -100,8 +100,9 @@ $container-sizes: (
   --space-xxxlarge:        calc(8.5   * var(--space-unit));
   --component-padding:     var(--space-small);
 
+  // Outlines
   --focus-outline:         2px solid currentColor;
-  --focus-outline-offset:  2px;
+  --focus-outline-offset:  3px;
 
   // Various components
   --radius:                0.25em;
