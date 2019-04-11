@@ -331,7 +331,7 @@ summary {
   --space-xxxlarge: calc(8.5 * var(--space-unit));
   --component-padding: var(--space-small);
   --focus-outline: 2px solid currentColor;
-  --focus-outline-offset: 3px;
+  --focus-outline-offset: 2px;
   --radius: 0.25em;
   --radius-rounded: 50rem;
   --button-small: calc(var(--control-text-size) - 0.2em);
