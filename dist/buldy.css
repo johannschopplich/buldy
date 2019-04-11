@@ -201,8 +201,8 @@ summary {
 }
 
 .content a:focus {
-  outline: 3px solid currentColor;
-  outline-offset: 2px;
+  outline: var(--focus-outline);
+  outline-offset: var(--focus-outline-offset);
 }
 
 .modal-close {
@@ -330,6 +330,8 @@ summary {
   --space-xxlarge: calc(5.25 * var(--space-unit));
   --space-xxxlarge: calc(8.5 * var(--space-unit));
   --component-padding: var(--space-small);
+  --focus-outline: 2px solid currentColor;
+  --focus-outline-offset: 2px;
   --radius: 0.25em;
   --radius-rounded: 50rem;
   --button-small: calc(var(--control-text-size) - 0.2em);

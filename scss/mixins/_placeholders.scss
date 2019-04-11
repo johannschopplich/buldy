@@ -19,15 +19,15 @@
   @include unselectable;
 }
 
-@mixin focus-outlined {
+@mixin focus-outline {
   &:focus {
-    outline: 3px solid currentColor;
-    outline-offset: 2px;
+    outline: var(--focus-outline);
+    outline-offset: var(--focus-outline-offset);
   }
 }
 
-%focus-outlined {
-  @include focus-outlined;
+%focus-outline {
+  @include focus-outline;
 }
 
 @mixin delete {
