@@ -33,7 +33,7 @@ body {
 //
 
 hr {
-  display: block;
+  box-sizing: content-box;
   border: 0;
   border-top: 1px solid var(--color-border);
   margin: var(--space-medium) 0;
