@@ -346,17 +346,12 @@ summary {
     --space-unit: 1.15em;
   }
 }
-@media screen and (-webkit-min-device-pixel-ratio: 2), screen and (min-resolution: 2dppx) {
-  body {
-    -moz-osx-font-smoothing: grayscale;
-    -webkit-font-smoothing: antialiased;
-  }
-}
 html {
   background-color: var(--color-background, white);
   min-width: 240px;
   overflow-x: hidden;
   overflow-y: scroll;
+  word-break: break-word;
 }
 
 body {
@@ -366,6 +361,12 @@ body {
   color: var(--color-text);
 }
 
+@media screen and (-webkit-min-device-pixel-ratio: 2), screen and (min-resolution: 2dppx) {
+  body {
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+  }
+}
 hr {
   display: block;
   border: 0;

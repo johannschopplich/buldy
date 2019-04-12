@@ -1,13 +1,3 @@
-// Improve font rendering on HiDPI devices
-@media
- screen and (-webkit-min-device-pixel-ratio: 2),
- screen and (min-resolution: 2dppx) {
- body {
-   -moz-osx-font-smoothing: grayscale;
-   -webkit-font-smoothing: antialiased;
- }
-}
-
 //
 // Document
 //
@@ -17,6 +7,8 @@ html {
   min-width: 240px;
   overflow-x: hidden;
   overflow-y: scroll;
+  // Breaks words to prevent overflow in all browsers (opinionated).
+  word-break: break-word;
 }
 
 body {
@@ -24,6 +16,16 @@ body {
   font-size: var(--text-base-size);
   line-height: var(--body-line-height);
   color: var(--color-text);
+}
+
+// Improve font rendering on HiDPI devices
+@media
+ screen and (-webkit-min-device-pixel-ratio: 2),
+ screen and (min-resolution: 2dppx) {
+ body {
+   -moz-osx-font-smoothing: grayscale;
+   -webkit-font-smoothing: antialiased;
+ }
 }
 
 //
