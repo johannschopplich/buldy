@@ -112,9 +112,6 @@ $container-sizes: (
   --button-small:          calc(var(--control-text-size) - 0.2em);
   --button-medium:         calc(var(--control-text-size) + 0.2em);
   --button-large:          calc(var(--control-text-size) + 0.4em);
-
-  // Form controls
-  --control-text-size:     1em;
 }
 
 //

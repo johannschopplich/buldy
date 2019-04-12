@@ -337,7 +337,6 @@ summary {
   --button-small: calc(var(--control-text-size) - 0.2em);
   --button-medium: calc(var(--control-text-size) + 0.2em);
   --button-large: calc(var(--control-text-size) + 0.4em);
-  --control-text-size: 1em;
 }
 
 @media (min-width: 768px) {
@@ -403,16 +402,17 @@ table th {
 .button,
 .form-control {
   -webkit-appearance: none;
+  -moz-appearance: none;
   appearance: none;
   position: relative;
   display: inline-flex;
-  border: 1px solid transparent;
-  border-radius: var(--radius);
-  font-size: var(--control-text-size);
-  box-shadow: none;
-  padding: var(--space-xsmall) var(--space-small);
   justify-content: flex-start;
   align-items: center;
+  border: 1px solid transparent;
+  border-radius: var(--radius);
+  font-size: var(--text-base-size);
+  box-shadow: none;
+  padding: var(--space-xsmall) var(--space-small);
   vertical-align: top;
 }
 .button:focus, .button:active,
