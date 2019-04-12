@@ -141,6 +141,7 @@
 
     figcaption {
       color: var(--color-contrast-medium);
+      margin-top: calc(var(--space-xsmall) * var(--text-vspace-multiplier, 1));
     }
 
     @include media-breakpoint-up(sm) {

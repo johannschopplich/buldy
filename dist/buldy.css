@@ -1938,6 +1938,7 @@ table th {
 }
 .content figure figcaption {
   color: var(--color-contrast-medium);
+  margin-top: calc(var(--space-xsmall) * var(--text-vspace-multiplier, 1));
 }
 @media (min-width: 576px) {
   .content figure.is-pulled-left, .content figure.is-pulled-right {
