@@ -1745,7 +1745,7 @@ table th {
   color: var(--color-text);
 }
 .button.is-link:hover, .button.is-link:focus {
-  background-color: var(--color-contrast-low);
+  background-color: var(--color-contrast-lower);
 }
 .button.is-link[disabled] {
   background-color: transparent;

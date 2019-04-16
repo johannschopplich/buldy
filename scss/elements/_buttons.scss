@@ -48,7 +48,7 @@
     color: var(--color-text);
     &:hover,
     &:focus {
-      background-color: var(--color-contrast-low);
+      background-color: var(--color-contrast-lower);
     }
     &[disabled] {
       background-color: transparent;
