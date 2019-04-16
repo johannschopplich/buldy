@@ -115,8 +115,9 @@
   }
 
   blockquote {
+    background-color: var(--color-contrast-lower);
     border-left: 5px solid var(--color-contrast-low);
-    padding-left: calc(2em - 5px);
+    padding: var(--space-small) 2em var(--space-small) calc(2em - 5px);
   }
 
   pre {
