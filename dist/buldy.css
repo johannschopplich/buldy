@@ -412,9 +412,9 @@ table th {
   align-items: center;
   border: 1px solid transparent;
   border-radius: var(--radius);
-  font-size: var(--text-base-size);
+  font-size: inherit;
   box-shadow: none;
-  padding: var(--space-xsmall) var(--space-small);
+  padding: var(--space-xsmall);
   vertical-align: top;
 }
 .button:focus, .button:active,
@@ -1620,8 +1620,8 @@ table th {
   border-color: var(--color-contrast-medium);
 }
 .form-control:focus, .form-control:active {
-  border-color: var(--color-text);
-  box-shadow: 0 0 0 3px var(--color-primary-a25);
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 4px var(--color-primary-a25);
 }
 .form-control::-webkit-input-placeholder {
   color: var(--color-contrast-medium);
@@ -1643,24 +1643,24 @@ table th {
   border-color: var(--color-red);
 }
 .form-control[aria-invalid=true]:focus {
-  box-shadow: 0 0 0 3px var(--color-red-a25);
+  box-shadow: 0 0 0 4px var(--color-red-a25);
 }
 
 .form-legend {
   color: var(--color-text);
   line-height: var(--heading-line-height);
   font-size: var(--text-md);
-  margin-bottom: var(--space-xxsmall);
+  margin-bottom: var(--space-xsmall);
 }
 
 .form-label {
-  font-size: var(--text-sm);
-  margin-bottom: var(--space-xxsmall);
+  font-size: var(--text-small);
+  margin-bottom: var(--space-xsmall);
 }
 
 .help {
-  font-size: var(--text-sm);
-  margin-top: var(--space-small);
+  font-size: var(--text-small);
+  margin-top: var(--space-xsmall);
 }
 .help.is-error {
   color: var(--color-red);

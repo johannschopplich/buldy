@@ -10,8 +10,8 @@
   }
   &:focus,
   &:active {
-    border-color: var(--color-text);
-    box-shadow: 0 0 0 3px var(--color-primary-a25);
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 4px var(--color-primary-a25);
   }
   &::-webkit-input-placeholder {
     color: var(--color-contrast-medium);
@@ -32,7 +32,7 @@
   &[aria-invalid="true"] {
     border-color: var(--color-red);
     &:focus {
-      box-shadow: 0 0 0 3px var(--color-red-a25);
+      box-shadow: 0 0 0 4px var(--color-red-a25);
     }
   }
 }
@@ -41,12 +41,12 @@
   color: var(--color-text);
   line-height: var(--heading-line-height);
   font-size: var(--text-md);
-  margin-bottom: var(--space-xxsmall);
+  margin-bottom: var(--space-xsmall);
 }
 
 .form-label {
-  font-size: var(--text-sm);
-  margin-bottom: var(--space-xxsmall);
+  font-size: var(--text-small);
+  margin-bottom: var(--space-xsmall);
 }
 
 //
@@ -54,8 +54,8 @@
 //
 
 .help {
-  font-size: var(--text-sm);
-  margin-top: var(--space-small);
+  font-size: var(--text-small);
+  margin-top: var(--space-xsmall);
   &.is-error {
     color: var(--color-red);
   }
