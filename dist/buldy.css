@@ -346,9 +346,9 @@ summary {
   --focus-outline-offset: 2px;
   --radius: 0.25em;
   --radius-rounded: 50rem;
-  --button-small: calc(var(--control-text-size) - 0.2em);
-  --button-medium: calc(var(--control-text-size) + 0.2em);
-  --button-large: calc(var(--control-text-size) + 0.4em);
+  --button-small: calc(1em - 0.2em);
+  --button-medium: calc(1em + 0.2em);
+  --button-large: calc(1em + 0.4em);
 }
 
 @media (min-width: 768px) {
@@ -1795,6 +1795,7 @@ table th {
 .button.is-primary[disabled], .button.is-accent[disabled] {
   background-color: var(--button-color);
   border-color: transparent;
+  color: var(--color-white);
   box-shadow: none;
 }
 .button.is-primary.is-outlined, .button.is-accent.is-outlined {
