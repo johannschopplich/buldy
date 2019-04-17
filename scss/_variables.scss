@@ -50,6 +50,8 @@ $container-sizes: (
   // Feedback
   --color-red:             hsl(348, 100%, 61%);
   --color-red-a25:         hsla(348, 100%, 61%, 0.25);
+  --color-green:           hsl(141, 71%, 48%);
+  --color-green-a25:       hsla(141, 71%, 48%, 0.25);
 
   // Semantic definitions
   --color-text:            var(--color-contrast-higher);

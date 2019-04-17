@@ -134,10 +134,6 @@ label {
   display: inline-block;
 }
 
-button {
-  border-radius: 0;
-}
-
 button,
 input,
 select,
@@ -148,7 +144,12 @@ textarea {
   margin: 0;
 }
 
+button {
+  border-radius: 0;
+}
+
 button,
+[type=button],
 [type=reset],
 [type=submit] {
   -webkit-appearance: button;
@@ -159,6 +160,14 @@ button:not(:disabled),
 [type=reset]:not(:disabled),
 [type=submit]:not(:disabled) {
   cursor: pointer;
+}
+
+button::-moz-focus-inner,
+[type=button]::-moz-focus-inner,
+[type=reset]::-moz-focus-inner,
+[type=submit]::-moz-focus-inner {
+  padding: 0;
+  border-style: none;
 }
 
 fieldset {
@@ -297,6 +306,8 @@ summary {
   --color-contrast-higher: hsl(0, 0%, 12%);
   --color-red: hsl(348, 100%, 61%);
   --color-red-a25: hsla(348, 100%, 61%, 0.25);
+  --color-green: hsl(141, 71%, 48%);
+  --color-green-a25: hsla(141, 71%, 48%, 0.25);
   --color-text: var(--color-contrast-higher);
   --color-border: var(--color-contrast-low);
 }
@@ -412,7 +423,6 @@ table th {
   align-items: center;
   border: 1px solid transparent;
   border-radius: var(--radius);
-  font-size: inherit;
   box-shadow: none;
   padding: var(--space-xsmall);
   vertical-align: top;
@@ -1621,7 +1631,15 @@ table th {
 }
 .form-control:focus, .form-control:active {
   border-color: var(--color-primary);
-  box-shadow: 0 0 0 4px var(--color-primary-a25);
+  box-shadow: 0 0 0 3px var(--color-primary-a25);
+}
+.form-control.is-error {
+  border-color: var(--color-red);
+  box-shadow: 0 0 0 3px var(--color-red-a25);
+}
+.form-control.is-success {
+  border-color: var(--color-green);
+  box-shadow: 0 0 0 3px var(--color-green-a25);
 }
 .form-control::-webkit-input-placeholder {
   color: var(--color-contrast-medium);
@@ -1636,25 +1654,24 @@ table th {
 .form-control[disabled] {
   background-color: var(--color-background);
   border-color: var(--color-contrast-low);
+  color: var(--color-text);
   box-shadow: none;
-  color: var(--color-contrast-medium);
 }
 .form-control[aria-invalid=true] {
   border-color: var(--color-red);
 }
 .form-control[aria-invalid=true]:focus {
-  box-shadow: 0 0 0 4px var(--color-red-a25);
+  box-shadow: 0 0 0 3px var(--color-red-a25);
 }
 
 .form-legend {
   color: var(--color-text);
   line-height: var(--heading-line-height);
-  font-size: var(--text-md);
+  font-size: var(--text-5);
   margin-bottom: var(--space-xsmall);
 }
 
 .form-label {
-  font-size: var(--text-small);
   margin-bottom: var(--space-xsmall);
 }
 
@@ -1664,6 +1681,9 @@ table th {
 }
 .help.is-error {
   color: var(--color-red);
+}
+.help.is-success {
+  color: var(--color-green);
 }
 
 .title {
@@ -1817,6 +1837,7 @@ table th {
 .button[disabled] {
   background-color: var(--color-background);
   border-color: var(--color-contrast-low);
+  color: var(--color-text);
   box-shadow: none;
   opacity: 0.5;
 }

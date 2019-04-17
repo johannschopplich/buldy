@@ -186,11 +186,7 @@ label {
   display: inline-block;
 }
 
-// Remove the default `border-radius` that macOS Chrome adds.
-button {
-  border-radius: 0;
-}
-
+// Inherit styling in all browsers (opinionated).
 button,
 input,
 select,
@@ -201,8 +197,14 @@ textarea {
   margin: 0;
 }
 
+// Remove the default `border-radius` that macOS Chrome adds.
+button {
+  border-radius: 0;
+}
+
 // Correct the inability to style clickable types in iOS and Safari.
 button,
+[type="button"],
 [type="reset"],
 [type="submit"] {
   -webkit-appearance: button;
@@ -216,6 +218,15 @@ button,
   &:not(:disabled) {
     cursor: pointer;
   }
+}
+
+// Remove inner border and padding from Firefox, but don't restore the outline like Normalize.
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  padding: 0;
+  border-style: none;
 }
 
 fieldset {
