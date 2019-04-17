@@ -1,0 +1,193 @@
+main {
+  display: grid;
+  grid: repeat(6, fit-content(240px))/repeat(4, 1fr);
+  grid-template-areas:
+    "colors typography typography typography"
+    "colors buttons buttons buttons"
+    "columns columns columns columns"
+    "inputs inputs inputs inputs"
+    "content content content content";
+  width: 90%;
+  max-width: var(--container-width-xl);
+  border: 1px solid var(--color-contrast-medium);
+  margin: var(--space-xlarge) auto;
+}
+
+main > section {
+  position: relative;
+}
+
+main > section > h6 {
+  position: absolute;
+  top: -0.75em;
+  left: calc(2 * var(--space-small));
+  color: var(--color-contrast-medium);
+  background: var(--color-background);
+  font-size: var(--text-small);
+  padding: 0 var(--space-small);
+  text-transform: uppercase;
+}
+
+main > section h6.subheader {
+  width: 100%;
+  color: var(--color-contrast-medium);
+  font-size: var(--text-small);
+  margin-bottom: var(--space-small);
+  text-transform: uppercase;
+}
+
+.section-colors {
+  grid-area: colors;
+  padding: var(--space-medium);
+  border: 1px solid var(--color-contrast-medium);
+  border-width: 0 1px 1px 0;
+}
+
+.palette {
+  display: grid;
+  grid: 6em 3em  min-content/repeat(3, minmax(3em, 1fr));
+  margin-bottom: 1em;
+}
+
+.palette > .main {
+  grid-column: span 3;
+}
+
+.palette h5 {
+  grid-column: span 3;
+  color: var(--color-contrast-medium);
+  padding: var(--space-xsmall) 0;
+}
+
+.palette.is-main div:nth-child(1) {
+  background: var(--color-primary);
+}
+.palette.is-main div:nth-child(2) {
+  background: var(--color-primary-a25);
+}
+.palette.is-main div:nth-child(3) {
+  background: var(--color-primary-hover);
+}
+.palette.is-main div:nth-child(4) {
+  background: var(--color-primary-active);
+}
+.palette.is-accent div:nth-child(1) {
+  background: var(--color-accent);
+}
+.palette.is-accent div:nth-child(2) {
+  background: var(--color-accent-a25);
+}
+.palette.is-accent div:nth-child(3) {
+  background: var(--color-accent-hover);
+}
+.palette.is-accent div:nth-child(4) {
+  background: var(--color-accent-active);
+}
+.palette.is-neutrals {
+  grid-template-rows: repeat(2, 50px) min-content;
+  grid-template-columns: repeat(3, 1fr);
+}
+.palette.is-neutrals div:nth-child(1) {
+  background: var(--color-black);
+}
+.palette.is-neutrals div:nth-child(2) {
+  background: var(--color-contrast-higher);
+}
+.palette.is-neutrals div:nth-child(3) {
+  background: var(--color-contrast-high);
+}
+.palette.is-neutrals div:nth-child(4) {
+  background: var(--color-contrast-medium);
+  grid-row: 2;
+}
+.palette.is-neutrals div:nth-child(5) {
+  background: var(--color-contrast-low);
+  grid-row: 2;
+}
+.palette.is-neutrals div:nth-child(6) {
+  background: var(--color-contrast-lower);
+  grid-row: 2;
+}
+
+.section-typography {
+  grid-area: typography;
+  border-bottom: 1px solid var(--color-contrast-medium);
+}
+
+.font-family {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.font-family > div {
+  flex: 1 1 auto;
+  padding: var(--space-medium);
+  min-width: 10em;
+}
+
+.font-example {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.font-example > div {
+  flex: 1 1 45%;
+  padding: var(--space-medium);
+}
+
+.section-buttons {
+  grid-area: buttons;
+  padding: var(--space-medium);
+  border-bottom: 1px solid var(--color-contrast-medium);
+}
+
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.buttons > .button {
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+}
+
+.section-columns {
+  grid-area: columns;
+  padding: var(--space-medium);
+  border-bottom: 1px solid var(--color-contrast-medium);
+}
+
+.section-inputs {
+  grid-area: inputs;
+  display: grid;
+  grid-auto-flow: dense;
+  grid: repeat(1, max-content)/repeat(6, 1fr);
+  grid-gap: var(--space-medium);
+  padding: var(--space-medium);
+  border-bottom: 1px solid var(--color-contrast-medium);
+}
+
+.section-inputs .inputs {
+  grid-column: span 3;
+}
+
+.section-inputs .input-wrapper {
+  margin-bottom: var(--space-medium);
+}
+
+.section-inputs .textarea-select {
+  grid-column: span 3;
+}
+
+.section-inputs .checkboxes,
+.section-inputs .radio-buttons {
+  grid-column: span 3;
+}
+
+.section-content {
+  grid-area: content;
+  padding: var(--space-medium);
+  border-top: 1px solid var(--color-contrast-medium);
+}
