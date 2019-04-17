@@ -6,7 +6,7 @@
 
   @include transition(background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out);
   &:hover {
-    border-color: var(--color-contrast-medium);
+    border-color: var(--color-contrast-light);
   }
   &:focus,
   &:active {
@@ -22,11 +22,11 @@
     box-shadow: 0 0 0 3px var(--color-green-a25);
   }
   &::-webkit-input-placeholder {
-    color: var(--color-contrast-medium);
+    color: var(--color-contrast-light);
   }
   &::-moz-placeholder {
     opacity: 1;
-    color: var(--color-contrast-medium);
+    color: var(--color-contrast-light);
   }
   &[readonly] {
     box-shadow: none;

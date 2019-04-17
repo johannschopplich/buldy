@@ -5,6 +5,7 @@
 .has-text-primary { color: var(--color-primary) !important; }
 .has-text-accent  { color: var(--color-accent) !important; }
 .has-text-white   { color: var(--color-white) !important; }
+.has-text-lighter { color: var(--color-contrast-lower) !important; }
 .has-text-light   { color: var(--color-contrast-light) !important; }
 .has-text-dark    { color: var(--color-contrast-high) !important; }
 .has-text-darker  { color: var(--color-contrast-higher) !important; }
@@ -15,6 +16,7 @@
 .has-background-primary { background-color: var(--color-primary) !important; }
 .has-background-accent  { background-color: var(--color-accent) !important; }
 .has-background-white   { background-color: var(--color-white) !important; }
+.has-background-lighter { background-color: var(--color-contrast-lower) !important; }
 .has-background-light   { background-color: var(--color-contrast-light) !important; }
 .has-background-dark    { background-color: var(--color-contrast-high) !important; }
 .has-background-darker  { background-color: var(--color-contrast-higher) !important; }
@@ -24,6 +26,25 @@
 //
 // Common spacing values
 //
+
+.has-padding-xxxsmall          { padding: var(--space-xxxsmall) !important; }
+.has-padding-xxsmall           { padding: var(--space-xxsmall) !important; }
+.has-padding-xsmall            { padding: var(--space-xsmall) !important; }
+.has-padding-small             { padding: var(--space-small) !important; }
+.has-padding-medium            { padding: var(--space-medium) !important; }
+.has-padding-large             { padding: var(--space-large) !important; }
+.has-padding-xlarge            { padding: var(--space-xlarge) !important; }
+.has-padding-xxlarge           { padding: var(--space-xxlarge) !important; }
+.has-padding-xxxlarge          { padding: var(--space-xxxlarge) !important; }
+.has-margin-xxxsmall           { margin: var(--space-xxxsmall) !important; }
+.has-margin-xxsmall            { margin: var(--space-xxsmall) !important; }
+.has-margin-xsmall             { margin: var(--space-xsmall) !important; }
+.has-margin-small              { margin: var(--space-small) !important; }
+.has-margin-medium             { margin: var(--space-medium) !important; }
+.has-margin-large              { margin: var(--space-large) !important; }
+.has-margin-xlarge             { margin: var(--space-xlarge) !important; }
+.has-margin-xxlarge            { margin: var(--space-xxlarge) !important; }
+.has-margin-xxxlarge           { margin: var(--space-xxxlarge) !important; }
 
 .has-padding-top               { padding-top: var(--space-medium) !important; }
 .has-padding-bottom            { padding-bottom: var(--space-medium) !important; }

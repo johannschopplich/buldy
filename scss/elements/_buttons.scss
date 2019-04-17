@@ -10,7 +10,7 @@
   @include transition(color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out);
   &:hover,
   &:focus {
-    border-color: var(--color-contrast-medium);
+    border-color: var(--color-contrast-text);
     color: var(--color-text);
   }
   &:active {

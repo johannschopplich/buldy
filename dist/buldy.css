@@ -406,6 +406,13 @@ span {
   font-weight: inherit;
 }
 
+code {
+  background-color: var(--color-contrast-lower);
+  color: var(--color-red);
+  font-size: 0.875em;
+  padding: 0.25em 0.5em 0.25em;
+}
+
 table td,
 table th {
   text-align: left;
@@ -449,6 +456,10 @@ table th {
   color: var(--color-white) !important;
 }
 
+.has-text-lighter {
+  color: var(--color-contrast-lower) !important;
+}
+
 .has-text-light {
   color: var(--color-contrast-light) !important;
 }
@@ -485,6 +496,10 @@ table th {
   background-color: var(--color-white) !important;
 }
 
+.has-background-lighter {
+  background-color: var(--color-contrast-lower) !important;
+}
+
 .has-background-light {
   background-color: var(--color-contrast-light) !important;
 }
@@ -503,6 +518,78 @@ table th {
 
 .has-background-current-color {
   background-color: currentColor !important;
+}
+
+.has-padding-xxxsmall {
+  padding: var(--space-xxxsmall) !important;
+}
+
+.has-padding-xxsmall {
+  padding: var(--space-xxsmall) !important;
+}
+
+.has-padding-xsmall {
+  padding: var(--space-xsmall) !important;
+}
+
+.has-padding-small {
+  padding: var(--space-small) !important;
+}
+
+.has-padding-medium {
+  padding: var(--space-medium) !important;
+}
+
+.has-padding-large {
+  padding: var(--space-large) !important;
+}
+
+.has-padding-xlarge {
+  padding: var(--space-xlarge) !important;
+}
+
+.has-padding-xxlarge {
+  padding: var(--space-xxlarge) !important;
+}
+
+.has-padding-xxxlarge {
+  padding: var(--space-xxxlarge) !important;
+}
+
+.has-margin-xxxsmall {
+  margin: var(--space-xxxsmall) !important;
+}
+
+.has-margin-xxsmall {
+  margin: var(--space-xxsmall) !important;
+}
+
+.has-margin-xsmall {
+  margin: var(--space-xsmall) !important;
+}
+
+.has-margin-small {
+  margin: var(--space-small) !important;
+}
+
+.has-margin-medium {
+  margin: var(--space-medium) !important;
+}
+
+.has-margin-large {
+  margin: var(--space-large) !important;
+}
+
+.has-margin-xlarge {
+  margin: var(--space-xlarge) !important;
+}
+
+.has-margin-xxlarge {
+  margin: var(--space-xxlarge) !important;
+}
+
+.has-margin-xxxlarge {
+  margin: var(--space-xxxlarge) !important;
 }
 
 .has-padding-top {
@@ -1627,7 +1714,7 @@ table th {
   }
 }
 .form-control:hover {
-  border-color: var(--color-contrast-medium);
+  border-color: var(--color-contrast-light);
 }
 .form-control:focus, .form-control:active {
   border-color: var(--color-primary);
@@ -1642,11 +1729,11 @@ table th {
   box-shadow: 0 0 0 3px var(--color-green-a25);
 }
 .form-control::-webkit-input-placeholder {
-  color: var(--color-contrast-medium);
+  color: var(--color-contrast-light);
 }
 .form-control::-moz-placeholder {
   opacity: 1;
-  color: var(--color-contrast-medium);
+  color: var(--color-contrast-light);
 }
 .form-control[readonly] {
   box-shadow: none;
@@ -1738,7 +1825,7 @@ table th {
   }
 }
 .button:hover, .button:focus {
-  border-color: var(--color-contrast-medium);
+  border-color: var(--color-contrast-text);
   color: var(--color-text);
 }
 .button:active {

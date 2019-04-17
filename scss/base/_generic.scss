@@ -63,6 +63,14 @@ span {
   font-weight: inherit;
 }
 
+code {
+  // Thanks to Bulma for this style
+  background-color: var(--color-contrast-lower);
+  color: var(--color-red);
+  font-size: 0.875em;
+  padding: 0.25em 0.5em 0.25em;
+}
+
 //
 // Tabular data
 //
