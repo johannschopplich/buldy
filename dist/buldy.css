@@ -2035,6 +2035,7 @@ table th {
   font-size: 0.875em;
   background-color: var(--color-contrast-lower);
   padding: var(--space-small) 1em;
+  white-space: pre-wrap;
 }
 .content figure {
   text-align: center;
