@@ -2032,6 +2032,7 @@ table th {
   padding: var(--space-small) 2em var(--space-small) calc(2em - 5px);
 }
 .content pre {
+  font-size: 0.875em;
   background-color: var(--color-contrast-lower);
   padding: var(--space-small) 1em;
 }
