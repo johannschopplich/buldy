@@ -1,4 +1,4 @@
-main {
+.cheatsheet {
   display: grid;
   grid: repeat(6, fit-content(240px))/repeat(4, 1fr);
   grid-template-areas:
@@ -7,17 +7,14 @@ main {
     "columns columns columns columns"
     "inputs inputs inputs inputs"
     "content content content content";
-  width: 90%;
-  max-width: var(--container-width-xl);
   border: 1px solid var(--color-contrast-medium);
-  margin: var(--space-xlarge) auto;
 }
 
-main > section {
+.cheatsheet > section {
   position: relative;
 }
 
-main > section > h6 {
+.cheatsheet > section > h6 {
   position: absolute;
   top: -0.75em;
   left: calc(2 * var(--space-small));
@@ -28,7 +25,7 @@ main > section > h6 {
   text-transform: uppercase;
 }
 
-main > section h6.subheader {
+.cheatsheet > section h6.subheader {
   width: 100%;
   color: var(--color-contrast-medium);
   font-size: var(--text-small);
@@ -150,6 +147,9 @@ main > section h6.subheader {
 
 .buttons > .button {
   margin-right: 1rem;
+}
+
+.buttons:not(:last-child) > .button {
   margin-bottom: 1rem;
 }
 
