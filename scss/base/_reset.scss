@@ -110,7 +110,8 @@ pre {
 }
 
 pre {
-  overflow-x: auto;
+  display: block;
+  overflow: auto;
 }
 
 small {

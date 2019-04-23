@@ -78,7 +78,8 @@ pre {
 }
 
 pre {
-  overflow-x: auto;
+  display: block;
+  overflow: auto;
 }
 
 small {
@@ -411,6 +412,19 @@ code {
   color: var(--color-red);
   font-size: 0.875em;
   padding: 0.25em 0.5em 0.25em;
+}
+
+pre {
+  background-color: var(--color-contrast-lower);
+  font-size: 0.875em;
+  padding: var(--space-small) 1em;
+}
+
+pre code {
+  background-color: transparent;
+  color: currentColor;
+  font-size: 1em;
+  padding: 0;
 }
 
 table td,
@@ -2030,12 +2044,6 @@ table th {
   background-color: var(--color-contrast-lower);
   border-left: 5px solid var(--color-contrast-low);
   padding: var(--space-small) 2em var(--space-small) calc(2em - 5px);
-}
-.content pre {
-  font-size: 0.875em;
-  background-color: var(--color-contrast-lower);
-  padding: var(--space-small) 1em;
-  white-space: pre-wrap;
 }
 .content figure {
   text-align: center;

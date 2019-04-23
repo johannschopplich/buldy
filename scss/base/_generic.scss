@@ -64,11 +64,26 @@ span {
 }
 
 code {
-  // Thanks to Bulma for this style
+  // Thanks to Bulma for these style ideas
   background-color: var(--color-contrast-lower);
   color: var(--color-red);
   font-size: 0.875em;
   padding: 0.25em 0.5em 0.25em;
+  //word-break: break-word;
+}
+
+pre {
+  background-color: var(--color-contrast-lower);
+  font-size: 0.875em;
+  padding: var(--space-small) 1em;
+}
+
+pre code {
+  background-color: transparent;
+  color: currentColor;
+  font-size: 1em;
+  padding: 0;
+  //word-break: normal;
 }
 
 //
