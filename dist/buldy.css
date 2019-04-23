@@ -288,14 +288,14 @@ summary {
 
 :root,
 [data-theme=default] {
-  --color-primary: hsl(220, 90%, 56%);
-  --color-primary-hover: hsl(220, 90%, 52%);
-  --color-primary-active: hsl(220, 90%, 49%);
-  --color-primary-a25: hsla(220, 90%, 56%, 0.25);
-  --color-accent: hsl(171, 100%, 41%);
-  --color-accent-hover: hsl(171, 100%, 37%);
-  --color-accent-active: hsl(171, 100%, 33%);
-  --color-accent-a25: hsla(171, 100%, 41%, 0.25);
+  --color-primary: hsl(17, 41%, 68%);
+  --color-primary-hover: hsl(17, 41%, 64%);
+  --color-primary-active: hsl(17, 41%, 60%);
+  --color-primary-a25: hsla(17, 41%, 68%, 0.25);
+  --color-accent: hsl(220, 90%, 56%);
+  --color-accent-hover: hsl(220, 90%, 52%);
+  --color-accent-active: hsl(220, 90%, 49%);
+  --color-accent-a25: hsla(220, 90%, 56%, 0.25);
   --color-black: hsl(0, 0%, 4%);
   --color-white: hsl(0, 0%, 100%);
   --color-background: hsl(0, 0%, 100%);
@@ -1839,7 +1839,7 @@ table th {
   }
 }
 .button:hover, .button:focus {
-  border-color: var(--color-contrast-text);
+  border-color: var(--color-contrast-light);
   color: var(--color-text);
 }
 .button:active {
