@@ -180,59 +180,30 @@
         <h6>Inputs & Selects</h6>
         <div class="inputs">
           <div class="input-wrapper">
-            <label class="form-label">A Normal Input</label>
-            <input class="form-control" type="text" placeholder="Placeholder">
+            <label class="label">Normal Input</label>
+            <input class="control" type="text" placeholder="Placeholder">
             <p class="help">A message here.</p>
           </div>
           <div class="input-wrapper">
-            <label class="form-label">A Success Input</label>
-            <input class="form-control is-success" type="text" placeholder="Placeholder">
-            <p class="help is-success">A success message here.</p>
+            <label class="label">Disabled Input</label>
+            <input class="control" type="text" value="Some Text" disabled>
           </div>
           <div class="input-wrapper">
-            <label class="form-label">A Error Input</label>
-            <input class="form-control is-error" type="text" placeholder="Placeholder">
-            <p class="help is-error">A error message here.</p>
-          </div>
-          <div class="input-wrapper">
-            <label class="form-label">A Disabled Input</label>
-            <input class="form-control" type="text" placeholder="Placeholder" disabled>
+            <label class="label">Textarea</label>
+            <textarea class="control" type="text" placeholder="Placeholder"></textarea>
           </div>
         </div>
 
         <div class="textarea-select">
           <div class="input-wrapper">
-            <label class="form-label">Textarea</label>
-            <textarea class="form-control" type="text" placeholder="Placeholder"></textarea>
+            <label class="label">Success Input</label>
+            <input class="control is-success" type="text" placeholder="Placeholder">
+            <p class="help is-success">A success message here.</p>
           </div>
           <div class="input-wrapper">
-            <label class="form-label">A Normal Select</label>
-            <select class="form-control" type="text" placeholder="Placeholder">
-              <option value="1">Option 1</option>
-              <option value="2">Option 2</option>
-            </select>
-          </div>
-          <div class="input-wrapper">
-            <h6 class="subheader">Checkboxes</h6>
-            <div class="checkbox">
-              <input id="checkbox-1" type="checkbox">
-              <label for="checkbox-1">Checkbox</label>
-            </div>
-            <div class="checkbox">
-              <input id="checkbox-2" type="checkbox" checked="checked">
-              <label for="checkbox-2">Checked Box</label>
-            </div>
-          </div>
-          <div class="input-wrapper">
-            <h6 class="subheader">Radio Buttons</h6>
-            <div class="radio">
-              <input id="radio-1" type="radio" name="radio-test" value="1" checked="checked">
-              <label for="radio-1">Radio Button</label>
-            </div>
-            <div class="radio">
-              <input id="radio-2" type="radio" name="radio-test" value="1">
-              <label for="radio-2">Selected Radio Button</label>
-            </div>
+            <label class="label">Error Input</label>
+            <input class="control is-error" type="text" placeholder="Placeholder">
+            <p class="help is-error">An error message here.</p>
           </div>
         </div>
       </section>

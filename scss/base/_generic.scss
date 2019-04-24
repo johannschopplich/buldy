@@ -68,7 +68,7 @@ code {
   background-color: var(--color-contrast-lower);
   color: var(--color-red);
   font-size: 0.875em;
-  padding: 0.25em 0.5em 0.25em;
+  padding: var(--space-xxxsmall) var(--space-xsmall) var(--space-xxxsmall);
   //word-break: break-word;
 }
 
@@ -95,32 +95,5 @@ table {
   th {
     text-align: left;
     vertical-align: top;
-  }
-}
-
-//
-// Form controls
-//
-
-.button,
-.form-control {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  position: relative;
-  display: inline-flex;
-  justify-content: flex-start;
-  align-items: center;
-  border: 1px solid transparent;
-  border-radius: var(--radius);
-  box-shadow: none;
-  padding: var(--space-xsmall);
-  vertical-align: top;
-  &:focus,
-  &:active {
-    outline: none;
-  }
-  &[disabled] {
-    cursor: not-allowed;
   }
 }

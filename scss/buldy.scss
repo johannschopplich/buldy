@@ -5,12 +5,12 @@
 @import "variables";
 
 @import "base/generic";
+@import "base/controls";
 @import "base/helpers";
 
 @import "components/container";
 @import "components/grid";
 @import "components/iota-grid/iota";
-@import "components/layout";
 @import "components/modal";
 @import "components/form";
 
@@ -21,3 +21,6 @@
 @import "elements/image";
 @import "elements/icon";
 @import "elements/flow";
+
+@import "layout/section";
+@import "layout/hero";

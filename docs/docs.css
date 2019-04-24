@@ -189,5 +189,4 @@
 .section-content {
   grid-area: content;
   padding: var(--space-medium);
-  border-top: 1px solid var(--color-contrast-medium);
 }

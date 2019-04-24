@@ -1,4 +1,4 @@
-.form-control {
+.control {
   width: 100%;
   background-color: var(--color-background);
   border-color: var(--color-contrast-low);
@@ -15,11 +15,17 @@
   }
   &.is-error {
     border-color: var(--color-red);
-    box-shadow: 0 0 0 3px var(--color-red-a25);
+    &:focus,
+    &:active {
+      box-shadow: 0 0 0 3px var(--color-red-a25);
+    }
   }
   &.is-success {
     border-color: var(--color-green);
-    box-shadow: 0 0 0 3px var(--color-green-a25);
+    &:focus,
+    &:active {
+      box-shadow: 0 0 0 3px var(--color-green-a25);
+    }
   }
   &::-webkit-input-placeholder {
     color: var(--color-contrast-light);
@@ -32,9 +38,9 @@
     box-shadow: none;
   }
   &[disabled] {
-    background-color: var(--color-background);
-    border-color: var(--color-contrast-low);
-    color: var(--color-text);
+    background-color: var(--color-contrast-lower);
+    border-color: var(--color-contrast-lower);
+    color: var(--color-contrast-light);
     box-shadow: none;
   }
   &[aria-invalid="true"] {
@@ -45,14 +51,14 @@
   }
 }
 
-.form-legend {
+.legend {
   color: var(--color-text);
   line-height: var(--heading-line-height);
   font-size: var(--text-5);
   margin-bottom: var(--space-xsmall);
 }
 
-.form-label {
+.label {
   margin-bottom: var(--space-xsmall);
 }
 

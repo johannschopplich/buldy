@@ -92,7 +92,7 @@ $container-sizes: (
 
   // Spacing
   --space-unit:            1em;
-  //--space-xxxxsmall:     calc(0.125 * var(--space-unit));
+  --space-xxxxsmall:       calc(0.125 * var(--space-unit));
   --space-xxxsmall:        calc(0.25  * var(--space-unit));
   --space-xxsmall:         calc(0.375 * var(--space-unit));
   --space-xsmall:          calc(0.5   * var(--space-unit));
@@ -102,6 +102,7 @@ $container-sizes: (
   --space-xlarge:          calc(3.25  * var(--space-unit));
   --space-xxlarge:         calc(5.25  * var(--space-unit));
   --space-xxxlarge:        calc(8.5   * var(--space-unit));
+  //--space-xxxxlarge:     calc(13.75 * var(--space-unit));
   --component-padding:     var(--space-small);
 
   // Outlines
