@@ -4,7 +4,7 @@
   border-color: var(--color-contrast-low);
   color: var(--color-text);
 
-  @include transition(background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out);
+  @include transition(/*border-color 0.15s ease-in-out,*/ box-shadow 0.15s ease-in-out);
   &:hover {
     border-color: var(--color-contrast-light);
   }
