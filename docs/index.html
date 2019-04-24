@@ -28,7 +28,7 @@
     <div class="hero-body">
       <div class="container is-md">
         <h2 class="title is-2 has-text-weight-light has-text-light">Features</h2>
-        <ul class="has-margin-top-medium">
+        <ul class="has-margin-top-medium" style="line-height: 2;">
           <li>⚡️&nbsp; Everything you need to create a solid project</li>
           <li>🗨&nbsp; <strong>Typography system</strong> where all font sizes are intertwined</li>
           <li>📐️&nbsp; Powerful <strong>responsive spacing system</strong> using multipliers of a unit value</li>
@@ -42,9 +42,9 @@
     </div>
   </section>
 
-  <section class="section has-margin-top-large has-margin-bottom-large">
+  <section id="cheatsheet" class="section has-margin-top-large has-margin-bottom-large">
     <div class="container is-md has-margin-bottom-xlarge">
-      <h2 id="cheatsheet" class="title is-2 has-text-weight-light has-text-light">Cheat Sheet (Basic Functionality)</h2>
+      <h2 class="title is-2 has-text-weight-light has-text-light">Cheat Sheet (Basic Functionality)</h2>
     </div>
     <div class="container cheatsheet">
       <section class="section-colors">
@@ -116,6 +116,8 @@
         <div class="buttons">
           <button class="button">Default Button</button>
           <button class="button" disabled>Disabled Button</button>
+          <button class="button is-text">Text Button</button>
+          <button class="button is-link">Link Button</button>
         </div>
         <div class="buttons">
           <button class="button is-primary">Primary Button</button>
@@ -128,10 +130,6 @@
           <button class="button is-accent" disabled>Accent Disabled</button>
           <button class="button is-primary is-outlined" disabled>Outline Disabled</button>
           <button class="button is-accent is-outlined" disabled>Outline Disabled</button>
-        </div>
-        <div class="buttons">
-          <button class="button is-text">Text Button</button>
-          <button class="button is-link">Link Button</button>
         </div>
         <div class="buttons">
           <button class="button is-small">Small</button>
@@ -177,7 +175,7 @@
       </section>
 
       <section class="section-inputs">
-        <h6>Inputs & Selects</h6>
+        <h6>Inputs & Textarea</h6>
         <div class="inputs">
           <div class="input-wrapper">
             <label class="label">Normal Input</label>
@@ -194,7 +192,7 @@
           </div>
         </div>
 
-        <div class="textarea-select">
+        <div class="inputs">
           <div class="input-wrapper">
             <label class="label">Success Input</label>
             <input class="control is-success" type="text" placeholder="Placeholder">
@@ -218,21 +216,13 @@
             <h5>h5 Heading</h5>
             <h6>h6 Heading</h6>
             <hr>
-            <h3>Emphasis</h3>
-            <p><strong>This is bold text</strong></p>
-            <p><strong>This is bold text</strong></p>
-            <p><em>This is italic text</em></p>
-            <p><em>This is italic text</em></p>
-            <p><s>Strikethrough</s></p>
-            <h3>Blockquotes</h3>
             <blockquote>
               <p>Blockquotes can also be nested…</p>
               <blockquote>
                 <p>…if you want them to be. Do you?</p>
               </blockquote>
             </blockquote>
-            <h3>Lists</h3>
-            <p>Unordered</p>
+            <p><strong>Unordered Lists:</strong></p>
             <ul>
               <li>In markdown create a list by starting a line with <code>+</code>, <code>-</code>, or <code>*</code></li>
               <li>Sub-lists are made by indenting 2 spaces:
@@ -252,7 +242,7 @@
               </li>
               <li>Very easy!</li>
             </ul>
-            <p>Ordered</p>
+            <p><strong>Ordered Lists:</strong></p>
             <ol>
               <li>Lorem ipsum dolor sit amet</li>
               <li><p>Consectetur adipiscing elit</p></li>

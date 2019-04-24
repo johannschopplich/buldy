@@ -35,9 +35,9 @@
 
 .section-colors {
   grid-area: colors;
-  padding: var(--space-medium);
   border: 1px solid var(--color-contrast-medium);
   border-width: 0 1px 1px 0;
+  padding: var(--space-large) var(--space-medium);
 }
 
 .palette {
@@ -119,8 +119,8 @@
 
 .font-family > div {
   flex: 1 1 auto;
-  padding: var(--space-medium);
   min-width: 10em;
+  padding: var(--space-large) var(--space-medium);
 }
 
 .font-example {
@@ -130,13 +130,13 @@
 
 .font-example > div {
   flex: 1 1 45%;
-  padding: var(--space-medium);
+  padding: var(--space-large) var(--space-medium);
 }
 
 .section-buttons {
   grid-area: buttons;
-  padding: var(--space-medium);
   border-bottom: 1px solid var(--color-contrast-medium);
+  padding: var(--space-large) var(--space-medium);
 }
 
 .buttons {
@@ -155,8 +155,8 @@
 
 .section-columns {
   grid-area: columns;
-  padding: var(--space-medium);
   border-bottom: 1px solid var(--color-contrast-medium);
+  padding: var(--space-large) var(--space-medium);
 }
 
 .section-inputs {
@@ -165,8 +165,8 @@
   grid-auto-flow: dense;
   grid: repeat(1, max-content)/repeat(6, 1fr);
   grid-gap: var(--space-medium);
-  padding: var(--space-medium);
   border-bottom: 1px solid var(--color-contrast-medium);
+  padding: var(--space-large) var(--space-medium);
 }
 
 .section-inputs .inputs {
@@ -174,19 +174,10 @@
 }
 
 .section-inputs .input-wrapper {
-  margin-bottom: var(--space-medium);
-}
-
-.section-inputs .textarea-select {
-  grid-column: span 3;
-}
-
-.section-inputs .checkboxes,
-.section-inputs .radio-buttons {
-  grid-column: span 3;
+  margin-bottom: var(--space-large) var(--space-medium);
 }
 
 .section-content {
   grid-area: content;
-  padding: var(--space-medium);
+  padding: var(--space-large) var(--space-medium);
 }
