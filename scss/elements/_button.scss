@@ -7,9 +7,9 @@
   justify-content: center;
   text-align: center;
   white-space: nowrap;
-
   @extend %unselectable;
   @include transition(/*color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out,*/ box-shadow 0.15s ease-in-out);
+
   &:hover,
   &:focus {
     border-color: var(--color-contrast-light);
