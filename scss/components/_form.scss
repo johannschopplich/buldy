@@ -3,6 +3,8 @@
   background-color: var(--color-background);
   border-color: var(--color-contrast-low);
   color: var(--color-text);
+  justify-content: flex-start;
+  padding: var(--space-xxsmall) var(--space-xsmall);
 
   @include transition(/*border-color 0.15s ease-in-out,*/ box-shadow 0.15s ease-in-out);
   &:hover {

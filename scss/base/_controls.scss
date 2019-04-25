@@ -5,12 +5,10 @@
   appearance: none;
   position: relative;
   display: inline-flex;
-  justify-content: flex-start;
   align-items: center;
   border: 1px solid transparent;
   border-radius: var(--radius);
   box-shadow: none;
-  padding: var(--space-xsmall);
   vertical-align: top;
   &:focus,
   &:active {
@@ -19,12 +17,4 @@
   &[disabled] {
     cursor: not-allowed;
   }
-}
-
-.button {
-  padding: var(--space-xsmall);
-}
-
-.control {
-  padding: var(--space-xxsmall) var(--space-xsmall);
 }
