@@ -441,12 +441,10 @@ table th {
   appearance: none;
   position: relative;
   display: inline-flex;
-  justify-content: flex-start;
   align-items: center;
   border: 1px solid transparent;
   border-radius: var(--radius);
   box-shadow: none;
-  padding: var(--space-xsmall);
   vertical-align: top;
 }
 .button:focus, .button:active,
@@ -457,14 +455,6 @@ table th {
 .button[disabled],
 .control[disabled] {
   cursor: not-allowed;
-}
-
-.button {
-  padding: var(--space-xsmall);
-}
-
-.control {
-  padding: var(--space-xxsmall) var(--space-xsmall);
 }
 
 .has-text-primary {
@@ -992,18 +982,15 @@ table th {
 }
 
 .is-sr-only {
-  position: fixed !important;
-  top: 0px !important;
-  left: 0px !important;
-  width: 4px !important;
-  height: 4px !important;
-  opacity: 0 !important;
-  overflow: hidden !important;
-  border: none !important;
-  margin: 0 !important;
-  padding: 0 !important;
-  display: block !important;
-  visibility: visible !important;
+  position: absolute;
+  width: 1px;
+  height: auto;
+  clip: rect(0 0 0 0);
+  border: 0;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
 .is-marginless {
@@ -1678,6 +1665,8 @@ table th {
   background-color: var(--color-background);
   border-color: var(--color-contrast-low);
   color: var(--color-text);
+  justify-content: flex-start;
+  padding: var(--space-xxsmall) var(--space-xsmall);
   transition: box-shadow 0.15s ease-in-out;
 }
 @media (prefers-reduced-motion: reduce) {
@@ -1790,6 +1779,7 @@ table th {
   border-color: var(--color-contrast-low);
   color: var(--color-text);
   line-height: 1;
+  padding: var(--space-xsmall);
   justify-content: center;
   text-align: center;
   white-space: nowrap;
