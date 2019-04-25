@@ -66,7 +66,7 @@ Improvements and suggestions are always welcome.
 
 ## Credits
 
-Big shoutout to [@CodyHouse](https://github.com/CodyHouse) and [@jgthms](jgthms) for their inspiring frameworks as well as [@korywakefield](https://github.com/korywakefield) for his grid spec powered micro-framework.
+Big shoutout to [@CodyHouse](https://github.com/CodyHouse) and [@jgthms](https://github.com/jgthms) for their inspiring frameworks as well as [@korywakefield](https://github.com/korywakefield) for his grid spec powered micro-framework.
 
 ## License
 
