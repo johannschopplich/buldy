@@ -65,7 +65,7 @@ span {
 
 code {
   // Thanks to Bulma for these style ideas
-  background-color: var(--color-contrast-lower);
+  background-color: var(--color-contrast-lightest);
   color: var(--color-red);
   font-size: 0.875em;
   padding: var(--space-xxxsmall) var(--space-xsmall) var(--space-xxxsmall);
@@ -73,7 +73,7 @@ code {
 }
 
 pre {
-  background-color: var(--color-contrast-lower);
+  background-color: var(--color-contrast-lightest);
   font-size: 0.875em;
   padding: var(--space-small) 1em;
 }

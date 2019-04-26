@@ -24,44 +24,44 @@ $container-sizes: (
 :root,
 [data-theme="default"] {
   // Main
-  
-  --color-primary:         hsl(17, 41%, 68%);
-  --color-primary-hover:   hsl(17, 41%, 64%);
-  --color-primary-active:  hsl(17, 41%, 60%);
-  --color-primary-a25:     hsla(17, 41%, 68%, 0.25);
 
-  --color-accent:          hsl(220, 90%, 56%);
-  --color-accent-hover:    hsl(220, 90%, 52%);
-  --color-accent-active:   hsl(220, 90%, 49%);
-  --color-accent-a25:      hsla(220, 90%, 56%, 0.25);
+  --color-primary:           hsl(17, 41%, 68%);
+  --color-primary-hover:     hsl(17, 41%, 64%);
+  --color-primary-active:    hsl(17, 41%, 60%);
+  --color-primary-a25:       hsla(17, 41%, 68%, 0.25);
+
+  --color-accent:            hsl(220, 90%, 56%);
+  --color-accent-hover:      hsl(220, 90%, 52%);
+  --color-accent-active:     hsl(220, 90%, 49%);
+  --color-accent-a25:        hsla(220, 90%, 56%, 0.25);
 
   // Shades
-  --color-black:           hsl(0, 0%, 4%);
-  --color-white:           hsl(0, 0%, 100%);
+  --color-black:             hsl(0, 0%, 4%);
+  --color-white:             hsl(0, 0%, 100%);
 
   // Color contrast
-  --color-background:      hsl(0, 0%, 100%);
-  --color-contrast-lower:  hsl(0, 0%, 95%);
-  --color-contrast-low:    hsl(0, 0%, 82%);
-  --color-contrast-light:  hsl(0, 0%, 70%);
-  --color-contrast-medium: hsl(0, 0%, 48%);
-  --color-contrast-high:   hsl(0, 0%, 20%);
-  --color-contrast-higher: hsl(0, 0%, 12%);
+  --color-background:        hsl(0, 0%, 100%);
+  --color-contrast-lightest: hsl(0, 0%, 95%);
+  --color-contrast-lighter:  hsl(0, 0%, 82%);
+  --color-contrast-light:    hsl(0, 0%, 70%);
+  --color-contrast-medium:   hsl(0, 0%, 48%);
+  --color-contrast-dark:     hsl(0, 0%, 20%);
+  --color-contrast-darker:   hsl(0, 0%, 12%);
 
   // Feedback
-  --color-red:             hsl(348, 100%, 61%);
-  --color-red-a25:         hsla(348, 100%, 61%, 0.25);
-  --color-green:           hsl(141, 71%, 48%);
-  --color-green-a25:       hsla(141, 71%, 48%, 0.25);
+  --color-red:               hsl(348, 100%, 61%);
+  --color-red-a25:           hsla(348, 100%, 61%, 0.25);
+  --color-green:             hsl(141, 71%, 48%);
+  --color-green-a25:         hsla(141, 71%, 48%, 0.25);
 
   // Semantic definitions
-  --color-text:            var(--color-contrast-higher);
-  --color-border:          var(--color-contrast-low);
+  --color-text:              var(--color-contrast-darker);
+  --color-border:            var(--color-contrast-lighter);
 }
 
 [data-theme] {
-  background-color:        var(--color-background);
-  color:                   var(--color-text);
+  background-color:          var(--color-background);
+  color:                     var(--color-text);
 }
 
 //
@@ -70,53 +70,53 @@ $container-sizes: (
 
 :root {
   // Font families
-  --font-primary:          -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-  --font-secondary:        var(--font-primary);
+  --font-primary:            -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  --font-secondary:          var(--font-primary);
 
   // Body font size
-  --text-base-size:        1em;
+  --text-base-size:          1em;
   
   // Type scale
-  --text-scale-ratio:      1.2;
-  --text-small:            calc(1em / var(--text-scale-ratio));
-  --text-6:                1em;
-  --text-5:                calc(var(--text-6) * var(--text-scale-ratio));
-  --text-4:                calc(var(--text-5) * var(--text-scale-ratio));
-  --text-3:                calc(var(--text-4) * var(--text-scale-ratio));
-  --text-2:                calc(var(--text-3) * var(--text-scale-ratio));
-  --text-1:                calc(var(--text-2) * var(--text-scale-ratio));
+  --text-scale-ratio:        1.2;
+  --text-small:              calc(1em / var(--text-scale-ratio));
+  --text-6:                  1em;
+  --text-5:                  calc(var(--text-6) * var(--text-scale-ratio));
+  --text-4:                  calc(var(--text-5) * var(--text-scale-ratio));
+  --text-3:                  calc(var(--text-4) * var(--text-scale-ratio));
+  --text-2:                  calc(var(--text-3) * var(--text-scale-ratio));
+  --text-1:                  calc(var(--text-2) * var(--text-scale-ratio));
 
   // Line heights
-  --body-line-height:      1.4;
-  --heading-line-height:   1.2;
+  --body-line-height:        1.4;
+  --heading-line-height:     1.2;
 
   // Spacing
-  --space-unit:            1em;
-  --space-xxxxsmall:       calc(0.125 * var(--space-unit));
-  --space-xxxsmall:        calc(0.25  * var(--space-unit));
-  --space-xxsmall:         calc(0.375 * var(--space-unit));
-  --space-xsmall:          calc(0.5   * var(--space-unit));
-  --space-small:           calc(0.75  * var(--space-unit));
-  --space-medium:          calc(1.25  * var(--space-unit));
-  --space-large:           calc(2     * var(--space-unit));
-  --space-xlarge:          calc(3.25  * var(--space-unit));
-  --space-xxlarge:         calc(5.25  * var(--space-unit));
-  --space-xxxlarge:        calc(8.5   * var(--space-unit));
-  //--space-xxxxlarge:     calc(13.75 * var(--space-unit));
-  --component-padding:     var(--space-small);
+  --space-unit:              1em;
+  --space-xxxxsmall:         calc(0.125 * var(--space-unit));
+  --space-xxxsmall:          calc(0.25  * var(--space-unit));
+  --space-xxsmall:           calc(0.375 * var(--space-unit));
+  --space-xsmall:            calc(0.5   * var(--space-unit));
+  --space-small:             calc(0.75  * var(--space-unit));
+  --space-medium:            calc(1.25  * var(--space-unit));
+  --space-large:             calc(2     * var(--space-unit));
+  --space-xlarge:            calc(3.25  * var(--space-unit));
+  --space-xxlarge:           calc(5.25  * var(--space-unit));
+  --space-xxxlarge:          calc(8.5   * var(--space-unit));
+  //--space-xxxxlarge:       calc(13.75 * var(--space-unit));
+  --component-padding:       var(--space-small);
 
   // Outlines
-  --focus-outline:         2px solid currentColor;
-  --focus-outline-offset:  2px;
+  --focus-outline:           2px solid currentColor;
+  --focus-outline-offset:    2px;
 
   // Various components
-  --radius:                0.25em;
-  --radius-rounded:        50rem;
+  --radius:                  0.25em;
+  --radius-rounded:          50rem;
 
   // Buttons
-  --button-small:          calc(1em - 0.2em);
-  --button-medium:         calc(1em + 0.2em);
-  --button-large:          calc(1em + 0.4em);
+  --button-small:            calc(1em - 0.2em);
+  --button-medium:           calc(1em + 0.2em);
+  --button-large:            calc(1em + 0.4em);
 }
 
 //

@@ -88,21 +88,21 @@
   background: var(--color-black);
 }
 .palette.is-neutrals div:nth-child(2) {
-  background: var(--color-contrast-higher);
+  background: var(--color-contrast-darker);
 }
 .palette.is-neutrals div:nth-child(3) {
-  background: var(--color-contrast-high);
+  background: var(--color-contrast-dark);
 }
 .palette.is-neutrals div:nth-child(4) {
   background: var(--color-contrast-medium);
   grid-row: 2;
 }
 .palette.is-neutrals div:nth-child(5) {
-  background: var(--color-contrast-low);
+  background: var(--color-contrast-lighter);
   grid-row: 2;
 }
 .palette.is-neutrals div:nth-child(6) {
-  background: var(--color-contrast-lower);
+  background: var(--color-contrast-lightest);
   grid-row: 2;
 }
 

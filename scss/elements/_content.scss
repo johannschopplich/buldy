@@ -81,7 +81,7 @@
   hr {
     border-top: 0;
     height: 1px;
-    background: var(--color-contrast-low);
+    background: var(--color-contrast-lighter);
     margin: calc(var(--space-medium) * var(--text-vspace-multiplier, 1)) auto;
   }
 
@@ -115,8 +115,8 @@
   }
 
   blockquote {
-    background-color: var(--color-contrast-lower);
-    border-left: 5px solid var(--color-contrast-low);
+    background-color: var(--color-contrast-lightest);
+    border-left: 5px solid var(--color-contrast-lighter);
     padding: var(--space-small) 2em var(--space-small) calc(2em - 5px);
   }
   

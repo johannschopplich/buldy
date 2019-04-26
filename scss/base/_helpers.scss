@@ -5,10 +5,11 @@
 .has-text-primary             { color: var(--color-primary) !important; }
 .has-text-accent              { color: var(--color-accent) !important; }
 .has-text-white               { color: var(--color-white) !important; }
-.has-text-lighter             { color: var(--color-contrast-lower) !important; }
+.has-text-lightest            { color: var(--color-contrast-lightest) !important; }
+.has-text-lighter             { color: var(--color-contrast-lighter) !important; }
 .has-text-light               { color: var(--color-contrast-light) !important; }
-.has-text-dark                { color: var(--color-contrast-high) !important; }
-.has-text-darker              { color: var(--color-contrast-higher) !important; }
+.has-text-dark                { color: var(--color-contrast-dark) !important; }
+.has-text-darker              { color: var(--color-contrast-darker) !important; }
 .has-text-black               { color: var(--color-black) !important; }
 .has-text-current-color       { color: currentColor !important; }
 .has-text-inherit             { color: inherit !important; }
@@ -16,10 +17,11 @@
 .has-background-primary       { background-color: var(--color-primary) !important; }
 .has-background-accent        { background-color: var(--color-accent) !important; }
 .has-background-white         { background-color: var(--color-white) !important; }
-.has-background-lighter       { background-color: var(--color-contrast-lower) !important; }
+.has-background-lightest      { background-color: var(--color-contrast-lightest) !important; }
+.has-background-lighter       { background-color: var(--color-contrast-lighter) !important; }
 .has-background-light         { background-color: var(--color-contrast-light) !important; }
-.has-background-dark          { background-color: var(--color-contrast-high) !important; }
-.has-background-darker        { background-color: var(--color-contrast-higher) !important; }
+.has-background-dark          { background-color: var(--color-contrast-dark) !important; }
+.has-background-darker        { background-color: var(--color-contrast-darker) !important; }
 .has-background-black         { background-color: var(--color-black) !important; }
 .has-background-current-color { background-color: currentColor !important; }
 

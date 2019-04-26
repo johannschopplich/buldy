@@ -299,18 +299,18 @@ summary {
   --color-black: hsl(0, 0%, 4%);
   --color-white: hsl(0, 0%, 100%);
   --color-background: hsl(0, 0%, 100%);
-  --color-contrast-lower: hsl(0, 0%, 95%);
-  --color-contrast-low: hsl(0, 0%, 82%);
+  --color-contrast-lightest: hsl(0, 0%, 95%);
+  --color-contrast-lighter: hsl(0, 0%, 82%);
   --color-contrast-light: hsl(0, 0%, 70%);
   --color-contrast-medium: hsl(0, 0%, 48%);
-  --color-contrast-high: hsl(0, 0%, 20%);
-  --color-contrast-higher: hsl(0, 0%, 12%);
+  --color-contrast-dark: hsl(0, 0%, 20%);
+  --color-contrast-darker: hsl(0, 0%, 12%);
   --color-red: hsl(348, 100%, 61%);
   --color-red-a25: hsla(348, 100%, 61%, 0.25);
   --color-green: hsl(141, 71%, 48%);
   --color-green-a25: hsla(141, 71%, 48%, 0.25);
-  --color-text: var(--color-contrast-higher);
-  --color-border: var(--color-contrast-low);
+  --color-text: var(--color-contrast-darker);
+  --color-border: var(--color-contrast-lighter);
 }
 
 [data-theme] {
@@ -409,14 +409,14 @@ span {
 }
 
 code {
-  background-color: var(--color-contrast-lower);
+  background-color: var(--color-contrast-lightest);
   color: var(--color-red);
   font-size: 0.875em;
   padding: var(--space-xxxsmall) var(--space-xsmall) var(--space-xxxsmall);
 }
 
 pre {
-  background-color: var(--color-contrast-lower);
+  background-color: var(--color-contrast-lightest);
   font-size: 0.875em;
   padding: var(--space-small) 1em;
 }
@@ -469,8 +469,12 @@ table th {
   color: var(--color-white) !important;
 }
 
+.has-text-lightest {
+  color: var(--color-contrast-lightest) !important;
+}
+
 .has-text-lighter {
-  color: var(--color-contrast-lower) !important;
+  color: var(--color-contrast-lighter) !important;
 }
 
 .has-text-light {
@@ -478,11 +482,11 @@ table th {
 }
 
 .has-text-dark {
-  color: var(--color-contrast-high) !important;
+  color: var(--color-contrast-dark) !important;
 }
 
 .has-text-darker {
-  color: var(--color-contrast-higher) !important;
+  color: var(--color-contrast-darker) !important;
 }
 
 .has-text-black {
@@ -509,8 +513,12 @@ table th {
   background-color: var(--color-white) !important;
 }
 
+.has-background-lightest {
+  background-color: var(--color-contrast-lightest) !important;
+}
+
 .has-background-lighter {
-  background-color: var(--color-contrast-lower) !important;
+  background-color: var(--color-contrast-lighter) !important;
 }
 
 .has-background-light {
@@ -518,11 +526,11 @@ table th {
 }
 
 .has-background-dark {
-  background-color: var(--color-contrast-high) !important;
+  background-color: var(--color-contrast-dark) !important;
 }
 
 .has-background-darker {
-  background-color: var(--color-contrast-higher) !important;
+  background-color: var(--color-contrast-darker) !important;
 }
 
 .has-background-black {
@@ -1663,7 +1671,7 @@ table th {
 .control {
   width: 100%;
   background-color: var(--color-background);
-  border-color: var(--color-contrast-low);
+  border-color: var(--color-contrast-lighter);
   color: var(--color-text);
   justify-content: flex-start;
   padding: var(--space-xxsmall) var(--space-xsmall);
@@ -1704,8 +1712,8 @@ table th {
   box-shadow: none;
 }
 .control[disabled] {
-  background-color: var(--color-contrast-lower);
-  border-color: var(--color-contrast-lower);
+  background-color: var(--color-contrast-lightest);
+  border-color: var(--color-contrast-lightest);
   color: var(--color-contrast-light);
   box-shadow: none;
 }
@@ -1739,7 +1747,7 @@ table th {
 }
 
 .title {
-  color: var(--color-contrast-higher);
+  color: var(--color-contrast-darker);
   line-height: var(--heading-line-height);
   font-size: var(--text-3);
   font-weight: 600;
@@ -1776,7 +1784,7 @@ table th {
 
 .button {
   background-color: var(--color-background);
-  border-color: var(--color-contrast-low);
+  border-color: var(--color-contrast-lighter);
   color: var(--color-text);
   line-height: 1;
   padding: var(--space-xsmall);
@@ -1818,7 +1826,7 @@ table th {
   color: var(--color-text);
 }
 .button.is-link:hover, .button.is-link:focus {
-  background-color: var(--color-contrast-lower);
+  background-color: var(--color-contrast-lightest);
 }
 .button.is-link[disabled] {
   background-color: transparent;
@@ -1890,7 +1898,7 @@ table th {
 }
 .button[disabled] {
   background-color: var(--color-background);
-  border-color: var(--color-contrast-low);
+  border-color: var(--color-contrast-lighter);
   color: var(--color-text);
   box-shadow: none;
   opacity: 0.5;
@@ -1966,7 +1974,7 @@ table th {
 .content hr {
   border-top: 0;
   height: 1px;
-  background: var(--color-contrast-low);
+  background: var(--color-contrast-lighter);
   margin: calc(var(--space-medium) * var(--text-vspace-multiplier, 1)) auto;
 }
 .content ol,
@@ -1993,8 +2001,8 @@ table th {
   list-style-type: square;
 }
 .content blockquote {
-  background-color: var(--color-contrast-lower);
-  border-left: 5px solid var(--color-contrast-low);
+  background-color: var(--color-contrast-lightest);
+  border-left: 5px solid var(--color-contrast-lighter);
   padding: var(--space-small) 2em var(--space-small) calc(2em - 5px);
 }
 .content figure {
@@ -2048,7 +2056,7 @@ table th {
   display: block;
   background-color: var(--color-background);
   border-radius: var(--radius);
-  box-shadow: 0 2px 8px var(--color-contrast-low), 0 0 0 1px var(--color-contrast-medium);
+  box-shadow: 0 2px 8px var(--color-contrast-lighter), 0 0 0 1px var(--color-contrast-medium);
   padding: var(--space-medium);
 }
 

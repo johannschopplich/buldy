@@ -1,7 +1,7 @@
 .control {
   width: 100%;
   background-color: var(--color-background);
-  border-color: var(--color-contrast-low);
+  border-color: var(--color-contrast-lighter);
   color: var(--color-text);
   justify-content: flex-start;
   padding: var(--space-xxsmall) var(--space-xsmall);
@@ -43,8 +43,8 @@
     box-shadow: none;
   }
   &[disabled] {
-    background-color: var(--color-contrast-lower);
-    border-color: var(--color-contrast-lower);
+    background-color: var(--color-contrast-lightest);
+    border-color: var(--color-contrast-lightest);
     color: var(--color-contrast-light);
     box-shadow: none;
   }

@@ -1,6 +1,6 @@
 .button {
   background-color: var(--color-background);
-  border-color: var(--color-contrast-low);
+  border-color: var(--color-contrast-lighter);
   color: var(--color-text);
   line-height: 1;
   padding: var(--space-xsmall);
@@ -50,7 +50,7 @@
     color: var(--color-text);
     &:hover,
     &:focus {
-      background-color: var(--color-contrast-lower);
+      background-color: var(--color-contrast-lightest);
     }
     &[disabled] {
       background-color: transparent;
@@ -141,7 +141,7 @@
 
   &[disabled] {
     background-color: var(--color-background);
-    border-color: var(--color-contrast-low);
+    border-color: var(--color-contrast-lighter);
     color: var(--color-text);
     box-shadow: none;
     opacity: 0.5;
