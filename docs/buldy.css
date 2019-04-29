@@ -448,8 +448,7 @@ table th {
   box-shadow: none;
   vertical-align: top;
 }
-.button:focus, .button:active,
-.control:focus,
+.button:active,
 .control:active {
   outline: none;
 }
@@ -1792,6 +1791,12 @@ table th {
   justify-content: center;
   text-align: center;
   white-space: nowrap;
+  transition: box-shadow 0.15s ease-in-out;
+}
+@media (prefers-reduced-motion: reduce) {
+  .button {
+    transition: none;
+  }
 }
 .button:hover, .button:focus {
   border-color: var(--color-contrast-light);
@@ -1845,11 +1850,13 @@ table th {
   background-color: var(--button-color-active);
   border-color: transparent;
   color: var(--color-white);
+  box-shadow: 0 0 0 2px var(--button-shadow);
 }
 .button.is-primary[disabled], .button.is-accent[disabled] {
   background-color: var(--button-color);
   border-color: transparent;
   color: var(--color-white);
+  box-shadow: none;
 }
 .button.is-primary.is-outlined, .button.is-accent.is-outlined {
   background-color: transparent;
@@ -1864,10 +1871,14 @@ table th {
   border-color: var(--button-color);
   color: var(--color-white);
 }
+.button.is-primary.is-outlined:active, .button.is-accent.is-outlined:active {
+  box-shadow: 0 0 0 2px var(--button-shadow);
+}
 .button.is-primary.is-outlined[disabled], .button.is-accent.is-outlined[disabled] {
   background-color: transparent;
   border-color: var(--button-color);
   color: var(--button-color);
+  box-shadow: none;
 }
 .button.is-primary {
   --button-color: var(--color-primary);
@@ -1894,6 +1905,7 @@ table th {
   background-color: var(--color-background);
   border-color: var(--color-contrast-lighter);
   color: var(--color-text);
+  box-shadow: none;
   opacity: 0.5;
 }
 .button.is-fullwidth {

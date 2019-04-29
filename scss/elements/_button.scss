@@ -10,7 +10,7 @@
   text-align: center;
   white-space: nowrap;
   @extend %unselectable;
-  //@include transition(/*color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out);
+  @include transition(/*color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out,*/ box-shadow 0.15s ease-in-out);
 
   &:hover,
   &:focus {
@@ -38,7 +38,6 @@
     &[disabled] {
       background-color: transparent;
       border-color: transparent;
-      //box-shadow: none;
     }
   }
 
@@ -57,7 +56,6 @@
     &[disabled] {
       background-color: transparent;
       border-color: transparent;
-      //box-shadow: none;
     }
   }
 
@@ -79,18 +77,18 @@
       border-color: transparent;
       color: var(--color-white);
       outline-color: var(--button-color);
-      //box-shadow: 0 0 0 3px var(--button-shadow);
     }
     &:active {
       background-color: var(--button-color-active);
       border-color: transparent;
       color: var(--color-white);
+      box-shadow: 0 0 0 2px var(--button-shadow);
     }
     &[disabled] {
       background-color: var(--button-color);
       border-color: transparent;
       color: var(--color-white);
-      //box-shadow: none;
+      box-shadow: none;
     }
 
     //
@@ -110,11 +108,14 @@
         border-color: var(--button-color);
         color: var(--color-white);
       }
+      &:active {
+        box-shadow: 0 0 0 2px var(--button-shadow);
+      }
       &[disabled] {
         background-color: transparent;
         border-color: var(--button-color);
         color: var(--button-color);
-        //box-shadow: none;
+        box-shadow: none;
       }
     }
   }
@@ -149,7 +150,7 @@
     background-color: var(--color-background);
     border-color: var(--color-contrast-lighter);
     color: var(--color-text);
-    //box-shadow: none;
+    box-shadow: none;
     opacity: 0.5;
   }
 
