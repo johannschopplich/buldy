@@ -448,7 +448,8 @@ table th {
   box-shadow: none;
   vertical-align: top;
 }
-.button:active,
+.button:focus, .button:active,
+.control:focus,
 .control:active {
   outline: none;
 }

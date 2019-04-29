@@ -11,6 +11,7 @@
   box-shadow: none;
   vertical-align: top;
 
+  &:focus,
   &:active {
     outline: none;
   }
