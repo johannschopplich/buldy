@@ -210,7 +210,7 @@ summary {
   user-select: none;
 }
 
-.content a:focus {
+.content a:focus, .button:focus {
   outline: var(--focus-outline);
   outline-offset: var(--focus-outline-offset);
 }
@@ -305,6 +305,7 @@ summary {
   --color-contrast-medium: hsl(0, 0%, 48%);
   --color-contrast-dark: hsl(0, 0%, 20%);
   --color-contrast-darker: hsl(0, 0%, 12%);
+  --color-focus: hsl(39, 100%, 75%);
   --color-red: hsl(348, 100%, 61%);
   --color-red-a25: hsla(348, 100%, 61%, 0.25);
   --color-green: hsl(141, 71%, 48%);
@@ -447,8 +448,7 @@ table th {
   box-shadow: none;
   vertical-align: top;
 }
-.button:focus, .button:active,
-.control:focus,
+.button:active,
 .control:active {
   outline: none;
 }
@@ -1687,19 +1687,19 @@ table th {
 }
 .control:focus, .control:active {
   border-color: var(--color-primary);
-  box-shadow: 0 0 0 3px var(--color-primary-a25);
+  box-shadow: 0 0 0 2px var(--color-primary-a25);
 }
 .control.is-error {
   border-color: var(--color-red);
 }
 .control.is-error:focus, .control.is-error:active {
-  box-shadow: 0 0 0 3px var(--color-red-a25);
+  box-shadow: 0 0 0 2px var(--color-red-a25);
 }
 .control.is-success {
   border-color: var(--color-green);
 }
 .control.is-success:focus, .control.is-success:active {
-  box-shadow: 0 0 0 3px var(--color-green-a25);
+  box-shadow: 0 0 0 2px var(--color-green-a25);
 }
 .control::-webkit-input-placeholder {
   color: var(--color-contrast-light);
@@ -1721,7 +1721,7 @@ table th {
   border-color: var(--color-red);
 }
 .control[aria-invalid=true]:focus {
-  box-shadow: 0 0 0 3px var(--color-red-a25);
+  box-shadow: 0 0 0 2px var(--color-red-a25);
 }
 
 .legend {
@@ -1791,12 +1791,6 @@ table th {
   justify-content: center;
   text-align: center;
   white-space: nowrap;
-  transition: box-shadow 0.15s ease-in-out;
-}
-@media (prefers-reduced-motion: reduce) {
-  .button {
-    transition: none;
-  }
 }
 .button:hover, .button:focus {
   border-color: var(--color-contrast-light);
@@ -1818,7 +1812,6 @@ table th {
 .button.is-text[disabled] {
   background-color: transparent;
   border-color: transparent;
-  box-shadow: none;
 }
 .button.is-link {
   background-color: transparent;
@@ -1831,7 +1824,6 @@ table th {
 .button.is-link[disabled] {
   background-color: transparent;
   border-color: transparent;
-  box-shadow: none;
 }
 .button.is-primary, .button.is-accent {
   background-color: var(--button-color);
@@ -1846,7 +1838,7 @@ table th {
 .button.is-primary:focus, .button.is-accent:focus {
   border-color: transparent;
   color: var(--color-white);
-  box-shadow: 0 0 0 3px var(--button-shadow);
+  outline-color: var(--button-color);
 }
 .button.is-primary:active, .button.is-accent:active {
   background-color: var(--button-color-active);
@@ -1857,12 +1849,14 @@ table th {
   background-color: var(--button-color);
   border-color: transparent;
   color: var(--color-white);
-  box-shadow: none;
 }
 .button.is-primary.is-outlined, .button.is-accent.is-outlined {
   background-color: transparent;
   border-color: var(--button-color);
   color: var(--button-color);
+}
+.button.is-primary.is-outlined:focus, .button.is-accent.is-outlined:focus {
+  outline-color: var(--button-color);
 }
 .button.is-primary.is-outlined:hover, .button.is-primary.is-outlined:focus, .button.is-accent.is-outlined:hover, .button.is-accent.is-outlined:focus {
   background-color: var(--button-color);
@@ -1873,7 +1867,6 @@ table th {
   background-color: transparent;
   border-color: var(--button-color);
   color: var(--button-color);
-  box-shadow: none;
 }
 .button.is-primary {
   --button-color: var(--color-primary);
@@ -1900,7 +1893,6 @@ table th {
   background-color: var(--color-background);
   border-color: var(--color-contrast-lighter);
   color: var(--color-text);
-  box-shadow: none;
   opacity: 0.5;
 }
 .button.is-fullwidth {

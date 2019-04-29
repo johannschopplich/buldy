@@ -1,4 +1,6 @@
 .button {
+  @extend %focus-outline;
+
   background-color: var(--color-background);
   border-color: var(--color-contrast-lighter);
   color: var(--color-text);
@@ -8,7 +10,7 @@
   text-align: center;
   white-space: nowrap;
   @extend %unselectable;
-  @include transition(/*color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out,*/ box-shadow 0.15s ease-in-out);
+  //@include transition(/*color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out);
 
   &:hover,
   &:focus {
@@ -36,7 +38,7 @@
     &[disabled] {
       background-color: transparent;
       border-color: transparent;
-      box-shadow: none;
+      //box-shadow: none;
     }
   }
 
@@ -55,7 +57,7 @@
     &[disabled] {
       background-color: transparent;
       border-color: transparent;
-      box-shadow: none;
+      //box-shadow: none;
     }
   }
 
@@ -76,7 +78,8 @@
     &:focus {
       border-color: transparent;
       color: var(--color-white);
-      box-shadow: 0 0 0 3px var(--button-shadow);
+      outline-color: var(--button-color);
+      //box-shadow: 0 0 0 3px var(--button-shadow);
     }
     &:active {
       background-color: var(--button-color-active);
@@ -87,7 +90,7 @@
       background-color: var(--button-color);
       border-color: transparent;
       color: var(--color-white);
-      box-shadow: none;
+      //box-shadow: none;
     }
 
     //
@@ -98,6 +101,9 @@
       background-color: transparent;
       border-color: var(--button-color);
       color: var(--button-color);
+      &:focus {
+        outline-color: var(--button-color);
+      }
       &:hover,
       &:focus {
         background-color: var(--button-color);
@@ -108,7 +114,7 @@
         background-color: transparent;
         border-color: var(--button-color);
         color: var(--button-color);
-        box-shadow: none;
+        //box-shadow: none;
       }
     }
   }
@@ -143,7 +149,7 @@
     background-color: var(--color-background);
     border-color: var(--color-contrast-lighter);
     color: var(--color-text);
-    box-shadow: none;
+    //box-shadow: none;
     opacity: 0.5;
   }
 
