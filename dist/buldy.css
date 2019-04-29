@@ -305,7 +305,7 @@ summary {
   --color-contrast-medium: hsl(0, 0%, 48%);
   --color-contrast-dark: hsl(0, 0%, 20%);
   --color-contrast-darker: hsl(0, 0%, 12%);
-  --color-focus: hsl(39, 100%, 75%);
+  --color-focus: hsl(39, 100%, 70%);
   --color-red: hsl(348, 100%, 61%);
   --color-red-a25: hsla(348, 100%, 61%, 0.25);
   --color-green: hsl(141, 71%, 48%);
