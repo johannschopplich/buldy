@@ -442,7 +442,7 @@ table th {
   position: relative;
   display: inline-flex;
   align-items: center;
-  border: 1px solid transparent;
+  border: 2px solid transparent;
   border-radius: var(--radius);
   box-shadow: none;
   vertical-align: top;
