@@ -10,11 +10,4 @@
   border-radius: var(--radius);
   box-shadow: none;
   vertical-align: top;
-
-  &:active {
-    outline: none;
-  }
-  &[disabled] {
-    cursor: not-allowed;
-  }
 }

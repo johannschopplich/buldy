@@ -448,14 +448,6 @@ table th {
   box-shadow: none;
   vertical-align: top;
 }
-.button:active,
-.control:active {
-  outline: none;
-}
-.button[disabled],
-.control[disabled] {
-  cursor: not-allowed;
-}
 
 .has-text-primary {
   color: var(--color-primary) !important;
