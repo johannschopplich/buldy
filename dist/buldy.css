@@ -203,16 +203,32 @@ summary {
   margin-bottom: var(--space-small);
 }
 
+.content a:focus, .button:focus, .control:focus {
+  outline: var(--focus-outline);
+  outline-offset: var(--focus-outline-offset);
+}
+
+.button, .control {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid transparent;
+  border-radius: var(--radius);
+  box-shadow: none;
+  vertical-align: top;
+}
+.button:focus, .control:focus {
+  outline-color: transparent;
+}
+
 .button, .is-unselectable, .modal-close {
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -moz-user-select: none;
   user-select: none;
-}
-
-.content a:focus, .button:focus {
-  outline: var(--focus-outline);
-  outline-offset: var(--focus-outline-offset);
 }
 
 .modal-close {
@@ -432,20 +448,6 @@ pre code {
 table td,
 table th {
   text-align: left;
-  vertical-align: top;
-}
-
-.button,
-.control {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  position: relative;
-  display: inline-flex;
-  align-items: center;
-  border: 2px solid transparent;
-  border-radius: var(--radius);
-  box-shadow: none;
   vertical-align: top;
 }
 
@@ -1679,19 +1681,19 @@ table th {
 }
 .control:focus, .control:active {
   border-color: var(--color-primary);
-  box-shadow: 0 0 0 2px var(--color-primary-a25);
+  box-shadow: 0 0 0 3px var(--color-primary-a25);
 }
 .control.is-error {
   border-color: var(--color-red);
 }
 .control.is-error:focus, .control.is-error:active {
-  box-shadow: 0 0 0 2px var(--color-red-a25);
+  box-shadow: 0 0 0 3px var(--color-red-a25);
 }
 .control.is-success {
   border-color: var(--color-green);
 }
 .control.is-success:focus, .control.is-success:active {
-  box-shadow: 0 0 0 2px var(--color-green-a25);
+  box-shadow: 0 0 0 3px var(--color-green-a25);
 }
 .control::-webkit-input-placeholder {
   color: var(--color-contrast-light);
@@ -1713,7 +1715,7 @@ table th {
   border-color: var(--color-red);
 }
 .control[aria-invalid=true]:focus {
-  box-shadow: 0 0 0 2px var(--color-red-a25);
+  box-shadow: 0 0 0 3px var(--color-red-a25);
 }
 
 .legend {
@@ -1836,13 +1838,12 @@ table th {
 .button.is-primary:focus, .button.is-accent:focus {
   border-color: transparent;
   color: var(--color-white);
-  outline-color: var(--button-color);
+  box-shadow: 0 0 0 3px var(--button-shadow);
 }
 .button.is-primary:active, .button.is-accent:active {
   background-color: var(--button-color-active);
   border-color: transparent;
   color: var(--color-white);
-  box-shadow: 0 0 0 2px var(--button-shadow);
 }
 .button.is-primary[disabled], .button.is-accent[disabled] {
   background-color: var(--button-color);
@@ -1855,16 +1856,10 @@ table th {
   border-color: var(--button-color);
   color: var(--button-color);
 }
-.button.is-primary.is-outlined:focus, .button.is-accent.is-outlined:focus {
-  outline-color: var(--button-color);
-}
 .button.is-primary.is-outlined:hover, .button.is-primary.is-outlined:focus, .button.is-accent.is-outlined:hover, .button.is-accent.is-outlined:focus {
   background-color: var(--button-color);
   border-color: var(--button-color);
   color: var(--color-white);
-}
-.button.is-primary.is-outlined:active, .button.is-accent.is-outlined:active {
-  box-shadow: 0 0 0 2px var(--button-shadow);
 }
 .button.is-primary.is-outlined[disabled], .button.is-accent.is-outlined[disabled] {
   background-color: transparent;

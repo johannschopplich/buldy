@@ -1,5 +1,5 @@
 .button {
-  @extend %focus-outline;
+  @extend %control;
 
   background-color: var(--color-background);
   border-color: var(--color-contrast-lighter);
@@ -76,13 +76,12 @@
     &:focus {
       border-color: transparent;
       color: var(--color-white);
-      outline-color: var(--button-color);
+      box-shadow: 0 0 0 3px var(--button-shadow);
     }
     &:active {
       background-color: var(--button-color-active);
       border-color: transparent;
       color: var(--color-white);
-      box-shadow: 0 0 0 2px var(--button-shadow);
     }
     &[disabled] {
       background-color: var(--button-color);
@@ -99,17 +98,11 @@
       background-color: transparent;
       border-color: var(--button-color);
       color: var(--button-color);
-      &:focus {
-        outline-color: var(--button-color);
-      }
       &:hover,
       &:focus {
         background-color: var(--button-color);
         border-color: var(--button-color);
         color: var(--color-white);
-      }
-      &:active {
-        box-shadow: 0 0 0 2px var(--button-shadow);
       }
       &[disabled] {
         background-color: transparent;
