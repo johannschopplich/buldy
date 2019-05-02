@@ -93,10 +93,18 @@ h6 {
 
 // Remove the outline on focused links when they are also active or hovered
 // in all browsers (opinionated).
-
 /*
 a:active {
   outline-width: 0;
+}
+*/
+
+// Or
+
+// Add standard outline on focused links (opinionated).
+/*
+a:focus {
+  outline: 1px dotted;
 }
 */
 

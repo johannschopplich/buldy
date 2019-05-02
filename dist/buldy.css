@@ -63,6 +63,11 @@ a:active {
   outline-width: 0;
 }
 */
+/*
+a:focus {
+  outline: 1px dotted;
+}
+*/
 ol,
 ul {
   list-style: none;
@@ -422,7 +427,7 @@ a {
   color: var(--color-primary);
   text-decoration: none;
 }
-a:hover {
+a:hover, a:focus {
   color: var(--color-text);
   text-decoration: none;
 }
