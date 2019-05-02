@@ -46,8 +46,7 @@ a {
   cursor: pointer;
   color: var(--color-primary);
   text-decoration: none;
-  &:hover,
-  &:focus {
+  &:hover {
     color: var(--color-text);
     text-decoration: none;
   }
