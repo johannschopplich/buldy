@@ -43,6 +43,11 @@ html {
   outline: none !important;
 }
 
+hr {
+  box-sizing: content-box;
+  height: 0;
+}
+
 h1,
 h2,
 h3,
@@ -53,12 +58,18 @@ h6 {
   font-weight: normal;
 }
 
+/*
+a:active {
+  outline-width: 0;
+}
+*/
 ol,
 ul {
   list-style: none;
 }
 
 abbr[title] {
+  text-decoration: underline;
   text-decoration: underline dotted;
   cursor: help;
   text-decoration-skip-ink: none;
@@ -137,11 +148,12 @@ label {
 
 button,
 input,
+optgroup,
 select,
 textarea {
   font-size: inherit;
   font-family: inherit;
-  line-height: inherit;
+  line-height: 1.15;
   margin: 0;
 }
 
@@ -400,7 +412,6 @@ body {
   }
 }
 hr {
-  box-sizing: content-box;
   border: 0;
   border-top: 1px solid var(--color-border);
   margin: var(--space-medium) 0;

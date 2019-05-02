@@ -63,6 +63,16 @@ html {
 }
 
 //
+// Grouping content
+//
+
+// Add the correct box sizing in Firefox.
+hr {
+  box-sizing: content-box;
+  height: 0;
+}
+
+//
 // Sections
 //
 
@@ -78,6 +88,19 @@ h6 {
 }
 
 //
+// Links
+//
+
+// Remove the outline on focused links when they are also active or hovered
+// in all browsers (opinionated).
+
+/*
+a:active {
+  outline-width: 0;
+}
+*/
+
+//
 // Text-level semantics
 //
 
@@ -89,6 +112,7 @@ ul {
 
 abbr[title] {
   // Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+  text-decoration: underline;
   text-decoration: underline dotted;
   // Add explicit cursor to indicate changed behavior.
   cursor: help;
@@ -96,6 +120,7 @@ abbr[title] {
   text-decoration-skip-ink: none;
 }
 
+// Add the correct font weight in Chrome, Edge, and Safari.
 b,
 strong {
   font-weight: bolder;
@@ -105,7 +130,9 @@ code,
 kbd,
 samp,
 pre {
+  // Correct the odd `em` font sizing in all browsers.
   font-size: 1em;
+  // Correct the inheritance and scaling of font size in all browsers.
   font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
@@ -190,11 +217,12 @@ label {
 // Inherit styling in all browsers (opinionated).
 button,
 input,
+optgroup,
 select,
 textarea {
   font-size: inherit;
   font-family: inherit;
-  line-height: inherit;
+  line-height: 1.15;
   margin: 0;
 }
 
