@@ -14,21 +14,21 @@
   &:focus,
   &:active {
     border-color: var(--color-primary);
-    box-shadow: 0 0 0 3px var(--color-primary-a25);
+    box-shadow: 0 0 0 3px var(--color-primary-a50);
   }
 
   &.is-error {
     border-color: var(--color-red);
     &:focus,
     &:active {
-      box-shadow: 0 0 0 3px var(--color-red-a25);
+      box-shadow: 0 0 0 3px var(--color-red-a50);
     }
   }
   &.is-success {
     border-color: var(--color-green);
     &:focus,
     &:active {
-      box-shadow: 0 0 0 3px var(--color-green-a25);
+      box-shadow: 0 0 0 3px var(--color-green-a50);
     }
   }
 
@@ -52,7 +52,7 @@
   &[aria-invalid="true"] {
     border-color: var(--color-red);
     &:focus {
-      box-shadow: 0 0 0 3px var(--color-red-a25);
+      box-shadow: 0 0 0 3px var(--color-red-a50);
     }
   }
 }

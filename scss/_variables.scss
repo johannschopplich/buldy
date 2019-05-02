@@ -28,12 +28,12 @@ $container-sizes: (
   --color-primary:           hsl(17, 41%, 68%);
   --color-primary-hover:     hsl(17, 41%, 64%);
   --color-primary-active:    hsl(17, 41%, 60%);
-  --color-primary-a25:       hsla(17, 41%, 68%, 0.25);
+  --color-primary-a50:       hsla(17, 41%, 68%, 0.5);
 
   --color-accent:            hsl(220, 90%, 56%);
   --color-accent-hover:      hsl(220, 90%, 52%);
   --color-accent-active:     hsl(220, 90%, 49%);
-  --color-accent-a25:        hsla(220, 90%, 56%, 0.25);
+  --color-accent-a50:        hsla(220, 90%, 56%, 0.5);
 
   // Shades
   --color-black:             hsl(0, 0%, 4%);
@@ -50,10 +50,11 @@ $container-sizes: (
 
   // Feedback
   --color-focus:             hsl(39, 100%, 70%);
+  --color-focus-a50:         hsla(39, 100%, 70%, 0.5);
   --color-red:               hsl(348, 100%, 61%);
-  --color-red-a25:           hsla(348, 100%, 61%, 0.25);
+  --color-red-a50:           hsla(348, 100%, 61%, 0.5);
   --color-green:             hsl(141, 71%, 48%);
-  --color-green-a25:         hsla(141, 71%, 48%, 0.25);
+  --color-green-a50:         hsla(141, 71%, 48%, 0.5);
 
   // Semantic definitions
   --color-text:              var(--color-contrast-darker);

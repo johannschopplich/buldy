@@ -139,8 +139,8 @@ button,
 input,
 select,
 textarea {
-  font-family: inherit;
   font-size: inherit;
+  font-family: inherit;
   line-height: inherit;
   margin: 0;
 }
@@ -307,11 +307,11 @@ summary {
   --color-primary: hsl(17, 41%, 68%);
   --color-primary-hover: hsl(17, 41%, 64%);
   --color-primary-active: hsl(17, 41%, 60%);
-  --color-primary-a25: hsla(17, 41%, 68%, 0.25);
+  --color-primary-a50: hsla(17, 41%, 68%, 0.5);
   --color-accent: hsl(220, 90%, 56%);
   --color-accent-hover: hsl(220, 90%, 52%);
   --color-accent-active: hsl(220, 90%, 49%);
-  --color-accent-a25: hsla(220, 90%, 56%, 0.25);
+  --color-accent-a50: hsla(220, 90%, 56%, 0.5);
   --color-black: hsl(0, 0%, 4%);
   --color-white: hsl(0, 0%, 100%);
   --color-background: hsl(0, 0%, 100%);
@@ -322,10 +322,11 @@ summary {
   --color-contrast-dark: hsl(0, 0%, 20%);
   --color-contrast-darker: hsl(0, 0%, 12%);
   --color-focus: hsl(39, 100%, 70%);
+  --color-focus-a50: hsla(39, 100%, 70%, 0.5);
   --color-red: hsl(348, 100%, 61%);
-  --color-red-a25: hsla(348, 100%, 61%, 0.25);
+  --color-red-a50: hsla(348, 100%, 61%, 0.5);
   --color-green: hsl(141, 71%, 48%);
-  --color-green-a25: hsla(141, 71%, 48%, 0.25);
+  --color-green-a50: hsla(141, 71%, 48%, 0.5);
   --color-text: var(--color-contrast-darker);
   --color-border: var(--color-contrast-lighter);
 }
@@ -1681,19 +1682,19 @@ table th {
 }
 .control:focus, .control:active {
   border-color: var(--color-primary);
-  box-shadow: 0 0 0 3px var(--color-primary-a25);
+  box-shadow: 0 0 0 3px var(--color-primary-a50);
 }
 .control.is-error {
   border-color: var(--color-red);
 }
 .control.is-error:focus, .control.is-error:active {
-  box-shadow: 0 0 0 3px var(--color-red-a25);
+  box-shadow: 0 0 0 3px var(--color-red-a50);
 }
 .control.is-success {
   border-color: var(--color-green);
 }
 .control.is-success:focus, .control.is-success:active {
-  box-shadow: 0 0 0 3px var(--color-green-a25);
+  box-shadow: 0 0 0 3px var(--color-green-a50);
 }
 .control::-webkit-input-placeholder {
   color: var(--color-contrast-light);
@@ -1715,7 +1716,7 @@ table th {
   border-color: var(--color-red);
 }
 .control[aria-invalid=true]:focus {
-  box-shadow: 0 0 0 3px var(--color-red-a25);
+  box-shadow: 0 0 0 3px var(--color-red-a50);
 }
 
 .legend {
@@ -1792,14 +1793,20 @@ table th {
     transition: none;
   }
 }
-.button:hover, .button:focus {
+.button:hover {
   border-color: var(--color-contrast-light);
   color: var(--color-text);
 }
+.button:focus {
+  border-color: var(--color-primary);
+  color: var(--color-text);
+}
+.button:focus:not(:active) {
+  box-shadow: 0 0 0 3px var(--color-primary-a50);
+}
 .button:active {
-  background-color: var(--color-text);
   border-color: var(--color-text);
-  color: var(--color-white);
+  color: var(--color-text);
 }
 .button.is-text {
   background-color: transparent;
@@ -1812,6 +1819,7 @@ table th {
 .button.is-text[disabled] {
   background-color: transparent;
   border-color: transparent;
+  box-shadow: none;
 }
 .button.is-link {
   background-color: transparent;
@@ -1824,6 +1832,7 @@ table th {
 .button.is-link[disabled] {
   background-color: transparent;
   border-color: transparent;
+  box-shadow: none;
 }
 .button.is-primary, .button.is-accent {
   background-color: var(--button-color);
@@ -1838,6 +1847,8 @@ table th {
 .button.is-primary:focus, .button.is-accent:focus {
   border-color: transparent;
   color: var(--color-white);
+}
+.button.is-primary:focus:not(:active), .button.is-accent:focus:not(:active) {
   box-shadow: 0 0 0 3px var(--button-shadow);
 }
 .button.is-primary:active, .button.is-accent:active {
@@ -1871,13 +1882,13 @@ table th {
   --button-color: var(--color-primary);
   --button-color-hover: var(--color-primary-hover);
   --button-color-active: var(--color-primary-active);
-  --button-shadow: var(--color-primary-a25);
+  --button-shadow: var(--color-primary-a50);
 }
 .button.is-accent {
   --button-color: var(--color-accent);
   --button-color-hover: var(--color-accent-hover);
   --button-color-active: var(--color-accent-active);
-  --button-shadow: var(--color-accent-a25);
+  --button-shadow: var(--color-accent-a50);
 }
 .button.is-small {
   font-size: var(--button-small);

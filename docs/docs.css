@@ -60,7 +60,7 @@
   background: var(--color-primary);
 }
 .palette.is-main div:nth-child(2) {
-  background: var(--color-primary-a25);
+  background: var(--color-primary-a50);
 }
 .palette.is-main div:nth-child(3) {
   background: var(--color-primary-hover);
@@ -72,7 +72,7 @@
   background: var(--color-accent);
 }
 .palette.is-accent div:nth-child(2) {
-  background: var(--color-accent-a25);
+  background: var(--color-accent-a50);
 }
 .palette.is-accent div:nth-child(3) {
   background: var(--color-accent-hover);
