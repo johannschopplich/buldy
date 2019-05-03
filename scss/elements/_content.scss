@@ -79,9 +79,6 @@
   }
 
   hr {
-    border-top: 0;
-    height: 1px;
-    background: var(--color-contrast-lighter);
     margin: calc(var(--space-medium) * var(--text-vspace-multiplier, 1)) auto;
   }
 
