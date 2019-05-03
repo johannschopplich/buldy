@@ -39,13 +39,8 @@ html {
   tab-size: 4;
 }
 
-[tabindex="-1"]:focus {
-  outline: none !important;
-}
-
-hr {
-  box-sizing: content-box;
-  height: 0;
+[tabindex="-1"]:focus:not(:focus-visible) {
+  outline: 0 !important;
 }
 
 h1,
@@ -61,11 +56,6 @@ h6 {
 /*
 a:active {
   outline-width: 0;
-}
-*/
-/*
-a:focus {
-  outline: 1px dotted;
 }
 */
 ol,
@@ -94,7 +84,6 @@ pre {
 }
 
 pre {
-  display: block;
   overflow: auto;
 }
 
@@ -202,6 +191,19 @@ summary {
   cursor: pointer;
 }
 
+/*
+a,
+area,
+button,
+input,
+label,
+select,
+summary,
+textarea,
+[tabindex] {
+  touch-action: manipulation;
+}
+*/
 [aria-busy=true] {
   cursor: progress;
 }
@@ -410,15 +412,9 @@ body {
   color: var(--color-text);
 }
 
-@media screen and (-webkit-min-device-pixel-ratio: 2), screen and (min-resolution: 2dppx) {
-  body {
-    -moz-osx-font-smoothing: grayscale;
-    -webkit-font-smoothing: antialiased;
-  }
-}
 hr {
+  background-color: var(--color-border);
   border: 0;
-  border-top: 1px solid var(--color-border);
   margin: var(--space-medium) 0;
 }
 
@@ -426,10 +422,15 @@ a {
   cursor: pointer;
   color: var(--color-primary);
   text-decoration: none;
+  /*
+  &:focus {
+    // Add standard outline on focused links (opinionated).
+    outline: 1px dotted;
+  }
+  */
 }
 a:hover {
   color: var(--color-text);
-  text-decoration: none;
 }
 
 mark {

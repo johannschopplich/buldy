@@ -31,7 +31,7 @@ iframe {
 }
 
 // Change from `box-sizing: content-box` so that `width` is not affected by
-// `padding` or `border` in all browsers (opinionated).
+// `padding` or `border` in all browsers.
 * {
   &,
   &::before,
@@ -45,31 +45,25 @@ html {
   line-height: 1.15;
   // Prevent adjustments of font size after orientation changes in iOS.
   -webkit-text-size-adjust: 100%;
-  // Breaks words to prevent overflow in all browsers (opinionated).
-  //word-break: break-word;
 }
 
-// Use a more readable tab size (opinionated).
+// Use a 4-space tab width in all browsers (opinionated).
 :root {
   -moz-tab-size: 4;
   tab-size: 4;
 }
 
-// Suppress the focus outline on elements that cannot be accessed via keyboard.
-// This prevents an unwanted focus outline from appearing around elements that
-// might still respond to pointer events.
-[tabindex="-1"]:focus {
-  outline: none !important;
-}
-
+// Future-proof rule: in browsers that support :focus-visible, suppress the focus outline
+// on elements that programmatically receive focus but wouldn't normally show a visible
+// focus outline. In general, this would mean that the outline is only applied if the
+// interaction that led to the element receiving programmatic focus was a keyboard interaction,
+// or the browser has somehow determined that the user is primarily a keyboard user and/or
+// wants focus outlines to always be presented.
 //
-// Grouping content
-//
-
-// Add the correct box sizing in Firefox.
-hr {
-  box-sizing: content-box;
-  height: 0;
+// See https://developer.mozilla.org/en-US/docs/Web/CSS/:focus-visible
+// and https://developer.paciellogroup.com/blog/2018/03/focus-visible-and-backwards-compatibility/
+[tabindex="-1"]:focus:not(:focus-visible) {
+  outline: 0 !important;
 }
 
 //
@@ -96,15 +90,6 @@ h6 {
 /*
 a:active {
   outline-width: 0;
-}
-*/
-
-// Or
-
-// Add standard outline on focused links (opinionated).
-/*
-a:focus {
-  outline: 1px dotted;
 }
 */
 
@@ -145,7 +130,7 @@ pre {
 }
 
 pre {
-  display: block;
+  // Don't allow content to break outside
   overflow: auto;
 }
 
@@ -153,8 +138,7 @@ small {
   font-size: 80%;
 }
 
-// Prevent `sub` and `sup` elements from affecting the line height in
-// all browsers.
+// Prevent `sub` and `sup` elements from affecting the line height in all browsers.
 sub,
 sup {
   font-size: 75%;
@@ -289,6 +273,25 @@ summary {
   display: list-item;
   cursor: pointer;
 }
+
+//
+// User interaction
+//
+
+// Remove the tapping delay on clickable elements in all browsers (opinionated).
+/*
+a,
+area,
+button,
+input,
+label,
+select,
+summary,
+textarea,
+[tabindex] {
+  touch-action: manipulation;
+}
+*/
 
 //
 // Accessibility

@@ -18,28 +18,18 @@ body {
   color: var(--color-text);
 }
 
-// Improve font rendering on HiDPI devices
-@media
- screen and (-webkit-min-device-pixel-ratio: 2),
- screen and (min-resolution: 2dppx) {
- body {
-   -moz-osx-font-smoothing: grayscale;
-   -webkit-font-smoothing: antialiased;
- }
-}
-
 //
 // Grouping content
 //
 
 hr {
+  background-color: var(--color-border);
   border: 0;
-  border-top: 1px solid var(--color-border);
   margin: var(--space-medium) 0;
 }
 
 //
-// Text-level semantics
+// Links
 //
 
 a {
@@ -48,9 +38,18 @@ a {
   text-decoration: none;
   &:hover {
     color: var(--color-text);
-    text-decoration: none;
   }
+  /*
+  &:focus {
+    // Add standard outline on focused links (opinionated).
+    outline: 1px dotted;
+  }
+  */
 }
+
+//
+// Text-level semantics
+//
 
 mark {
   background-color: #fff4d1;
