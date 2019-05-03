@@ -82,6 +82,21 @@ h6 {
 }
 
 //
+// Grouping content
+//
+
+hr {
+  color: currentColor;
+  background-color: currentColor;
+  border: 0;
+  opacity: 0.25;
+}
+
+hr:not([size]) {
+  height: 1px;
+}
+
+//
 // Links
 //
 

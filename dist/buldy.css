@@ -53,6 +53,17 @@ h6 {
   font-weight: normal;
 }
 
+hr {
+  color: currentColor;
+  background-color: currentColor;
+  border: 0;
+  opacity: 0.25;
+}
+
+hr:not([size]) {
+  height: 1px;
+}
+
 /*
 a:active {
   outline-width: 0;
@@ -413,10 +424,9 @@ body {
 }
 
 hr {
-  height: 1px;
   background-color: var(--color-border);
-  border: 0;
   margin: var(--space-medium) 0;
+  opacity: 1;
 }
 
 a {
