@@ -19,7 +19,7 @@
   top: -0.75em;
   left: calc(2 * var(--space-small));
   color: var(--color-contrast-medium);
-  background: var(--color-background);
+  background: var(--color-white);
   font-size: var(--text-small);
   padding: 0 var(--space-small);
   text-transform: uppercase;

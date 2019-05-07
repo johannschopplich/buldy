@@ -342,9 +342,8 @@ textarea,
   --color-accent-hover: hsl(220, 90%, 52%);
   --color-accent-active: hsl(220, 90%, 49%);
   --color-accent-a50: hsla(220, 90%, 56%, 0.5);
-  --color-black: hsl(0, 0%, 4%);
   --color-white: hsl(0, 0%, 100%);
-  --color-background: hsl(0, 0%, 100%);
+  --color-black: hsl(0, 0%, 4%);
   --color-contrast-lightest: hsl(0, 0%, 95%);
   --color-contrast-lighter: hsl(0, 0%, 82%);
   --color-contrast-light: hsl(0, 0%, 70%);
@@ -357,6 +356,7 @@ textarea,
   --color-red-a50: hsla(348, 100%, 61%, 0.5);
   --color-green: hsl(141, 71%, 48%);
   --color-green-a50: hsla(141, 71%, 48%, 0.5);
+  --color-background: hsl(0, 0%, 100%);
   --color-text: var(--color-contrast-darker);
   --color-border: var(--color-contrast-lighter);
 }
@@ -1693,7 +1693,7 @@ table th {
 
 .control {
   width: 100%;
-  background-color: var(--color-background);
+  background-color: var(--color-white);
   border-color: var(--color-contrast-lighter);
   color: var(--color-text);
   justify-content: flex-start;
@@ -1806,7 +1806,7 @@ table th {
 }
 
 .button {
-  background-color: var(--color-background);
+  background-color: var(--color-white);
   border-color: var(--color-contrast-lighter);
   color: var(--color-text);
   line-height: 1;
@@ -1928,7 +1928,7 @@ table th {
   font-size: var(--button-large);
 }
 .button[disabled] {
-  background-color: var(--color-background);
+  background-color: var(--color-white);
   border-color: var(--color-contrast-lighter);
   color: var(--color-text);
   box-shadow: none;
@@ -2082,7 +2082,7 @@ table th {
 
 .box {
   display: block;
-  background-color: var(--color-background);
+  background-color: var(--color-white);
   border-radius: var(--radius);
   box-shadow: 0 2px 8px var(--color-contrast-lighter), 0 0 0 1px var(--color-contrast-medium);
   padding: var(--space-medium);

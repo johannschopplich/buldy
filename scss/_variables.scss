@@ -36,18 +36,17 @@ $container-sizes: (
   --color-accent-a50:        hsla(220, 90%, 56%, 0.5);
 
   // Shades
-  --color-black:             hsl(0, 0%, 4%);
   --color-white:             hsl(0, 0%, 100%);
+  --color-black:             hsl(0, 0%, 4%);
 
   // Color contrast
-  --color-background:        hsl(0, 0%, 100%);
   --color-contrast-lightest: hsl(0, 0%, 95%);
   --color-contrast-lighter:  hsl(0, 0%, 82%);
   --color-contrast-light:    hsl(0, 0%, 70%);
   --color-contrast-medium:   hsl(0, 0%, 48%);
   --color-contrast-dark:     hsl(0, 0%, 20%);
   --color-contrast-darker:   hsl(0, 0%, 12%);
-
+  
   // Feedback
   --color-focus:             hsl(39, 100%, 70%);
   --color-focus-a50:         hsla(39, 100%, 70%, 0.5);
@@ -55,8 +54,9 @@ $container-sizes: (
   --color-red-a50:           hsla(348, 100%, 61%, 0.5);
   --color-green:             hsl(141, 71%, 48%);
   --color-green-a50:         hsla(141, 71%, 48%, 0.5);
-
+  
   // Semantic definitions
+  --color-background:        hsl(0, 0%, 100%);
   --color-text:              var(--color-contrast-darker);
   --color-border:            var(--color-contrast-lighter);
 }
