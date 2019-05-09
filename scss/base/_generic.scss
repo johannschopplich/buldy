@@ -67,21 +67,22 @@ code {
   color: var(--color-red);
   font-size: 0.875em;
   padding: var(--space-xxxsmall) var(--space-xsmall) var(--space-xxxsmall);
-  //word-break: break-word;
 }
 
 pre {
+  -webkit-overflow-scrolling: touch;
   background-color: var(--color-contrast-lightest);
   font-size: 0.875em;
   padding: var(--space-small) 1em;
-}
+  white-space: pre;
+  word-wrap: normal;
 
-pre code {
-  background-color: transparent;
-  color: currentColor;
-  font-size: 1em;
-  padding: 0;
-  //word-break: normal;
+  pre code {
+    background-color: transparent;
+    color: currentColor;
+    font-size: 1em;
+    padding: 0;
+  }
 }
 
 //

@@ -144,9 +144,9 @@ pre {
   font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
+// Don't allow content to break outside.
 pre {
-  // Don't allow content to break outside
-  overflow: auto;
+  overflow-x: auto;
 }
 
 small {

@@ -95,7 +95,7 @@ pre {
 }
 
 pre {
-  overflow: auto;
+  overflow-x: auto;
 }
 
 small {
@@ -462,12 +462,14 @@ code {
 }
 
 pre {
+  -webkit-overflow-scrolling: touch;
   background-color: var(--color-contrast-lightest);
   font-size: 0.875em;
   padding: var(--space-small) 1em;
+  white-space: pre;
+  word-wrap: normal;
 }
-
-pre code {
+pre pre code {
   background-color: transparent;
   color: currentColor;
   font-size: 1em;
