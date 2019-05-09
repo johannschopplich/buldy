@@ -7,8 +7,6 @@ html {
   min-width: 240px;
   overflow-x: hidden;
   overflow-y: scroll;
-  // Breaks words to prevent overflow in all browsers (opinionated).
-  word-break: break-word;
 }
 
 body {
