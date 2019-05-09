@@ -413,6 +413,7 @@ html {
   min-width: 240px;
   overflow-x: hidden;
   overflow-y: scroll;
+  word-break: break-word;
 }
 
 body {
