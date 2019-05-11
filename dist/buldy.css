@@ -14,12 +14,12 @@ dl,
 dt,
 dd,
 hr,
+pre,
 figure,
 blockquote,
 fieldset,
 legend,
 textarea,
-pre,
 iframe {
   margin: 0;
   padding: 0;
@@ -202,19 +202,6 @@ summary {
   cursor: pointer;
 }
 
-/*
-a,
-area,
-button,
-input,
-label,
-select,
-summary,
-textarea,
-[tabindex] {
-  touch-action: manipulation;
-}
-*/
 [aria-busy=true] {
   cursor: progress;
 }
@@ -1530,6 +1517,13 @@ table th {
 }
 .columns.has-gap-xlarge {
   --column-gap: var(--space-xlarge);
+}
+
+.auto-grid {
+  --auto-grid-min-size: 16rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(var(--auto-grid-min-size), 1fr));
+  grid-gap: 1rem;
 }
 
 .grid {

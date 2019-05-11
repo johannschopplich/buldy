@@ -19,12 +19,12 @@ dl,
 dt,
 dd,
 hr,
+pre,
 figure,
 blockquote,
 fieldset,
 legend,
 textarea,
-pre,
 iframe {
   margin: 0;
   padding: 0;
@@ -288,25 +288,6 @@ summary {
   display: list-item;
   cursor: pointer;
 }
-
-//
-// User interaction
-//
-
-// Remove the tapping delay on clickable elements in all browsers (opinionated).
-/*
-a,
-area,
-button,
-input,
-label,
-select,
-summary,
-textarea,
-[tabindex] {
-  touch-action: manipulation;
-}
-*/
 
 //
 // Accessibility
