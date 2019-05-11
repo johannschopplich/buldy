@@ -445,7 +445,7 @@ code {
   background-color: var(--color-contrast-lightest);
   color: var(--color-red);
   font-size: 0.875em;
-  padding: var(--space-xxxsmall) var(--space-xsmall) var(--space-xxxsmall);
+  padding: var(--space-xxxsmall) var(--space-xsmall);
 }
 
 pre {
