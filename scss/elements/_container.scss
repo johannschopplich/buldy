@@ -11,10 +11,6 @@
   margin-left: auto;
   margin-right: auto;
 
-  &.is-fullwidth {
-    width: 100%;
-  }
-
   @each $breakpoint in map-keys($container-sizes) {
     @include media-breakpoint-up($breakpoint) {
       & { max-width: var(--container-width-#{$breakpoint}); }
@@ -23,5 +19,9 @@
 
   @each $size in map-keys($container-sizes) {
     &.is-#{$size} { max-width: var(--container-width-#{$size}); }
+  }
+
+  &.is-fluid {
+    max-width: none;
   }
 }

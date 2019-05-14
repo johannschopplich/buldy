@@ -1126,55 +1126,6 @@ table th {
     display: block !important;
   }
 }
-:root {
-  --container-width-sm: 540px;
-  --container-width-md: 720px;
-  --container-width-lg: 960px;
-  --container-width-xl: 1140px;
-}
-
-.container {
-  position: relative;
-  width: calc(100% - 2 * var(--component-padding));
-  margin-left: auto;
-  margin-right: auto;
-}
-.container.is-fullwidth {
-  width: 100%;
-}
-@media (min-width: 576px) {
-  .container {
-    max-width: var(--container-width-sm);
-  }
-}
-@media (min-width: 768px) {
-  .container {
-    max-width: var(--container-width-md);
-  }
-}
-@media (min-width: 992px) {
-  .container {
-    max-width: var(--container-width-lg);
-  }
-}
-@media (min-width: 1200px) {
-  .container {
-    max-width: var(--container-width-xl);
-  }
-}
-.container.is-sm {
-  max-width: var(--container-width-sm);
-}
-.container.is-md {
-  max-width: var(--container-width-md);
-}
-.container.is-lg {
-  max-width: var(--container-width-lg);
-}
-.container.is-xl {
-  max-width: var(--container-width-xl);
-}
-
 .column {
   display: block;
   flex-grow: 1;
@@ -1788,6 +1739,55 @@ table th {
 }
 .help.is-success {
   color: var(--color-green);
+}
+
+:root {
+  --container-width-sm: 540px;
+  --container-width-md: 720px;
+  --container-width-lg: 960px;
+  --container-width-xl: 1140px;
+}
+
+.container {
+  position: relative;
+  width: calc(100% - 2 * var(--component-padding));
+  margin-left: auto;
+  margin-right: auto;
+}
+@media (min-width: 576px) {
+  .container {
+    max-width: var(--container-width-sm);
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    max-width: var(--container-width-md);
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    max-width: var(--container-width-lg);
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    max-width: var(--container-width-xl);
+  }
+}
+.container.is-sm {
+  max-width: var(--container-width-sm);
+}
+.container.is-md {
+  max-width: var(--container-width-md);
+}
+.container.is-lg {
+  max-width: var(--container-width-lg);
+}
+.container.is-xl {
+  max-width: var(--container-width-xl);
+}
+.container.is-fluid {
+  max-width: none;
 }
 
 .title {

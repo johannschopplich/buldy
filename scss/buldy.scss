@@ -7,13 +7,13 @@
 @import "base/generic";
 @import "base/helpers";
 
-@import "components/container";
 @import "components/grid";
 @import "components/auto-grid";
 @import "components/iota-grid/iota";
 @import "components/modal";
 @import "components/form";
 
+@import "elements/container";
 @import "elements/title";
 @import "elements/button";
 @import "elements/content";
