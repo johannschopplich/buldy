@@ -4,7 +4,7 @@
 
 html {
   background-color: var(--color-background, white);
-  min-width: 240px;
+  min-width: 256px;
   overflow-x: hidden;
   overflow-y: scroll;
   // Breaks words to prevent overflow in all browsers (opinionated).

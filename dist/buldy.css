@@ -197,11 +197,36 @@ textarea {
   resize: vertical;
 }
 
+[type=number]::-webkit-inner-spin-button,
+[type=number]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+[type=search] {
+  -webkit-appearance: textfield;
+  outline-offset: -2px;
+}
+
+[type=search]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
 summary {
   display: list-item;
   cursor: pointer;
 }
 
+/*
+@media (prefers-reduced-motion: reduce) {
+  *:not(.safe-animation),
+  *:not(.safe-animation)::before,
+  *:not(.safe-animation)::after {
+    animation-duration: 0.01s !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0s !important;
+  }
+}
+*/
 [aria-busy=true] {
   cursor: progress;
 }
@@ -339,11 +364,11 @@ summary {
   --color-contrast-darker: hsl(0, 0%, 12%);
   --color-focus: hsl(39, 100%, 70%);
   --color-focus-a50: hsla(39, 100%, 70%, 0.5);
-  --color-red: hsl(348, 100%, 61%);
-  --color-red-a50: hsla(348, 100%, 61%, 0.5);
   --color-green: hsl(141, 71%, 48%);
   --color-green-a50: hsla(141, 71%, 48%, 0.5);
-  --color-background: hsl(0, 0%, 100%);
+  --color-red: hsl(348, 100%, 61%);
+  --color-red-a50: hsla(348, 100%, 61%, 0.5);
+  --color-background: var(--color-white);
   --color-text: var(--color-contrast-darker);
   --color-border: var(--color-contrast-lighter);
 }
@@ -397,7 +422,7 @@ summary {
 }
 html {
   background-color: var(--color-background, white);
-  min-width: 240px;
+  min-width: 256px;
   overflow-x: hidden;
   overflow-y: scroll;
   /*overflow-wrap: break-word;*/

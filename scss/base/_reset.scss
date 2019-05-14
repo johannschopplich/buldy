@@ -279,12 +279,30 @@ textarea {
   resize: vertical;
 }
 
+// Correct the cursor style of increment and decrement buttons in Chrome.
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+ 
+[type="search"] {
+  // Correct the odd appearance in Chrome and Safari.
+  -webkit-appearance: textfield;
+  // Correct the outline style in Safari.
+  outline-offset: -2px;
+}
+ 
+// Remove the inner padding in Chrome and Safari on macOS.
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
 //
 // Interactive
 //
 
-// Add the correct display in all browsers.
 summary {
+  // Add the correct display in all browsers.
   display: list-item;
   cursor: pointer;
 }
@@ -292,6 +310,20 @@ summary {
 //
 // Accessibility
 //
+
+// Immediately jump any animation to the end point if the user has set their
+// device to `prefers reduced motion` (opinionated).
+/*
+@media (prefers-reduced-motion: reduce) {
+  *:not(.safe-animation),
+  *:not(.safe-animation)::before,
+  *:not(.safe-animation)::after {
+    animation-duration: 0.01s !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0s !important;
+  }
+}
+*/
 
 // Change the cursor on busy elements in all browsers (opinionated).
 [aria-busy="true"] {
