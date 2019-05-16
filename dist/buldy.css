@@ -583,96 +583,16 @@ table th {
   padding: var(--space-xxxsmall) !important;
 }
 
-.has-padding-xxsmall {
-  padding: var(--space-xxsmall) !important;
-}
-
-.has-padding-xsmall {
-  padding: var(--space-xsmall) !important;
-}
-
-.has-padding-small {
-  padding: var(--space-small) !important;
-}
-
-.has-padding-medium {
-  padding: var(--space-medium) !important;
-}
-
-.has-padding-large {
-  padding: var(--space-large) !important;
-}
-
-.has-padding-xlarge {
-  padding: var(--space-xlarge) !important;
-}
-
-.has-padding-xxlarge {
-  padding: var(--space-xxlarge) !important;
-}
-
-.has-padding-xxxlarge {
-  padding: var(--space-xxxlarge) !important;
-}
-
-.has-margin-xxxsmall {
-  margin: var(--space-xxxsmall) !important;
-}
-
-.has-margin-xxsmall {
-  margin: var(--space-xxsmall) !important;
-}
-
-.has-margin-xsmall {
-  margin: var(--space-xsmall) !important;
-}
-
-.has-margin-small {
-  margin: var(--space-small) !important;
-}
-
-.has-margin-medium {
-  margin: var(--space-medium) !important;
-}
-
-.has-margin-large {
-  margin: var(--space-large) !important;
-}
-
-.has-margin-xlarge {
-  margin: var(--space-xlarge) !important;
-}
-
-.has-margin-xxlarge {
-  margin: var(--space-xxlarge) !important;
-}
-
-.has-margin-xxxlarge {
-  margin: var(--space-xxxlarge) !important;
-}
-
-.has-padding-top {
-  padding-top: var(--space-medium) !important;
-}
-
-.has-padding-bottom {
-  padding-bottom: var(--space-medium) !important;
-}
-
-.has-margin-top {
-  margin-top: var(--space-medium) !important;
-}
-
-.has-margin-bottom {
-  margin-bottom: var(--space-medium) !important;
-}
-
 .has-padding-top-xxxsmall {
   padding-top: var(--space-xxxsmall) !important;
 }
 
 .has-padding-bottom-xxxsmall {
   padding-bottom: var(--space-xxxsmall) !important;
+}
+
+.has-margin-xxxsmall {
+  margin: var(--space-xxxsmall) !important;
 }
 
 .has-margin-top-xxxsmall {
@@ -683,12 +603,20 @@ table th {
   margin-bottom: var(--space-xxxsmall) !important;
 }
 
+.has-padding-xxsmall {
+  padding: var(--space-xxsmall) !important;
+}
+
 .has-padding-top-xxsmall {
   padding-top: var(--space-xxsmall) !important;
 }
 
 .has-padding-bottom-xxsmall {
   padding-bottom: var(--space-xxsmall) !important;
+}
+
+.has-margin-xxsmall {
+  margin: var(--space-xxsmall) !important;
 }
 
 .has-margin-top-xxsmall {
@@ -699,12 +627,20 @@ table th {
   margin-bottom: var(--space-xxsmall) !important;
 }
 
+.has-padding-xsmall {
+  padding: var(--space-xsmall) !important;
+}
+
 .has-padding-top-xsmall {
   padding-top: var(--space-xsmall) !important;
 }
 
 .has-padding-bottom-xsmall {
   padding-bottom: var(--space-xsmall) !important;
+}
+
+.has-margin-xsmall {
+  margin: var(--space-xsmall) !important;
 }
 
 .has-margin-top-xsmall {
@@ -715,12 +651,20 @@ table th {
   margin-bottom: var(--space-xsmall) !important;
 }
 
+.has-padding-small {
+  padding: var(--space-small) !important;
+}
+
 .has-padding-top-small {
   padding-top: var(--space-small) !important;
 }
 
 .has-padding-bottom-small {
   padding-bottom: var(--space-small) !important;
+}
+
+.has-margin-small {
+  margin: var(--space-small) !important;
 }
 
 .has-margin-top-small {
@@ -731,12 +675,20 @@ table th {
   margin-bottom: var(--space-small) !important;
 }
 
+.has-padding-medium {
+  padding: var(--space-medium) !important;
+}
+
 .has-padding-top-medium {
   padding-top: var(--space-medium) !important;
 }
 
 .has-padding-bottom-medium {
   padding-bottom: var(--space-medium) !important;
+}
+
+.has-margin-medium {
+  margin: var(--space-medium) !important;
 }
 
 .has-margin-top-medium {
@@ -747,12 +699,20 @@ table th {
   margin-bottom: var(--space-medium) !important;
 }
 
+.has-padding-large {
+  padding: var(--space-large) !important;
+}
+
 .has-padding-top-large {
   padding-top: var(--space-large) !important;
 }
 
 .has-padding-bottom-large {
   padding-bottom: var(--space-large) !important;
+}
+
+.has-margin-large {
+  margin: var(--space-large) !important;
 }
 
 .has-margin-top-large {
@@ -763,12 +723,20 @@ table th {
   margin-bottom: var(--space-large) !important;
 }
 
+.has-padding-xlarge {
+  padding: var(--space-xlarge) !important;
+}
+
 .has-padding-top-xlarge {
   padding-top: var(--space-xlarge) !important;
 }
 
 .has-padding-bottom-xlarge {
   padding-bottom: var(--space-xlarge) !important;
+}
+
+.has-margin-xlarge {
+  margin: var(--space-xlarge) !important;
 }
 
 .has-margin-top-xlarge {
@@ -779,12 +747,20 @@ table th {
   margin-bottom: var(--space-xlarge) !important;
 }
 
+.has-padding-xxlarge {
+  padding: var(--space-xxlarge) !important;
+}
+
 .has-padding-top-xxlarge {
   padding-top: var(--space-xxlarge) !important;
 }
 
 .has-padding-bottom-xxlarge {
   padding-bottom: var(--space-xxlarge) !important;
+}
+
+.has-margin-xxlarge {
+  margin: var(--space-xxlarge) !important;
 }
 
 .has-margin-top-xxlarge {
@@ -795,12 +771,20 @@ table th {
   margin-bottom: var(--space-xxlarge) !important;
 }
 
+.has-padding-xxxlarge {
+  padding: var(--space-xxxlarge) !important;
+}
+
 .has-padding-top-xxxlarge {
   padding-top: var(--space-xxxlarge) !important;
 }
 
 .has-padding-bottom-xxxlarge {
   padding-bottom: var(--space-xxxlarge) !important;
+}
+
+.has-margin-xxxlarge {
+  margin: var(--space-xxxlarge) !important;
 }
 
 .has-margin-top-xxxlarge {

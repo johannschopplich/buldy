@@ -29,34 +29,12 @@
 // Common spacing values
 //
 
-.has-padding-xxxsmall         { padding: var(--space-xxxsmall) !important; }
-.has-padding-xxsmall          { padding: var(--space-xxsmall) !important; }
-.has-padding-xsmall           { padding: var(--space-xsmall) !important; }
-.has-padding-small            { padding: var(--space-small) !important; }
-.has-padding-medium           { padding: var(--space-medium) !important; }
-.has-padding-large            { padding: var(--space-large) !important; }
-.has-padding-xlarge           { padding: var(--space-xlarge) !important; }
-.has-padding-xxlarge          { padding: var(--space-xxlarge) !important; }
-.has-padding-xxxlarge         { padding: var(--space-xxxlarge) !important; }
-.has-margin-xxxsmall          { margin: var(--space-xxxsmall) !important; }
-.has-margin-xxsmall           { margin: var(--space-xxsmall) !important; }
-.has-margin-xsmall            { margin: var(--space-xsmall) !important; }
-.has-margin-small             { margin: var(--space-small) !important; }
-.has-margin-medium            { margin: var(--space-medium) !important; }
-.has-margin-large             { margin: var(--space-large) !important; }
-.has-margin-xlarge            { margin: var(--space-xlarge) !important; }
-.has-margin-xxlarge           { margin: var(--space-xxlarge) !important; }
-.has-margin-xxxlarge          { margin: var(--space-xxxlarge) !important; }
-
-.has-padding-top              { padding-top: var(--space-medium) !important; }
-.has-padding-bottom           { padding-bottom: var(--space-medium) !important; }
-.has-margin-top               { margin-top: var(--space-medium) !important; }
-.has-margin-bottom            { margin-bottom: var(--space-medium) !important; }
-
 $spacing-sizes: xxxsmall, xxsmall, xsmall, small, medium, large, xlarge, xxlarge, xxxlarge;
 @each $size in $spacing-sizes {
+  .has-padding-#{$size}        { padding: var(--space-#{$size}) !important; }
   .has-padding-top-#{$size}    { padding-top: var(--space-#{$size}) !important; }
   .has-padding-bottom-#{$size} { padding-bottom: var(--space-#{$size}) !important; }
+  .has-margin-#{$size}         { margin: var(--space-#{$size}) !important; }
   .has-margin-top-#{$size}     { margin-top: var(--space-#{$size}) !important; }
   .has-margin-bottom-#{$size}  { margin-bottom: var(--space-#{$size}) !important; }
 }
