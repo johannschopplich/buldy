@@ -2,35 +2,22 @@
 // Colors
 //
 
-.has-text-primary             { color: var(--color-primary) !important; }
-.has-text-accent              { color: var(--color-accent) !important; }
-.has-text-white               { color: var(--color-white) !important; }
-.has-text-lightest            { color: var(--color-contrast-lightest) !important; }
-.has-text-lighter             { color: var(--color-contrast-lighter) !important; }
-.has-text-light               { color: var(--color-contrast-light) !important; }
-.has-text-dark                { color: var(--color-contrast-dark) !important; }
-.has-text-darker              { color: var(--color-contrast-darker) !important; }
-.has-text-black               { color: var(--color-black) !important; }
+$colors: "primary", "accent", "lightest", "lighter", "light", "medium", "dark", "darker", "black";
+@each $value in $colors {
+  .has-text-#{$value}          { color: var(--color-#{$value}) !important; }
+  .has-background-#{$value}    { background-color: var(--color-#{$value}) !important; }
+}
+
 .has-text-current-color       { color: currentColor !important; }
 .has-text-inherit             { color: inherit !important; }
-
-.has-background-primary       { background-color: var(--color-primary) !important; }
-.has-background-accent        { background-color: var(--color-accent) !important; }
-.has-background-white         { background-color: var(--color-white) !important; }
-.has-background-lightest      { background-color: var(--color-contrast-lightest) !important; }
-.has-background-lighter       { background-color: var(--color-contrast-lighter) !important; }
-.has-background-light         { background-color: var(--color-contrast-light) !important; }
-.has-background-dark          { background-color: var(--color-contrast-dark) !important; }
-.has-background-darker        { background-color: var(--color-contrast-darker) !important; }
-.has-background-black         { background-color: var(--color-black) !important; }
 .has-background-current-color { background-color: currentColor !important; }
 
 //
 // Common spacing values
 //
 
-$spacing-sizes: xxxsmall, xxsmall, xsmall, small, medium, large, xlarge, xxlarge, xxxlarge;
-@each $size in $spacing-sizes {
+$spacers: "xxxsmall", "xxsmall", "xsmall", "small", "medium", "large", "xlarge", "xxlarge", "xxxlarge";
+@each $size in $spacers {
   .has-padding-#{$size}        { padding: var(--space-#{$size}) !important; }
   .has-padding-top-#{$size}    { padding-top: var(--space-#{$size}) !important; }
   .has-padding-bottom-#{$size} { padding-bottom: var(--space-#{$size}) !important; }

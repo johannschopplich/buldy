@@ -371,13 +371,15 @@ summary {
   --color-background: var(--color-white);
   --color-text: var(--color-contrast-darker);
   --color-border: var(--color-contrast-lighter);
+  --color-link: var(--color-primary);
 }
 
+/*
 [data-theme] {
-  background-color: var(--color-background);
-  color: var(--color-text);
+  background-color:          var(--color-background);
+  color:                     var(--color-text);
 }
-
+*/
 :root {
   --font-primary: -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   --font-secondary: var(--font-primary);
@@ -444,7 +446,7 @@ hr {
 
 a {
   cursor: pointer;
-  color: var(--color-primary);
+  color: var(--color-link);
   text-decoration: none;
   /*
   &:focus {
@@ -499,36 +501,72 @@ table th {
   color: var(--color-primary) !important;
 }
 
+.has-background-primary {
+  background-color: var(--color-primary) !important;
+}
+
 .has-text-accent {
   color: var(--color-accent) !important;
 }
 
-.has-text-white {
-  color: var(--color-white) !important;
+.has-background-accent {
+  background-color: var(--color-accent) !important;
 }
 
 .has-text-lightest {
-  color: var(--color-contrast-lightest) !important;
+  color: var(--color-lightest) !important;
+}
+
+.has-background-lightest {
+  background-color: var(--color-lightest) !important;
 }
 
 .has-text-lighter {
-  color: var(--color-contrast-lighter) !important;
+  color: var(--color-lighter) !important;
+}
+
+.has-background-lighter {
+  background-color: var(--color-lighter) !important;
 }
 
 .has-text-light {
-  color: var(--color-contrast-light) !important;
+  color: var(--color-light) !important;
+}
+
+.has-background-light {
+  background-color: var(--color-light) !important;
+}
+
+.has-text-medium {
+  color: var(--color-medium) !important;
+}
+
+.has-background-medium {
+  background-color: var(--color-medium) !important;
 }
 
 .has-text-dark {
-  color: var(--color-contrast-dark) !important;
+  color: var(--color-dark) !important;
+}
+
+.has-background-dark {
+  background-color: var(--color-dark) !important;
 }
 
 .has-text-darker {
-  color: var(--color-contrast-darker) !important;
+  color: var(--color-darker) !important;
+}
+
+.has-background-darker {
+  background-color: var(--color-darker) !important;
 }
 
 .has-text-black {
   color: var(--color-black) !important;
+}
+
+.has-background-black {
+  background-color: var(--color-black) !important;
 }
 
 .has-text-current-color {
@@ -537,42 +575,6 @@ table th {
 
 .has-text-inherit {
   color: inherit !important;
-}
-
-.has-background-primary {
-  background-color: var(--color-primary) !important;
-}
-
-.has-background-accent {
-  background-color: var(--color-accent) !important;
-}
-
-.has-background-white {
-  background-color: var(--color-white) !important;
-}
-
-.has-background-lightest {
-  background-color: var(--color-contrast-lightest) !important;
-}
-
-.has-background-lighter {
-  background-color: var(--color-contrast-lighter) !important;
-}
-
-.has-background-light {
-  background-color: var(--color-contrast-light) !important;
-}
-
-.has-background-dark {
-  background-color: var(--color-contrast-dark) !important;
-}
-
-.has-background-darker {
-  background-color: var(--color-contrast-darker) !important;
-}
-
-.has-background-black {
-  background-color: var(--color-black) !important;
 }
 
 .has-background-current-color {

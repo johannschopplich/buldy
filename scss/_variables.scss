@@ -24,7 +24,6 @@ $container-sizes: (
 :root,
 [data-theme="default"] {
   // Main
-
   --color-primary:           hsl(17, 41%, 68%);
   --color-primary-hover:     hsl(17, 41%, 64%);
   --color-primary-active:    hsl(17, 41%, 60%);
@@ -59,12 +58,15 @@ $container-sizes: (
   --color-background:        var(--color-white);
   --color-text:              var(--color-contrast-darker);
   --color-border:            var(--color-contrast-lighter);
+  --color-link:              var(--color-primary);
 }
 
+/*
 [data-theme] {
   background-color:          var(--color-background);
   color:                     var(--color-text);
 }
+*/
 
 //
 // Typography, spacing and components
