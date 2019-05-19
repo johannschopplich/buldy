@@ -1,7 +1,7 @@
 .control {
   @extend %control;
   width: 100%;
-  background-color: var(--color-white);
+  background-color: var(--color-background);
   border-color: var(--color-contrast-lighter);
   color: var(--color-text);
   justify-content: flex-start;

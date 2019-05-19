@@ -1,7 +1,7 @@
 .button {
   @extend %control;
 
-  background-color: var(--color-white);
+  background-color: var(--color-background);
   border-color: var(--color-contrast-lighter);
   color: var(--color-text);
   line-height: 1;
@@ -149,7 +149,7 @@
   //
 
   &[disabled] {
-    background-color: var(--color-white);
+    background-color: var(--color-background);
     border-color: var(--color-contrast-lighter);
     color: var(--color-text);
     box-shadow: none;

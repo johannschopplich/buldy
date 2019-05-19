@@ -1652,7 +1652,7 @@ table th {
 
 .control {
   width: 100%;
-  background-color: var(--color-white);
+  background-color: var(--color-background);
   border-color: var(--color-contrast-lighter);
   color: var(--color-text);
   justify-content: flex-start;
@@ -1765,7 +1765,7 @@ table th {
 }
 
 .button {
-  background-color: var(--color-white);
+  background-color: var(--color-background);
   border-color: var(--color-contrast-lighter);
   color: var(--color-text);
   line-height: 1;
@@ -1887,7 +1887,7 @@ table th {
   font-size: var(--button-large);
 }
 .button[disabled] {
-  background-color: var(--color-white);
+  background-color: var(--color-background);
   border-color: var(--color-contrast-lighter);
   color: var(--color-text);
   box-shadow: none;
@@ -2041,7 +2041,7 @@ table th {
 
 .box {
   display: block;
-  background-color: var(--color-white);
+  background-color: var(--color-background);
   border-radius: var(--radius);
   box-shadow: 0 2px 8px var(--color-contrast-lighter), 0 0 0 1px var(--color-contrast-medium);
   padding: var(--space-medium);
