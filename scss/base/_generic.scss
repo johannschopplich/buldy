@@ -37,7 +37,7 @@ a {
   color: var(--color-link);
   text-decoration: none;
   &:hover {
-    color: var(--color-text);
+    color: var(--color-link-hover);
   }
   /*
   &:focus {

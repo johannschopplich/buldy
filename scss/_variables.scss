@@ -59,14 +59,8 @@ $container-sizes: (
   --color-text:              var(--color-contrast-darker);
   --color-border:            var(--color-contrast-lighter);
   --color-link:              var(--color-primary);
+  --color-link-hover:        var(--color-text);
 }
-
-/*
-[data-theme] {
-  background-color:          var(--color-background);
-  color:                     var(--color-text);
-}
-*/
 
 //
 // Typography, spacing and components
@@ -110,8 +104,10 @@ $container-sizes: (
   --component-padding:       var(--space-small);
 
   // Outlines
+  /*
   --focus-outline:           2px solid currentColor;
   --focus-outline-offset:    2px;
+  */
 
   // Various components
   --radius:                  0.25em;

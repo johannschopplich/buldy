@@ -367,14 +367,9 @@ summary {
   --color-text: var(--color-contrast-darker);
   --color-border: var(--color-contrast-lighter);
   --color-link: var(--color-primary);
+  --color-link-hover: var(--color-text);
 }
 
-/*
-[data-theme] {
-  background-color:          var(--color-background);
-  color:                     var(--color-text);
-}
-*/
 :root {
   --font-primary: -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   --font-secondary: var(--font-primary);
@@ -401,8 +396,10 @@ summary {
   --space-xxlarge: calc(5.25 * var(--space-unit));
   --space-xxxlarge: calc(8.5 * var(--space-unit));
   --component-padding: var(--space-small);
-  --focus-outline: 2px solid currentColor;
-  --focus-outline-offset: 2px;
+  /*
+  --focus-outline:           2px solid currentColor;
+  --focus-outline-offset:    2px;
+  */
   --radius: 0.25em;
   --radius-rounded: 50rem;
   --button-small: calc(1em - 0.2em);
@@ -450,7 +447,7 @@ a {
   */
 }
 a:hover {
-  color: var(--color-text);
+  color: var(--color-link-hover);
 }
 
 mark {
@@ -993,18 +990,6 @@ table th {
 
 .has-text-weight-bold {
   font-weight: 700 !important;
-}
-
-.is-lowercase {
-  text-transform: lowercase !important;
-}
-
-.is-uppercase {
-  text-transform: uppercase !important;
-}
-
-.is-italic {
-  font-style: italic !important;
 }
 
 .is-sr-only {
