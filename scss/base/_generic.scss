@@ -4,13 +4,11 @@
 
 html {
   background-color: var(--color-background, white);
-  min-width: 256px;
+  min-width: 288px;
   overflow-x: hidden;
   overflow-y: scroll;
-  // Breaks words to prevent overflow in all browsers (opinionated).
-  /*overflow-wrap: break-word;*/
   // Change the default tap highlight to be completely transparent in iOS (opinionated).
-  /*-webkit-tap-highlight-color: transparent;*/
+  -webkit-tap-highlight-color: transparent;
 }
 
 body {
