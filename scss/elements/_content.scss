@@ -50,10 +50,6 @@
     margin-top: calc(var(--space-xxxsmall) * var(--text-vspace-multiplier, 1));
   }
 
-  a {
-    @extend %focus-outline;
-  }
-
   //
   // Other content elements
   //

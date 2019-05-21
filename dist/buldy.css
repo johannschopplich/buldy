@@ -245,11 +245,6 @@ summary {
   margin-bottom: var(--space-small);
 }
 
-.content a:focus, .button:focus, .control:focus {
-  outline: var(--focus-outline);
-  outline-offset: var(--focus-outline-offset);
-}
-
 .button, .control {
   -webkit-appearance: none;
   -moz-appearance: none;
