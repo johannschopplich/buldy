@@ -119,6 +119,21 @@ $spacers: "xxxsmall", "xxsmall", "xsmall", "small", "medium", "large", "xlarge",
   margin-left: calc(50% - 50vw);
 }
 
+// Vertically and horizontally center content
+.center-xy {
+  // Place *all* descendants in the center 
+  /*
+  display: grid;
+  place-items: center;
+  */
+  // More resilient version for only one descendant
+  display: flex;
+  & > *:only-child {
+    margin: auto;
+  }
+}
+
+
 //
 // Common `display` values
 //

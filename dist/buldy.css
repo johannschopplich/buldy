@@ -320,15 +320,13 @@ summary {
 .image.is-1by1 .has-ratio, .image.is-5by4 img,
 .image.is-5by4 .has-ratio, .image.is-4by3 img,
 .image.is-4by3 .has-ratio, .image.is-3by2 img,
-.image.is-3by2 .has-ratio, .image.is-5by3 img,
-.image.is-5by3 .has-ratio, .image.is-16by9 img,
+.image.is-3by2 .has-ratio, .image.is-16by9 img,
 .image.is-16by9 .has-ratio, .image.is-2by1 img,
 .image.is-2by1 .has-ratio, .image.is-3by1 img,
 .image.is-3by1 .has-ratio, .image.is-4by5 img,
 .image.is-4by5 .has-ratio, .image.is-3by4 img,
 .image.is-3by4 .has-ratio, .image.is-2by3 img,
-.image.is-2by3 .has-ratio, .image.is-3by5 img,
-.image.is-3by5 .has-ratio, .image.is-9by16 img,
+.image.is-2by3 .has-ratio, .image.is-9by16 img,
 .image.is-9by16 .has-ratio, .image.is-1by2 img,
 .image.is-1by2 .has-ratio, .image.is-1by3 img,
 .image.is-1by3 .has-ratio, .modal-background, .modal {
@@ -1031,6 +1029,17 @@ table th {
 .is-full-bleed {
   width: 100vw;
   margin-left: calc(50% - 50vw);
+}
+
+.center-xy {
+  /*
+  display: grid;
+  place-items: center;
+  */
+  display: flex;
+}
+.center-xy > *:only-child {
+  margin: auto;
 }
 
 .is-hidden {
@@ -2032,8 +2041,8 @@ table th {
 }
 
 .image {
-  display: block;
   position: relative;
+  display: block;
 }
 .image img {
   display: block;
@@ -2048,15 +2057,13 @@ table th {
 .image.is-1by1 .has-ratio, .image.is-5by4 img,
 .image.is-5by4 .has-ratio, .image.is-4by3 img,
 .image.is-4by3 .has-ratio, .image.is-3by2 img,
-.image.is-3by2 .has-ratio, .image.is-5by3 img,
-.image.is-5by3 .has-ratio, .image.is-16by9 img,
+.image.is-3by2 .has-ratio, .image.is-16by9 img,
 .image.is-16by9 .has-ratio, .image.is-2by1 img,
 .image.is-2by1 .has-ratio, .image.is-3by1 img,
 .image.is-3by1 .has-ratio, .image.is-4by5 img,
 .image.is-4by5 .has-ratio, .image.is-3by4 img,
 .image.is-3by4 .has-ratio, .image.is-2by3 img,
-.image.is-2by3 .has-ratio, .image.is-3by5 img,
-.image.is-3by5 .has-ratio, .image.is-9by16 img,
+.image.is-2by3 .has-ratio, .image.is-9by16 img,
 .image.is-9by16 .has-ratio, .image.is-1by2 img,
 .image.is-1by2 .has-ratio, .image.is-1by3 img,
 .image.is-1by3 .has-ratio {
@@ -2075,9 +2082,6 @@ table th {
 .image.is-3by2 {
   padding-top: 66.6666%;
 }
-.image.is-5by3 {
-  padding-top: 60%;
-}
 .image.is-16by9 {
   padding-top: 56.25%;
 }
@@ -2095,9 +2099,6 @@ table th {
 }
 .image.is-2by3 {
   padding-top: 150%;
-}
-.image.is-3by5 {
-  padding-top: 166.6666%;
 }
 .image.is-9by16 {
   padding-top: 177.7777%;
