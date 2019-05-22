@@ -14,9 +14,9 @@ $shades: "lightest", "lighter", "light", "medium", "dark", "darker", "black";
   .has-background-#{$value}    { background-color: var(--color-contrast-#{$value}) !important; }
 }
 
-.has-text-current-color       { color: currentColor !important; }
-.has-text-inherit             { color: inherit !important; }
-.has-background-current-color { background-color: currentColor !important; }
+.has-text-current-color        { color: currentColor !important; }
+.has-text-inherit              { color: inherit !important; }
+.has-background-current-color  { background-color: currentColor !important; }
 
 //
 // Common spacing values
@@ -112,6 +112,12 @@ $spacers: "xxxsmall", "xxsmall", "xsmall", "small", "medium", "large", "xlarge",
 
 .is-covered {
   object-fit: cover !important;
+}
+
+.is-full-bleed {
+  width: 100vw;
+  margin-left: 50%;
+  transform: translateX(-50%);
 }
 
 //

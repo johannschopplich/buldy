@@ -1028,6 +1028,12 @@ table th {
   object-fit: cover !important;
 }
 
+.is-full-bleed {
+  width: 100vw;
+  margin-left: 50%;
+  transform: translateX(-50%);
+}
+
 .is-hidden {
   display: none !important;
 }
