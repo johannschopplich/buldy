@@ -116,8 +116,7 @@ $spacers: "xxxsmall", "xxsmall", "xsmall", "small", "medium", "large", "xlarge",
 
 .is-full-bleed {
   width: 100vw;
-  margin-left: 50%;
-  transform: translateX(-50%);
+  margin-left: calc(50% - 50vw);
 }
 
 //
