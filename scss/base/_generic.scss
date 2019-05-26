@@ -4,7 +4,7 @@
 
 html {
   background-color: var(--color-background, white);
-  min-width: 288px;
+  min-width: 288px; // Equals 576px / 2
   overflow-x: hidden;
   overflow-y: scroll;
   // Change the default tap highlight to be completely transparent in iOS (opinionated).
