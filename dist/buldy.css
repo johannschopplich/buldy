@@ -121,9 +121,7 @@ sup {
 img,
 svg,
 audio,
-video,
-canvas,
-iframe {
+video {
   vertical-align: middle;
 }
 

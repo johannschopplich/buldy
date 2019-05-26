@@ -178,9 +178,7 @@ sup {
 img,
 svg,
 audio,
-video,
-canvas,
-iframe {
+video {
   vertical-align: middle;
 }
 
@@ -188,9 +186,11 @@ iframe {
 // Keep both elements from scaling beyond the width of their parents.
 img,
 video {
-  max-width: 100%; // Set a maximum relative to the parent.
-  height: auto; // Override the height to `auto`, otherwise the elements
-  // will be stretched when setting a width and height attribute on them.
+  // Set a maximum relative to the parent.
+  max-width: 100%;
+  // Override the height to `auto`, otherwise the elements will be stretched
+  // when setting a width and height attribute on them.
+  height: auto;
 }
 
 // Change the fill color to match the text color in all browsers (opinionated).
@@ -284,14 +284,14 @@ textarea {
 [type="number"]::-webkit-outer-spin-button {
   height: auto;
 }
- 
+
 [type="search"] {
   // Correct the odd appearance in Chrome and Safari.
   -webkit-appearance: textfield;
   // Correct the outline style in Safari.
   outline-offset: -2px;
 }
- 
+
 // Remove the inner padding in Chrome and Safari on macOS.
 [type="search"]::-webkit-search-decoration {
   -webkit-appearance: none;
