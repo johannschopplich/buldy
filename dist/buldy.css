@@ -2226,6 +2226,9 @@ table th {
   margin-left: auto;
   margin-right: auto;
 }
+.container.is-full-width {
+  width: 100%;
+}
 @media (min-width: 576px) {
   .container {
     max-width: var(--container-width-sm);
