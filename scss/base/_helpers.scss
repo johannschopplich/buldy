@@ -8,7 +8,7 @@ $colors: "primary", "accent";
   .has-background-#{$value}    { background-color: var(--color-#{$value}) !important; }
 }
 
-$shades: "lightest", "lighter", "light", "medium", "dark", "darker", "black";
+$shades: "lowest", "lower", "low", "medium", "high", "higher", "black";
 @each $value in $shades {
   .has-text-#{$value}          { color: var(--color-contrast-#{$value}) !important; }
   .has-background-#{$value}    { background-color: var(--color-contrast-#{$value}) !important; }

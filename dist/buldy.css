@@ -505,28 +505,28 @@ table th {
   background-color: var(--color-accent) !important;
 }
 
-.has-text-lightest {
-  color: var(--color-contrast-lightest) !important;
+.has-text-lowest {
+  color: var(--color-contrast-lowest) !important;
 }
 
-.has-background-lightest {
-  background-color: var(--color-contrast-lightest) !important;
+.has-background-lowest {
+  background-color: var(--color-contrast-lowest) !important;
 }
 
-.has-text-lighter {
-  color: var(--color-contrast-lighter) !important;
+.has-text-lower {
+  color: var(--color-contrast-lower) !important;
 }
 
-.has-background-lighter {
-  background-color: var(--color-contrast-lighter) !important;
+.has-background-lower {
+  background-color: var(--color-contrast-lower) !important;
 }
 
-.has-text-light {
-  color: var(--color-contrast-light) !important;
+.has-text-low {
+  color: var(--color-contrast-low) !important;
 }
 
-.has-background-light {
-  background-color: var(--color-contrast-light) !important;
+.has-background-low {
+  background-color: var(--color-contrast-low) !important;
 }
 
 .has-text-medium {
@@ -537,20 +537,20 @@ table th {
   background-color: var(--color-contrast-medium) !important;
 }
 
-.has-text-dark {
-  color: var(--color-contrast-dark) !important;
+.has-text-high {
+  color: var(--color-contrast-high) !important;
 }
 
-.has-background-dark {
-  background-color: var(--color-contrast-dark) !important;
+.has-background-high {
+  background-color: var(--color-contrast-high) !important;
 }
 
-.has-text-darker {
-  color: var(--color-contrast-darker) !important;
+.has-text-higher {
+  color: var(--color-contrast-higher) !important;
 }
 
-.has-background-darker {
-  background-color: var(--color-contrast-darker) !important;
+.has-background-higher {
+  background-color: var(--color-contrast-higher) !important;
 }
 
 .has-text-black {
