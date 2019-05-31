@@ -2,7 +2,7 @@
   @extend %control;
 
   background-color: var(--color-background);
-  border-color: var(--color-contrast-lighter);
+  border-color: var(--color-contrast-lower);
   color: var(--color-text);
   line-height: 1;
   padding: var(--space-xsmall);
@@ -13,7 +13,7 @@
   @include transition(/*color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out,*/ box-shadow 0.15s ease-in-out);
 
   &:hover {
-    border-color: var(--color-contrast-light);
+    border-color: var(--color-contrast-low);
     color: var(--color-text);
   }
   &:focus {
@@ -57,7 +57,7 @@
     color: var(--color-text);
     &:hover,
     &:focus {
-      background-color: var(--color-contrast-lightest);
+      background-color: var(--color-contrast-lowest);
     }
     &[disabled] {
       background-color: transparent;
@@ -150,7 +150,7 @@
 
   &[disabled] {
     background-color: var(--color-background);
-    border-color: var(--color-contrast-lighter);
+    border-color: var(--color-contrast-lower);
     color: var(--color-text);
     box-shadow: none;
     opacity: 0.5;

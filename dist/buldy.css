@@ -347,12 +347,12 @@ summary {
   --color-accent-a50: hsla(220, 90%, 56%, 0.5);
   --color-white: hsl(0, 0%, 100%);
   --color-black: hsl(0, 0%, 4%);
-  --color-contrast-lightest: hsl(0, 0%, 95%);
-  --color-contrast-lighter: hsl(0, 0%, 82%);
-  --color-contrast-light: hsl(0, 0%, 70%);
+  --color-contrast-lowest: hsl(0, 0%, 95%);
+  --color-contrast-lower: hsl(0, 0%, 82%);
+  --color-contrast-low: hsl(0, 0%, 70%);
   --color-contrast-medium: hsl(0, 0%, 48%);
-  --color-contrast-dark: hsl(0, 0%, 20%);
-  --color-contrast-darker: hsl(0, 0%, 12%);
+  --color-contrast-high: hsl(0, 0%, 20%);
+  --color-contrast-higher: hsl(0, 0%, 12%);
   --color-focus: hsl(39, 100%, 70%);
   --color-focus-a50: hsla(39, 100%, 70%, 0.5);
   --color-green: hsl(141, 71%, 48%);
@@ -360,10 +360,15 @@ summary {
   --color-red: hsl(348, 100%, 61%);
   --color-red-a50: hsla(348, 100%, 61%, 0.5);
   --color-background: var(--color-white);
-  --color-text: var(--color-contrast-darker);
-  --color-border: var(--color-contrast-lighter);
+  --color-text: var(--color-contrast-higher);
+  --color-border: var(--color-contrast-lower);
   --color-link: var(--color-primary);
   --color-link-hover: var(--color-text);
+}
+
+[data-theme] {
+  background-color: var(--color-bg);
+  color: var(--color-contrast-high);
 }
 
 :root {
@@ -457,7 +462,7 @@ span {
 }
 
 code {
-  background-color: var(--color-contrast-lightest);
+  background-color: var(--color-contrast-lowest);
   color: var(--color-red);
   font-size: 0.875em;
   padding: var(--space-xxxsmall) var(--space-xsmall);
@@ -465,7 +470,7 @@ code {
 
 pre {
   -webkit-overflow-scrolling: touch;
-  background-color: var(--color-contrast-lightest);
+  background-color: var(--color-contrast-lowest);
   font-size: 0.875em;
   padding: var(--space-small) 1em;
   white-space: pre;
@@ -1644,7 +1649,7 @@ table th {
 .control {
   width: 100%;
   background-color: var(--color-background);
-  border-color: var(--color-contrast-lighter);
+  border-color: var(--color-contrast-lower);
   color: var(--color-text);
   justify-content: flex-start;
   padding: var(--space-xxsmall) var(--space-xsmall);
@@ -1656,7 +1661,7 @@ table th {
   }
 }
 .control:hover {
-  border-color: var(--color-contrast-light);
+  border-color: var(--color-contrast-low);
 }
 .control:focus, .control:active {
   border-color: var(--color-primary);
@@ -1675,19 +1680,19 @@ table th {
   box-shadow: 0 0 0 3px var(--color-green-a50);
 }
 .control::-webkit-input-placeholder {
-  color: var(--color-contrast-light);
+  color: var(--color-contrast-low);
 }
 .control::-moz-placeholder {
   opacity: 1;
-  color: var(--color-contrast-light);
+  color: var(--color-contrast-low);
 }
 .control[readonly] {
   box-shadow: none;
 }
 .control[disabled] {
-  background-color: var(--color-contrast-lightest);
-  border-color: var(--color-contrast-lightest);
-  color: var(--color-contrast-light);
+  background-color: var(--color-contrast-lowest);
+  border-color: var(--color-contrast-lowest);
+  color: var(--color-contrast-low);
   box-shadow: none;
 }
 .control[aria-invalid=true] {
@@ -1720,7 +1725,7 @@ table th {
 }
 
 .title {
-  color: var(--color-contrast-darker);
+  color: var(--color-contrast-higher);
   line-height: var(--heading-line-height);
   font-size: var(--text-3);
   font-weight: 600;
@@ -1757,7 +1762,7 @@ table th {
 
 .button {
   background-color: var(--color-background);
-  border-color: var(--color-contrast-lighter);
+  border-color: var(--color-contrast-lower);
   color: var(--color-text);
   line-height: 1;
   padding: var(--space-xsmall);
@@ -1772,7 +1777,7 @@ table th {
   }
 }
 .button:hover {
-  border-color: var(--color-contrast-light);
+  border-color: var(--color-contrast-low);
   color: var(--color-text);
 }
 .button:focus {
@@ -1805,7 +1810,7 @@ table th {
   color: var(--color-text);
 }
 .button.is-link:hover, .button.is-link:focus {
-  background-color: var(--color-contrast-lightest);
+  background-color: var(--color-contrast-lowest);
 }
 .button.is-link[disabled] {
   background-color: transparent;
@@ -1879,7 +1884,7 @@ table th {
 }
 .button[disabled] {
   background-color: var(--color-background);
-  border-color: var(--color-contrast-lighter);
+  border-color: var(--color-contrast-lower);
   color: var(--color-text);
   box-shadow: none;
   opacity: 0.5;
@@ -1979,8 +1984,8 @@ table th {
   list-style-type: square;
 }
 .content blockquote {
-  background-color: var(--color-contrast-lightest);
-  border-left: 5px solid var(--color-contrast-lighter);
+  background-color: var(--color-contrast-lowest);
+  border-left: 5px solid var(--color-contrast-lower);
   padding: var(--space-small) 2em var(--space-small) calc(2em - 5px);
 }
 .content figure {
@@ -2034,7 +2039,7 @@ table th {
   display: block;
   background-color: var(--color-background);
   border-radius: var(--radius);
-  box-shadow: 0 2px 8px var(--color-contrast-lighter), 0 0 0 1px var(--color-contrast-medium);
+  box-shadow: 0 2px 8px var(--color-contrast-lower), 0 0 0 1px var(--color-contrast-medium);
   padding: var(--space-medium);
 }
 

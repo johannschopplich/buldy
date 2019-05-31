@@ -39,12 +39,12 @@ $container-sizes: (
   --color-black:             hsl(0, 0%, 4%);
 
   // Color contrast
-  --color-contrast-lightest: hsl(0, 0%, 95%);
-  --color-contrast-lighter:  hsl(0, 0%, 82%);
-  --color-contrast-light:    hsl(0, 0%, 70%);
+  --color-contrast-lowest: hsl(0, 0%, 95%);
+  --color-contrast-lower:  hsl(0, 0%, 82%);
+  --color-contrast-low:    hsl(0, 0%, 70%);
   --color-contrast-medium:   hsl(0, 0%, 48%);
-  --color-contrast-dark:     hsl(0, 0%, 20%);
-  --color-contrast-darker:   hsl(0, 0%, 12%);
+  --color-contrast-high:     hsl(0, 0%, 20%);
+  --color-contrast-higher:   hsl(0, 0%, 12%);
   
   // Feedback
   --color-focus:             hsl(39, 100%, 70%);
@@ -56,10 +56,15 @@ $container-sizes: (
   
   // Semantic definitions
   --color-background:        var(--color-white);
-  --color-text:              var(--color-contrast-darker);
-  --color-border:            var(--color-contrast-lighter);
+  --color-text:              var(--color-contrast-higher);
+  --color-border:            var(--color-contrast-lower);
   --color-link:              var(--color-primary);
   --color-link-hover:        var(--color-text);
+}
+
+[data-theme] {
+  background-color: var(--color-bg);
+  color: var(--color-contrast-high);
 }
 
 //

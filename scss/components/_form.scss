@@ -2,14 +2,14 @@
   @extend %control;
   width: 100%;
   background-color: var(--color-background);
-  border-color: var(--color-contrast-lighter);
+  border-color: var(--color-contrast-lower);
   color: var(--color-text);
   justify-content: flex-start;
   padding: var(--space-xxsmall) var(--space-xsmall);
   @include transition(/*border-color 0.15s ease-in-out,*/ box-shadow 0.15s ease-in-out);
 
   &:hover {
-    border-color: var(--color-contrast-light);
+    border-color: var(--color-contrast-low);
   }
   &:focus,
   &:active {
@@ -33,20 +33,20 @@
   }
 
   &::-webkit-input-placeholder {
-    color: var(--color-contrast-light);
+    color: var(--color-contrast-low);
   }
   &::-moz-placeholder {
     opacity: 1;
-    color: var(--color-contrast-light);
+    color: var(--color-contrast-low);
   }
 
   &[readonly] {
     box-shadow: none;
   }
   &[disabled] {
-    background-color: var(--color-contrast-lightest);
-    border-color: var(--color-contrast-lightest);
-    color: var(--color-contrast-light);
+    background-color: var(--color-contrast-lowest);
+    border-color: var(--color-contrast-lowest);
+    color: var(--color-contrast-low);
     box-shadow: none;
   }
   &[aria-invalid="true"] {
