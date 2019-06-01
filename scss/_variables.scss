@@ -62,11 +62,6 @@ $container-sizes: (
   --color-link-hover:        var(--color-text);
 }
 
-[data-theme] {
-  background-color: var(--color-background);
-  color: var(--color-contrast-high);
-}
-
 //
 // Typography, spacing and components
 //

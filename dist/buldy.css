@@ -366,11 +366,6 @@ summary {
   --color-link-hover: var(--color-text);
 }
 
-[data-theme] {
-  background-color: var(--color-background);
-  color: var(--color-contrast-high);
-}
-
 :root {
   --font-primary: -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   --font-secondary: var(--font-primary);
