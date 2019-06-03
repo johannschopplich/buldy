@@ -11,7 +11,7 @@
   &.is-primary {
     background-color: var(--color-primary);
     color: var(--color-white);
-    a:not(.button) {
+    a:not([class]) {
       color: inherit;
     }
   }
@@ -19,7 +19,7 @@
   &.is-accent {
     background-color: var(--color-accent);
     color: var(--color-white);
-    a:not(.button) {
+    a:not([class]) {
       color: inherit;
     }
   }

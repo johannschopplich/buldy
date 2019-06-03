@@ -2279,14 +2279,14 @@ table th {
   background-color: var(--color-primary);
   color: var(--color-white);
 }
-.hero.is-primary a:not(.button) {
+.hero.is-primary a:not([class]) {
   color: inherit;
 }
 .hero.is-accent {
   background-color: var(--color-accent);
   color: var(--color-white);
 }
-.hero.is-accent a:not(.button) {
+.hero.is-accent a:not([class]) {
   color: inherit;
 }
 .hero.is-halfheight .hero-body, .hero.is-fullheight .hero-body {
