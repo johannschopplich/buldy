@@ -1,7 +1,7 @@
 {
   "name": "buldy-framework",
   "description": "A beautiful minimal CSS framework utilizing custom properties",
-  "version": "0.9.0",
+  "version": "1.0.0",
   "author": "Johann Schopplich",
   "license": "MIT",
   "keywords": [
@@ -20,7 +20,7 @@
   },
   "devDependencies": {
     "clean-css-cli": "^4.3.0",
-    "sass": "^1.18.0"
+    "sass": "^1.22.4"
   },
   "files": [
     "dist/*.{css,map}",
