@@ -41,16 +41,19 @@ iframe {
 }
 
 html {
-  // Correct the line height in all browsers.
+  // Use the default cursor in all browsers (opinionated).
+  // cursor: default;
+  // Change the line height in all browsers (opinionated).
   line-height: 1.15;
-  // Prevent adjustments of font size after orientation changes in iOS.
-  -webkit-text-size-adjust: 100%;
-}
-
-// Use a 4-space tab width in all browsers (opinionated).
-:root {
+  // Use a 4-space tab width in all browsers (opinionated).
   -moz-tab-size: 4;
   tab-size: 4;
+  // Remove the grey highlight on links in iOS (opinionated).
+  -webkit-tap-highlight-color: transparent;
+  // Prevent adjustments of font size after orientation changes in iOS.
+  -webkit-text-size-adjust: 100%;
+  // Breaks words to prevent overflow in all browsers (opinionated).
+  // overflow-wrap: break-word;
 }
 
 // Future-proof rule: in browsers that support :focus-visible, suppress the focus outline
@@ -119,13 +122,11 @@ ul {
 }
 
 abbr[title] {
-  // Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+  // Add the correct text decoration in Edge 18-, IE, and Safari.
   text-decoration: underline;
   text-decoration: underline dotted;
   // Add explicit cursor to indicate changed behavior.
   cursor: help;
-  // Prevent the text-decoration to be skipped.
-  text-decoration-skip-ink: none;
 }
 
 // Add the correct font weight in Chrome, Edge, and Safari.
@@ -141,7 +142,7 @@ pre {
   // Correct the odd `em` font sizing in all browsers.
   font-size: 1em;
   // Correct the inheritance and scaling of font size in all browsers.
-  font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-family: "Menlo", "Consolas", "Roboto Mono", "Ubuntu Monospace", "Noto Mono", "Liberation Mono", monospace, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
 // Don't allow content to break outside.
@@ -149,6 +150,7 @@ pre {
   overflow-x: auto;
 }
 
+// Add the correct font size in all browsers.
 small {
   font-size: 80%;
 }
@@ -175,17 +177,21 @@ sup {
 //
 
 // Change the alignment on media elements in all browsers (opinionated).
+audio,
+canvas,
+iframe,
 img,
 svg,
-audio,
 video {
   vertical-align: middle;
 }
 
-// Responsive image and video:
-// Keep both elements from scaling beyond the width of their parents.
+// Restrict sizing to the page width in all browsers (opinionated).
 img,
-video {
+video,
+input,
+select,
+textarea {
   // Set a maximum relative to the parent.
   max-width: 100%;
   // Override the height to `auto`, otherwise the elements will be stretched
@@ -196,6 +202,11 @@ video {
 // Change the fill color to match the text color in all browsers (opinionated).
 svg:not([fill]) {
   fill: currentColor;
+}
+
+// Remove the border on iframes in all browsers (opinionated).
+ iframe {
+  border-style: none;
 }
 
 //
@@ -221,16 +232,39 @@ label {
   display: inline-block;
 }
 
-// Inherit styling in all browsers (opinionated).
+// Remove the margin on controls in Safari.
 button,
 input,
-optgroup,
+select {
+  margin: 0;
+}
+
+// Change the inconsistent appearance in all browsers (opinionated).
+// Add typography inheritance in all browsers (opinionated).
+button,
+input,
 select,
 textarea {
-  font-size: inherit;
-  font-family: inherit;
-  line-height: 1.15;
-  margin: 0;
+  background-color: transparent;
+  border: 1px solid WindowFrame;
+  color: inherit;
+  font: inherit;
+  letter-spacing: inherit;
+  padding: 0.25em 0.375em;
+}
+
+// Change the inconsistent appearance in all browsers (opinionated).
+select {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  background: no-repeat right center / 1em;
+  border-radius: 0;
+  padding-right: 1em;
+
+  // Change the inconsistent appearance in all browsers (opinionated).
+  &:not([multiple]):not([size]) {
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='4'%3E%3Cpath d='M4 0h6L7 4'/%3E%3C/svg%3E");
+  }
 }
 
 // Remove the default `border-radius` that macOS Chrome adds.
@@ -238,7 +272,7 @@ button {
   border-radius: 0;
 }
 
-// Correct the inability to style clickable types in iOS and Safari.
+// Correct the inability to style upload buttons in iOS and Safari.
 button,
 [type="button"],
 [type="reset"],
@@ -274,26 +308,37 @@ fieldset {
   border: 0;
 }
 
-// Change the resize direction on textareas in all browsers (opinionated).
+// Add the correct vertical alignment in Chrome, Edge, and Firefox.
+progress {
+ vertical-align: baseline;
+}
+
+// Change the resize direction in all browsers (opinionated).
 textarea {
   resize: vertical;
 }
 
-// Correct the cursor style of increment and decrement buttons in Chrome.
-[type="number"]::-webkit-inner-spin-button,
-[type="number"]::-webkit-outer-spin-button {
-  height: auto;
-}
-
 [type="search"] {
-  // Correct the odd appearance in Chrome and Safari.
+  // Correct the odd appearance in Chrome, Edge, and Safari.
   -webkit-appearance: textfield;
   // Correct the outline style in Safari.
   outline-offset: -2px;
 }
 
-// Remove the inner padding in Chrome and Safari on macOS.
-[type="search"]::-webkit-search-decoration {
+// Correct the cursor style of increment and decrement buttons in Safari.
+::-webkit-inner-spin-button,
+::-webkit-outer-spin-button {
+  height: auto;
+}
+
+// Correct the text style of placeholders in Chrome, Edge, and Safari.
+::-webkit-input-placeholder {
+  color: inherit;
+  opacity: 0.54;
+}
+
+// Remove the inner padding in Chrome, Edge, and Safari on macOS.
+::-webkit-search-decoration {
   -webkit-appearance: none;
 }
 
@@ -308,22 +353,27 @@ summary {
 }
 
 //
-// Accessibility
+// User interaction
 //
 
-// Immediately jump any animation to the end point if the user has set their
-// device to `prefers reduced motion` (opinionated).
+// Remove the tapping delay on clickable elements in all browsers (opinionated).
 /*
-@media (prefers-reduced-motion: reduce) {
-  *:not(.safe-animation),
-  *:not(.safe-animation)::before,
-  *:not(.safe-animation)::after {
-    animation-duration: 0.01s !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0s !important;
-  }
+a,
+area,
+button,
+input,
+label,
+select,
+summary,
+textarea,
+[tabindex] {
+  touch-action: manipulation;
 }
 */
+
+//
+// Accessibility
+//
 
 // Change the cursor on busy elements in all browsers (opinionated).
 [aria-busy="true"] {

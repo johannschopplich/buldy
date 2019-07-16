@@ -117,15 +117,21 @@ $spacers: "xxxsmall", "xxsmall", "xsmall", "small", "medium", "large", "xlarge",
 .is-full-bleed {
   width: 100vw;
   margin-left: calc(50% - 50vw);
+
+  // A variation which works in edgecases that doesn't need calc():
+  // width: 100vw;
+  // position: relative;
+  // left: 50%;
+  // right: 50%;
+  // margin-left: -50vw;
+  // margin-right: -50vw;
 }
 
 // Vertically and horizontally center content
 .center-xy {
-  // Place *all* descendants in the center 
-  /*
-  display: grid;
-  place-items: center;
-  */
+  // Place *all* descendants in the center
+  // display: grid;
+  // place-items: center;
   // More resilient version for only one descendant
   display: flex;
   & > *:only-child {
