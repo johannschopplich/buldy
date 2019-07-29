@@ -118,7 +118,7 @@ $spacers: "xxxsmall", "xxsmall", "xsmall", "small", "medium", "large", "xlarge",
   width: 100vw;
   margin-left: calc(50% - 50vw);
 
-  // A variation which works in edgecases that doesn't need calc():
+  // A `full-bleed` helper variation, which doesn't need calc()
   // width: 100vw;
   // position: relative;
   // left: 50%;
@@ -132,7 +132,8 @@ $spacers: "xxxsmall", "xxsmall", "xsmall", "small", "medium", "large", "xlarge",
   // Place *all* descendants in the center
   // display: grid;
   // place-items: center;
-  // More resilient version for only one descendant
+
+  // A more resilient version for only one descendant
   display: flex;
   & > *:only-child {
     margin: auto;
