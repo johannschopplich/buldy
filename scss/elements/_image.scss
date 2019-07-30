@@ -22,13 +22,11 @@
   &.is-3by2,
   &.is-16by9,
   &.is-2by1,
-  &.is-3by1,
   &.is-4by5,
   &.is-3by4,
   &.is-2by3,
   &.is-9by16,
-  &.is-1by2,
-  &.is-1by3 {
+  &.is-1by2 {
     img,
     .has-ratio {
       @extend %overlay;
@@ -56,9 +54,6 @@
   &.is-2by1 {
     padding-top: 50%
   }
-  &.is-3by1 {
-    padding-top: 33.3333%
-  }
   &.is-4by5 {
     padding-top: 125%
   }
@@ -73,8 +68,5 @@
   }
   &.is-1by2 {
     padding-top: 200%
-  }
-  &.is-1by3 {
-    padding-top: 300%
   }
 }
