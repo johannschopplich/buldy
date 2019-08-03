@@ -76,6 +76,7 @@ abbr[title] {
   text-decoration: underline;
   text-decoration: underline dotted;
   cursor: help;
+  text-decoration-skip-ink: none;
 }
 
 b,
@@ -194,7 +195,6 @@ button,
 [type=submit] {
   -webkit-appearance: button;
 }
-
 button:not(:disabled),
 [type=button]:not(:disabled),
 [type=reset]:not(:disabled),
@@ -202,10 +202,7 @@ button:not(:disabled),
   cursor: pointer;
 }
 
-button::-moz-focus-inner,
-[type=button]::-moz-focus-inner,
-[type=reset]::-moz-focus-inner,
-[type=submit]::-moz-focus-inner {
+::-moz-focus-inner {
   padding: 0;
   border-style: none;
 }
@@ -221,11 +218,7 @@ progress {
 
 textarea {
   resize: vertical;
-}
-
-[type=search] {
   -webkit-appearance: textfield;
-  outline-offset: -2px;
 }
 
 ::-webkit-inner-spin-button,
@@ -233,9 +226,9 @@ textarea {
   height: auto;
 }
 
-::-webkit-input-placeholder {
-  color: inherit;
-  opacity: 0.54;
+[type=search] {
+  outline-offset: -2px;
+  -webkit-appearance: textfield;
 }
 
 ::-webkit-search-decoration {

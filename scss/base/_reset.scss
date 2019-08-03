@@ -127,6 +127,8 @@ abbr[title] {
   text-decoration: underline dotted;
   // Add explicit cursor to indicate changed behavior.
   cursor: help;
+  // Prevent the text-decoration to be skipped.
+  text-decoration-skip-ink: none;
 }
 
 // Add the correct font weight in Chrome, Edge, and Safari.
@@ -278,23 +280,15 @@ button,
 [type="reset"],
 [type="submit"] {
   -webkit-appearance: button;
-}
 
-// Add "hand" cursor to non-disabled button elements (opinionated).
-button,
-[type="button"],
-[type="reset"],
-[type="submit"] {
+  // Add "hand" cursor to non-disabled button elements (opinionated).
   &:not(:disabled) {
     cursor: pointer;
   }
 }
 
 // Remove inner border and padding from Firefox, but don't restore the outline like Normalize.
-button::-moz-focus-inner,
-[type="button"]::-moz-focus-inner,
-[type="reset"]::-moz-focus-inner,
-[type="submit"]::-moz-focus-inner {
+::-moz-focus-inner {
   padding: 0;
   border-style: none;
 }
@@ -313,16 +307,11 @@ progress {
  vertical-align: baseline;
 }
 
-// Change the resize direction in all browsers (opinionated).
 textarea {
+  // Change the resize direction in all browsers (opinionated).
   resize: vertical;
-}
-
-[type="search"] {
-  // Correct the odd appearance in Chrome, Edge, and Safari.
+  // Use the same borders as textfields.
   -webkit-appearance: textfield;
-  // Correct the outline style in Safari.
-  outline-offset: -2px;
 }
 
 // Correct the cursor style of increment and decrement buttons in Safari.
@@ -331,13 +320,14 @@ textarea {
   height: auto;
 }
 
-// Correct the text style of placeholders in Chrome, Edge, and Safari.
-::-webkit-input-placeholder {
-  color: inherit;
-  opacity: 0.54;
+[type="search"] {
+  // Correct the outline style in Safari.
+  outline-offset: -2px;
+  // Overrides the extra rounded corners on search inputs in iOS.
+  -webkit-appearance: textfield;
 }
 
-// Remove the inner padding in Chrome, Edge, and Safari on macOS.
+// Remove the inner padding in Chrome and Safari on macOS.
 ::-webkit-search-decoration {
   -webkit-appearance: none;
 }
