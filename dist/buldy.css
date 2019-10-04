@@ -218,7 +218,6 @@ progress {
 
 textarea {
   resize: vertical;
-  -webkit-appearance: textfield;
 }
 
 ::-webkit-inner-spin-button,

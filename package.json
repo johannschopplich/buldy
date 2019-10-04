@@ -20,7 +20,7 @@
   },
   "devDependencies": {
     "clean-css-cli": "^4.3.0",
-    "sass": "^1.22.7"
+    "sass": "^1.23.0"
   },
   "files": [
     "dist/*.{css,map}",

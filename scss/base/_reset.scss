@@ -307,11 +307,9 @@ progress {
  vertical-align: baseline;
 }
 
+// Change the resize direction in all browsers (opinionated).
 textarea {
-  // Change the resize direction in all browsers (opinionated).
   resize: vertical;
-  // Use the same borders as textfields.
-  -webkit-appearance: textfield;
 }
 
 // Correct the cursor style of increment and decrement buttons in Safari.
