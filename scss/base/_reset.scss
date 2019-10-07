@@ -3,7 +3,6 @@
 //
 
 // Remove default spacing (opinionated).
-html,
 body,
 h1,
 h2,
@@ -16,11 +15,11 @@ ol,
 ul,
 li,
 dl,
-dt,
 dd,
 hr,
 pre,
 figure,
+figcaption,
 blockquote,
 fieldset,
 legend,
@@ -41,8 +40,6 @@ iframe {
 }
 
 html {
-  // Use the default cursor in all browsers (opinionated).
-  // cursor: default;
   // Change the line height in all browsers (opinionated).
   line-height: 1.15;
   // Use a 4-space tab width in all browsers (opinionated).
@@ -122,7 +119,7 @@ ul {
 }
 
 abbr[title] {
-  // Add the correct text decoration in Edge 18-, IE, and Safari.
+  // Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
   text-decoration: underline;
   text-decoration: underline dotted;
   // Add explicit cursor to indicate changed behavior.
@@ -206,11 +203,6 @@ svg:not([fill]) {
   fill: currentColor;
 }
 
-// Remove the border on iframes in all browsers (opinionated).
- iframe {
-  border-style: none;
-}
-
 //
 // Tabular data
 //
@@ -234,10 +226,22 @@ label {
   display: inline-block;
 }
 
-// Remove the margin on controls in Safari.
+/*
+// Work around a Firefox/IE bug where the transparent `button` background
+// results in a loss of the default `button` focus styles.
+//
+// Credit: https://github.com/suitcss/base/
+button:focus {
+  outline: 1px dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+}
+*/
+
+// Remove the margin on controls in Firefox and Safari.
 button,
 input,
-select {
+select,
+textarea {
   margin: 0;
 }
 
@@ -260,7 +264,6 @@ select {
   -moz-appearance: none;
   -webkit-appearance: none;
   background: no-repeat right center / 1em;
-  border-radius: 0;
   padding-right: 1em;
 
   // Change the inconsistent appearance in all browsers (opinionated).
@@ -269,19 +272,11 @@ select {
   }
 }
 
-// Remove the default `border-radius` that macOS Chrome adds.
-button {
-  border-radius: 0;
-}
-
-// Correct the inability to style upload buttons in iOS and Safari.
+// Add "hand" cursor to non-disabled button elements (opinionated).
 button,
 [type="button"],
 [type="reset"],
 [type="submit"] {
-  -webkit-appearance: button;
-
-  // Add "hand" cursor to non-disabled button elements (opinionated).
   &:not(:disabled) {
     cursor: pointer;
   }
@@ -293,6 +288,11 @@ button,
   border-style: none;
 }
 
+// Change the resize direction in all browsers (opinionated).
+textarea {
+  resize: vertical;
+}
+
 fieldset {
   // Browsers set a default `min-width: min-content;` on fieldsets,
   // unlike e.g. `<div>`s, which have `min-width: 0;` by default.
@@ -300,34 +300,6 @@ fieldset {
   min-width: 0;
   // Reset the default outline behavior of fieldsets so they don't affect page layout.
   border: 0;
-}
-
-// Add the correct vertical alignment in Chrome, Edge, and Firefox.
-progress {
- vertical-align: baseline;
-}
-
-// Change the resize direction in all browsers (opinionated).
-textarea {
-  resize: vertical;
-}
-
-// Correct the cursor style of increment and decrement buttons in Safari.
-::-webkit-inner-spin-button,
-::-webkit-outer-spin-button {
-  height: auto;
-}
-
-[type="search"] {
-  // Correct the outline style in Safari.
-  outline-offset: -2px;
-  // Overrides the extra rounded corners on search inputs in iOS.
-  -webkit-appearance: textfield;
-}
-
-// Remove the inner padding in Chrome and Safari on macOS.
-::-webkit-search-decoration {
-  -webkit-appearance: none;
 }
 
 //
