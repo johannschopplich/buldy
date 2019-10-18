@@ -102,11 +102,9 @@ hr:not([size]) {
 
 // Remove the outline on focused links when they are also active or hovered
 // in all browsers (opinionated).
-/*
-a:active {
-  outline-width: 0;
-}
-*/
+// a:active {
+//   outline-width: 0;
+// }
 
 //
 // Text-level semantics
@@ -226,17 +224,6 @@ label {
   display: inline-block;
 }
 
-/*
-// Work around a Firefox/IE bug where the transparent `button` background
-// results in a loss of the default `button` focus styles.
-//
-// Credit: https://github.com/suitcss/base/
-button:focus {
-  outline: 1px dotted;
-  outline: 5px auto -webkit-focus-ring-color;
-}
-*/
-
 // Remove the margin on controls in Firefox and Safari.
 button,
 input,
@@ -317,19 +304,17 @@ summary {
 //
 
 // Remove the tapping delay on clickable elements in all browsers (opinionated).
-/*
-a,
-area,
-button,
-input,
-label,
-select,
-summary,
-textarea,
-[tabindex] {
-  touch-action: manipulation;
-}
-*/
+// a,
+// area,
+// button,
+// input,
+// label,
+// select,
+// summary,
+// textarea,
+// [tabindex] {
+//   touch-action: manipulation;
+// }
 
 //
 // Accessibility

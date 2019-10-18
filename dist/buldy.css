@@ -61,11 +61,6 @@ hr:not([size]) {
   height: 1px;
 }
 
-/*
-a:active {
-  outline-width: 0;
-}
-*/
 ol,
 ul {
   list-style: none;
@@ -151,16 +146,6 @@ label {
   display: inline-block;
 }
 
-/*
-// Work around a Firefox/IE bug where the transparent `button` background
-// results in a loss of the default `button` focus styles.
-//
-// Credit: https://github.com/suitcss/base/
-button:focus {
-  outline: 1px dotted;
-  outline: 5px auto -webkit-focus-ring-color;
-}
-*/
 button,
 input,
 select,
@@ -216,19 +201,6 @@ summary {
   cursor: pointer;
 }
 
-/*
-a,
-area,
-button,
-input,
-label,
-select,
-summary,
-textarea,
-[tabindex] {
-  touch-action: manipulation;
-}
-*/
 [aria-busy=true] {
   cursor: progress;
 }
@@ -242,9 +214,16 @@ textarea,
   cursor: not-allowed;
 }
 
-.box:not(:last-child), .content:not(:last-child), .title.is-spaced:not(:last-child),
+.block:not(:last-child), .box:not(:last-child), .content:not(:last-child), .title.is-spaced:not(:last-child),
 .subtitle.is-spaced:not(:last-child) {
   margin-bottom: var(--space-small);
+}
+
+.button, .is-unselectable, .modal-close {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
 }
 
 .button, .control {
@@ -261,13 +240,6 @@ textarea,
 }
 .button:focus, .control:focus {
   outline-color: transparent;
-}
-
-.button, .is-unselectable, .modal-close {
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  user-select: none;
 }
 
 .modal-close {
@@ -394,10 +366,6 @@ textarea,
   --space-xxlarge: calc(5.25 * var(--space-unit));
   --space-xxxlarge: calc(8.5 * var(--space-unit));
   --component-padding: var(--space-small);
-  /*
-  --focus-outline:           2px solid currentColor;
-  --focus-outline-offset:    2px;
-  */
   --radius: 0.25em;
   --radius-rounded: 50rem;
   --button-small: calc(1em - 0.2em);
@@ -413,8 +381,8 @@ textarea,
   }
 }
 html {
-  background-color: var(--color-background, white);
-  min-width: 288px;
+  background-color: var(--color-background, #fff);
+  min-width: 320px;
   overflow-x: hidden;
   overflow-y: scroll;
 }
@@ -436,12 +404,6 @@ a {
   cursor: pointer;
   color: var(--color-link);
   text-decoration: none;
-  /*
-  &:focus {
-    // Add standard outline on focused links (opinionated).
-    outline: 1px dotted;
-  }
-  */
 }
 a:hover {
   color: var(--color-link-hover);

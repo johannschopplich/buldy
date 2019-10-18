@@ -3,8 +3,8 @@
 //
 
 html {
-  background-color: var(--color-background, white);
-  min-width: 288px; // Equals 576px / 2
+  background-color: var(--color-background, #fff);
+  min-width: 320px;
   overflow-x: hidden;
   overflow-y: scroll;
 }
@@ -37,12 +37,10 @@ a {
   &:hover {
     color: var(--color-link-hover);
   }
-  /*
-  &:focus {
-    // Add standard outline on focused links (opinionated).
-    outline: 1px dotted;
-  }
-  */
+  // &:focus {
+  //   // Add standard outline on focused links (opinionated).
+  //   outline: 1px dotted;
+  // }
 }
 
 //

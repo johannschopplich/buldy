@@ -45,7 +45,7 @@ $container-sizes: (
   --color-contrast-medium:   hsl(0, 0%, 48%);
   --color-contrast-high:     hsl(0, 0%, 20%);
   --color-contrast-higher:   hsl(0, 0%, 12%);
-  
+
   // Feedback
   --color-focus:             hsl(39, 100%, 70%);
   --color-focus-a50:         hsla(39, 100%, 70%, 0.5);
@@ -53,7 +53,7 @@ $container-sizes: (
   --color-green-a50:         hsla(141, 71%, 48%, 0.5);
   --color-red:               hsl(348, 100%, 61%);
   --color-red-a50:           hsla(348, 100%, 61%, 0.5);
-  
+
   // Semantic definitions
   --color-background:        var(--color-white);
   --color-text:              var(--color-contrast-higher);
@@ -73,7 +73,7 @@ $container-sizes: (
 
   // Body font size
   --text-base-size:          1em;
-  
+
   // Type scale
   --text-scale-ratio:        1.2;
   --text-small:              calc(1em / var(--text-scale-ratio));
@@ -100,14 +100,12 @@ $container-sizes: (
   --space-xlarge:            calc(3.25  * var(--space-unit));
   --space-xxlarge:           calc(5.25  * var(--space-unit));
   --space-xxxlarge:          calc(8.5   * var(--space-unit));
-  //--space-xxxxlarge:       calc(13.75 * var(--space-unit));
+  // --space-xxxxlarge:       calc(13.75 * var(--space-unit));
   --component-padding:       var(--space-small);
 
   // Outlines
-  /*
-  --focus-outline:           2px solid currentColor;
-  --focus-outline-offset:    2px;
-  */
+  // --focus-outline:           2px solid currentColor;
+  // --focus-outline-offset:    2px;
 
   // Various components
   --radius:                  0.25em;
