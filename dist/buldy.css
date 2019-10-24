@@ -141,6 +141,10 @@ td,
 th {
   padding: 0;
 }
+td:not([align]),
+th:not([align]) {
+  text-align: left;
+}
 
 label {
   display: inline-block;
