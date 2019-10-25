@@ -1,15 +1,13 @@
-[*]
+[*.{css,scss,js,ts,vue,json,html,php,md,yml}]
 indent_style = space
 indent_size = 2
 end_of_line = lf
 trim_trailing_whitespace = true
 insert_final_newline = true
 
-[*.md,*.txt]
+[*.md]
+indent_size = 4
 trim_trailing_whitespace = false
-
-# PHP PSR-2 Coding Standards
-# http://www.php-fig.org/psr/psr-2/
 
 [*.php]
 indent_size = 4
