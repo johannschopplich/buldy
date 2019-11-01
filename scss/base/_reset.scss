@@ -22,9 +22,7 @@ figure,
 figcaption,
 blockquote,
 fieldset,
-legend,
-textarea,
-iframe {
+legend {
   margin: 0;
   padding: 0;
 }
@@ -176,7 +174,6 @@ sup {
 // Change the alignment on media elements in all browsers (opinionated).
 audio,
 canvas,
-iframe,
 img,
 svg,
 video {
@@ -227,14 +224,6 @@ label {
   display: inline-block;
 }
 
-// Remove the margin on controls in Firefox and Safari.
-button,
-input,
-select,
-textarea {
-  margin: 0;
-}
-
 // Change the inconsistent appearance in all browsers (opinionated).
 // Add typography inheritance in all browsers (opinionated).
 button,
@@ -247,12 +236,13 @@ textarea {
   font: inherit;
   letter-spacing: inherit;
   padding: 0.25em 0.375em;
+  margin: 0;
 }
 
 // Change the inconsistent appearance in all browsers (opinionated).
 select {
-  -moz-appearance: none;
   -webkit-appearance: none;
+  -moz-appearance: none;
   background: no-repeat right center / 1em;
   padding-right: 1em;
 

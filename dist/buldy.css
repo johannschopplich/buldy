@@ -17,9 +17,7 @@ figure,
 figcaption,
 blockquote,
 fieldset,
-legend,
-textarea,
-iframe {
+legend {
   margin: 0;
   padding: 0;
 }
@@ -112,7 +110,6 @@ sup {
 
 audio,
 canvas,
-iframe,
 img,
 svg,
 video {
@@ -154,24 +151,18 @@ button,
 input,
 select,
 textarea {
-  margin: 0;
-}
-
-button,
-input,
-select,
-textarea {
   background-color: transparent;
   border: 1px solid WindowFrame;
   color: inherit;
   font: inherit;
   letter-spacing: inherit;
   padding: 0.25em 0.375em;
+  margin: 0;
 }
 
 select {
-  -moz-appearance: none;
   -webkit-appearance: none;
+  -moz-appearance: none;
   background: no-repeat right center/1em;
   padding-right: 1em;
 }
@@ -447,7 +438,6 @@ pre code {
 
 table td,
 table th {
-  text-align: left;
   vertical-align: top;
 }
 
