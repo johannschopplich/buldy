@@ -15,7 +15,6 @@ $shades: "lowest", "lower", "low", "medium", "high", "higher", "black";
 }
 
 .has-text-current-color        { color: currentColor !important; }
-.has-text-inherit              { color: inherit !important; }
 .has-background-current-color  { background-color: currentColor !important; }
 
 //
@@ -27,6 +26,7 @@ $spacers: "xxxsmall", "xxsmall", "xsmall", "small", "medium", "large", "xlarge",
   .has-padding-#{$size}        { padding: var(--space-#{$size}) !important; }
   .has-padding-top-#{$size}    { padding-top: var(--space-#{$size}) !important; }
   .has-padding-bottom-#{$size} { padding-bottom: var(--space-#{$size}) !important; }
+
   .has-margin-#{$size}         { margin: var(--space-#{$size}) !important; }
   .has-margin-top-#{$size}     { margin-top: var(--space-#{$size}) !important; }
   .has-margin-bottom-#{$size}  { margin-bottom: var(--space-#{$size}) !important; }
@@ -39,10 +39,15 @@ $spacers: "xxxsmall", "xxsmall", "xsmall", "small", "medium", "large", "xlarge",
 @each $breakpoint in map-keys($grid-breakpoints) {
   @include media-breakpoint-up($breakpoint) {
     $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+
     @for $i from 1 through 6 {
       .is-size#{$infix}-#{$i} {
         font-size: var(--text-#{$i}) !important;
       }
+    }
+
+    .is-size#{$infix}-small {
+      font-size: var(--text-small) !important;
     }
   }
 }

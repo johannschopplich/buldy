@@ -517,10 +517,6 @@ table th {
   color: currentColor !important;
 }
 
-.has-text-inherit {
-  color: inherit !important;
-}
-
 .has-background-current-color {
   background-color: currentColor !important;
 }
@@ -765,6 +761,10 @@ table th {
   font-size: var(--text-6) !important;
 }
 
+.is-size-small {
+  font-size: var(--text-small) !important;
+}
+
 @media (min-width: 576px) {
   .is-size-sm-1 {
     font-size: var(--text-1) !important;
@@ -788,6 +788,10 @@ table th {
 
   .is-size-sm-6 {
     font-size: var(--text-6) !important;
+  }
+
+  .is-size-sm-small {
+    font-size: var(--text-small) !important;
   }
 }
 @media (min-width: 768px) {
@@ -814,6 +818,10 @@ table th {
   .is-size-md-6 {
     font-size: var(--text-6) !important;
   }
+
+  .is-size-md-small {
+    font-size: var(--text-small) !important;
+  }
 }
 @media (min-width: 992px) {
   .is-size-lg-1 {
@@ -839,6 +847,10 @@ table th {
   .is-size-lg-6 {
     font-size: var(--text-6) !important;
   }
+
+  .is-size-lg-small {
+    font-size: var(--text-small) !important;
+  }
 }
 @media (min-width: 1200px) {
   .is-size-xl-1 {
@@ -863,6 +875,10 @@ table th {
 
   .is-size-xl-6 {
     font-size: var(--text-6) !important;
+  }
+
+  .is-size-xl-small {
+    font-size: var(--text-small) !important;
   }
 }
 .has-text-left {
