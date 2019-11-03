@@ -134,10 +134,6 @@ table {
   border-spacing: 0;
 }
 
-td,
-th {
-  padding: 0;
-}
 td:not([align]),
 th:not([align]) {
   text-align: left;
@@ -224,7 +220,6 @@ summary {
 .button, .control {
   -webkit-appearance: none;
   -moz-appearance: none;
-  appearance: none;
   position: relative;
   display: inline-flex;
   align-items: center;
@@ -436,8 +431,8 @@ pre code {
   padding: 0;
 }
 
-table td,
-table th {
+td,
+th {
   vertical-align: top;
 }
 
@@ -1002,10 +997,10 @@ table th {
   margin-left: calc(50% - 50vw);
 }
 
-.center-xy {
+.is-both-centered {
   display: flex;
 }
-.center-xy > *:only-child {
+.is-both-centered > *:only-child {
   margin: auto;
 }
 
