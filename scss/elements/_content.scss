@@ -59,9 +59,9 @@
   ul li,
   blockquote {
     line-height: var(--component-body-line-height);
-    color: var(--color-text);
+    // color: var(--color-text);
   }
-  
+
   p,
   dl,
   ol,
@@ -112,7 +112,7 @@
     border-left: 5px solid var(--color-contrast-lower);
     padding: var(--space-small) 2em var(--space-small) calc(2em - 5px);
   }
-  
+
   figure {
     text-align: center;
     //margin-right: 2em;
@@ -149,7 +149,7 @@
         margin-left: calc(var(--space-medium) * var(--text-vspace-multiplier, 1));
       }
     }
-    
+
     @include media-breakpoint-up(xl) {
       &.is-pulled-left,
       &.is-pulled-right {

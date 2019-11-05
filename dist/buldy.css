@@ -1924,7 +1924,6 @@ th {
 .content ul li,
 .content blockquote {
   line-height: var(--component-body-line-height);
-  color: var(--color-text);
 }
 .content p:not(:last-child),
 .content dl:not(:last-child),
