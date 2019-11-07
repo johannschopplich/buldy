@@ -2204,39 +2204,44 @@ th {
   width: 100%;
 }
 @media (min-width: 576px) {
-  .container {
+  .container:not(.is-fluid) {
     max-width: var(--container-width-sm);
   }
 }
 @media (min-width: 768px) {
-  .container {
+  .container:not(.is-fluid) {
     max-width: var(--container-width-md);
   }
 }
 @media (min-width: 992px) {
-  .container {
+  .container:not(.is-fluid) {
     max-width: var(--container-width-lg);
   }
 }
 @media (min-width: 1200px) {
-  .container {
+  .container:not(.is-fluid) {
     max-width: var(--container-width-xl);
   }
 }
-.container.is-sm {
-  max-width: var(--container-width-sm);
+@media (min-width: 576px) {
+  .container.is-sm {
+    max-width: var(--container-width-sm);
+  }
 }
-.container.is-md {
-  max-width: var(--container-width-md);
+@media (min-width: 768px) {
+  .container.is-md {
+    max-width: var(--container-width-md);
+  }
 }
-.container.is-lg {
-  max-width: var(--container-width-lg);
+@media (min-width: 992px) {
+  .container.is-lg {
+    max-width: var(--container-width-lg);
+  }
 }
-.container.is-xl {
-  max-width: var(--container-width-xl);
-}
-.container.is-fluid {
-  max-width: none;
+@media (min-width: 1200px) {
+  .container.is-xl {
+    max-width: var(--container-width-xl);
+  }
 }
 
 .section {

@@ -17,15 +17,17 @@
 
   @each $breakpoint in map-keys($container-sizes) {
     @include media-breakpoint-up($breakpoint) {
-      & { max-width: var(--container-width-#{$breakpoint}); }
+      &:not(.is-fluid) {
+        max-width: var(--container-width-#{$breakpoint});
+      }
     }
   }
 
   @each $size in map-keys($container-sizes) {
-    &.is-#{$size} { max-width: var(--container-width-#{$size}); }
-  }
-
-  &.is-fluid {
-    max-width: none;
+    @include media-breakpoint-up($size) {
+      &.is-#{$size} {
+        max-width: var(--container-width-#{$size});
+      }
+    }
   }
 }
