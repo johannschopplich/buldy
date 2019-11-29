@@ -452,6 +452,22 @@ th {
   background-color: var(--color-accent) !important;
 }
 
+.has-text-white {
+  color: var(--color-white) !important;
+}
+
+.has-background-white {
+  background-color: var(--color-white) !important;
+}
+
+.has-text-black {
+  color: var(--color-black) !important;
+}
+
+.has-background-black {
+  background-color: var(--color-black) !important;
+}
+
 .has-text-lowest {
   color: var(--color-contrast-lowest) !important;
 }
@@ -498,14 +514,6 @@ th {
 
 .has-background-higher {
   background-color: var(--color-contrast-higher) !important;
-}
-
-.has-text-black {
-  color: var(--color-contrast-black) !important;
-}
-
-.has-background-black {
-  background-color: var(--color-contrast-black) !important;
 }
 
 .has-text-current-color {

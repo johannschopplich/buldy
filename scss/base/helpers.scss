@@ -2,13 +2,13 @@
 // Colors
 //
 
-$colors: "primary", "accent";
+$colors: "primary", "accent", "white", "black";
 @each $value in $colors {
   .has-text-#{$value}          { color: var(--color-#{$value}) !important; }
   .has-background-#{$value}    { background-color: var(--color-#{$value}) !important; }
 }
 
-$shades: "lowest", "lower", "low", "medium", "high", "higher", "black";
+$shades: "lowest", "lower", "low", "medium", "high", "higher";
 @each $value in $shades {
   .has-text-#{$value}          { color: var(--color-contrast-#{$value}) !important; }
   .has-background-#{$value}    { background-color: var(--color-contrast-#{$value}) !important; }
