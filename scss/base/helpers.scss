@@ -24,10 +24,11 @@ $shades: "lowest", "lower", "low", "medium", "high", "higher";
 $spacers: "xxxsmall", "xxsmall", "xsmall", "small", "medium", "large", "xlarge", "xxlarge", "xxxlarge";
 @each $size in $spacers {
   .has-padding-#{$size}        { padding: var(--space-#{$size}) !important; }
+  .has-margin-#{$size}         { margin: var(--space-#{$size}) !important; }
+
   .has-padding-top-#{$size}    { padding-top: var(--space-#{$size}) !important; }
   .has-padding-bottom-#{$size} { padding-bottom: var(--space-#{$size}) !important; }
 
-  .has-margin-#{$size}         { margin: var(--space-#{$size}) !important; }
   .has-margin-top-#{$size}     { margin-top: var(--space-#{$size}) !important; }
   .has-margin-bottom-#{$size}  { margin-bottom: var(--space-#{$size}) !important; }
 }
@@ -67,25 +68,9 @@ $spacers: "xxxsmall", "xxsmall", "xsmall", "small", "medium", "large", "xlarge",
 
 .has-text-weight-light    { font-weight: 300 !important; }
 .has-text-weight-normal   { font-weight: 400 !important; }
+.has-text-weight-medium   { font-weight: 500 !important; }
 .has-text-weight-semibold { font-weight: 600 !important; }
 .has-text-weight-bold     { font-weight: 700 !important; }
-
-//
-// Accessability
-//
-
-// Make element visually invisible but still accessible to screen-readers
-.is-sr-only {
-  position: absolute;
-  width: 1px;
-  height: auto;
-  clip: rect(0 0 0 0);
-  border: 0;
-  padding: 0;
-  margin: 0;
-  overflow: hidden;
-  white-space: nowrap;
-}
 
 //
 // Miscellaneous
@@ -123,7 +108,7 @@ $spacers: "xxxsmall", "xxsmall", "xsmall", "small", "medium", "large", "xlarge",
   width: 100vw;
   margin-left: calc(50% - 50vw);
 
-  // A `full-bleed` helper variation, which doesn't need calc()
+  // A `full-bleed` helper variation, which doesn't need `calc()`
   // width: 100vw;
   // position: relative;
   // left: 50%;
@@ -145,7 +130,6 @@ $spacers: "xxxsmall", "xxsmall", "xsmall", "small", "medium", "large", "xlarge",
   }
 }
 
-
 //
 // Common `display` values
 //
@@ -157,4 +141,21 @@ $spacers: "xxxsmall", "xxsmall", "xsmall", "small", "medium", "large", "xlarge",
     .is#{$infix}-inline { display: inline !important; }
     .is#{$infix}-block  { display: block !important; }
   }
+}
+
+//
+// Accessability
+//
+
+// Make element visually invisible but still accessible to screen-readers
+.is-sr-only {
+  position: absolute;
+  width: 1px;
+  height: auto;
+  clip: rect(0 0 0 0);
+  border: 0;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  white-space: nowrap;
 }
