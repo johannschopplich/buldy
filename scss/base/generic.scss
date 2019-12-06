@@ -3,16 +3,16 @@
 //
 
 html {
-  background-color: var(--color-background, #fff);
+  background-color: var(--color-background, white);
   min-width: 320px;
   overflow-x: hidden;
   overflow-y: scroll;
 }
 
 body {
-  font-family: var(--font-primary);
-  font-size: var(--text-base-size);
-  line-height: var(--body-line-height);
+  font-family: var(--family-base);
+  font-size: var(--text-base);
+  line-height: var(--line-height-base);
   color: var(--color-text);
 }
 
@@ -58,7 +58,6 @@ span {
 }
 
 code {
-  // Thanks to Bulma for these style ideas
   background-color: var(--color-contrast-lowest);
   color: var(--color-red);
   font-size: 0.875em;

@@ -164,7 +164,7 @@
   display: grid;
   grid-auto-flow: dense;
   grid: repeat(1, max-content)/repeat(6, 1fr);
-  grid-gap: var(--space-medium);
+  gap: var(--space-medium);
   border-bottom: 1px solid var(--color-contrast-medium);
   padding: var(--space-large) var(--space-medium);
 }

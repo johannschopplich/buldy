@@ -1,6 +1,13 @@
+$container-sizes: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px
+) !default;
+
 .container {
   position: relative;
-  width: calc(100% - 2 * var(--component-padding));
+  width: calc(100% - 2 * var(--space-small));
   margin-left: auto;
   margin-right: auto;
 
@@ -11,7 +18,7 @@
   @each $breakpoint in map-keys($container-sizes) {
     $width: map-get($container-sizes, $breakpoint);
 
-    @include media-breakpoint-up($breakpoint) {
+    @include media-breakpoint-above($breakpoint) {
       &:not(.is-fluid),
       &.is-#{$breakpoint} {
         max-width: $width;

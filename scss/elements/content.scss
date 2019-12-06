@@ -1,6 +1,6 @@
 .content {
-  --component-body-line-height: calc(var(--body-line-height) * var(--line-height-multiplier, 1));
-  --component-heading-line-height: calc(var(--heading-line-height) * var(--line-height-multiplier, 1));
+  --component-line-height-base: calc(var(--line-height-base) * var(--line-height-multiplier, 1));
+  --component-line-height-heading: calc(var(--line-height-heading) * var(--line-height-multiplier, 1));
   --line-height-multiplier: 1;
   --text-vspace-multiplier: 1;
 
@@ -23,7 +23,7 @@
   h2,
   h3,
   h4 {
-    line-height: var(--component-heading-line-height);
+    line-height: var(--component-line-height-heading);
     margin-bottom: calc(var(--space-xxsmall) * var(--text-vspace-multiplier, 1));
   }
 
@@ -58,7 +58,7 @@
   ol li,
   ul li,
   blockquote {
-    line-height: var(--component-body-line-height);
+    line-height: var(--component-line-height-base);
     // color: var(--color-text);
   }
 
@@ -133,7 +133,7 @@
       margin-top: calc(var(--space-xsmall) * var(--text-vspace-multiplier, 1));
     }
 
-    @include media-breakpoint-up(sm) {
+    @include media-breakpoint-above(mobile) {
       &.is-pulled-left,
       &.is-pulled-right {
         width: 45%;
@@ -150,7 +150,7 @@
       }
     }
 
-    @include media-breakpoint-up(xl) {
+    @include media-breakpoint-above(widescreen) {
       &.is-pulled-left,
       &.is-pulled-right {
         width: 50%;

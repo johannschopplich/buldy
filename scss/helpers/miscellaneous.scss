@@ -1,0 +1,53 @@
+.is-marginless {
+  margin: 0 !important;
+}
+
+.is-paddingless {
+  padding: 0 !important;
+}
+
+.is-radiusless {
+  border-radius: 0 !important;
+}
+
+.is-shadowless {
+  box-shadow: none !important;
+}
+
+.is-unselectable {
+  @extend %unselectable;
+}
+
+.is-contained {
+  object-fit: contain !important;
+}
+
+.is-covered {
+  object-fit: cover !important;
+}
+
+.is-full-bleed {
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+
+  // A `full-bleed` helper variation, which doesn't need `calc()`
+  // width: 100vw;
+  // position: relative;
+  // left: 50%;
+  // right: 50%;
+  // margin-left: -50vw;
+  // margin-right: -50vw;
+}
+
+// Vertically and horizontally center content
+.is-both-centered {
+  // Place *all* descendants in the center
+  // display: grid;
+  // place-items: center;
+
+  // A more resilient version for only one descendant
+  display: flex;
+  & > *:only-child {
+    margin: auto;
+  }
+}

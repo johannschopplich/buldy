@@ -1,0 +1,143 @@
+$spacers: (
+  xxxsmall: var(--space-xxxsmall),
+  xxsmall: var(--space-xxsmall),
+  xsmall: var(--space-xsmall),
+  small: var(--space-small),
+  medium: var(--space-medium),
+  large: var(--space-large),
+  xlarge: var(--space-xlarge),
+  xxlarge: var(--space-xxlarge),
+  xxxlarge: var(--space-xxxlarge),
+) !default;
+
+$utilities: (
+  // Display utilities
+  "display": (
+    responsive: true,
+    property: display,
+    class: is,
+    values: (
+      hidden: none,
+      inline: inline,
+      block: block,
+    )
+  ),
+
+  // Margin utilities
+  "margin": (
+    responsive: true,
+    property: margin,
+    class: has-margin,
+    values: $spacers
+  ),
+  "margin-top": (
+    responsive: true,
+    property: margin-top,
+    class: has-margin-top,
+    values: $spacers
+  ),
+  "margin-bottom": (
+    responsive: true,
+    property: margin-bottom,
+    class: has-margin-bottom,
+    values: $spacers
+  ),
+
+  // Padding utilities
+  "padding": (
+    responsive: true,
+    property: padding,
+    class: has-padding,
+    values: $spacers
+  ),
+  "padding-top": (
+    responsive: true,
+    property: padding-top,
+    class: has-padding-top,
+    values: $spacers
+  ),
+  "padding-bottom": (
+    responsive: true,
+    property: padding-bottom,
+    class: has-padding-bottom,
+    values: $spacers
+  ),
+
+  // Text
+  "color": (
+    property: color,
+    class: has-text,
+    values: (
+      "white": var(--color-white),
+      "black": var(--color-black),
+      "primary": var(--color-primary),
+      "accent": var(--color-accent),
+      "lowest": var(--color-contrast-lowest),
+      "lower": var(--color-contrast-lower),
+      "low": var(--color-contrast-low),
+      "medium": var(--color-contrast-medium),
+      "high": var(--color-contrast-high),
+      "higher": var(--color-contrast-higher),
+    )
+  ),
+  "background-color": (
+    property: background-color,
+    class: has-background,
+    values: (
+      "white": var(--color-white),
+      "black": var(--color-black),
+      "primary": var(--color-primary),
+      "accent": var(--color-accent),
+      "lowest": var(--color-contrast-lowest),
+      "lower": var(--color-contrast-lower),
+      "low": var(--color-contrast-low),
+      "medium": var(--color-contrast-medium),
+      "high": var(--color-contrast-high),
+      "higher": var(--color-contrast-higher),
+    )
+  ),
+  "font-size": (
+    responsive: true,
+    property: font-size,
+    class: is-size,
+    values: (
+      1: var(--text-1),
+      2: var(--text-2),
+      3: var(--text-3),
+      4: var(--text-4),
+      5: var(--text-5),
+      6: var(--text-6),
+      small: var(--text-small),
+    )
+  ),
+  "font-weight": (
+    property: font-weight,
+    class: has-text-weight,
+    values: (
+      light: 300,
+      normal: 400,
+      medium: 500,
+      semibold: 600,
+      bold: 700,
+      bolder: 800,
+    )
+  ),
+  "text-align": (
+    responsive: true,
+    property: text-align,
+    class: has-text,
+    values: (
+      left: left,
+      right: right,
+      centered: center,
+    )
+  ),
+  "font-family": (
+    property: font-family,
+    class: is-family,
+    values: (
+      base: var(--family-base),
+      heading: var(--family-heading),
+    )
+  ),
+);

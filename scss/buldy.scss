@@ -1,19 +1,24 @@
-@import "base/reset";
 @import "mixins/all";
+
+// Base
 @import "variables";
-
+@import "base/reset";
 @import "base/generic";
-@import "base/helpers";
 
+// Components
 @import "components/grid";
 @import "components/auto-grid";
 @import "components/iota-grid/iota";
 @import "components/modal";
 @import "components/form";
 @import "components/aspect-ratio";
+@import "components/hero";
 
+// Elements
 @import "elements/title";
 @import "elements/button";
+@import "elements/container";
+@import "elements/section";
 @import "elements/content";
 @import "elements/box";
 @import "elements/image";
@@ -21,6 +26,9 @@
 @import "elements/flow";
 @import "elements/other";
 
-@import "layout/container";
-@import "layout/section";
-@import "layout/hero";
+// Helpers
+@import "helpers/miscellaneous";
+@import "helpers/accessibility";
+
+// Utilities
+@import "utilities/api";

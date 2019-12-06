@@ -1,10 +1,6 @@
-//
-// Color system
-//
-
 :root,
 [data-theme="default"] {
-  // Main
+  // Main colors
   --color-primary:           hsl(17, 41%, 68%);
   --color-primary-hover:     hsl(17, 41%, 64%);
   --color-primary-active:    hsl(17, 41%, 60%);
@@ -14,6 +10,14 @@
   --color-accent-hover:      hsl(220, 90%, 52%);
   --color-accent-active:     hsl(220, 90%, 49%);
   --color-accent-a50:        hsla(220, 90%, 56%, 0.5);
+
+  // Feedback colors
+  --color-focus:             hsl(39, 100%, 70%);
+  --color-focus-a50:         hsla(39, 100%, 70%, 0.5);
+  --color-green:             hsl(141, 71%, 48%);
+  --color-green-a50:         hsla(141, 71%, 48%, 0.5);
+  --color-red:               hsl(348, 100%, 61%);
+  --color-red-a50:           hsla(348, 100%, 61%, 0.5);
 
   // Shades
   --color-white:             hsl(0, 0%, 100%);
@@ -27,81 +31,65 @@
   --color-contrast-high:     hsl(0, 0%, 20%);
   --color-contrast-higher:   hsl(0, 0%, 12%);
 
-  // Feedback
-  --color-focus:             hsl(39, 100%, 70%);
-  --color-focus-a50:         hsla(39, 100%, 70%, 0.5);
-  --color-green:             hsl(141, 71%, 48%);
-  --color-green-a50:         hsla(141, 71%, 48%, 0.5);
-  --color-red:               hsl(348, 100%, 61%);
-  --color-red-a50:           hsla(348, 100%, 61%, 0.5);
-
-  // Semantic definitions
+  // Semantic color definitions
   --color-background:        var(--color-white);
   --color-text:              var(--color-contrast-higher);
   --color-border:            var(--color-contrast-lower);
   --color-link:              var(--color-primary);
   --color-link-hover:        var(--color-text);
-}
 
-//
-// Typography, spacing and components
-//
+  // Typography system
+  --family-base:             -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  --family-heading:          var(--family-base);
 
-:root {
-  // Font families
-  --font-primary:            -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-  --font-secondary:          var(--font-primary);
+  --line-height-base:        1.4;
+  --line-height-heading:     1.2;
 
-  // Body font size
-  --text-base-size:          1em;
+  // Modular typography scaling
+  --text-base:               1em;
+  --text-ratio:              1.2;
 
-  // Type scale
-  --text-scale-ratio:        1.2;
-  --text-small:              calc(1em / var(--text-scale-ratio));
-  --text-6:                  1em;
-  --text-5:                  calc(var(--text-6) * var(--text-scale-ratio));
-  --text-4:                  calc(var(--text-5) * var(--text-scale-ratio));
-  --text-3:                  calc(var(--text-4) * var(--text-scale-ratio));
-  --text-2:                  calc(var(--text-3) * var(--text-scale-ratio));
-  --text-1:                  calc(var(--text-2) * var(--text-scale-ratio));
+  --text-1:                  calc(var(--text-2) * var(--text-ratio));
+  --text-2:                  calc(var(--text-3) * var(--text-ratio));
+  --text-3:                  calc(var(--text-4) * var(--text-ratio));
+  --text-4:                  calc(var(--text-5) * var(--text-ratio));
+  --text-5:                  calc(var(--text-6) * var(--text-ratio));
+  --text-6:                  var(--text-base);
+  --text-small:              calc(var(--text-base) / var(--text-ratio));
 
-  // Line heights
-  --body-line-height:        1.4;
-  --heading-line-height:     1.2;
+  // Modular space scaling
+  --space-ratio:             1rem;
 
-  // Spacing
-  --space-unit:              1em;
-  --space-xxxxsmall:         calc(0.125 * var(--space-unit));
-  --space-xxxsmall:          calc(0.25  * var(--space-unit));
-  --space-xxsmall:           calc(0.375 * var(--space-unit));
-  --space-xsmall:            calc(0.5   * var(--space-unit));
-  --space-small:             calc(0.75  * var(--space-unit));
-  --space-medium:            calc(1.25  * var(--space-unit));
-  --space-large:             calc(2     * var(--space-unit));
-  --space-xlarge:            calc(3.25  * var(--space-unit));
-  --space-xxlarge:           calc(5.25  * var(--space-unit));
-  --space-xxxlarge:          calc(8.5   * var(--space-unit));
-  // --space-xxxxlarge:       calc(13.75 * var(--space-unit));
-  --component-padding:       var(--space-small);
+  --space-xxxsmall:          calc(0.25  * var(--space-ratio));
+  --space-xxsmall:           calc(0.375 * var(--space-ratio));
+  --space-xsmall:            calc(0.5   * var(--space-ratio));
+  --space-small:             calc(0.75  * var(--space-ratio));
+  --space-medium:            calc(1.25  * var(--space-ratio));
+  --space-large:             calc(2     * var(--space-ratio));
+  --space-xlarge:            calc(3.25  * var(--space-ratio));
+  --space-xxlarge:           calc(5.25  * var(--space-ratio));
+  --space-xxxlarge:          calc(8.5   * var(--space-ratio));
 
-  // Various components
+  --component-padding:       var(--space-medium);
+
+  // Radius
   --radius:                  0.25em;
   --radius-rounded:          50rem;
 
   // Buttons
-  --button-small:            calc(1em - 0.2em);
-  --button-medium:           calc(1em + 0.2em);
-  --button-large:            calc(1em + 0.4em);
+  --button-small:            calc(var(--text-base) - 0.2em);
+  --button-medium:           calc(var(--text-base) + 0.2em);
+  --button-large:            calc(var(--text-base) + 0.4em);
 }
 
 //
-// Responsiveness
+// Natural flowing responsiveness
 //
 
-@include media-breakpoint-up(md) {
+@include media-breakpoint-above(tablet) {
   :root {
-    --text-base-size:      1.15em;
-    --text-scale-ratio:    1.25;
-    --space-unit:          1.15em;
+    --text-base:             1.15em;
+    --text-ratio:            1.25;
+    --space-ratio:           1.15rem;
   }
 }

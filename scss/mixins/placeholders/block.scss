@@ -1,9 +1,0 @@
-@mixin block {
-  &:not(:last-child) {
-    margin-bottom: var(--space-small);
-  }
-}
-
-%block {
-  @include block;
-}

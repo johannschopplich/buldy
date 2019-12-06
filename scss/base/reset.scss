@@ -2,6 +2,14 @@
 // Document
 //
 
+// Change from `box-sizing: content-box` so that `width` is not affected by
+// `padding` or `border` in all browsers.
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 // Remove default spacing (opinionated).
 body,
 h1,
@@ -11,8 +19,6 @@ h4,
 h5,
 h6,
 p,
-ol,
-ul,
 li,
 dl,
 dd,
@@ -27,16 +33,6 @@ legend {
   padding: 0;
 }
 
-// Change from `box-sizing: content-box` so that `width` is not affected by
-// `padding` or `border` in all browsers.
-* {
-  &,
-  &::before,
-  &::after {
-    box-sizing: border-box;
-  }
-}
-
 html {
   // Change the line height in all browsers (opinionated).
   line-height: 1.15;
@@ -47,21 +43,11 @@ html {
   -webkit-tap-highlight-color: transparent;
   // Prevent adjustments of font size after orientation changes in iOS.
   -webkit-text-size-adjust: 100%;
-  // Breaks words to prevent overflow in all browsers (opinionated).
-  // overflow-wrap: break-word;
 }
 
-// Future-proof rule: in browsers that support :focus-visible, suppress the focus outline
-// on elements that programmatically receive focus but wouldn't normally show a visible
-// focus outline. In general, this would mean that the outline is only applied if the
-// interaction that led to the element receiving programmatic focus was a keyboard interaction,
-// or the browser has somehow determined that the user is primarily a keyboard user and/or
-// wants focus outlines to always be presented.
-//
-// See https://developer.mozilla.org/en-US/docs/Web/CSS/:focus-visible
-// and https://developer.paciellogroup.com/blog/2018/03/focus-visible-and-backwards-compatibility/
-[tabindex="-1"]:focus:not(:focus-visible) {
-  outline: 0 !important;
+// Set core body defaults (opinionated).
+body {
+  min-height: 100vh;
 }
 
 //
@@ -98,6 +84,11 @@ hr:not([size]) {
 // Links
 //
 
+// Anchor elements that don't have a class get default styles
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
 // Remove the outline on focused links when they are also active or hovered
 // in all browsers (opinionated).
 // a:active {
@@ -108,20 +99,13 @@ hr:not([size]) {
 // Text-level semantics
 //
 
-// Remove list style in all browsers (opinionated).
-ol,
-ul {
+ul[class],
+ol[class] {
+  // Remove list style in all browsers (opinionated).
   list-style: none;
-}
-
-abbr[title] {
-  // Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
-  text-decoration: underline;
-  text-decoration: underline dotted;
-  // Add explicit cursor to indicate changed behavior.
-  cursor: help;
-  // Prevent the text-decoration to be skipped.
-  text-decoration-skip-ink: none;
+  // Remove default padding in all browsers
+  padding: 0;
+  margin: 0;
 }
 
 // Add the correct font weight in Chrome, Edge, and Safari.
@@ -150,23 +134,6 @@ small {
   font-size: 0.875em;
 }
 
-// Prevent `sub` and `sup` elements from affecting the line height in all browsers.
-sub,
-sup {
-  font-size: 0.75em;
-  line-height: 0;
-  position: relative;
-  vertical-align: baseline;
-}
-
-sub {
-  bottom: -0.25em;
-}
-
-sup {
-  top: -0.5em;
-}
-
 //
 // Embedded content
 //
@@ -174,6 +141,7 @@ sup {
 // Change the alignment on media elements in all browsers (opinionated).
 audio,
 canvas,
+iframe,
 img,
 svg,
 video {
@@ -182,10 +150,7 @@ video {
 
 // Restrict sizing to the page width in all browsers (opinionated).
 img,
-video,
-input,
-select,
-textarea {
+video {
   // Set a maximum relative to the parent.
   max-width: 100%;
   // Override the height to `auto`, otherwise the elements will be stretched
@@ -267,11 +232,6 @@ button,
   border-style: none;
 }
 
-// Change the resize direction in all browsers (opinionated).
-textarea {
-  resize: vertical;
-}
-
 fieldset {
   // Browsers set a default `min-width: min-content;` on fieldsets,
   // unlike e.g. `<div>`s, which have `min-width: 0;` by default.
@@ -279,16 +239,14 @@ fieldset {
   min-width: 0;
   // Reset the default outline behavior of fieldsets so they don't affect page layout.
   border: 0;
+  padding: 0;
 }
 
-//
-// Interactive
-//
-
-summary {
-  // Add the correct display in all browsers.
-  display: list-item;
-  cursor: pointer;
+textarea {
+  // Remove the margin in Firefox and Safari.
+  margin: 0;
+  // Change the resize direction in all browsers (opinionated).
+  resize: vertical;
 }
 
 //

@@ -1,5 +1,6 @@
 .button {
   @extend %control;
+  @extend %unselectable;
 
   background-color: var(--color-background);
   border-color: var(--color-contrast-lower);
@@ -9,7 +10,6 @@
   justify-content: center;
   text-align: center;
   white-space: nowrap;
-  @extend %unselectable;
   @include transition(/*color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out,*/ box-shadow 0.15s ease-in-out);
 
   &:hover {

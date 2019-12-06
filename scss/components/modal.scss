@@ -28,7 +28,7 @@
   margin: 0 20px;
   overflow: auto;
 
-  @include media-breakpoint-up(md) {
+  @include media-breakpoint-above(tablet) {
     width: 640px;
     max-height: calc(100vh - 40px);
     margin: 0 auto;
@@ -36,16 +36,59 @@
 }
 
 .modal-close {
-  @extend %delete;
+  @extend %unselectable;
 
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  display: inline-block;
   position: fixed;
   top: 20px;
   right: 20px;
-  background: none;
   width: 40px;
   min-width: 40px;
   max-width: 40px;
   height: 40px;
   min-height: 40px;
   max-height: 40px;
+  border: none;
+  border-radius: var(--radius-rounded);
+  cursor: pointer;
+  pointer-events: auto;
+  flex-grow: 0;
+  flex-shrink: 0;
+  font-size: 0;
+  outline: none;
+  position: relative;
+  vertical-align: top;
+
+  &::before,
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    background-color: white;
+    transform: translateX(-50%) translateY(-50%) rotate(45deg);
+    transform-origin: center center;
+  }
+
+  &::before {
+    width: 50%;
+    height: 2px;
+  }
+
+  &::after {
+    width: 2px;
+    height: 50%;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+
+  &:active {
+    background-color: rgba(0, 0, 0, 0.4);
+  }
 }

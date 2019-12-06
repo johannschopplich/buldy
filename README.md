@@ -31,10 +31,10 @@ If [Bulma](https://github.com/jgthms/bulma) and [CodyHouse's framework](https://
 ## What's included
 
 - Tiny modern CSS reset that covers the basics, built on top of Bootstrap's [`reboot.scss`](https://github.com/twbs/bootstrap/blob/master/scss/_reboot.scss), Jeremy Thomas' (creator of Bulma) [`minireset.sass`](https://github.com/jgthms/minireset.css/blob/master/minireset.css), Jonathan Neal's [`sanitize.css`](https://github.com/csstools/sanitize.css/blob/master/sanitize.css) and Sindre Sorhus' [`modern-normalize.css`](https://github.com/sindresorhus/modern-normalize/blob/master/modern-normalize.css)
-- Color (primary, accent, light and dark variations), typography, spacing and component variables
+- Color (primary, accent and color shade variations), typography, spacing and component variables
 - Different basic `.button` styles (normal, primary, accent and text)
 - A simple `.container` to center your content horizontally
-- Components like `.hero`, `.section`, `.form-control` and `.box`
+- Components like `.hero`, `.section`, `.control` and `.box`
 - Single `.content` class to handle WYSIWYG generated content where HTML should be available 
 - Responsive `.columns` layout powered by Flexbox (heavily inspired by Bulma)
 - Responsive `.image` container with 16 ratio modifiers

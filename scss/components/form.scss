@@ -1,5 +1,6 @@
 .control {
   @extend %control;
+
   width: 100%;
   background-color: var(--color-background);
   border-color: var(--color-contrast-lower);
@@ -17,6 +18,7 @@
     box-shadow: 0 0 0 3px var(--color-primary-a50);
   }
 
+  &[aria-invalid="true"],
   &.is-error {
     border-color: var(--color-red);
     &:focus,
@@ -24,6 +26,7 @@
       box-shadow: 0 0 0 3px var(--color-red-a50);
     }
   }
+
   &.is-success {
     border-color: var(--color-green);
     &:focus,
@@ -32,34 +35,26 @@
     }
   }
 
-  &::-webkit-input-placeholder {
+  &::placeholder {
     color: var(--color-contrast-low);
-  }
-  &::-moz-placeholder {
     opacity: 1;
-    color: var(--color-contrast-low);
   }
 
   &[readonly] {
     box-shadow: none;
   }
+
   &[disabled] {
     background-color: var(--color-contrast-lowest);
     border-color: var(--color-contrast-lowest);
     color: var(--color-contrast-low);
     box-shadow: none;
   }
-  &[aria-invalid="true"] {
-    border-color: var(--color-red);
-    &:focus {
-      box-shadow: 0 0 0 3px var(--color-red-a50);
-    }
-  }
 }
 
 .legend {
   color: var(--color-text);
-  line-height: var(--heading-line-height);
+  line-height: var(--line-height-heading);
   font-size: var(--text-5);
   margin-bottom: var(--space-xsmall);
 }
