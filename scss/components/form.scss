@@ -17,8 +17,11 @@
     border-color: var(--color-primary);
     box-shadow: 0 0 0 3px var(--color-primary-a50);
   }
+  &::placeholder {
+    color: var(--color-contrast-low);
+    opacity: 1;
+  }
 
-  &[aria-invalid="true"],
   &.is-error {
     border-color: var(--color-red);
     &:focus,
@@ -35,11 +38,6 @@
     }
   }
 
-  &::placeholder {
-    color: var(--color-contrast-low);
-    opacity: 1;
-  }
-
   &[readonly] {
     box-shadow: none;
   }
@@ -49,6 +47,13 @@
     border-color: var(--color-contrast-lowest);
     color: var(--color-contrast-low);
     box-shadow: none;
+  }
+
+  &[aria-invalid="true"] {
+    border-color: var(--color-red);
+    &:focus {
+      box-shadow: 0 0 0 3px var(--color-red-a50);
+    }
   }
 }
 

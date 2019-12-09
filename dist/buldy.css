@@ -971,10 +971,14 @@ th {
   border-color: var(--color-primary);
   box-shadow: 0 0 0 3px var(--color-primary-a50);
 }
-.control[aria-invalid=true], .control.is-error {
+.control::placeholder {
+  color: var(--color-contrast-low);
+  opacity: 1;
+}
+.control.is-error {
   border-color: var(--color-red);
 }
-.control[aria-invalid=true]:focus, .control[aria-invalid=true]:active, .control.is-error:focus, .control.is-error:active {
+.control.is-error:focus, .control.is-error:active {
   box-shadow: 0 0 0 3px var(--color-red-a50);
 }
 .control.is-success {
@@ -982,10 +986,6 @@ th {
 }
 .control.is-success:focus, .control.is-success:active {
   box-shadow: 0 0 0 3px var(--color-green-a50);
-}
-.control::placeholder {
-  color: var(--color-contrast-low);
-  opacity: 1;
 }
 .control[readonly] {
   box-shadow: none;
@@ -995,6 +995,12 @@ th {
   border-color: var(--color-contrast-lowest);
   color: var(--color-contrast-low);
   box-shadow: none;
+}
+.control[aria-invalid=true] {
+  border-color: var(--color-red);
+}
+.control[aria-invalid=true]:focus {
+  box-shadow: 0 0 0 3px var(--color-red-a50);
 }
 
 .legend {
