@@ -1,3 +1,13 @@
+@mixin block {
+  &:not(:last-child) {
+    margin-bottom: var(--space-medium);
+  }
+}
+
+%block {
+  @include block;
+}
+
 @mixin control {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -20,16 +30,6 @@
   @include control;
 }
 
-@mixin block {
-  &:not(:last-child) {
-    margin-bottom: var(--space-medium);
-  }
-}
-
-%block {
-  @include block;
-}
-
 @mixin overlay($offset: 0) {
   position: absolute;
   top: $offset;
@@ -45,7 +45,6 @@
 @mixin unselectable {
   -webkit-touch-callout: none;
   -webkit-user-select: none;
-  -moz-user-select: none;
   user-select: none;
 }
 

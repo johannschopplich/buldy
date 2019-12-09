@@ -1,3 +1,8 @@
+.block:not(:last-child), .box:not(:last-child), .content:not(:last-child), .title.is-spaced:not(:last-child),
+.subtitle.is-spaced:not(:last-child) {
+  margin-bottom: var(--space-medium);
+}
+
 .button, .control {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -11,11 +16,6 @@
 }
 .button:focus, .control:focus {
   outline-color: transparent;
-}
-
-.block:not(:last-child), .box:not(:last-child), .content:not(:last-child), .title.is-spaced:not(:last-child),
-.subtitle.is-spaced:not(:last-child) {
-  margin-bottom: var(--space-medium);
 }
 
 .image.is-square img,
@@ -41,7 +41,6 @@
 .is-unselectable, .button, .modal-close {
   -webkit-touch-callout: none;
   -webkit-user-select: none;
-  -moz-user-select: none;
   user-select: none;
 }
 
@@ -755,71 +754,71 @@ th {
 
 .grid {
   display: grid;
-  grid-gap: var(--gap-xs, 2rem);
-  grid-auto-flow: var(--flow-xs, row);
-  grid-auto-columns: var(--auto-cols-xs, auto);
-  grid-auto-rows: var(--auto-rows-xs, auto);
-  grid-template-columns: var(--template-cols-xs, repeat(var(--cols-xs, 1), var(--cols-size-xs, 1fr)));
-  grid-template-rows: var(--template-rows-xs, none);
-  justify-content: var(--justify-content-xs, space-evenly);
-  justify-items: var(--justify-items-xs, stretch);
-  align-content: var(--align-content-xs, center);
-  align-items: var(--align-items-xs, stretch);
+  grid-auto-flow: var(--flow-zero, row);
+  grid-auto-columns: var(--auto-cols-zero, auto);
+  grid-auto-rows: var(--auto-rows-zero, auto);
+  grid-template-columns: var(--template-cols-zero, repeat(var(--cols-zero, 1), var(--cols-size-zero, 1fr)));
+  grid-template-rows: var(--template-rows-zero, none);
+  justify-content: var(--justify-content-zero, space-evenly);
+  justify-items: var(--justify-items-zero, stretch);
+  align-content: var(--align-content-zero, center);
+  align-items: var(--align-items-zero, stretch);
+  gap: var(--gap-zero, 2rem);
 }
 @media (min-width: 576px) {
   .grid {
-    grid-gap: var(--gap-sm, 2rem);
-    grid-auto-flow: var(--flow-sm, row);
-    grid-auto-columns: var(--auto-cols-sm, auto);
-    grid-auto-rows: var(--auto-rows-sm, auto);
-    grid-template-columns: var(--template-cols-sm, repeat(var(--cols-sm, 2), var(--cols-size-sm, 1fr)));
-    grid-template-rows: var(--template-rows-sm, none);
-    justify-content: var(--justify-content-sm, space-evenly);
-    justify-items: var(--justify-items-sm, stretch);
-    align-content: var(--align-content-sm, center);
-    align-items: var(--align-items-sm, stretch);
+    grid-auto-flow: var(--flow-mobile, row);
+    grid-auto-columns: var(--auto-cols-mobile, auto);
+    grid-auto-rows: var(--auto-rows-mobile, auto);
+    grid-template-columns: var(--template-cols-mobile, repeat(var(--cols-mobile, 2), var(--cols-size-mobile, 1fr)));
+    grid-template-rows: var(--template-rows-mobile, none);
+    justify-content: var(--justify-content-mobile, space-evenly);
+    justify-items: var(--justify-items-mobile, stretch);
+    align-content: var(--align-content-mobile, center);
+    align-items: var(--align-items-mobile, stretch);
+    gap: var(--gap-mobile, 2rem);
   }
 }
 @media (min-width: 768px) {
   .grid {
-    grid-gap: var(--gap-md, 2rem);
-    grid-auto-flow: var(--flow-md, row);
-    grid-auto-columns: var(--auto-cols-md, auto);
-    grid-auto-rows: var(--auto-rows-md, auto);
-    grid-template-columns: var(--template-cols-md, repeat(var(--cols-md, 2), var(--cols-size-md, 1fr)));
-    grid-template-rows: var(--template-rows-md, none);
-    justify-content: var(--justify-content-md, space-evenly);
-    justify-items: var(--justify-items-md, stretch);
-    align-content: var(--align-content-md, center);
-    align-items: var(--align-items-md, stretch);
+    grid-auto-flow: var(--flow-tablet, row);
+    grid-auto-columns: var(--auto-cols-tablet, auto);
+    grid-auto-rows: var(--auto-rows-tablet, auto);
+    grid-template-columns: var(--template-cols-tablet, repeat(var(--cols-tablet, 2), var(--cols-size-tablet, 1fr)));
+    grid-template-rows: var(--template-rows-tablet, none);
+    justify-content: var(--justify-content-tablet, space-evenly);
+    justify-items: var(--justify-items-tablet, stretch);
+    align-content: var(--align-content-tablet, center);
+    align-items: var(--align-items-tablet, stretch);
+    gap: var(--gap-tablet, 2rem);
   }
 }
 @media (min-width: 992px) {
   .grid {
-    grid-gap: var(--gap-lg, 2rem);
-    grid-auto-flow: var(--flow-lg, row);
-    grid-auto-columns: var(--auto-cols-lg, auto);
-    grid-auto-rows: var(--auto-rows-lg, auto);
-    grid-template-columns: var(--template-cols-lg, repeat(var(--cols-lg, 4), var(--cols-size-lg, 1fr)));
-    grid-template-rows: var(--template-rows-lg, none);
-    justify-content: var(--justify-content-lg, space-evenly);
-    justify-items: var(--justify-items-lg, stretch);
-    align-content: var(--align-content-lg, center);
-    align-items: var(--align-items-lg, stretch);
+    grid-auto-flow: var(--flow-desktop, row);
+    grid-auto-columns: var(--auto-cols-desktop, auto);
+    grid-auto-rows: var(--auto-rows-desktop, auto);
+    grid-template-columns: var(--template-cols-desktop, repeat(var(--cols-desktop, 4), var(--cols-size-desktop, 1fr)));
+    grid-template-rows: var(--template-rows-desktop, none);
+    justify-content: var(--justify-content-desktop, space-evenly);
+    justify-items: var(--justify-items-desktop, stretch);
+    align-content: var(--align-content-desktop, center);
+    align-items: var(--align-items-desktop, stretch);
+    gap: var(--gap-desktop, 2rem);
   }
 }
 @media (min-width: 1200px) {
   .grid {
-    grid-gap: var(--gap-xl, 2rem);
-    grid-auto-flow: var(--flow-xl, row);
-    grid-auto-columns: var(--auto-cols-xl, auto);
-    grid-auto-rows: var(--auto-rows-xl, auto);
-    grid-template-columns: var(--template-cols-xl, repeat(var(--cols-xl, 4), var(--cols-size-xl, 1fr)));
-    grid-template-rows: var(--template-rows-xl, none);
-    justify-content: var(--justify-content-xl, space-evenly);
-    justify-items: var(--justify-items-xl, stretch);
-    align-content: var(--align-content-xl, center);
-    align-items: var(--align-items-xl, stretch);
+    grid-auto-flow: var(--flow-widescreen, row);
+    grid-auto-columns: var(--auto-cols-widescreen, auto);
+    grid-auto-rows: var(--auto-rows-widescreen, auto);
+    grid-template-columns: var(--template-cols-widescreen, repeat(var(--cols-widescreen, 4), var(--cols-size-widescreen, 1fr)));
+    grid-template-rows: var(--template-rows-widescreen, none);
+    justify-content: var(--justify-content-widescreen, space-evenly);
+    justify-items: var(--justify-items-widescreen, stretch);
+    align-content: var(--align-content-widescreen, center);
+    align-items: var(--align-items-widescreen, stretch);
+    gap: var(--gap-widescreen, 2rem);
   }
 }
 .grid.is-inline {
@@ -829,41 +828,31 @@ th {
   min-width: 0;
   max-width: 100%;
   min-height: 0;
-  grid-column: var(--col-xs, auto);
-  grid-row: var(--row-xs, auto);
-  justify-self: var(--justify-self-xs, auto);
-  align-self: var(--align-self-xs, auto);
+  grid-column: var(--col-zero, auto);
+  grid-row: var(--row-zero, auto);
 }
 @media (min-width: 576px) {
   .grid > * {
-    grid-column: var(--col-sm, auto);
-    grid-row: var(--row-sm, auto);
-    justify-self: var(--justify-self-sm, auto);
-    align-self: var(--align-self-sm, auto);
+    grid-column: var(--col-mobile, auto);
+    grid-row: var(--row-mobile, auto);
   }
 }
 @media (min-width: 768px) {
   .grid > * {
-    grid-column: var(--col-md, auto);
-    grid-row: var(--row-md, auto);
-    justify-self: var(--justify-self-md, auto);
-    align-self: var(--align-self-md, auto);
+    grid-column: var(--col-tablet, auto);
+    grid-row: var(--row-tablet, auto);
   }
 }
 @media (min-width: 992px) {
   .grid > * {
-    grid-column: var(--col-lg, auto);
-    grid-row: var(--row-lg, auto);
-    justify-self: var(--justify-self-lg, auto);
-    align-self: var(--align-self-lg, auto);
+    grid-column: var(--col-desktop, auto);
+    grid-row: var(--row-desktop, auto);
   }
 }
 @media (min-width: 1200px) {
   .grid > * {
-    grid-column: var(--col-xl, auto);
-    grid-row: var(--row-xl, auto);
-    justify-self: var(--justify-self-xl, auto);
-    align-self: var(--align-self-xl, auto);
+    grid-column: var(--col-widescreen, auto);
+    grid-row: var(--row-widescreen, auto);
   }
 }
 

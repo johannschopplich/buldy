@@ -1,33 +1,10 @@
-// =============================================================================
-// IOTA.SCSS
-// -----------------------------------------------------------------------------
-// Iota styles.
-// =============================================================================
-
-// =============================================================================
-// TABLE OF CONTENTS
-// -----------------------------------------------------------------------------
-//   01. Imports
-//   02. Grid
-// =============================================================================
-
-// Imports
-// =============================================================================
-
 @import "variables";
-@import "mixins";
 
-
-
-// Grid
-// =============================================================================
-
-.#{$iota_grid_class} {
+.grid {
   display: grid;
 
   @each $bp, $data in $iota_grid {
-    @include iota-breakpoint(map-get($data, "breakpoint")) {
-      grid-gap: var(#{--gap- + $bp}, map-get($data, "grid_gap"));
+    @include media-breakpoint-above($bp) {
       grid-auto-flow: var(#{--flow- + $bp}, map-get($data, "grid_auto_flow"));
       grid-auto-columns: var(#{--auto-cols- + $bp}, map-get($data, "grid_auto_columns"));
       grid-auto-rows: var(#{--auto-rows- + $bp}, map-get($data, "grid_auto_rows"));
@@ -37,6 +14,7 @@
       justify-items: var(#{--justify-items- + $bp}, map-get($data, "justify_items"));
       align-content: var(#{--align-content- + $bp}, map-get($data, "align_content"));
       align-items: var(#{--align-items- + $bp}, map-get($data, "align_items"));
+      gap: var(#{--gap- + $bp}, map-get($data, "grid_gap"));
     }
   }
 
@@ -50,7 +28,7 @@
     min-height: 0;
 
     @each $bp, $data in $iota_grid {
-      @include iota-breakpoint(map-get($data, "breakpoint")) {
+      @include media-breakpoint-above($bp) {
         @if $iota_enable_grid_column_property {
           grid-column: var(#{--col- + $bp}, map-get($data, "grid_column"));
         }
