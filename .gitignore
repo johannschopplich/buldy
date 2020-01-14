@@ -1,19 +1,4 @@
-# Numerous always-ignore extensions
-*.diff
-*.err
-*.log
-*.orig
-*.rej
-*.swo
-*.swp
-*.vi
-*.zip
-*~
-
-# OS folders and files
-._*
-.cache
 .DS_Store
-
-# Folders to ignore
-/node_modules
+node_modules/
+package-lock.json
+.env
