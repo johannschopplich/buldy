@@ -1,6 +1,6 @@
 @mixin block {
   &:not(:last-child) {
-    margin-bottom: var(--space-medium);
+    margin-bottom: var(--component-spacer);
   }
 }
 

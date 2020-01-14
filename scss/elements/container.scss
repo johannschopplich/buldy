@@ -1,8 +1,8 @@
 $container-sizes: (
-  sm: 540px,
-  md: 720px,
-  lg: 960px,
-  xl: 1140px
+  mobile: 540px,
+  tablet: 720px,
+  desktop: 960px,
+  widescreen: 1140px
 ) !default;
 
 .container {
@@ -19,9 +19,12 @@ $container-sizes: (
     $width: map-get($container-sizes, $breakpoint);
 
     @include media-breakpoint-above($breakpoint) {
-      &:not(.is-fluid),
-      &.is-#{$breakpoint} {
+      &:not(.is-fluid) {
         max-width: $width;
+      }
+
+      &.is-#{$breakpoint} {
+        max-width: $width !important;
       }
     }
   }

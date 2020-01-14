@@ -1,0 +1,82 @@
+$grid-columns: 12 !default;
+
+.grid,
+[class*="grid-auto-"] {
+  display: grid;
+  gap: var(--grid-gap, 0);
+}
+
+.grid {
+  --grid-columns: #{$grid-columns};
+  grid-template-columns: repeat(var(--grid-columns), 1fr);
+
+  > * {
+    grid-column: span var(--span, #{$grid-columns}) / span var(--span, #{$grid-columns});
+  }
+}
+
+.grid-auto-xsmall,
+.grid-auto-small,
+.grid-auto-medium,
+.grid-auto-large,
+.grid-auto-xlarge {
+  grid-template-columns: repeat(auto-fit, minmax(var(--col-min-width), 1fr));
+}
+
+.grid-auto-xsmall { --col-min-width: 8rem; }
+.grid-auto-small { --col-min-width: 10rem; }
+.grid-auto-medium { --col-min-width: 15rem; }
+.grid-auto-large { --col-min-width: 20rem; }
+.grid-auto-xlarge { --col-min-width: 25rem; }
+
+.grid-auto-columns {
+  grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
+}
+
+.grid,
+[class*="grid-auto-"] {
+  &.has-gap-xsmall { --grid-gap: var(--space-xsmall); }
+  &.has-gap-small  { --grid-gap: var(--space-small); }
+  &.has-gap-medium { --grid-gap: var(--space-medium); }
+  &.has-gap-large  { --grid-gap: var(--space-large); }
+  &.has-gap-xlarge { --grid-gap: var(--space-xlarge); }
+}
+
+@for $i from 1 through $grid-columns {
+  .column-#{$i} { --span: #{$i}; }
+  .column-start-#{$i} { grid-column-start: #{$i}; }
+  .column-end-#{$i+1} { grid-column-end: #{$i + 1}; }
+}
+
+.column-start { grid-column-start: 1; }
+.column-end   { grid-column-end: -1; }
+
+//
+// Breakpoints
+//
+
+@each $breakpoint in map-keys($grid-breakpoints) {
+  @include media-breakpoint-above($breakpoint) {
+    $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+
+    .grid-auto#{$infix}-xsmall { --col-min-width: 8rem; }
+    .grid-auto#{$infix}-small { --col-min-width: 10rem; }
+    .grid-auto#{$infix}-medium { --col-min-width: 15rem; }
+    .grid-auto#{$infix}-large { --col-min-width: 20rem; }
+    .grid-auto#{$infix}-xlarge { --col-min-width: 25rem; }
+
+    .grid-auto-columns#{$infix} { grid-template-columns: repeat(auto-fit, minmax(0, 1fr)); }
+
+    @for $i from 1 through $grid-columns {
+      .column#{$infix}-#{$i} { --span: #{$i}; }
+      .column-start#{$infix}-#{$i} { grid-column-start: #{$i}; }
+      .column-end#{$infix}-#{$i + 1} { grid-column-end: #{$i + 1}; }
+    }
+
+    .column-start#{$infix} { grid-column-start: 1; }
+    .column-end#{$infix}   { grid-column-end: -1; }
+
+    .column-start-auto#{$infix} { grid-column-start: auto; }
+    .column-end-auto#{$infix}   { grid-column-end: auto; }
+  }
+}

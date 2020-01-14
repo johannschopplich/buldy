@@ -1,8 +1,6 @@
 .column {
   display: block;
-  flex-grow: 1;
-  flex-shrink: 1;
-  flex-basis: 0;
+  flex: 1 1 0;
   padding: var(--space-small);
 
   @each $breakpoint in map-keys($grid-breakpoints) {
@@ -10,17 +8,13 @@
       $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
 
       &.is#{$infix}-narrow {
-        flex: none;
+        flex: 0 0 auto;
+        width: auto;
       }
 
       &.is#{$infix}-full {
         flex: none;
         width: 100%;
-      }
-
-      &.is#{$infix}-auto {
-        flex: 0 0 auto;
-        width: auto;
       }
 
       @for $i from 1 through 12 {
@@ -43,7 +37,7 @@
     margin-bottom: calc(var(--space-small) * -1);
   }
   &:not(:last-child) {
-    margin-bottom: calc(var(--space-small) * 2 - var(--space-small));
+    margin-bottom: calc(var(--component-spacer) - var(--space-small));
   }
 
   //
@@ -59,11 +53,15 @@
       padding: 0 !important;
     }
     &:not(:last-child) {
-      margin-bottom: calc(2 * var(--space-small))
+      margin-bottom: var(--component-spacer);
     }
     &:last-child {
-      margin-bottom: 0
+      margin-bottom: 0;
     }
+  }
+
+  &.is-wrappless {
+    flex-wrap: nowrap;
   }
 
   &.is-centered {

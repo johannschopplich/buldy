@@ -49,13 +49,13 @@
   --text-base:               1em;
   --text-ratio:              1.2;
 
-  --text-1:                  calc(var(--text-2) * var(--text-ratio));
-  --text-2:                  calc(var(--text-3) * var(--text-ratio));
-  --text-3:                  calc(var(--text-4) * var(--text-ratio));
-  --text-4:                  calc(var(--text-5) * var(--text-ratio));
-  --text-5:                  calc(var(--text-6) * var(--text-ratio));
-  --text-6:                  var(--text-base);
   --text-small:              calc(var(--text-base) / var(--text-ratio));
+  --text-6:                  var(--text-base);
+  --text-5:                  calc(var(--text-6) * var(--text-ratio));
+  --text-3:                  calc(var(--text-4) * var(--text-ratio));
+  --text-2:                  calc(var(--text-3) * var(--text-ratio));
+  --text-4:                  calc(var(--text-5) * var(--text-ratio));
+  --text-1:                  calc(var(--text-2) * var(--text-ratio));
 
   // Modular space scaling
   --space-ratio:             1rem;
@@ -70,16 +70,11 @@
   --space-xxlarge:           calc(5.25  * var(--space-ratio));
   --space-xxxlarge:          calc(8.5   * var(--space-ratio));
 
-  --component-padding:       var(--space-medium);
+  --component-spacer:       var(--space-medium);
 
   // Radius
   --radius:                  0.25em;
   --radius-rounded:          50rem;
-
-  // Buttons
-  --button-small:            calc(var(--text-base) - 0.2em);
-  --button-medium:           calc(var(--text-base) + 0.2em);
-  --button-large:            calc(var(--text-base) + 0.4em);
 }
 
 //

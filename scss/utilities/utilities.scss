@@ -10,8 +10,21 @@ $spacers: (
   xxxlarge: var(--space-xxxlarge),
 ) !default;
 
+$colors: (
+  "white": var(--color-white),
+  "black": var(--color-black),
+  "primary": var(--color-primary),
+  "accent": var(--color-accent),
+  "contrast-lowest": var(--color-contrast-lowest),
+  "contrast-lower": var(--color-contrast-lower),
+  "contrast-low": var(--color-contrast-low),
+  "contrast-medium": var(--color-contrast-medium),
+  "contrast-high": var(--color-contrast-high),
+  "contrast-higher": var(--color-contrast-higher),
+);
+
 $utilities: (
-  // Display utilities
+  // Display
   "display": (
     responsive: true,
     property: display,
@@ -20,94 +33,122 @@ $utilities: (
       hidden: none,
       inline: inline,
       block: block,
+      flex: flex,
+      inline-flex: inline-flex,
     )
   ),
 
-  // Margin utilities
+  // Margin
   "margin": (
-    responsive: true,
     property: margin,
-    class: has-margin,
+    class: has-m,
     values: $spacers
   ),
   "margin-top": (
-    responsive: true,
     property: margin-top,
-    class: has-margin-top,
+    class: has-mt,
     values: $spacers
   ),
   "margin-bottom": (
-    responsive: true,
     property: margin-bottom,
-    class: has-margin-bottom,
+    class: has-mb,
     values: $spacers
   ),
 
-  // Padding utilities
+  // Padding
   "padding": (
-    responsive: true,
     property: padding,
-    class: has-padding,
+    class: has-p,
     values: $spacers
   ),
   "padding-top": (
-    responsive: true,
     property: padding-top,
-    class: has-padding-top,
+    class: has-pt,
     values: $spacers
   ),
   "padding-bottom": (
-    responsive: true,
     property: padding-bottom,
-    class: has-padding-bottom,
+    class: has-pb,
     values: $spacers
+  ),
+
+  // Flex
+  "flex": (
+    property: flex,
+    class: has-flex,
+    values: (fill: 1 1 auto)
+  ),
+  "flex-direction": (
+    property: flex-direction,
+    class: has-flex,
+    values: row column row-reverse
+  ),
+  "flex-grow": (
+    property: flex-grow,
+    class: has-flex,
+    values: (
+      grow-0: 0,
+      grow-1: 1,
+    )
+  ),
+  "flex-shrink": (
+    property: flex-shrink,
+    class: has-flex,
+    values: (
+      shrink-0: 0,
+      shrink-1: 1,
+    )
+  ),
+  "flex-wrap": (
+    property: flex-wrap,
+    class: has-flex,
+    values: wrap nowrap
+  ),
+  "justify-content": (
+    property: justify-content,
+    class: has-content-justified,
+    values: (
+      start: flex-start,
+      end: flex-end,
+      center: center,
+      between: space-between,
+      around: space-around,
+    )
+  ),
+  "align-items": (
+    property: align-items,
+    class: has-items-aligned,
+    values: (
+      start: flex-start,
+      end: flex-end,
+      center: center,
+      stretch: stretch,
+    )
   ),
 
   // Text
   "color": (
     property: color,
     class: has-text,
-    values: (
-      "white": var(--color-white),
-      "black": var(--color-black),
-      "primary": var(--color-primary),
-      "accent": var(--color-accent),
-      "lowest": var(--color-contrast-lowest),
-      "lower": var(--color-contrast-lower),
-      "low": var(--color-contrast-low),
-      "medium": var(--color-contrast-medium),
-      "high": var(--color-contrast-high),
-      "higher": var(--color-contrast-higher),
-    )
+    values: $colors
   ),
   "background-color": (
     property: background-color,
     class: has-background,
-    values: (
-      "white": var(--color-white),
-      "black": var(--color-black),
-      "primary": var(--color-primary),
-      "accent": var(--color-accent),
-      "lowest": var(--color-contrast-lowest),
-      "lower": var(--color-contrast-lower),
-      "low": var(--color-contrast-low),
-      "medium": var(--color-contrast-medium),
-      "high": var(--color-contrast-high),
-      "higher": var(--color-contrast-higher),
-    )
+    values: $colors
   ),
   "font-size": (
     responsive: true,
     property: font-size,
     class: is-size,
     values: (
-      1: var(--text-1),
-      2: var(--text-2),
-      3: var(--text-3),
-      4: var(--text-4),
-      5: var(--text-5),
-      6: var(--text-6),
       small: var(--text-small),
+      6: var(--text-6),
+      3: var(--text-3),
+      5: var(--text-5),
+      4: var(--text-4),
+      2: var(--text-2),
+      1: var(--text-1),
     )
   ),
   "font-weight": (
