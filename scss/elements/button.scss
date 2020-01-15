@@ -6,7 +6,7 @@
   border-color: var(--color-contrast-lower);
   color: var(--color-text);
   line-height: 1;
-  padding: var(--space-xsmall);
+  padding: var(--space-xs);
   justify-content: center;
   text-align: center;
   white-space: nowrap;
@@ -135,6 +135,14 @@
     --button-color-active: var(--color-accent-active);
     --button-shadow: var(--color-accent-a50);
   }
+
+  //
+  // Sizes
+  //
+
+  &.is-small  { font-size: calc(var(--text-base) - 0.2em); }
+  &.is-medium { font-size: calc(var(--text-base) + 0.2em); }
+  &.is-large  { font-size: calc(var(--text-base) + 0.4em); }
 
   //
   // Modifiers

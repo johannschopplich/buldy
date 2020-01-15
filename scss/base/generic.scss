@@ -61,14 +61,14 @@ code {
   background-color: var(--color-contrast-lowest);
   color: var(--color-red);
   font-size: 0.875em;
-  padding: var(--space-xxxsmall) var(--space-xsmall);
+  padding: var(--space-xxxs) var(--space-xs);
 }
 
 pre {
   -webkit-overflow-scrolling: touch;
   background-color: var(--color-contrast-lowest);
   font-size: 0.875em;
-  padding: var(--space-small) 1em;
+  padding: var(--space-s) 1em;
   white-space: pre;
   word-wrap: normal;
 

@@ -1,22 +1,23 @@
 .control {
   @extend %control;
-
   width: 100%;
   background-color: var(--color-background);
   border-color: var(--color-contrast-lower);
   color: var(--color-text);
   justify-content: flex-start;
-  padding: var(--space-xxsmall) var(--space-xsmall);
+  padding: var(--space-xxs) var(--space-xs);
   @include transition(/*border-color 0.15s ease-in-out,*/ box-shadow 0.15s ease-in-out);
 
   &:hover {
     border-color: var(--color-contrast-low);
   }
+
   &:focus,
   &:active {
     border-color: var(--color-primary);
     box-shadow: 0 0 0 3px var(--color-primary-a50);
   }
+
   &::placeholder {
     color: var(--color-contrast-low);
     opacity: 1;
@@ -61,11 +62,11 @@
   color: var(--color-text);
   line-height: var(--line-height-heading);
   font-size: var(--text-5);
-  margin-bottom: var(--space-xxsmall);
+  margin-bottom: var(--space-xxs);
 }
 
 .label {
-  margin-bottom: var(--space-xxsmall);
+  margin-bottom: var(--space-xxs);
 }
 
 //
@@ -74,7 +75,7 @@
 
 .help {
   font-size: var(--text-small);
-  margin-top: var(--space-xsmall);
+  margin-top: var(--space-xs);
   &.is-error {
     color: var(--color-red);
   }

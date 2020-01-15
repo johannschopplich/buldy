@@ -1,24 +1,24 @@
 .column {
   display: block;
   flex: 1 1 0;
-  padding: var(--space-small);
+  padding: var(--space-s);
 
   @each $breakpoint in map-keys($grid-breakpoints) {
     @include media-breakpoint-above($breakpoint) {
       $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
 
-      &.is#{$infix}-narrow {
+      &.is-narrow#{$infix} {
         flex: 0 0 auto;
         width: auto;
       }
 
-      &.is#{$infix}-full {
+      &.is-full#{$infix} {
         flex: none;
         width: 100%;
       }
 
       @for $i from 1 through 12 {
-        &.is#{$infix}-#{$i} {
+        &.is-#{$i}#{$infix} {
           flex: none;
           width: percentage($i / 12);
         }
@@ -30,14 +30,14 @@
 .columns {
   display: flex;
   flex-wrap: wrap;
-  margin-top: calc(var(--space-small) * -1);
-  margin-right: calc(var(--space-small) * -1);
-  margin-left: calc(var(--space-small) * -1);
+  margin-top: calc(var(--space-s) * -1);
+  margin-right: calc(var(--space-s) * -1);
+  margin-left: calc(var(--space-s) * -1);
   &:last-child {
-    margin-bottom: calc(var(--space-small) * -1);
+    margin-bottom: calc(var(--space-s) * -1);
   }
   &:not(:last-child) {
-    margin-bottom: calc(var(--component-spacer) - var(--space-small));
+    margin-bottom: calc(var(--component-spacer) - var(--space-s));
   }
 
   //
@@ -89,9 +89,9 @@
     }
   }
 
-  &.has-gap-xsmall { --column-gap: var(--space-xsmall); }
-  &.has-gap-small  { --column-gap: var(--space-small); }
-  &.has-gap-medium { --column-gap: var(--space-medium); }
-  &.has-gap-large  { --column-gap: var(--space-large); }
-  &.has-gap-xlarge { --column-gap: var(--space-xlarge); }
+  &.has-gap-xsmall { --column-gap: var(--space-xs); }
+  &.has-gap-small  { --column-gap: var(--space-s); }
+  &.has-gap-medium { --column-gap: var(--space-m); }
+  &.has-gap-large  { --column-gap: var(--space-l); }
+  &.has-gap-xlarge { --column-gap: var(--space-xl); }
 }

@@ -7,7 +7,7 @@ $container-sizes: (
 
 .container {
   position: relative;
-  width: calc(100% - 2 * var(--space-small));
+  width: calc(100% - 2 * var(--space-s));
   margin-left: auto;
   margin-right: auto;
 

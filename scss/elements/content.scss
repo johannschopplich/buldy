@@ -24,14 +24,14 @@
   h3,
   h4 {
     line-height: var(--component-line-height-heading);
-    margin-bottom: calc(var(--space-xxsmall) * var(--text-vspace-multiplier, 1));
+    margin-bottom: calc(var(--space-xxs) * var(--text-vspace-multiplier, 1));
   }
 
   h2,
   h3,
   h4 {
     &:not(:first-child) {
-      margin-top: calc(var(--space-small) * var(--text-vspace-multiplier, 1));
+      margin-top: calc(var(--space-s) * var(--text-vspace-multiplier, 1));
     }
   }
 
@@ -47,7 +47,7 @@
   //
 
   li + li {
-    margin-top: calc(var(--space-xxxsmall) * var(--text-vspace-multiplier, 1));
+    margin-top: calc(var(--space-xxxs) * var(--text-vspace-multiplier, 1));
   }
 
   //
@@ -70,12 +70,12 @@
   pre,
   table {
     &:not(:last-child) {
-      margin-bottom: calc(var(--space-small) * var(--text-vspace-multiplier, 1));
+      margin-bottom: calc(var(--space-s) * var(--text-vspace-multiplier, 1));
     }
   }
 
   hr {
-    margin: calc(var(--space-medium) * var(--text-vspace-multiplier, 1)) auto;
+    margin: calc(var(--space-m) * var(--text-vspace-multiplier, 1)) auto;
   }
 
   ol,
@@ -86,7 +86,7 @@
 
   ol,
   ul {
-    margin-top: calc(var(--space-medium) * var(--text-vspace-multiplier, 1));
+    margin-top: calc(var(--space-m) * var(--text-vspace-multiplier, 1));
   }
 
   ol {
@@ -99,7 +99,7 @@
 
     ul {
       list-style-type: circle;
-      margin-top: calc(var(--space-xsmall) * var(--text-vspace-multiplier, 1));
+      margin-top: calc(var(--space-xs) * var(--text-vspace-multiplier, 1));
 
       ul {
         list-style-type: square;
@@ -110,7 +110,7 @@
   blockquote {
     background-color: var(--color-contrast-lowest);
     border-left: 5px solid var(--color-contrast-lower);
-    padding: var(--space-small) 2em var(--space-small) calc(2em - 5px);
+    padding: var(--space-s) 2em var(--space-s) calc(2em - 5px);
   }
 
   figure {
@@ -118,10 +118,10 @@
     //margin-right: 2em;
     //margin-left: 2em;
     &:not(:first-child) {
-      margin-top: calc(var(--space-medium) * var(--text-vspace-multiplier, 1));
+      margin-top: calc(var(--space-m) * var(--text-vspace-multiplier, 1));
     }
     &:not(:last-child) {
-      margin-bottom: calc(var(--space-medium) * var(--text-vspace-multiplier, 1));
+      margin-bottom: calc(var(--space-m) * var(--text-vspace-multiplier, 1));
     }
 
     img {
@@ -130,7 +130,7 @@
 
     figcaption {
       color: var(--color-contrast-medium);
-      margin-top: calc(var(--space-xsmall) * var(--text-vspace-multiplier, 1));
+      margin-top: calc(var(--space-xs) * var(--text-vspace-multiplier, 1));
     }
 
     @include media-breakpoint-above(mobile) {
@@ -141,12 +141,12 @@
 
       &.is-pulled-left {
         float: left;
-        margin-right: calc(var(--space-medium) * var(--text-vspace-multiplier, 1));
+        margin-right: calc(var(--space-m) * var(--text-vspace-multiplier, 1));
       }
 
       &.is-pulled-right {
         float: right;
-        margin-left: calc(var(--space-medium) * var(--text-vspace-multiplier, 1));
+        margin-left: calc(var(--space-m) * var(--text-vspace-multiplier, 1));
       }
     }
 
@@ -157,12 +157,12 @@
       }
 
       &.is-outset {
-        width: calc(100% + 2 * var(--space-xxlarge));
+        width: calc(100% + 2 * var(--space-xxl));
         &:not(.is-pulled-right) {
-          margin-left: calc(-1 * var(--space-xxlarge));
+          margin-left: calc(-1 * var(--space-xxl));
         }
         &.is-pulled-right {
-          margin-right: calc(-1 * var(--space-xxlarge));
+          margin-right: calc(-1 * var(--space-xxl));
         }
       }
     }

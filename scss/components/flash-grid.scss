@@ -35,11 +35,11 @@ $grid-columns: 12 !default;
 
 .grid,
 [class*="grid-auto-"] {
-  &.has-gap-xsmall { --grid-gap: var(--space-xsmall); }
-  &.has-gap-small  { --grid-gap: var(--space-small); }
-  &.has-gap-medium { --grid-gap: var(--space-medium); }
-  &.has-gap-large  { --grid-gap: var(--space-large); }
-  &.has-gap-xlarge { --grid-gap: var(--space-xlarge); }
+  &.has-gap-xsmall { --grid-gap: var(--space-xs); }
+  &.has-gap-small  { --grid-gap: var(--space-s); }
+  &.has-gap-medium { --grid-gap: var(--space-m); }
+  &.has-gap-large  { --grid-gap: var(--space-l); }
+  &.has-gap-xlarge { --grid-gap: var(--space-xl); }
 }
 
 @for $i from 1 through $grid-columns {
@@ -59,18 +59,18 @@ $grid-columns: 12 !default;
   @include media-breakpoint-above($breakpoint) {
     $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
 
-    .grid-auto#{$infix}-xsmall { --col-min-width: 8rem; }
-    .grid-auto#{$infix}-small { --col-min-width: 10rem; }
-    .grid-auto#{$infix}-medium { --col-min-width: 15rem; }
-    .grid-auto#{$infix}-large { --col-min-width: 20rem; }
-    .grid-auto#{$infix}-xlarge { --col-min-width: 25rem; }
+    .grid-auto-xsmall#{$infix} { --col-min-width: 8rem; }
+    .grid-auto-small#{$infix} { --col-min-width: 10rem; }
+    .grid-auto-medium#{$infix} { --col-min-width: 15rem; }
+    .grid-auto-large#{$infix} { --col-min-width: 20rem; }
+    .grid-auto-xlarge#{$infix} { --col-min-width: 25rem; }
 
     .grid-auto-columns#{$infix} { grid-template-columns: repeat(auto-fit, minmax(0, 1fr)); }
 
     @for $i from 1 through $grid-columns {
-      .column#{$infix}-#{$i} { --span: #{$i}; }
-      .column-start#{$infix}-#{$i} { grid-column-start: #{$i}; }
-      .column-end#{$infix}-#{$i + 1} { grid-column-end: #{$i + 1}; }
+      .column-#{$i}#{$infix} { --span: #{$i}; }
+      .column-start-#{$i}#{$infix} { grid-column-start: #{$i}; }
+      .column-end-#{$i + 1}#{$infix} { grid-column-end: #{$i + 1}; }
     }
 
     .column-start#{$infix} { grid-column-start: 1; }

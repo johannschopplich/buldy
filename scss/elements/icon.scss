@@ -32,8 +32,8 @@
 .inline-icon {
   display: inline-flex;
   align-items: center;
-  
+
   > *:nth-child(2) {
-    margin-left: var(--space-xxxsmall);
+    margin-left: var(--space-xxxs);
   }
 }
