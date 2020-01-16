@@ -23,16 +23,6 @@ $grid-columns: 12 !default;
   grid-template-columns: repeat(auto-fit, minmax(var(--col-min-width), 1fr));
 }
 
-.grid-auto-xsmall { --col-min-width: 8rem; }
-.grid-auto-small { --col-min-width: 10rem; }
-.grid-auto-medium { --col-min-width: 15rem; }
-.grid-auto-large { --col-min-width: 20rem; }
-.grid-auto-xlarge { --col-min-width: 25rem; }
-
-.grid-auto-columns {
-  grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
-}
-
 .grid,
 [class*="grid-auto-"] {
   &.has-gap-xsmall { --grid-gap: var(--space-xs); }
@@ -41,15 +31,6 @@ $grid-columns: 12 !default;
   &.has-gap-large  { --grid-gap: var(--space-l); }
   &.has-gap-xlarge { --grid-gap: var(--space-xl); }
 }
-
-@for $i from 1 through $grid-columns {
-  .column-#{$i} { --span: #{$i}; }
-  .column-start-#{$i} { grid-column-start: #{$i}; }
-  .column-end-#{$i+1} { grid-column-end: #{$i + 1}; }
-}
-
-.column-start { grid-column-start: 1; }
-.column-end   { grid-column-end: -1; }
 
 //
 // Breakpoints
@@ -65,7 +46,9 @@ $grid-columns: 12 !default;
     .grid-auto-large#{$infix} { --col-min-width: 20rem; }
     .grid-auto-xlarge#{$infix} { --col-min-width: 25rem; }
 
-    .grid-auto-columns#{$infix} { grid-template-columns: repeat(auto-fit, minmax(0, 1fr)); }
+    .grid-auto-columns#{$infix} {
+      grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
+    }
 
     @for $i from 1 through $grid-columns {
       .column-#{$i}#{$infix} { --span: #{$i}; }
