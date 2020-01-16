@@ -1,5 +1,6 @@
 .box {
   @extend %block;
+
   display: block;
   background-color: var(--color-background);
   border-radius: var(--radius);

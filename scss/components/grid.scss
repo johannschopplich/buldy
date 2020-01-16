@@ -33,9 +33,11 @@
   margin-top: calc(var(--space-s) * -1);
   margin-right: calc(var(--space-s) * -1);
   margin-left: calc(var(--space-s) * -1);
+
   &:last-child {
     margin-bottom: calc(var(--space-s) * -1);
   }
+
   &:not(:last-child) {
     margin-bottom: calc(var(--component-spacer) - var(--space-s));
   }
@@ -48,13 +50,16 @@
     margin-top: 0;
     margin-right: 0;
     margin-left: 0;
+
     > .column {
       margin: 0;
       padding: 0 !important;
     }
+
     &:not(:last-child) {
       margin-bottom: var(--component-spacer);
     }
+
     &:last-child {
       margin-bottom: 0;
     }
