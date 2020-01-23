@@ -2104,6 +2104,9 @@ th {
   --line-height-multiplier: 1;
   --text-vspace-multiplier: 1;
 }
+.content.is-article {
+  --line-height-multiplier: 1.25;
+}
 .content h1,
 .content h2,
 .content h3,
@@ -2233,9 +2236,6 @@ th {
   .content figure.is-outset.is-pulled-right {
     margin-right: calc(-1 * var(--space-xxl));
   }
-}
-.content.is-article {
-  --line-height-multiplier: 1.25;
 }
 
 .box {

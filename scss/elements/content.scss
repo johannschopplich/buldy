@@ -6,6 +6,15 @@
 
   @extend %block;
 
+
+  //
+  // Modifiers (e.g. for articles)
+  //
+
+  &.is-article {
+    --line-height-multiplier: 1.25;
+  }
+
   //
   // Headings
   //
@@ -166,10 +175,5 @@
         }
       }
     }
-  }
-
-  // Adapted variables for articles (e.g. blog posts)
-  &.is-article {
-    --line-height-multiplier: 1.25;
   }
 }
