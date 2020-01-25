@@ -1,30 +1,28 @@
 $grid-columns: 12 !default;
 
-.grid,
-[class*="grid-auto-"] {
+.grid {
   display: grid;
   gap: var(--grid-gap, 0);
-}
 
-.grid {
-  --grid-columns: #{$grid-columns};
-  grid-template-columns: repeat(var(--grid-columns), 1fr);
+  &:not(.is-auto) {
+    --grid-columns: #{$grid-columns};
+    grid-template-columns: repeat(var(--grid-columns), 1fr);
 
-  > * {
-    grid-column: span var(--span, #{$grid-columns}) / span var(--span, #{$grid-columns});
+    > * {
+      grid-column: span var(--span, #{$grid-columns}) / span var(--span, #{$grid-columns});
+    }
   }
-}
 
-.grid-auto-xsmall,
-.grid-auto-small,
-.grid-auto-medium,
-.grid-auto-large,
-.grid-auto-xlarge {
-  grid-template-columns: repeat(auto-fit, minmax(var(--col-min-width), 1fr));
-}
+  &.is-auto {
+    &.is-xsmall,
+    &.is-small,
+    &.is-medium,
+    &.is-large,
+    &.is-xlarge {
+      grid-template-columns: repeat(auto-fit, minmax(var(--col-min-width), 1fr));
+    }
+  }
 
-.grid,
-[class*="grid-auto-"] {
   &.has-gap-xsmall { --grid-gap: var(--space-xs); }
   &.has-gap-small  { --grid-gap: var(--space-s); }
   &.has-gap-medium { --grid-gap: var(--space-m); }
@@ -40,11 +38,13 @@ $grid-columns: 12 !default;
   @include media-breakpoint-above($breakpoint) {
     $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
 
-    .grid-auto-xsmall#{$infix} { --col-min-width: 8rem; }
-    .grid-auto-small#{$infix} { --col-min-width: 10rem; }
-    .grid-auto-medium#{$infix} { --col-min-width: 15rem; }
-    .grid-auto-large#{$infix} { --col-min-width: 20rem; }
-    .grid-auto-xlarge#{$infix} { --col-min-width: 25rem; }
+    .grid.is-auto {
+      &.is-xsmall#{$infix} { --col-min-width: 8rem; }
+      &.is-small#{$infix} { --col-min-width: 10rem; }
+      &.is-medium#{$infix} { --col-min-width: 15rem; }
+      &.is-large#{$infix} { --col-min-width: 20rem; }
+      &.is-xlarge#{$infix} { --col-min-width: 25rem; }
+    }
 
     .grid-auto-columns#{$infix} {
       grid-template-columns: repeat(auto-fit, minmax(0, 1fr));

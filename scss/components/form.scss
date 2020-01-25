@@ -72,9 +72,11 @@
 .help {
   font-size: var(--text-small);
   margin-top: var(--space-xs);
+
   &.is-error {
     color: var(--color-red);
   }
+
   &.is-success {
     color: var(--color-green);
   }

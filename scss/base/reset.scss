@@ -192,19 +192,14 @@ textarea {
   margin: 0;
 }
 
-// Correct the inability to style buttons in iOS and Safari
 button,
 [type="button"],
 [type="reset"],
 [type="submit"] {
+  // Correct the inability to style buttons in iOS and Safari
   -webkit-appearance: button;
-}
 
-// Add "hand" cursor to non-disabled button elements (opinionated).
-button,
-[type="button"],
-[type="reset"],
-[type="submit"] {
+  // Add "hand" cursor to non-disabled button elements (opinionated).
   &:not(:disabled) {
     cursor: pointer;
   }

@@ -41,34 +41,34 @@ $utilities: (
   // Margin
   "margin": (
     property: margin,
-    class: has-m,
+    class: has-margin,
     values: $spacers
   ),
   "margin-top": (
     property: margin-top,
-    class: has-mt,
+    class: has-margin-top,
     values: $spacers
   ),
   "margin-bottom": (
     property: margin-bottom,
-    class: has-mb,
+    class: has-margin-bottom,
     values: $spacers
   ),
 
   // Padding
   "padding": (
     property: padding,
-    class: has-p,
+    class: has-padding,
     values: $spacers
   ),
   "padding-top": (
     property: padding-top,
-    class: has-pt,
+    class: has-padding-top,
     values: $spacers
   ),
   "padding-bottom": (
     property: padding-bottom,
-    class: has-pb,
+    class: has-padding-bottom,
     values: $spacers
   ),
 

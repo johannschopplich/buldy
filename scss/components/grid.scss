@@ -1,6 +1,8 @@
 .column {
   display: block;
-  flex: 1 1 0;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 0;
   padding: var(--space-s);
 
   @each $breakpoint in map-keys($grid-breakpoints) {
