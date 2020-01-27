@@ -11,16 +11,16 @@ $spacers: (
 ) !default;
 
 $colors: (
-  "white": var(--color-white),
-  "black": var(--color-black),
-  "primary": var(--color-primary),
-  "accent": var(--color-accent),
-  "contrast-lowest": var(--color-contrast-lowest),
-  "contrast-lower": var(--color-contrast-lower),
-  "contrast-low": var(--color-contrast-low),
-  "contrast-medium": var(--color-contrast-medium),
-  "contrast-high": var(--color-contrast-high),
-  "contrast-higher": var(--color-contrast-higher),
+  white: var(--color-white),
+  black: var(--color-black),
+  primary: var(--color-primary),
+  accent: var(--color-accent),
+  contrast-lowest: var(--color-contrast-lowest),
+  contrast-lower: var(--color-contrast-lower),
+  contrast-low: var(--color-contrast-low),
+  contrast-medium: var(--color-contrast-medium),
+  contrast-high: var(--color-contrast-high),
+  contrast-higher: var(--color-contrast-higher),
 );
 
 $utilities: (
