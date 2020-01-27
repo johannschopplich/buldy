@@ -1,11 +1,8 @@
 .content {
-  --component-line-height-base: calc(var(--line-height-base) * var(--line-height-multiplier, 1));
-  --component-line-height-heading: calc(var(--line-height-heading) * var(--line-height-multiplier, 1));
   --line-height-multiplier: 1;
   --text-vspace-multiplier: 1;
 
   @extend %block;
-
 
   //
   // Modifiers (e.g. for articles)
@@ -18,6 +15,13 @@
   //
   // Headings
   //
+
+  h1 { font-size: var(--text-1); }
+  h2 { font-size: var(--text-2); }
+  h3 { font-size: var(--text-3); }
+  h4 { font-size: var(--text-4); }
+  h5 { font-size: var(--text-5); }
+  h6 { font-size: var(--text-6); }
 
   h1,
   h2,
@@ -32,24 +36,11 @@
   h2,
   h3,
   h4 {
-    line-height: var(--component-line-height-heading);
-    margin-bottom: calc(var(--space-xxs) * var(--text-vspace-multiplier, 1));
-  }
-
-  h2,
-  h3,
-  h4 {
+    line-height: calc(var(--line-height-heading) * var(--line-height-multiplier, 1));
     &:not(:first-child) {
-      margin-top: calc(var(--space-s) * var(--text-vspace-multiplier, 1));
+      margin-top: calc(var(--space-m) * var(--text-vspace-multiplier, 1));
     }
   }
-
-  h1 { font-size: var(--text-1); }
-  h2 { font-size: var(--text-2); }
-  h3 { font-size: var(--text-3); }
-  h4 { font-size: var(--text-4); }
-  h5 { font-size: var(--text-5); }
-  h6 { font-size: var(--text-6); }
 
   //
   // Text-level semantics
@@ -67,10 +58,16 @@
   ol li,
   ul li,
   blockquote {
-    line-height: var(--component-line-height-base);
+    line-height: calc(var(--line-height-base) * var(--line-height-multiplier, 1));
     // color: var(--color-text);
   }
 
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
   p,
   dl,
   ol,
@@ -87,19 +84,15 @@
     margin: calc(var(--component-spacer) * var(--text-vspace-multiplier, 1)) auto;
   }
 
-  ol,
   ul,
+  ol,
   dd {
     margin-left: 2em;
   }
 
-  ol,
-  ul {
-    margin-top: calc(var(--component-spacer) * var(--text-vspace-multiplier, 1));
-  }
-
+  ul,
   ol {
-    list-style-type: decimal;
+    margin-top: calc(var(--component-spacer) * var(--text-vspace-multiplier, 1));
   }
 
   ul {
@@ -116,6 +109,10 @@
     }
   }
 
+  ol {
+    list-style-type: decimal;
+  }
+
   blockquote {
     background-color: var(--color-contrast-lowest);
     border-left: 5px solid var(--color-contrast-lower);
@@ -126,9 +123,11 @@
     text-align: center;
     // margin-right: 2em;
     // margin-left: 2em;
+
     &:not(:first-child) {
       margin-top: calc(var(--component-spacer) * var(--text-vspace-multiplier, 1));
     }
+
     &:not(:last-child) {
       margin-bottom: calc(var(--component-spacer) * var(--text-vspace-multiplier, 1));
     }
@@ -167,9 +166,11 @@
 
       &.is-outset {
         width: calc(100% + 2 * var(--space-xxl));
+
         &:not(.is-pulled-right) {
           margin-left: calc(-1 * var(--space-xxl));
         }
+
         &.is-pulled-right {
           margin-right: calc(-1 * var(--space-xxl));
         }

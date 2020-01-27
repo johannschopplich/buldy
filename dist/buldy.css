@@ -2067,33 +2067,11 @@ th {
 }
 
 .content {
-  --component-line-height-base: calc(var(--line-height-base) * var(--line-height-multiplier, 1));
-  --component-line-height-heading: calc(var(--line-height-heading) * var(--line-height-multiplier, 1));
   --line-height-multiplier: 1;
   --text-vspace-multiplier: 1;
 }
 .content.is-article {
   --line-height-multiplier: 1.25;
-}
-.content h1,
-.content h2,
-.content h3,
-.content h4,
-.content h5,
-.content h6 {
-  font-weight: 600;
-}
-.content h1,
-.content h2,
-.content h3,
-.content h4 {
-  line-height: var(--component-line-height-heading);
-  margin-bottom: calc(var(--space-xxs) * var(--text-vspace-multiplier, 1));
-}
-.content h2:not(:first-child),
-.content h3:not(:first-child),
-.content h4:not(:first-child) {
-  margin-top: calc(var(--space-s) * var(--text-vspace-multiplier, 1));
 }
 .content h1 {
   font-size: var(--text-1);
@@ -2113,6 +2091,26 @@ th {
 .content h6 {
   font-size: var(--text-6);
 }
+.content h1,
+.content h2,
+.content h3,
+.content h4,
+.content h5,
+.content h6 {
+  font-weight: 600;
+}
+.content h1,
+.content h2,
+.content h3,
+.content h4 {
+  line-height: calc(var(--line-height-heading) * var(--line-height-multiplier, 1));
+}
+.content h1:not(:first-child),
+.content h2:not(:first-child),
+.content h3:not(:first-child),
+.content h4:not(:first-child) {
+  margin-top: calc(var(--space-m) * var(--text-vspace-multiplier, 1));
+}
 .content li + li {
   margin-top: calc(var(--space-xxxs) * var(--text-vspace-multiplier, 1));
 }
@@ -2120,8 +2118,14 @@ th {
 .content ol li,
 .content ul li,
 .content blockquote {
-  line-height: var(--component-line-height-base);
+  line-height: calc(var(--line-height-base) * var(--line-height-multiplier, 1));
 }
+.content h1:not(:last-child),
+.content h2:not(:last-child),
+.content h3:not(:last-child),
+.content h4:not(:last-child),
+.content h5:not(:last-child),
+.content h6:not(:last-child),
 .content p:not(:last-child),
 .content dl:not(:last-child),
 .content ol:not(:last-child),
@@ -2134,17 +2138,14 @@ th {
 .content hr {
   margin: calc(var(--component-spacer) * var(--text-vspace-multiplier, 1)) auto;
 }
-.content ol,
 .content ul,
+.content ol,
 .content dd {
   margin-left: 2em;
 }
-.content ol,
-.content ul {
-  margin-top: calc(var(--component-spacer) * var(--text-vspace-multiplier, 1));
-}
+.content ul,
 .content ol {
-  list-style-type: decimal;
+  margin-top: calc(var(--component-spacer) * var(--text-vspace-multiplier, 1));
 }
 .content ul {
   list-style-type: disc;
@@ -2156,6 +2157,9 @@ th {
 }
 .content ul ul ul {
   list-style-type: square;
+}
+.content ol {
+  list-style-type: decimal;
 }
 .content blockquote {
   background-color: var(--color-contrast-lowest);
