@@ -84,7 +84,7 @@
   }
 
   hr {
-    margin: calc(var(--space-m) * var(--text-vspace-multiplier, 1)) auto;
+    margin: calc(var(--component-spacer) * var(--text-vspace-multiplier, 1)) auto;
   }
 
   ol,
@@ -95,7 +95,7 @@
 
   ol,
   ul {
-    margin-top: calc(var(--space-m) * var(--text-vspace-multiplier, 1));
+    margin-top: calc(var(--component-spacer) * var(--text-vspace-multiplier, 1));
   }
 
   ol {
@@ -127,10 +127,10 @@
     // margin-right: 2em;
     // margin-left: 2em;
     &:not(:first-child) {
-      margin-top: calc(var(--space-m) * var(--text-vspace-multiplier, 1));
+      margin-top: calc(var(--component-spacer) * var(--text-vspace-multiplier, 1));
     }
     &:not(:last-child) {
-      margin-bottom: calc(var(--space-m) * var(--text-vspace-multiplier, 1));
+      margin-bottom: calc(var(--component-spacer) * var(--text-vspace-multiplier, 1));
     }
 
     img {

@@ -720,19 +720,19 @@ th {
   padding-right: var(--column-gap);
   padding-left: var(--column-gap);
 }
-.columns.has-gap-xsmall {
+.columns.has-gap-xs {
   --column-gap: var(--space-xs);
 }
-.columns.has-gap-small {
+.columns.has-gap-s {
   --column-gap: var(--space-s);
 }
-.columns.has-gap-medium {
+.columns.has-gap-m {
   --column-gap: var(--space-m);
 }
-.columns.has-gap-large {
+.columns.has-gap-l {
   --column-gap: var(--space-l);
 }
-.columns.has-gap-xlarge {
+.columns.has-gap-xl {
   --column-gap: var(--space-xl);
 }
 
@@ -750,19 +750,19 @@ th {
 .grid.is-auto.is-xsmall, .grid.is-auto.is-small, .grid.is-auto.is-medium, .grid.is-auto.is-large, .grid.is-auto.is-xlarge {
   grid-template-columns: repeat(auto-fit, minmax(var(--col-min-width), 1fr));
 }
-.grid.has-gap-xsmall {
+.grid.has-gap-xs {
   --grid-gap: var(--space-xs);
 }
-.grid.has-gap-small {
+.grid.has-gap-s {
   --grid-gap: var(--space-s);
 }
-.grid.has-gap-medium {
+.grid.has-gap-m {
   --grid-gap: var(--space-m);
 }
-.grid.has-gap-large {
+.grid.has-gap-l {
   --grid-gap: var(--space-l);
 }
-.grid.has-gap-xlarge {
+.grid.has-gap-xl {
   --grid-gap: var(--space-xl);
 }
 
@@ -2132,7 +2132,7 @@ th {
   margin-bottom: calc(var(--space-s) * var(--text-vspace-multiplier, 1));
 }
 .content hr {
-  margin: calc(var(--space-m) * var(--text-vspace-multiplier, 1)) auto;
+  margin: calc(var(--component-spacer) * var(--text-vspace-multiplier, 1)) auto;
 }
 .content ol,
 .content ul,
@@ -2141,7 +2141,7 @@ th {
 }
 .content ol,
 .content ul {
-  margin-top: calc(var(--space-m) * var(--text-vspace-multiplier, 1));
+  margin-top: calc(var(--component-spacer) * var(--text-vspace-multiplier, 1));
 }
 .content ol {
   list-style-type: decimal;
@@ -2166,10 +2166,10 @@ th {
   text-align: center;
 }
 .content figure:not(:first-child) {
-  margin-top: calc(var(--space-m) * var(--text-vspace-multiplier, 1));
+  margin-top: calc(var(--component-spacer) * var(--text-vspace-multiplier, 1));
 }
 .content figure:not(:last-child) {
-  margin-bottom: calc(var(--space-m) * var(--text-vspace-multiplier, 1));
+  margin-bottom: calc(var(--component-spacer) * var(--text-vspace-multiplier, 1));
 }
 .content figure img {
   display: inline-block;

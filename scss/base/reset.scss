@@ -226,8 +226,8 @@ label {
   display: inline-block;
 }
 
+// Change the resize direction in all browsers (opinionated).
 textarea {
-  // Change the resize direction in all browsers (opinionated).
   resize: vertical;
 }
 

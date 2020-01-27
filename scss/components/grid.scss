@@ -90,15 +90,16 @@
   &.has-gap-xlarge {
     margin-right: calc(-1 * var(--column-gap));
     margin-left: calc(-1 * var(--column-gap));
+
     > .column {
       padding-right: var(--column-gap);
       padding-left: var(--column-gap);
     }
   }
 
-  &.has-gap-xsmall { --column-gap: var(--space-xs); }
-  &.has-gap-small  { --column-gap: var(--space-s); }
-  &.has-gap-medium { --column-gap: var(--space-m); }
-  &.has-gap-large  { --column-gap: var(--space-l); }
-  &.has-gap-xlarge { --column-gap: var(--space-xl); }
+  &.has-gap-xs { --column-gap: var(--space-xs); }
+  &.has-gap-s  { --column-gap: var(--space-s); }
+  &.has-gap-m  { --column-gap: var(--space-m); }
+  &.has-gap-l  { --column-gap: var(--space-l); }
+  &.has-gap-xl { --column-gap: var(--space-xl); }
 }
