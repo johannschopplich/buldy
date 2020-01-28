@@ -22,10 +22,10 @@ $container-sizes: (
       &:not(.is-fluid) {
         max-width: $width;
       }
+    }
 
-      &.is-#{$breakpoint} {
-        max-width: $width !important;
-      }
+    &.is-#{$breakpoint} {
+      max-width: $width !important;
     }
   }
 }

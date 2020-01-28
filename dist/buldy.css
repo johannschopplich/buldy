@@ -1888,7 +1888,7 @@ th {
   border-color: var(--color-contrast-lower);
   color: var(--color-text);
   line-height: 1;
-  padding: var(--space-xs);
+  padding: var(--space-xs) var(--space-s);
   justify-content: center;
   text-align: center;
   white-space: nowrap;
@@ -2030,33 +2030,33 @@ th {
   .container:not(.is-fluid) {
     max-width: 540px;
   }
-  .container.is-mobile {
-    max-width: 540px !important;
-  }
+}
+.container.is-mobile {
+  max-width: 540px !important;
 }
 @media (min-width: 768px) {
   .container:not(.is-fluid) {
     max-width: 720px;
   }
-  .container.is-tablet {
-    max-width: 720px !important;
-  }
+}
+.container.is-tablet {
+  max-width: 720px !important;
 }
 @media (min-width: 992px) {
   .container:not(.is-fluid) {
     max-width: 960px;
   }
-  .container.is-desktop {
-    max-width: 960px !important;
-  }
+}
+.container.is-desktop {
+  max-width: 960px !important;
 }
 @media (min-width: 1200px) {
   .container:not(.is-fluid) {
     max-width: 1140px;
   }
-  .container.is-widescreen {
-    max-width: 1140px !important;
-  }
+}
+.container.is-widescreen {
+  max-width: 1140px !important;
 }
 
 .section {
@@ -2300,8 +2300,8 @@ th {
   height: var(--text-4);
 }
 .icon.is-large {
-  width: var(--text-3);
-  height: var(--text-3);
+  width: var(--text-2);
+  height: var(--text-2);
 }
 
 .inline-icon {
