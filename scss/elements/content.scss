@@ -13,6 +13,40 @@
   }
 
   //
+  // Vertical spacing
+  //
+
+  p,
+  ol li,
+  ul li,
+  blockquote {
+    // color: var(--color-text);
+    line-height: calc(var(--line-height-base) * var(--line-height-multiplier, 1));
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  dl,
+  ol,
+  ul,
+  blockquote,
+  pre,
+  table {
+    &:not(:last-child) {
+      margin-bottom: calc(var(--space-s) * var(--text-vspace-multiplier, 1));
+    }
+  }
+
+  hr {
+    margin: calc(var(--component-spacer) * var(--text-vspace-multiplier, 1)) auto;
+  }
+
+  //
   // Headings
   //
 
@@ -51,38 +85,8 @@
   }
 
   //
-  // Other content elements
+  // Common content elements
   //
-
-  p,
-  ol li,
-  ul li,
-  blockquote {
-    line-height: calc(var(--line-height-base) * var(--line-height-multiplier, 1));
-    // color: var(--color-text);
-  }
-
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6,
-  p,
-  dl,
-  ol,
-  ul,
-  blockquote,
-  pre,
-  table {
-    &:not(:last-child) {
-      margin-bottom: calc(var(--space-s) * var(--text-vspace-multiplier, 1));
-    }
-  }
-
-  hr {
-    margin: calc(var(--component-spacer) * var(--text-vspace-multiplier, 1)) auto;
-  }
 
   ul,
   ol,

@@ -1755,10 +1755,10 @@ th {
 
 .control {
   width: 100%;
+  justify-content: flex-start;
   background-color: var(--color-background);
   border-color: var(--color-contrast-lower);
   color: var(--color-text);
-  justify-content: flex-start;
   padding: var(--space-xxs) var(--space-xs);
   transition: box-shadow 0.15s ease-in-out;
 }
@@ -1884,12 +1884,12 @@ th {
 }
 
 .button {
+  justify-content: center;
   background-color: var(--color-background);
   border-color: var(--color-contrast-lower);
   color: var(--color-text);
   line-height: 1;
-  padding: var(--space-xs) var(--space-s);
-  justify-content: center;
+  padding: var(--space-xs);
   text-align: center;
   white-space: nowrap;
   transition: box-shadow 0.15s ease-in-out;
@@ -1914,31 +1914,21 @@ th {
   border-color: var(--color-text);
   color: var(--color-text);
 }
-.button.is-text {
+.button.is-text, .button.is-link {
   background-color: transparent;
   border-color: transparent;
   color: var(--color-text);
+}
+.button.is-text[disabled], .button.is-link[disabled] {
+  background-color: transparent;
+  border-color: transparent;
+  box-shadow: none;
 }
 .button.is-text:hover, .button.is-text:focus {
   text-decoration: underline;
 }
-.button.is-text[disabled] {
-  background-color: transparent;
-  border-color: transparent;
-  box-shadow: none;
-}
-.button.is-link {
-  background-color: transparent;
-  border-color: transparent;
-  color: var(--color-text);
-}
 .button.is-link:hover, .button.is-link:focus {
   background-color: var(--color-contrast-lowest);
-}
-.button.is-link[disabled] {
-  background-color: transparent;
-  border-color: transparent;
-  box-shadow: none;
 }
 .button.is-primary, .button.is-accent {
   background-color: var(--button-color);
@@ -1998,12 +1988,14 @@ th {
 }
 .button.is-small {
   font-size: calc(var(--text-size-base) - 0.2em);
+  padding: var(--space-s);
 }
 .button.is-medium {
   font-size: calc(var(--text-size-base) + 0.2em);
 }
 .button.is-large {
   font-size: calc(var(--text-size-base) + 0.4em);
+  padding: var(--space-xxs);
 }
 .button[disabled] {
   background-color: var(--color-background);
@@ -2073,6 +2065,30 @@ th {
 .content.is-article {
   --line-height-multiplier: 1.25;
 }
+.content p,
+.content ol li,
+.content ul li,
+.content blockquote {
+  line-height: calc(var(--line-height-base) * var(--line-height-multiplier, 1));
+}
+.content h1:not(:last-child),
+.content h2:not(:last-child),
+.content h3:not(:last-child),
+.content h4:not(:last-child),
+.content h5:not(:last-child),
+.content h6:not(:last-child),
+.content p:not(:last-child),
+.content dl:not(:last-child),
+.content ol:not(:last-child),
+.content ul:not(:last-child),
+.content blockquote:not(:last-child),
+.content pre:not(:last-child),
+.content table:not(:last-child) {
+  margin-bottom: calc(var(--space-s) * var(--text-vspace-multiplier, 1));
+}
+.content hr {
+  margin: calc(var(--component-spacer) * var(--text-vspace-multiplier, 1)) auto;
+}
 .content h1 {
   font-size: var(--text-1);
 }
@@ -2113,30 +2129,6 @@ th {
 }
 .content li + li {
   margin-top: calc(var(--space-xxxs) * var(--text-vspace-multiplier, 1));
-}
-.content p,
-.content ol li,
-.content ul li,
-.content blockquote {
-  line-height: calc(var(--line-height-base) * var(--line-height-multiplier, 1));
-}
-.content h1:not(:last-child),
-.content h2:not(:last-child),
-.content h3:not(:last-child),
-.content h4:not(:last-child),
-.content h5:not(:last-child),
-.content h6:not(:last-child),
-.content p:not(:last-child),
-.content dl:not(:last-child),
-.content ol:not(:last-child),
-.content ul:not(:last-child),
-.content blockquote:not(:last-child),
-.content pre:not(:last-child),
-.content table:not(:last-child) {
-  margin-bottom: calc(var(--space-s) * var(--text-vspace-multiplier, 1));
-}
-.content hr {
-  margin: calc(var(--component-spacer) * var(--text-vspace-multiplier, 1)) auto;
 }
 .content ul,
 .content ol,

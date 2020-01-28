@@ -7,6 +7,7 @@
   &.is-primary {
     background-color: var(--color-primary);
     color: var(--color-white);
+
     a:not(.button) {
       color: inherit;
     }
@@ -15,6 +16,7 @@
   &.is-accent {
     background-color: var(--color-accent);
     color: var(--color-white);
+
     a:not(.button) {
       color: inherit;
     }
@@ -25,6 +27,7 @@
     .hero-body {
       align-items: center;
       display: flex;
+
       & > .container {
         flex-grow: 1;
         flex-shrink: 1;

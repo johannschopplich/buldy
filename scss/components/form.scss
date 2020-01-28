@@ -1,10 +1,11 @@
 .control {
   @extend %control;
+
   width: 100%;
+  justify-content: flex-start;
   background-color: var(--color-background);
   border-color: var(--color-contrast-lower);
   color: var(--color-text);
-  justify-content: flex-start;
   padding: var(--space-xxs) var(--space-xs);
   @include transition(/*border-color 0.15s ease-in-out,*/ box-shadow 0.15s ease-in-out);
 

@@ -29,23 +29,26 @@
 .is-full-bleed {
   width: 100vw;
   margin-left: calc(50% - 50vw);
-
-  // A `full-bleed` helper variation, which doesn't need `calc()`
-  // width: 100vw;
-  // position: relative;
-  // left: 50%;
-  // right: 50%;
-  // margin-left: -50vw;
-  // margin-right: -50vw;
 }
 
-// Vertically and horizontally center content
-.is-both-centered {
-  // Place *all* descendants in the center
-  // display: grid;
-  // place-items: center;
+// A `full-bleed` helper variation, which doesn't need `calc()`.
+// .is-full-bleed {
+//   width: 100vw;
+//   position: relative;
+//   left: 50%;
+//   right: 50%;
+//   margin-left: -50vw;
+//   margin-right: -50vw;
+// }
 
-  // A more resilient version for only one descendant
+// Place all descendants in the center.
+// .is-both-centered {
+//   display: grid;
+//   place-items: center;
+// }
+
+// A more resilient version for only one descendant
+.is-both-centered {
   display: flex;
   & > *:only-child {
     margin: auto;
