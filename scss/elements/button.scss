@@ -152,9 +152,9 @@
   // Sizes
   //
 
-  &.is-small  { font-size: calc(var(--text-base) - 0.2em); }
-  &.is-medium { font-size: calc(var(--text-base) + 0.2em); }
-  &.is-large  { font-size: calc(var(--text-base) + 0.4em); }
+  &.is-small  { font-size: calc(var(--text-size-base) - 0.2em); }
+  &.is-medium { font-size: calc(var(--text-size-base) + 0.2em); }
+  &.is-large  { font-size: calc(var(--text-size-base) + 0.4em); }
 
   //
   // Modifiers

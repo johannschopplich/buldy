@@ -73,37 +73,41 @@ $utilities: (
   ),
 
   // Flex
-  "flex": (
-    property: flex,
-    class: has-flex,
-    values: (fill: 1 1 auto)
-  ),
-  "flex-direction": (
-    property: flex-direction,
-    class: has-flex,
-    values: row column row-reverse
-  ),
-  "flex-grow": (
-    property: flex-grow,
-    class: has-flex,
-    values: (
-      grow-0: 0,
-      grow-1: 1,
-    )
-  ),
-  "flex-shrink": (
-    property: flex-shrink,
-    class: has-flex,
-    values: (
-      shrink-0: 0,
-      shrink-1: 1,
-    )
-  ),
-  "flex-wrap": (
-    property: flex-wrap,
-    class: has-flex,
-    values: wrap nowrap
-  ),
+  // "flex": (
+  //   responsive: true,
+  //   property: flex,
+  //   class: has-flex,
+  //   values: (fill: 1 1 auto)
+  // ),
+  // "flex-direction": (
+  //   property: flex-direction,
+  //   class: has-flex,
+  //   values: row column
+  // ),
+  // "flex-grow": (
+  //   responsive: true,
+  //   property: flex-grow,
+  //   class: has-flex,
+  //   values: (
+  //     grow-0: 0,
+  //     grow-1: 1,
+  //   )
+  // ),
+  // "flex-shrink": (
+  //   responsive: true,
+  //   property: flex-shrink,
+  //   class: has-flex,
+  //   values: (
+  //     shrink-0: 0,
+  //     shrink-1: 1,
+  //   )
+  // ),
+  // "flex-wrap": (
+  //   responsive: true,
+  //   property: flex-wrap,
+  //   class: has-flex,
+  //   values: wrap nowrap
+  // ),
   "justify-content": (
     property: justify-content,
     class: has-content-justified,

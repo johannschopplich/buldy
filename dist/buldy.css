@@ -77,25 +77,25 @@
   --family-heading: var(--family-base);
   --line-height-base: 1.4;
   --line-height-heading: 1.2;
-  --text-base: 1em;
-  --text-ratio: 1.2;
-  --text-small: calc(var(--text-base) / var(--text-ratio));
-  --text-6: var(--text-base);
-  --text-5: calc(var(--text-6) * var(--text-ratio));
-  --text-3: calc(var(--text-4) * var(--text-ratio));
-  --text-2: calc(var(--text-3) * var(--text-ratio));
-  --text-4: calc(var(--text-5) * var(--text-ratio));
-  --text-1: calc(var(--text-2) * var(--text-ratio));
-  --space-ratio: 1rem;
-  --space-xxxs: calc(0.25 * var(--space-ratio));
-  --space-xxs: calc(0.375 * var(--space-ratio));
-  --space-xs: calc(0.5 * var(--space-ratio));
-  --space-s: calc(0.75 * var(--space-ratio));
-  --space-m: calc(1.25 * var(--space-ratio));
-  --space-l: calc(2 * var(--space-ratio));
-  --space-xl: calc(3.25 * var(--space-ratio));
-  --space-xxl: calc(5.25 * var(--space-ratio));
-  --space-xxxl: calc(8.5 * var(--space-ratio));
+  --text-size-base: 1em;
+  --text-scale-ratio: 1.2;
+  --text-small: calc(var(--text-size-base) / var(--text-scale-ratio));
+  --text-6: var(--text-size-base);
+  --text-5: calc(var(--text-6) * var(--text-scale-ratio));
+  --text-3: calc(var(--text-4) * var(--text-scale-ratio));
+  --text-2: calc(var(--text-3) * var(--text-scale-ratio));
+  --text-4: calc(var(--text-5) * var(--text-scale-ratio));
+  --text-1: calc(var(--text-2) * var(--text-scale-ratio));
+  --space-unit: 1rem;
+  --space-xxxs: calc(0.25 * var(--space-unit));
+  --space-xxs: calc(0.375 * var(--space-unit));
+  --space-xs: calc(0.5 * var(--space-unit));
+  --space-s: calc(0.75 * var(--space-unit));
+  --space-m: calc(1.25 * var(--space-unit));
+  --space-l: calc(2 * var(--space-unit));
+  --space-xl: calc(3.25 * var(--space-unit));
+  --space-xxl: calc(5.25 * var(--space-unit));
+  --space-xxxl: calc(8.5 * var(--space-unit));
   --component-spacer: var(--space-m);
   --shadow-xs: 0 1px 2px rgba(0, 0, 0, .1);
   --shadow-s: 0 1px 2px rgba(0, 0, 0, .085), 0 1px 8px rgba(0, 0, 0, .1);
@@ -107,9 +107,9 @@
 
 @media (min-width: 768px) {
   :root {
-    --text-base: 1.15em;
-    --text-ratio: 1.25;
-    --space-ratio: 1.15rem;
+    --text-size-base: 1.15em;
+    --text-scale-ratio: 1.25;
+    --space-unit: 1.15rem;
   }
 }
 *,
@@ -319,7 +319,7 @@ html {
 
 body {
   font-family: var(--family-base);
-  font-size: var(--text-base);
+  font-size: var(--text-size-base);
   line-height: var(--line-height-base);
   color: var(--color-text);
 }
@@ -1997,13 +1997,13 @@ th {
   --button-shadow: var(--color-accent-a50);
 }
 .button.is-small {
-  font-size: calc(var(--text-base) - 0.2em);
+  font-size: calc(var(--text-size-base) - 0.2em);
 }
 .button.is-medium {
-  font-size: calc(var(--text-base) + 0.2em);
+  font-size: calc(var(--text-size-base) + 0.2em);
 }
 .button.is-large {
-  font-size: calc(var(--text-base) + 0.4em);
+  font-size: calc(var(--text-size-base) + 0.4em);
 }
 .button[disabled] {
   background-color: var(--color-background);
@@ -2594,46 +2594,6 @@ th {
 
 .has-padding-bottom-xxxl {
   padding-bottom: var(--space-xxxl) !important;
-}
-
-.has-flex-fill {
-  flex: 1 1 auto !important;
-}
-
-.has-flex-row {
-  flex-direction: row !important;
-}
-
-.has-flex-column {
-  flex-direction: column !important;
-}
-
-.has-flex-row-reverse {
-  flex-direction: row-reverse !important;
-}
-
-.has-flex-grow-0 {
-  flex-grow: 0 !important;
-}
-
-.has-flex-grow-1 {
-  flex-grow: 1 !important;
-}
-
-.has-flex-shrink-0 {
-  flex-shrink: 0 !important;
-}
-
-.has-flex-shrink-1 {
-  flex-shrink: 1 !important;
-}
-
-.has-flex-wrap {
-  flex-wrap: wrap !important;
-}
-
-.has-flex-nowrap {
-  flex-wrap: nowrap !important;
 }
 
 .has-content-justified-start {
