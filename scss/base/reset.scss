@@ -2,15 +2,15 @@
 // Document
 //
 
-// Change from `box-sizing: content-box` so that `width` is not affected by
-// `padding` or `border` in all browsers.
+// Add border box sizing so that `width` is not affected by
+// `padding` or `border`.
 *,
 *::before,
 *::after {
   box-sizing: border-box;
 }
 
-// Remove default spacing (opinionated).
+// Remove default margin.
 body,
 h1,
 h2,
@@ -19,42 +19,36 @@ h4,
 h5,
 h6,
 p,
-li,
-dl,
-dd,
 hr,
 pre,
 figure,
-figcaption,
 blockquote,
 fieldset,
-legend {
+dl,
+dd {
   margin: 0;
-  padding: 0;
 }
 
 html {
-  // Change the line height in all browsers (opinionated).
-  line-height: 1.15;
-  // Use a 4-space tab width in all browsers (opinionated).
-  -moz-tab-size: 4;
-  tab-size: 4;
-  // Remove the grey highlight on links in iOS (opinionated).
+  // Change the line height.
+  line-height: 1.5;
+  // Remove the grey highlight on links in iOS.
   -webkit-tap-highlight-color: transparent;
   // Prevent adjustments of font size after orientation changes in iOS.
   -webkit-text-size-adjust: 100%;
 }
 
-// Set core body defaults (opinionated).
+// Set core body defaults.
 body {
   min-height: 100vh;
+  // scroll-behavior: smooth;
 }
 
 //
 // Sections
 //
 
-// Normalize all headings to text-level size (opinionated).
+// Normalize all headings to text-level size.
 h1,
 h2,
 h3,
@@ -66,7 +60,7 @@ h6 {
 }
 
 //
-// Grouping content
+// Content grouping
 //
 
 hr {
@@ -74,23 +68,25 @@ hr {
   background-color: currentColor;
   border: 0;
   opacity: 0.25;
-}
 
-hr:not([size]) {
-  height: 1px;
+  // Set correct height and prevent the `size` attribute to make
+  // the `hr` look like an input field.
+  &:not([size]) {
+    height: 1px;
+  }
 }
 
 //
 // Links
 //
 
-// Anchor elements that don't have a class get default styles
+// Anchor elements that don't have a class get default styles.
 a:not([class]) {
   text-decoration-skip-ink: auto;
 }
 
-// Remove the outline on focused links when they are also active or hovered
-// in all browsers (opinionated).
+// Remove the outline on focused links when they are also
+// active or hovered.
 // a:active {
 //   outline-width: 0;
 // }
@@ -101,9 +97,9 @@ a:not([class]) {
 
 ul[class],
 ol[class] {
-  // Remove list style in all browsers (opinionated).
+  // Remove list style.
   list-style: none;
-  // Remove default padding in all browsers
+  // Remove default spacing.
   padding: 0;
   margin: 0;
 }
@@ -118,9 +114,9 @@ code,
 kbd,
 samp,
 pre {
-  // Correct the odd `em` font sizing in all browsers.
+  // Correct the odd `em` font sizing.
   font-size: 1em;
-  // Correct the inheritance and scaling of font size in all browsers.
+  // Correct the inheritance and scaling of font size.
   font-family: "Menlo", "Consolas", "Roboto Mono", "Ubuntu Monospace", "Noto Mono", "Liberation Mono", monospace, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
@@ -129,7 +125,7 @@ pre {
   overflow-x: auto;
 }
 
-// Add the correct font size in all browsers.
+// Add the correct font size.
 small {
   font-size: 0.875em;
 }
@@ -138,7 +134,7 @@ small {
 // Embedded content
 //
 
-// Change the alignment on media elements in all browsers (opinionated).
+// Change the alignment on media elements.
 audio,
 canvas,
 iframe,
@@ -148,7 +144,7 @@ video {
   vertical-align: middle;
 }
 
-// Restrict sizing to the page width in all browsers (opinionated).
+// Restrict sizing to the page width.
 img,
 video {
   // Set a maximum relative to the parent.
@@ -158,7 +154,7 @@ video {
   height: auto;
 }
 
-// Change the fill color to match the text color in all browsers (opinionated).
+// Change the fill color to match the text color.
 svg:not([fill]) {
   fill: currentColor;
 }
@@ -183,29 +179,31 @@ th {
 // Forms
 //
 
-// Remove the margin in Firefox and Safari
 button,
 input,
-optgroup,
 select,
 textarea {
+  // Remove the margin on controls in Firefox and Safari.
   margin: 0;
+  // Inherit fonts for inputs and buttons.
+  font: inherit;
 }
 
 button,
 [type="button"],
 [type="reset"],
 [type="submit"] {
-  // Correct the inability to style buttons in iOS and Safari
+  // Correct the inability to style buttons in iOS and Safari.
   -webkit-appearance: button;
 
-  // Add "hand" cursor to non-disabled button elements (opinionated).
+  // Add "hand" cursor to non-disabled button elements.
   &:not(:disabled) {
     cursor: pointer;
   }
 }
 
-// Remove inner border and padding from Firefox, but don't restore the outline like Normalize.
+// Remove inner border and padding from Firefox, but don't
+// restore the outline like Normalize.
 ::-moz-focus-inner {
   padding: 0;
   border-style: none;
@@ -214,9 +212,10 @@ button,
 fieldset {
   // Browsers set a default `min-width: min-content;` on fieldsets,
   // unlike e.g. `<div>`s, which have `min-width: 0;` by default.
-  // So we reset that to ensure fieldsets behave more like a standard block element.
+  // Make fieldsets behave more like a standard block element.
   min-width: 0;
-  // Reset the default outline behavior of fieldsets so they don't affect page layout.
+  // Reset the default outline behavior of fieldsets so
+  // they don't affect page layout.
   border: 0;
   padding: 0;
 }
@@ -226,55 +225,27 @@ label {
   display: inline-block;
 }
 
-// Change the resize direction in all browsers (opinionated).
+// Change the resize direction.
 textarea {
   resize: vertical;
-}
-
-// Change the inconsistent appearance in all browsers (opinionated).
-// Add typography inheritance in all browsers (opinionated).
-button,
-input,
-select,
-textarea {
-  background-color: transparent;
-  border: 1px solid WindowFrame;
-  color: inherit;
-  font: inherit;
-  letter-spacing: inherit;
-  padding: 0.25em 0.375em;
-  margin: 0;
-}
-
-// Change the inconsistent appearance in all browsers (opinionated).
-select {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  background: no-repeat right center / 1em;
-  padding-right: 1em;
-
-  // Change the inconsistent appearance in all browsers (opinionated).
-  &:not([multiple]):not([size]) {
-    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='4'%3E%3Cpath d='M4 0h6L7 4'/%3E%3C/svg%3E");
-  }
 }
 
 //
 // Accessibility
 //
 
-// Change the cursor on busy elements in all browsers (opinionated).
+// Change the cursor on busy elements.
 [aria-busy="true"] {
   cursor: progress;
 }
 
-// Change the cursor on control elements in all browsers (opinionated).
+// Change the cursor on control elements.
 [aria-controls] {
   cursor: pointer;
 }
 
 // Change the cursor on disabled, not-editable, or otherwise
-// inoperable elements in all browsers (opinionated).
+// inoperable elements.
 [aria-disabled="true"],
 [disabled] {
   cursor: not-allowed;

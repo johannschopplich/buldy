@@ -126,24 +126,18 @@ h4,
 h5,
 h6,
 p,
-li,
-dl,
-dd,
 hr,
 pre,
 figure,
-figcaption,
 blockquote,
 fieldset,
-legend {
+dl,
+dd {
   margin: 0;
-  padding: 0;
 }
 
 html {
-  line-height: 1.15;
-  -moz-tab-size: 4;
-  tab-size: 4;
+  line-height: 1.5;
   -webkit-tap-highlight-color: transparent;
   -webkit-text-size-adjust: 100%;
 }
@@ -168,7 +162,6 @@ hr {
   border: 0;
   opacity: 0.25;
 }
-
 hr:not([size]) {
   height: 1px;
 }
@@ -236,10 +229,10 @@ th:not([align]) {
 
 button,
 input,
-optgroup,
 select,
 textarea {
   margin: 0;
+  font: inherit;
 }
 
 button,
@@ -274,29 +267,6 @@ textarea {
   resize: vertical;
 }
 
-button,
-input,
-select,
-textarea {
-  background-color: transparent;
-  border: 1px solid WindowFrame;
-  color: inherit;
-  font: inherit;
-  letter-spacing: inherit;
-  padding: 0.25em 0.375em;
-  margin: 0;
-}
-
-select {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  background: no-repeat right center/1em;
-  padding-right: 1em;
-}
-select:not([multiple]):not([size]) {
-  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='4'%3E%3Cpath d='M4 0h6L7 4'/%3E%3C/svg%3E");
-}
-
 [aria-busy=true] {
   cursor: progress;
 }
@@ -308,6 +278,29 @@ select:not([multiple]):not([size]) {
 [aria-disabled=true],
 [disabled] {
   cursor: not-allowed;
+}
+
+button,
+input,
+select,
+textarea {
+  background-color: transparent;
+  border: 1px solid WindowFrame;
+  color: inherit;
+  font: inherit;
+  letter-spacing: inherit;
+  padding: 0.25em 0.375em;
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: no-repeat right center/1em;
+  border-radius: 0;
+  padding-right: 1em;
+}
+select:not([multiple]):not([size]) {
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='4'%3E%3Cpath d='M4 0h6L7 4'/%3E%3C/svg%3E");
 }
 
 html {
@@ -345,11 +338,6 @@ a[class*=has-text-]:hover {
 mark {
   background-color: #fff4d1;
   color: inherit;
-}
-
-span {
-  font-style: inherit;
-  font-weight: inherit;
 }
 
 code {
@@ -1931,12 +1919,16 @@ th {
   background-color: var(--color-contrast-lowest);
 }
 .button.is-primary, .button.is-accent {
-  background-color: var(--button-color);
+  --color: var(--color-primary);
+  --color-hover: var(--color-primary-hover);
+  --color-active: var(--color-primary-active);
+  --shadow: var(--color-primary-a50);
+  background-color: var(--color);
   border-color: transparent;
   color: var(--color-white);
 }
 .button.is-primary:hover, .button.is-accent:hover {
-  background-color: var(--button-color-hover);
+  background-color: var(--color-hover);
   border-color: transparent;
   color: var(--color-white);
 }
@@ -1945,46 +1937,40 @@ th {
   color: var(--color-white);
 }
 .button.is-primary:focus:not(:active), .button.is-accent:focus:not(:active) {
-  box-shadow: 0 0 0 3px var(--button-shadow);
+  box-shadow: 0 0 0 3px var(--shadow);
 }
 .button.is-primary:active, .button.is-accent:active {
-  background-color: var(--button-color-active);
+  background-color: var(--color-active);
   border-color: transparent;
   color: var(--color-white);
 }
 .button.is-primary[disabled], .button.is-accent[disabled] {
-  background-color: var(--button-color);
+  background-color: var(--color);
   border-color: transparent;
   color: var(--color-white);
   box-shadow: none;
 }
 .button.is-primary.is-outlined, .button.is-accent.is-outlined {
   background-color: transparent;
-  border-color: var(--button-color);
-  color: var(--button-color);
+  border-color: var(--color);
+  color: var(--color);
 }
 .button.is-primary.is-outlined:hover, .button.is-primary.is-outlined:focus, .button.is-accent.is-outlined:hover, .button.is-accent.is-outlined:focus {
-  background-color: var(--button-color);
-  border-color: var(--button-color);
+  background-color: var(--color);
+  border-color: var(--color);
   color: var(--color-white);
 }
 .button.is-primary.is-outlined[disabled], .button.is-accent.is-outlined[disabled] {
   background-color: transparent;
-  border-color: var(--button-color);
-  color: var(--button-color);
+  border-color: var(--color);
+  color: var(--color);
   box-shadow: none;
 }
-.button.is-primary {
-  --button-color: var(--color-primary);
-  --button-color-hover: var(--color-primary-hover);
-  --button-color-active: var(--color-primary-active);
-  --button-shadow: var(--color-primary-a50);
-}
 .button.is-accent {
-  --button-color: var(--color-accent);
-  --button-color-hover: var(--color-accent-hover);
-  --button-color-active: var(--color-accent-active);
-  --button-shadow: var(--color-accent-a50);
+  --color: var(--color-accent);
+  --color-hover: var(--color-accent-hover);
+  --color-active: var(--color-accent-active);
+  --shadow: var(--color-accent-a50);
 }
 .button.is-small {
   font-size: calc(var(--text-size-base) - 0.2em);
@@ -2274,8 +2260,8 @@ th {
 
 .icon {
   display: inline-flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   height: var(--text-5);
   width: var(--text-5);
 }
