@@ -1,3 +1,12 @@
+.has-inline-icon {
+  display: inline-flex;
+  align-items: center;
+
+  > *:nth-child(2) {
+    margin-left: var(--space-xxxs);
+  }
+}
+
 .is-marginless {
   margin: 0 !important;
 }
@@ -48,6 +57,7 @@
 // }
 
 // A more resilient version for only one descendant
+// to place all descendants in the center.
 .is-both-centered {
   display: flex;
   & > *:only-child {

@@ -267,19 +267,6 @@ textarea {
   resize: vertical;
 }
 
-[aria-busy=true] {
-  cursor: progress;
-}
-
-[aria-controls] {
-  cursor: pointer;
-}
-
-[aria-disabled=true],
-[disabled] {
-  cursor: not-allowed;
-}
-
 button,
 input,
 select,
@@ -301,6 +288,19 @@ select {
 }
 select:not([multiple]):not([size]) {
   background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='4'%3E%3Cpath d='M4 0h6L7 4'/%3E%3C/svg%3E");
+}
+
+[aria-busy=true] {
+  cursor: progress;
+}
+
+[aria-controls] {
+  cursor: pointer;
+}
+
+[aria-disabled=true],
+[disabled] {
+  cursor: not-allowed;
 }
 
 html {
@@ -2270,23 +2270,23 @@ th {
   height: 100%;
 }
 .icon.is-small {
-  width: var(--text-6);
-  height: var(--text-6);
+  width: var(--space-s);
+  height: var(--space-s);
 }
 .icon.is-medium {
-  width: var(--text-4);
-  height: var(--text-4);
+  width: var(--space-l);
+  height: var(--space-l);
 }
 .icon.is-large {
-  width: var(--text-2);
-  height: var(--text-2);
+  width: var(--space-xl);
+  height: var(--space-xl);
 }
 
-.inline-icon {
+.has-inline-icon {
   display: inline-flex;
   align-items: center;
 }
-.inline-icon > *:nth-child(2) {
+.has-inline-icon > *:nth-child(2) {
   margin-left: var(--space-xxxs);
 }
 

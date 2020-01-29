@@ -15,26 +15,17 @@
   //
 
   &.is-small {
-    width: var(--text-6);
-    height: var(--text-6);
+    width: var(--space-s);
+    height: var(--space-s);
   }
 
   &.is-medium {
-    width: var(--text-4);
-    height: var(--text-4);
+    width: var(--space-l);
+    height: var(--space-l);
   }
 
   &.is-large {
-    width: var(--text-2);
-    height: var(--text-2);
-  }
-}
-
-.inline-icon {
-  display: inline-flex;
-  align-items: center;
-
-  > *:nth-child(2) {
-    margin-left: var(--space-xxxs);
+    width: var(--space-xl);
+    height: var(--space-xl);
   }
 }
