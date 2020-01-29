@@ -1,0 +1,93 @@
+//
+// Raster grid subsystem (rsms.me/raster)
+//
+
+$raster-breakpoints: (
+  zero: 0,
+  small: 640px,
+  large: 1200px
+) !default;
+
+.r-grid {
+  display: grid;
+  --grid-tc: repeat(4, 1fr);
+  grid-template-columns: var(--grid-tc);
+  --grid-cs: 1; // Column start
+  --grid-ce: -1; // Column end
+
+  // Cell or column
+  > .r-cell {
+    -webkit-appearance: none;
+    appearance: none;
+    display: block;
+  }
+
+  @each $breakpoint in map-keys($raster-breakpoints) {
+    @include media-breakpoint-above($breakpoint) {
+      $infix: breakpoint-infix($breakpoint, $raster-breakpoints);
+
+      &[columns#{$infix}="1"] { --grid-tc: repeat(1, 1fr); }
+      &[columns#{$infix}="2"] { --grid-tc: repeat(2, 1fr); }
+      &[columns#{$infix}="3"] { --grid-tc: repeat(3, 1fr); }
+      &[columns#{$infix}="4"] { --grid-tc: repeat(4, 1fr); }
+      &[columns#{$infix}="5"] { --grid-tc: repeat(5, 1fr); }
+      &[columns#{$infix}="6"] { --grid-tc: repeat(6, 1fr); }
+      &[columns#{$infix}="7"] { --grid-tc: repeat(7, 1fr); }
+      &[columns#{$infix}="8"] { --grid-tc: repeat(8, 1fr); }
+
+      > .r-cell {
+        &[span#{$infix}^="1"] { --grid-cs: 1; }
+        &[span#{$infix}^="2"] { --grid-cs: 2; }
+        &[span#{$infix}^="3"] { --grid-cs: 3; }
+        &[span#{$infix}^="4"] { --grid-cs: 4; }
+        &[span#{$infix}^="5"] { --grid-cs: 5; }
+        &[span#{$infix}^="6"] { --grid-cs: 6; }
+        &[span#{$infix}^="7"] { --grid-cs: 7; }
+        &[span#{$infix}^="8"] { --grid-cs: 8; }
+
+        &[span#{$infix}$="+1"], &[span="1"] { --grid-ce: 1; }
+        &[span#{$infix}$="+2"], &[span#{$infix}$="-1"], &[span#{$infix}="2"] { --grid-ce: 2; }
+        &[span#{$infix}$="+3"], &[span#{$infix}$="-2"], &[span#{$infix}="3"] { --grid-ce: 3; }
+        &[span#{$infix}$="+4"], &[span#{$infix}$="-3"], &[span#{$infix}="4"] { --grid-ce: 4; }
+        &[span#{$infix}$="+5"], &[span#{$infix}$="-4"], &[span#{$infix}="5"] { --grid-ce: 5; }
+        &[span#{$infix}$="+6"], &[span#{$infix}$="-5"], &[span#{$infix}="6"] { --grid-ce: 6; }
+        &[span#{$infix}$="+7"], &[span#{$infix}$="-6"], &[span#{$infix}="7"] { --grid-ce: 7; }
+        &[span#{$infix}$="+8"], &[span#{$infix}$="-7"], &[span#{$infix}="8"] { --grid-ce: 8; }
+        &[span#{$infix}$="-8"] { --grid-ce: 9; }
+
+        &[span#{$infix}] {
+          grid-column-end: span var(--grid-ce);
+        }
+
+        &[span#{$infix}*="+"],
+        &[span#{$infix}*="-"],
+        &[span#{$infix}*=".."] {
+          grid-column-start: var(--grid-cs);
+        }
+
+        &[span#{$infix}*="-"],
+        &[span#{$infix}*=".."] {
+          grid-column-end: var(--grid-ce);
+        }
+
+        &[span#{$infix}="row"] {
+          grid-column: 1 / -1;
+        }
+      }
+    }
+  }
+
+  &.is-debug {
+    > * {
+      --color: rgba(248, 110, 91, 0.3);
+      background-image: linear-gradient(to bottom, var(--color) 0%, var(--color) 100%);
+    }
+
+    > :nth-child(6n+2) { --color: rgba(103, 126, 208, 0.3); }
+    > :nth-child(6n+3) { --color: rgba(224, 174, 72, 0.3); }
+    > :nth-child(6n+4) { --color: rgba(77, 214, 115, 0.3); }
+    > :nth-child(6n+5) { --color: rgba(217, 103, 219, 0.3); }
+    > :nth-child(6n+6) { --color: rgba(94, 204, 211, 0.3); }
+    > :nth-child(6n+7) { --color: rgba(248, 110, 91, 0.3); }
+  }
+}
