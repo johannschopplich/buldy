@@ -9,6 +9,13 @@ $grid-breakpoints: (
   widescreen: 1280px,
 ) !default;
 
+$grid-containers: (
+  mobile: 640px,
+  tablet: 768px,
+  desktop: 1024px,
+  widescreen: 1280px,
+) !default;
+
 // Minimum breakpoint width. Null for the smallest (first) breakpoint.
 @function breakpoint-min($name, $breakpoints: $grid-breakpoints) {
   $min: map-get($breakpoints, $name);

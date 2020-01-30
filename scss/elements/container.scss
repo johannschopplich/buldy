@@ -1,22 +1,11 @@
-$container-sizes: (
-  mobile: 640px,
-  tablet: 768px,
-  desktop: 1024px,
-  widescreen: 1280px,
-) !default;
-
 .container {
   position: relative;
   width: calc(100% - 2 * var(--component-spacer));
   margin-left: auto;
   margin-right: auto;
 
-  &.is-fullwidth {
-    width: 100%;
-  }
-
-  @each $breakpoint in map-keys($container-sizes) {
-    $width: map-get($container-sizes, $breakpoint);
+  @each $breakpoint in map-keys($grid-containers) {
+    $width: map-get($grid-containers, $breakpoint);
 
     @include media-breakpoint-above($breakpoint) {
       &:not(.is-fluid) {
