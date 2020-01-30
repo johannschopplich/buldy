@@ -17,11 +17,17 @@
   //
 
   p,
-  ol li,
   ul li,
+  ol li,
   blockquote {
     // color: var(--color-text);
     line-height: calc(var(--line-height-base) * var(--line-height-multiplier, 1));
+  }
+
+  ul,
+  ol {
+    padding: 0;
+    margin: 0;
   }
 
   h1,
@@ -31,12 +37,12 @@
   h5,
   h6,
   p,
-  dl,
-  ol,
-  ul,
-  blockquote,
   pre,
-  table {
+  ul,
+  ol,
+  blockquote,
+  table,
+  dl {
     &:not(:last-child) {
       margin-bottom: calc(var(--space-s) * var(--text-vspace-multiplier, 1));
     }
@@ -72,7 +78,7 @@
   h4 {
     line-height: calc(var(--line-height-heading) * var(--line-height-multiplier, 1));
     &:not(:first-child) {
-      margin-top: calc(var(--space-m) * var(--text-vspace-multiplier, 1));
+      margin-top: calc(var(--space-l) * var(--text-vspace-multiplier, 1));
     }
   }
 
@@ -92,11 +98,6 @@
   ol,
   dd {
     margin-left: 2em;
-  }
-
-  ul,
-  ol {
-    margin-top: calc(var(--component-spacer) * var(--text-vspace-multiplier, 1));
   }
 
   ul {

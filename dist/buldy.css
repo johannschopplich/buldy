@@ -1997,7 +1997,7 @@ th {
 
 .container {
   position: relative;
-  width: calc(100% - var(--component-spacer));
+  width: calc(100% - 2 * var(--component-spacer));
   margin-left: auto;
   margin-right: auto;
 }
@@ -2052,10 +2052,15 @@ th {
   --line-height-multiplier: 1.25;
 }
 .content p,
-.content ol li,
 .content ul li,
+.content ol li,
 .content blockquote {
   line-height: calc(var(--line-height-base) * var(--line-height-multiplier, 1));
+}
+.content ul,
+.content ol {
+  padding: 0;
+  margin: 0;
 }
 .content h1:not(:last-child),
 .content h2:not(:last-child),
@@ -2064,12 +2069,12 @@ th {
 .content h5:not(:last-child),
 .content h6:not(:last-child),
 .content p:not(:last-child),
-.content dl:not(:last-child),
-.content ol:not(:last-child),
-.content ul:not(:last-child),
-.content blockquote:not(:last-child),
 .content pre:not(:last-child),
-.content table:not(:last-child) {
+.content ul:not(:last-child),
+.content ol:not(:last-child),
+.content blockquote:not(:last-child),
+.content table:not(:last-child),
+.content dl:not(:last-child) {
   margin-bottom: calc(var(--space-s) * var(--text-vspace-multiplier, 1));
 }
 .content hr {
@@ -2111,7 +2116,7 @@ th {
 .content h2:not(:first-child),
 .content h3:not(:first-child),
 .content h4:not(:first-child) {
-  margin-top: calc(var(--space-m) * var(--text-vspace-multiplier, 1));
+  margin-top: calc(var(--space-l) * var(--text-vspace-multiplier, 1));
 }
 .content li + li {
   margin-top: calc(var(--space-xxxs) * var(--text-vspace-multiplier, 1));
@@ -2120,10 +2125,6 @@ th {
 .content ol,
 .content dd {
   margin-left: 2em;
-}
-.content ul,
-.content ol {
-  margin-top: calc(var(--component-spacer) * var(--text-vspace-multiplier, 1));
 }
 .content ul {
   list-style-type: disc;
