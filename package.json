@@ -2,16 +2,25 @@
   "name": "buldy-framework",
   "description": "A beautiful minimal CSS framework utilizing custom properties",
   "version": "2.0.0",
-  "author": "Johann Schopplich",
+  "main": "scss/buldy.scss",
+  "style": "dist/buldy.min.css",
+  "author": {
+    "name": "Johann Schopplich",
+    "email": "hello@johanns.design",
+    "url": "https://johanns.design"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jschopplich/buldy.git"
+  },
   "license": "MIT",
   "keywords": [
     "css",
     "scss",
+    "grid",
     "mobile-first",
     "responsive",
-    "front-end",
-    "framework",
-    "web"
+    "framework"
   ],
   "scripts": {
     "build": "npm run css-compile && npm run css-minify",

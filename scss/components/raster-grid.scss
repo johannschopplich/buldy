@@ -4,8 +4,8 @@
 
 $raster-breakpoints: (
   zero: 0,
-  small: 640px,
-  large: 1280px
+  mobile: 640px,
+  desktop: 1024px
 ) !default;
 
 .r-grid {
