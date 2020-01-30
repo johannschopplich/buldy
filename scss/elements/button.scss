@@ -141,7 +141,7 @@
 
   &.is-small  {
     font-size: calc(var(--text-size-base) - 0.2em);
-    padding: var(--space-s);
+    padding: var(--space-xxs);
   }
 
   &.is-medium {
@@ -150,7 +150,7 @@
 
   &.is-large  {
     font-size: calc(var(--text-size-base) + 0.4em);
-    padding: var(--space-xxs);
+    padding: var(--space-s);
   }
 
   //
