@@ -83,11 +83,11 @@
   // Gap sizes
   //
 
-  &.has-gap-xsmall,
-  &.has-gap-small,
-  &.has-gap-medium,
-  &.has-gap-large,
-  &.has-gap-xlarge {
+  &.has-gap-xs,
+  &.has-gap-s,
+  &.has-gap-m,
+  &.has-gap-l,
+  &.has-gap-xl {
     margin-right: calc(-1 * var(--column-gap));
     margin-left: calc(-1 * var(--column-gap));
 

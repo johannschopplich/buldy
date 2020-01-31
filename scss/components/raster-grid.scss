@@ -23,7 +23,7 @@ $raster-breakpoints: (
   }
 
   @each $breakpoint in map-keys($raster-breakpoints) {
-    @include media-breakpoint-above($breakpoint) {
+    @include media-breakpoint-above($breakpoint, $raster-breakpoints) {
       $infix: breakpoint-infix($breakpoint, $raster-breakpoints);
 
       &[columns#{$infix}="1"] { --grid-tc: repeat(1, 1fr); }
