@@ -700,11 +700,11 @@ th {
 .columns.is-vcentered {
   align-items: center;
 }
-.columns.has-gap-xsmall, .columns.has-gap-small, .columns.has-gap-medium, .columns.has-gap-large, .columns.has-gap-xlarge {
+.columns.has-gap-xs, .columns.has-gap-s, .columns.has-gap-m, .columns.has-gap-l, .columns.has-gap-xl {
   margin-right: calc(-1 * var(--column-gap));
   margin-left: calc(-1 * var(--column-gap));
 }
-.columns.has-gap-xsmall > .column, .columns.has-gap-small > .column, .columns.has-gap-medium > .column, .columns.has-gap-large > .column, .columns.has-gap-xlarge > .column {
+.columns.has-gap-xs > .column, .columns.has-gap-s > .column, .columns.has-gap-m > .column, .columns.has-gap-l > .column, .columns.has-gap-xl > .column {
   padding-right: var(--column-gap);
   padding-left: var(--column-gap);
 }
