@@ -1,5 +1,5 @@
 {
-  "name": "buldy-framework",
+  "name": "buldy",
   "description": "A beautiful minimal CSS framework utilizing custom properties",
   "version": "1.2.0",
   "main": "scss/buldy.scss",
