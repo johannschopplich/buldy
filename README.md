@@ -19,7 +19,7 @@ The framework serves the following purposes:
 - 📐️&nbsp; Powerful **responsive spacing system** using multipliers of a unit value
 - 🌈&nbsp; Easy editable and extendable CSS variables
 - 🎈&nbsp; No preprocessor necessary if unwanted — [just plug'n'play](https://github.com/jschopplich/buldy/blob/master/dist/buldy.css)
-- 📖&nbsp; Magical 12 column grid plus [iota grid](https://github.com/korywakefield/iota) included
+- 📖&nbsp; Magical 12 column grid
 - 🏗&nbsp; Comes with a handful of components &amp; utilities
 - ✅&nbsp; Good Semantics
 
@@ -66,7 +66,7 @@ Improvements and suggestions are always welcome.
 
 ## Credits
 
-Big shoutout to [@CodyHouse](https://github.com/CodyHouse) and [@jgthms](https://github.com/jgthms) for their inspiring frameworks as well as [@korywakefield](https://github.com/korywakefield) for his grid spec powered micro-framework.
+Big shoutout to [@CodyHouse](https://github.com/CodyHouse) and [@jgthms](https://github.com/jgthms) for their inspiring frameworks.
 
 ## License
 
