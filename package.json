@@ -1,7 +1,7 @@
 {
   "name": "buldy",
   "description": "A beautiful minimal CSS framework utilizing custom properties",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "main": "scss/buldy.scss",
   "style": "dist/buldy.min.css",
   "author": {
