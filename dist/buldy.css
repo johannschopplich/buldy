@@ -182,6 +182,12 @@ strong {
   font-weight: bolder;
 }
 
+abbr[title] {
+  text-decoration: underline dotted;
+  cursor: help;
+  text-decoration-skip-ink: none;
+}
+
 code,
 kbd,
 samp,

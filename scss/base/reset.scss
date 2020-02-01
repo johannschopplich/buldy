@@ -85,8 +85,8 @@ a:not([class]) {
   text-decoration-skip-ink: auto;
 }
 
-// Remove the outline on focused links when they are also
-// active or hovered.
+// Remove the outline on focused links when they are
+// active as well as hovered.
 // a:active {
 //   outline-width: 0;
 // }
@@ -108,6 +108,15 @@ ol[class] {
 b,
 strong {
   font-weight: bolder;
+}
+
+abbr[title] {
+  // Add the correct text decoration.
+  text-decoration: underline dotted;
+  // Add explicit cursor to indicate changed behavior.
+  cursor: help;
+  // Prevent the text-decoration to be skipped.
+  text-decoration-skip-ink: none;
 }
 
 code,

@@ -16,6 +16,12 @@ body {
   color: var(--color-text);
 }
 
+// ::selection {
+//   color: var(--color-text);
+//   background: var(--color-focus);
+//   text-shadow: none;
+// }
+
 //
 // Content grouping
 //
@@ -39,16 +45,17 @@ a {
     color: var(--color-link-hover);
   }
 
-  // Add standard outline on focused links (opinionated).
-  // &:focus {
-  //   outline: 1px dotted;
-  // }
-
   &[class*="has-text-"] {
     &:hover {
       text-decoration: underline;
     }
   }
+
+  // Add standard outline on focused links.
+  // &:focus {
+  //   outline: 2px solid var(--color-primary);
+  //   outline-offset: 2px;
+  // }
 }
 
 //
@@ -56,7 +63,7 @@ a {
 //
 
 mark {
-  background-color: #fff4d1;
+  background-color: hsl(46, 100%, 91%);
   color: inherit;
 }
 
