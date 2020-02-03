@@ -29,9 +29,15 @@ dd {
   margin: 0;
 }
 
+// Use a more readable tab size.
+:root {
+	-moz-tab-size: 4;
+	tab-size: 4;
+}
+
 html {
-  // Change the line height.
-  line-height: 1.5;
+  // Correct the line height.
+  line-height: 1.15;
   // Remove the grey highlight on links in iOS.
   -webkit-tap-highlight-color: transparent;
   // Prevent adjustments of font size after orientation changes in iOS.
@@ -42,6 +48,8 @@ html {
 body {
   min-height: 100vh;
   // scroll-behavior: smooth;
+  // Improve consistency of default fonts.
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
 }
 
 //
@@ -126,7 +134,7 @@ pre {
   // Correct the odd `em` font sizing.
   font-size: 1em;
   // Correct the inheritance and scaling of font size.
-  font-family: "Menlo", "Consolas", "Roboto Mono", "Ubuntu Monospace", "Noto Mono", "Liberation Mono", monospace, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: "Menlo", "Consolas", "Roboto Mono", "Ubuntu Monospace", "Liberation Mono", monospace, "Apple Color Emoji", "Segoe UI Emoji";
 }
 
 // Don't allow content to break outside.
@@ -144,9 +152,9 @@ small {
 //
 
 // Change the alignment on media elements.
+
 audio,
 canvas,
-iframe,
 img,
 svg,
 video {
@@ -190,12 +198,13 @@ th {
 
 button,
 input,
+optgroup,
 select,
 textarea {
-  // Remove the margin on controls in Firefox and Safari.
-  margin: 0;
   // Inherit fonts for controls.
   font: inherit;
+  // Remove the margin on controls in Firefox and Safari.
+  margin: 0;
 }
 
 button,
