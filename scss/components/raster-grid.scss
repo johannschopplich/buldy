@@ -2,15 +2,17 @@
 // Raster grid subsystem (rsms.me/raster)
 //
 
+$raster-columns: 12 !default;
+
 $raster-breakpoints: (
-  zero: 0,
-  mobile: 640px,
-  desktop: 1024px
+  z: 0,
+  s: 640px,
+  l: 1024px
 ) !default;
 
 .r-grid {
   display: grid;
-  --grid-tc: repeat(4, 1fr);
+  --grid-tc: repeat(4, 1fr); // Template columns
   grid-template-columns: var(--grid-tc);
   --grid-cs: 1; // Column start
   --grid-ce: -1; // Column end
@@ -26,35 +28,31 @@ $raster-breakpoints: (
     @include media-breakpoint-above($breakpoint, $raster-breakpoints) {
       $infix: breakpoint-infix($breakpoint, $raster-breakpoints);
 
-      &[columns#{$infix}="1"] { --grid-tc: repeat(1, 1fr); }
-      &[columns#{$infix}="2"] { --grid-tc: repeat(2, 1fr); }
-      &[columns#{$infix}="3"] { --grid-tc: repeat(3, 1fr); }
-      &[columns#{$infix}="4"] { --grid-tc: repeat(4, 1fr); }
-      &[columns#{$infix}="5"] { --grid-tc: repeat(5, 1fr); }
-      &[columns#{$infix}="6"] { --grid-tc: repeat(6, 1fr); }
-      &[columns#{$infix}="7"] { --grid-tc: repeat(7, 1fr); }
-      &[columns#{$infix}="8"] { --grid-tc: repeat(8, 1fr); }
+      @for $i from 1 through $raster-columns {
+        &[columns#{$infix}="#{$i}"] { --grid-tc: repeat(#{$i}, 1fr); }
+      }
 
       > .r-cell {
-        &[span#{$infix}^="1"] { --grid-cs: 1; }
-        &[span#{$infix}^="2"] { --grid-cs: 2; }
-        &[span#{$infix}^="3"] { --grid-cs: 3; }
-        &[span#{$infix}^="4"] { --grid-cs: 4; }
-        &[span#{$infix}^="5"] { --grid-cs: 5; }
-        &[span#{$infix}^="6"] { --grid-cs: 6; }
-        &[span#{$infix}^="7"] { --grid-cs: 7; }
-        &[span#{$infix}^="8"] { --grid-cs: 8; }
+        // span=start...
+        @for $i from 1 through $raster-columns {
+          &[span#{$infix}^="#{$i}"] { --grid-cs: #{$i}; }
+        }
 
+        // span=...+width, span=...-end
         &[span#{$infix}$="+1"], &[span="1"] { --grid-ce: 1; }
-        &[span#{$infix}$="+2"], &[span#{$infix}$="-1"], &[span#{$infix}="2"] { --grid-ce: 2; }
-        &[span#{$infix}$="+3"], &[span#{$infix}$="-2"], &[span#{$infix}="3"] { --grid-ce: 3; }
-        &[span#{$infix}$="+4"], &[span#{$infix}$="-3"], &[span#{$infix}="4"] { --grid-ce: 4; }
-        &[span#{$infix}$="+5"], &[span#{$infix}$="-4"], &[span#{$infix}="5"] { --grid-ce: 5; }
-        &[span#{$infix}$="+6"], &[span#{$infix}$="-5"], &[span#{$infix}="6"] { --grid-ce: 6; }
-        &[span#{$infix}$="+7"], &[span#{$infix}$="-6"], &[span#{$infix}="7"] { --grid-ce: 7; }
-        &[span#{$infix}$="+8"], &[span#{$infix}$="-7"], &[span#{$infix}="8"] { --grid-ce: 8; }
-        &[span#{$infix}$="-8"] { --grid-ce: 9; }
 
+        @for $i from 1 through $raster-columns {
+          $min: $i - 1;
+          &[span#{$infix}$="+#{$i}"],
+          &[span#{$infix}$="-#{$i - 1}"],
+          &[span#{$infix}="#{$i}"] {
+            --grid-ce: #{$i};
+          }
+        }
+
+        &[span#{$infix}$="-#{$raster-columns}"] { --grid-ce: #{$raster-columns + 1}; }
+
+        // Connect vars
         &[span#{$infix}] {
           grid-column-end: span var(--grid-ce);
         }

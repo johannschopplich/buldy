@@ -126,11 +126,9 @@ h4,
 h5,
 h6,
 p,
-hr,
 pre,
 figure,
 blockquote,
-fieldset,
 dl,
 dd {
   margin: 0;
@@ -210,11 +208,8 @@ small {
   font-size: 0.875em;
 }
 
-audio,
-canvas,
 img,
-svg,
-video {
+svg {
   vertical-align: middle;
 }
 
@@ -240,10 +235,10 @@ th:not([align]) {
 
 button,
 input,
-optgroup,
 select,
 textarea {
   font: inherit;
+  letter-spacing: inherit;
   margin: 0;
 }
 
@@ -269,6 +264,7 @@ fieldset {
   min-width: 0;
   border: 0;
   padding: 0;
+  margin: 0;
 }
 
 label {
@@ -286,8 +282,6 @@ textarea {
   background-color: transparent;
   border: 1px solid WindowFrame;
   color: inherit;
-  font: inherit;
-  letter-spacing: inherit;
   padding: 0.25em 0.375em;
 }
 
