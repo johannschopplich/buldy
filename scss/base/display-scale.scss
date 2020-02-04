@@ -1,0 +1,26 @@
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+       only screen and (min-device-pixel-ratio: 1.5),
+       only screen and (min-resolution: 1.5dppx) {
+  :root {
+    --displayScale: 2;
+    --pixel: 0.5px;
+  }
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2.5),
+       only screen and (min-device-pixel-ratio: 2.5),
+       only screen and (min-resolution: 2.5dppx) {
+  :root {
+    --displayScale: 3;
+    --pixel: 0.34px;
+  }
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 3.5),
+       only screen and (min-device-pixel-ratio: 3.5),
+       only screen and (min-resolution: 3.5dppx) {
+  :root {
+    --displayScale: 4;
+    --pixel: 0.25px;
+  }
+}

@@ -19,11 +19,9 @@ h4,
 h5,
 h6,
 p,
-hr,
 pre,
 figure,
 blockquote,
-fieldset,
 dl,
 dd {
   margin: 0;
@@ -44,10 +42,9 @@ html {
   -webkit-text-size-adjust: 100%;
 }
 
-// Set core body defaults.
 body {
+  // Set core body defaults.
   min-height: 100vh;
-  // scroll-behavior: smooth;
   // Improve consistency of default fonts.
   font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
 }
@@ -152,12 +149,8 @@ small {
 //
 
 // Change the alignment on media elements.
-
-audio,
-canvas,
 img,
-svg,
-video {
+svg {
   vertical-align: middle;
 }
 
@@ -175,6 +168,11 @@ video {
 svg:not([fill]) {
   fill: currentColor;
 }
+
+// Blur images when they have no alt attribute.
+// img:not([alt]) {
+//   filter: blur(10px);
+// }
 
 //
 // Tabular data
@@ -198,11 +196,11 @@ th {
 
 button,
 input,
-optgroup,
 select,
 textarea {
   // Inherit fonts for controls.
   font: inherit;
+  letter-spacing: inherit;
   // Remove the margin on controls in Firefox and Safari.
   margin: 0;
 }
@@ -236,6 +234,7 @@ fieldset {
   // they don't affect page layout.
   border: 0;
   padding: 0;
+  margin: 0;
 }
 
 // Allow labels to use `margin` for spacing.
@@ -253,7 +252,6 @@ textarea {
 //
 
 // Change the inconsistent appearance.
-// Add typography inheritance.
 button,
 input,
 select,
@@ -261,8 +259,6 @@ textarea {
   background-color: transparent;
   border: 1px solid WindowFrame;
   color: inherit;
-  font: inherit;
-  letter-spacing: inherit;
   padding: 0.25em 0.375em;
 }
 
