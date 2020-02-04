@@ -1,11 +1,10 @@
 .image {
   position: relative;
-  display: block;
 
   img {
     display: block;
-    height: auto;
     width: 100%;
+    height: auto;
 
     &.is-rounded {
       border-radius: var(--radius)
@@ -31,6 +30,7 @@
     img,
     .has-ratio {
       @extend %overlay;
+
       width: 100%;
       height: 100%;
     }

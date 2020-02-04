@@ -2202,12 +2202,11 @@ th {
 
 .image {
   position: relative;
-  display: block;
 }
 .image img {
   display: block;
-  height: auto;
   width: 100%;
+  height: auto;
 }
 .image img.is-rounded {
   border-radius: var(--radius);
