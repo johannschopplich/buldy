@@ -200,10 +200,6 @@ pre {
   font-family: "Menlo", "Consolas", "Roboto Mono", "Ubuntu Monospace", "Liberation Mono", monospace, "Apple Color Emoji", "Segoe UI Emoji";
 }
 
-pre {
-  overflow-x: auto;
-}
-
 small {
   font-size: 0.875em;
 }
@@ -358,6 +354,7 @@ pre {
   background-color: var(--color-contrast-lowest);
   font-size: 0.875em;
   padding: var(--space-s) 1em;
+  overflow-x: auto;
   white-space: pre;
   word-wrap: normal;
 }

@@ -134,11 +134,6 @@ pre {
   font-family: "Menlo", "Consolas", "Roboto Mono", "Ubuntu Monospace", "Liberation Mono", monospace, "Apple Color Emoji", "Segoe UI Emoji";
 }
 
-// Don't allow content to break outside.
-pre {
-  overflow-x: auto;
-}
-
 // Add the correct font size.
 small {
   font-size: 0.875em;
