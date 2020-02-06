@@ -2,25 +2,24 @@
   <img src="docs/logo.svg" alt="Buldy logo" height="114">
 </p>
 
+<h3 align="center">Buldy</h3>
+
 <p align="center">
-  A beautiful minimal CSS framework utilizing custom properties.<br>
-  <br>
-  <a href="https://github.com/jschopplich/buldy/issues"><img src="https://img.shields.io/github/issues/jschopplich/buldy.svg"></a>
+  Modern CSS framework distilled from the best of larger frameworks<br>
 </p>
 
 <br>
 
-# Buldy
+## Quick start
 
 The framework serves the following purposes:
 
 - ⚡️&nbsp; Everything you need to create a solid project
-- 🗨&nbsp; **Typography system** where all font sizes are intertwined
+- 📐️&nbsp; **Typography system** where all font sizes are intertwined
 - 📐️&nbsp; Powerful **responsive spacing system** using multipliers of a unit value
 - 🌈&nbsp; Easily editable and extendable CSS variables
-- 📖&nbsp; Magical 12 column grid
 - 🏗&nbsp; A handful of elements, components &amp; utilities
-- 🎈&nbsp; No preprocessor necessary — [just plug'n'play](https://github.com/jschopplich/buldy/blob/master/dist/buldy.css)
+- 📖&nbsp; No preprocessor necessary — [just plug'n'play](https://github.com/jschopplich/buldy/blob/master/dist/buldy.css)
 - ✅&nbsp; Good Semantics
 
 Buldy is a CSS framework. As such, the sole output is a single CSS file: [buldy.css](https://github.com/jschopplich/buldy/blob/master/dist/buldy.css)
