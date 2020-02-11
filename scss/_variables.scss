@@ -39,7 +39,7 @@
   --color-link-hover:        var(--color-text);
 
   // Typography system
-  --family-base:             -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  --family-base:             system-ui, -apple-system, "Segoe UI", Roboto, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
   --family-heading:          var(--family-base);
   --line-height-base:        1.4;
   --line-height-heading:     1.2;

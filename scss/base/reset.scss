@@ -46,7 +46,7 @@ body {
   // Set core body defaults.
   min-height: 100vh;
   // Improve consistency of default fonts.
-  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
 }
 
 //
@@ -90,8 +90,7 @@ a:not([class]) {
   text-decoration-skip-ink: auto;
 }
 
-// Remove the outline on focused links when they are
-// active as well as hovered.
+// Remove the outline on focused links.
 // a:active {
 //   outline-width: 0;
 // }
