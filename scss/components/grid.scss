@@ -36,12 +36,12 @@
   margin-right: calc(var(--space-s) * -1);
   margin-left: calc(var(--space-s) * -1);
 
-  &:last-child {
-    margin-bottom: calc(var(--space-s) * -1);
-  }
-
   &:not(:last-child) {
     margin-bottom: calc(var(--component-spacer) - var(--space-s));
+  }
+
+  &:last-child {
+    margin-bottom: calc(var(--space-s) * -1);
   }
 
   //

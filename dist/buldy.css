@@ -673,11 +673,11 @@ th {
   margin-right: calc(var(--space-s) * -1);
   margin-left: calc(var(--space-s) * -1);
 }
-.columns:last-child {
-  margin-bottom: calc(var(--space-s) * -1);
-}
 .columns:not(:last-child) {
   margin-bottom: calc(var(--component-spacer) - var(--space-s));
+}
+.columns:last-child {
+  margin-bottom: calc(var(--space-s) * -1);
 }
 .columns.is-gapless {
   margin-top: 0;
