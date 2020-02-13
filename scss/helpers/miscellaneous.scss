@@ -35,6 +35,10 @@
   object-fit: cover !important;
 }
 
+.is-rounded {
+  border-radius: var(--radius)
+}
+
 .is-full-bleed {
   width: 100vw;
   margin-left: calc(50% - 50vw);

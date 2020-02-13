@@ -1,0 +1,48 @@
+.image,
+.aspect-ratio,
+[style*="--aspect-ratio"] {
+  position: relative;
+  display: block;
+
+  &::before {
+    content: "";
+    display: block;
+    padding-bottom: calc(100% / (var(--aspect-ratio)));
+  }
+
+  > img {
+    height: auto;
+  }
+
+  > :first-child {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+//
+// Pre-defined horizonral ratios
+//
+
+.is-square::before,
+.is-1by1::before {
+  padding-top: 100%;
+}
+.is-5by4::before {
+  padding-top: 80%;
+}
+.is-4by3::before {
+  padding-top: 75%;
+}
+.is-3by2::before {
+  padding-top: 66.6666%;
+}
+.is-16by9::before {
+  padding-top: 56.25%;
+}
+.is-2by1::before {
+  padding-top: 50%;
+}
