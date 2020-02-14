@@ -169,22 +169,6 @@ svg:not([fill]) {
 // }
 
 //
-// Tabular data
-//
-
-table {
-  border-collapse: collapse; // Prevent double borders.
-  border-spacing: 0;
-}
-
-td,
-th {
-  &:not([align]) {
-    text-align: left;
-  }
-}
-
-//
 // Forms
 //
 

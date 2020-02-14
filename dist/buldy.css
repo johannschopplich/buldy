@@ -199,16 +199,6 @@ svg:not([fill]) {
   fill: currentColor;
 }
 
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-td:not([align]),
-th:not([align]) {
-  text-align: left;
-}
-
 button,
 input,
 select,
@@ -343,11 +333,6 @@ pre code {
   color: currentColor;
   font-size: 1em;
   padding: 0;
-}
-
-td,
-th {
-  vertical-align: top;
 }
 
 .column {
