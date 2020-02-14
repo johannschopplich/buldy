@@ -10,15 +10,15 @@ $raster-breakpoints: (
   l: 1024px
 ) !default;
 
-.r-grid {
-  display: grid;
+.raster {
   --grid-tc: repeat(4, 1fr); // Template columns
-  grid-template-columns: var(--grid-tc);
   --grid-cs: 1; // Column start
   --grid-ce: -1; // Column end
+  display: grid;
+  grid-template-columns: var(--grid-tc);
 
   // Cell or column
-  > .r-cell {
+  > .cell {
     -webkit-appearance: none;
     appearance: none;
     display: block;
@@ -32,7 +32,7 @@ $raster-breakpoints: (
         &[columns#{$infix}="#{$i}"] { --grid-tc: repeat(#{$i}, 1fr); }
       }
 
-      > .r-cell {
+      > .cell {
         // span=start...
         @for $i from 1 through $raster-columns {
           &[span#{$infix}^="#{$i}"] { --grid-cs: #{$i}; }

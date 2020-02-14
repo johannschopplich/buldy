@@ -1,3 +1,26 @@
+//
+// SCSS variables
+//
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 640px,
+  md: 768px,
+  lg: 1024px,
+  xl: 1280px,
+) !default;
+
+$container-sizes: (
+  sm: 640px,
+  md: 768px,
+  lg: 1024px,
+  xl: 1280px,
+) !default;
+
+//
+// Custom properties
+//
+
 :root,
 [data-theme="default"] {
   // Main colors
@@ -86,7 +109,7 @@
 // Natural growing responsiveness
 //
 
-@include media-breakpoint-above(tablet) {
+@include media-breakpoint-above(md) {
   :root {
     --text-size-base:        1.15em;
     --text-scale-ratio:      1.25;

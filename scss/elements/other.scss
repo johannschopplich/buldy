@@ -1,3 +1,7 @@
 .block {
   @extend %block;
 }
+
+.flow > * + * {
+  margin-top: var(--component-spacer);
+}

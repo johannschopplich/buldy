@@ -11,10 +11,6 @@
 
 .title,
 .subtitle {
-  &.is-spaced {
-    @extend %block;
-  }
-
   @for $i from 1 through 6 {
     &.is-#{$i} {
       font-size: var(--text-#{$i});

@@ -4,8 +4,8 @@
   margin-left: auto;
   margin-right: auto;
 
-  @each $breakpoint in map-keys($grid-containers) {
-    $width: map-get($grid-containers, $breakpoint);
+  @each $breakpoint in map-keys($container-sizes) {
+    $width: map-get($container-sizes, $breakpoint);
 
     @include media-breakpoint-above($breakpoint) {
       &:not(.is-fluid) {

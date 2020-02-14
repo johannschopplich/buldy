@@ -45,12 +45,6 @@ a {
     color: var(--color-link-hover);
   }
 
-  &[class*="has-text-"] {
-    &:hover {
-      text-decoration: underline;
-    }
-  }
-
   // Add standard outline on focused links.
   // &:focus {
   //   outline: 2px solid var(--color-primary);

@@ -146,7 +146,7 @@
       margin-top: calc(var(--space-xs) * var(--text-vspace-multiplier, 1));
     }
 
-    @include media-breakpoint-above(mobile) {
+    @include media-breakpoint-above(sm) {
       &.is-pulled-left,
       &.is-pulled-right {
         width: 45%;
@@ -163,7 +163,7 @@
       }
     }
 
-    @include media-breakpoint-above(widescreen) {
+    @include media-breakpoint-above(xl) {
       &.is-pulled-left,
       &.is-pulled-right {
         width: 50%;

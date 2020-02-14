@@ -21,54 +21,108 @@ $colors: (
   contrast-medium: var(--color-contrast-medium),
   contrast-high: var(--color-contrast-high),
   contrast-higher: var(--color-contrast-higher),
-);
+) !default;
 
 $utilities: (
-  // Display
+  "position": (
+    property: position,
+    values: static relative absolute fixed sticky
+  ),
   "display": (
     responsive: true,
     property: display,
-    class: is,
-    values: (
-      hidden: none,
-      inline: inline,
-      block: block,
-      flex: flex,
-      inline-flex: inline-flex,
-    )
+    class: d,
+    values: none inline inline-block block flex inline-flex
+  ),
+
+  // Sizing
+  "viewport-width": (
+    property: width,
+    class: vw,
+    values: (100: 100vw)
+  ),
+  "viewport-height": (
+    property: height,
+    class: vh,
+    values: (100: calc(var(--vh, 1vh) * 100))
+  ),
+  "min-viewport-height": (
+    property: min-height,
+    class: min-vh,
+    values: (100: calc(var(--vh, 1vh) * 100))
   ),
 
   // Margin
   "margin": (
     property: margin,
-    class: has-margin,
-    values: $spacers
+    class: m,
+    values: map-merge($spacers, (auto: auto))
+  ),
+  "margin-x": (
+    property: margin-right margin-left,
+    class: mx,
+    values: map-merge($spacers, (auto: auto))
+  ),
+  "margin-y": (
+    property: margin-top margin-bottom,
+    class: my,
+    values: map-merge($spacers, (auto: auto))
   ),
   "margin-top": (
     property: margin-top,
-    class: has-margin-top,
-    values: $spacers
+    class: mt,
+    values: map-merge($spacers, (auto: auto))
+  ),
+  "margin-right": (
+    property: margin-right,
+    class: mr,
+    values: map-merge($spacers, (auto: auto))
   ),
   "margin-bottom": (
     property: margin-bottom,
-    class: has-margin-bottom,
-    values: $spacers
+    class: mb,
+    values: map-merge($spacers, (auto: auto))
+  ),
+  "margin-left": (
+    property: margin-left,
+    class: ml,
+    values: map-merge($spacers, (auto: auto))
   ),
 
   // Padding
   "padding": (
     property: padding,
-    class: has-padding,
+    class: p,
+    values: $spacers
+  ),
+  "padding-x": (
+    property: padding-right padding-left,
+    class: px,
+    values: $spacers
+  ),
+  "padding-y": (
+    property: padding-top padding-bottom,
+    class: py,
     values: $spacers
   ),
   "padding-top": (
     property: padding-top,
-    class: has-padding-top,
+    class: pt,
+    values: $spacers
+  ),
+  "padding-right": (
+    property: padding-right,
+    class: pr,
     values: $spacers
   ),
   "padding-bottom": (
     property: padding-bottom,
-    class: has-padding-bottom,
+    class: pb,
+    values: $spacers
+  ),
+  "padding-left": (
+    property: padding-left,
+    class: pl,
     values: $spacers
   ),
 
@@ -76,18 +130,18 @@ $utilities: (
   // "flex": (
   //   responsive: true,
   //   property: flex,
-  //   class: has-flex,
   //   values: (fill: 1 1 auto)
   // ),
   // "flex-direction": (
+  //   responsive: true,
   //   property: flex-direction,
-  //   class: has-flex,
+  //   class: flex,
   //   values: row column
   // ),
   // "flex-grow": (
   //   responsive: true,
   //   property: flex-grow,
-  //   class: has-flex,
+  //   class: flex,
   //   values: (
   //     grow-0: 0,
   //     grow-1: 1,
@@ -96,7 +150,7 @@ $utilities: (
   // "flex-shrink": (
   //   responsive: true,
   //   property: flex-shrink,
-  //   class: has-flex,
+  //   class: flex,
   //   values: (
   //     shrink-0: 0,
   //     shrink-1: 1,
@@ -105,12 +159,12 @@ $utilities: (
   // "flex-wrap": (
   //   responsive: true,
   //   property: flex-wrap,
-  //   class: has-flex,
+  //   class: flex,
   //   values: wrap nowrap
   // ),
   "justify-content": (
+    responsive: true,
     property: justify-content,
-    class: has-content-justified,
     values: (
       start: flex-start,
       end: flex-end,
@@ -120,8 +174,8 @@ $utilities: (
     )
   ),
   "align-items": (
+    responsive: true,
     property: align-items,
-    class: has-items-aligned,
     values: (
       start: flex-start,
       end: flex-end,
@@ -133,31 +187,47 @@ $utilities: (
   // Text
   "color": (
     property: color,
-    class: has-text,
+    class: text,
     values: $colors
   ),
   "background-color": (
     property: background-color,
-    class: has-background,
+    class: bg,
     values: $colors
   ),
+  "line-height": (
+    property: line-height,
+    class: lh,
+    values: (
+      1: 1,
+      base: var(--line-height-base),
+      heading: var(--line-height-heading)
+    )
+  ),
   "font-size": (
-    responsive: true,
     property: font-size,
-    class: is-size,
+    class: text,
     values: (
       small: var(--text-small),
       6: var(--text-6),
-      3: var(--text-3),
       5: var(--text-5),
       4: var(--text-4),
+      3: var(--text-3),
       2: var(--text-2),
       1: var(--text-1),
     )
   ),
+  "font-family": (
+    property: font-family,
+    class: family,
+    values: (
+      base: var(--family-base),
+      heading: var(--family-heading),
+    )
+  ),
   "font-weight": (
     property: font-weight,
-    class: has-text-weight,
+    class: text,
     values: (
       light: 300,
       normal: 400,
@@ -170,19 +240,11 @@ $utilities: (
   "text-align": (
     responsive: true,
     property: text-align,
-    class: has-text,
+    class: text,
     values: (
       left: left,
       right: right,
       centered: center,
-    )
-  ),
-  "font-family": (
-    property: font-family,
-    class: is-family,
-    values: (
-      base: var(--family-base),
-      heading: var(--family-heading),
     )
   ),
 );

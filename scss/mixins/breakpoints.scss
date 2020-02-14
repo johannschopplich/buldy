@@ -1,21 +1,6 @@
 // Breakpoint viewport sizes and media queries.
 // The map defined in the `$grid-breakpoints` global variable is used as the `$breakpoints` argument by default.
 
-$grid-breakpoints: (
-  zero: 0,
-  mobile: 640px,
-  tablet: 768px,
-  desktop: 1024px,
-  widescreen: 1280px,
-) !default;
-
-$grid-containers: (
-  mobile: 640px,
-  tablet: 768px,
-  desktop: 1024px,
-  widescreen: 1280px,
-) !default;
-
 // Minimum breakpoint width. Null for the smallest (first) breakpoint.
 @function breakpoint-min($name, $breakpoints: $grid-breakpoints) {
   $min: map-get($breakpoints, $name);

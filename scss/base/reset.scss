@@ -27,12 +27,6 @@ dd {
   margin: 0;
 }
 
-// Use a more readable tab size.
-:root {
-	-moz-tab-size: 4;
-	tab-size: 4;
-}
-
 html {
   // Correct the line height.
   line-height: 1.15;
@@ -43,8 +37,6 @@ html {
 }
 
 body {
-  // Set core body defaults.
-  min-height: 100vh;
   // Improve consistency of default fonts.
   font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
 }

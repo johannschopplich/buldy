@@ -1,4 +1,8 @@
-.has-inline-icon {
+.hover\:underline:hover {
+  text-decoration: underline;
+}
+
+.inline-icon {
   display: inline-flex;
   align-items: center;
 
@@ -7,45 +11,45 @@
   }
 }
 
-.is-marginless {
+.marginless {
   margin: 0 !important;
 }
 
-.is-paddingless {
+.paddingless {
   padding: 0 !important;
 }
 
-.is-radiusless {
+.radiusless {
   border-radius: 0 !important;
 }
 
-.is-shadowless {
+.shadowless {
   box-shadow: none !important;
 }
 
-.is-unselectable {
+.unselectable {
   @extend %unselectable;
 }
 
-.is-contained {
+.contained {
   object-fit: contain !important;
 }
 
-.is-covered {
+.covered {
   object-fit: cover !important;
 }
 
-.is-rounded {
+.rounded {
   border-radius: var(--radius)
 }
 
-.is-full-bleed {
+.full-bleed {
   width: 100vw;
   margin-left: calc(50% - 50vw);
 }
 
 // A `full-bleed` helper variation, which doesn't need `calc()`.
-// .is-full-bleed {
+// .full-bleed {
 //   width: 100vw;
 //   position: relative;
 //   left: 50%;
@@ -55,15 +59,16 @@
 // }
 
 // Place all descendants in the center.
-// .is-both-centered {
+// .both-centered {
 //   display: grid;
 //   place-items: center;
 // }
 
 // A more resilient version for only one descendant
 // to place all descendants in the center.
-.is-both-centered {
+.center-content {
   display: flex;
+
   & > *:only-child {
     margin: auto;
   }
