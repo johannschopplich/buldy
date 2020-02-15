@@ -43,12 +43,12 @@
   border-radius: var(--radius)
 }
 
-.full-bleed {
+.spans-full-width {
   width: 100vw;
   margin-left: calc(50% - 50vw);
 }
 
-// A `full-bleed` helper variation, which doesn't need `calc()`.
+// A "full-bleed" helper variation, which doesn't need `calc()`.
 // .full-bleed {
 //   width: 100vw;
 //   position: relative;
@@ -59,14 +59,14 @@
 // }
 
 // Place all descendants in the center.
-// .both-centered {
+// .content-centered {
 //   display: grid;
 //   place-items: center;
 // }
 
 // A more resilient version for only one descendant
 // to place all descendants in the center.
-.center-content {
+.content-centered {
   display: flex;
 
   & > *:only-child {
