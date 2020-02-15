@@ -163,7 +163,6 @@ $utilities: (
   //   values: wrap nowrap
   // ),
   "justify-content": (
-    responsive: true,
     property: justify-content,
     values: (
       start: flex-start,
@@ -174,7 +173,6 @@ $utilities: (
     )
   ),
   "align-items": (
-    responsive: true,
     property: align-items,
     values: (
       start: flex-start,
@@ -219,7 +217,7 @@ $utilities: (
   ),
   "font-family": (
     property: font-family,
-    class: family,
+    class: text,
     values: (
       base: var(--family-base),
       heading: var(--family-heading),
