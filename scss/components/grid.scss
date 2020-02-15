@@ -1,105 +1,65 @@
-.column {
-  display: block;
-  flex-grow: 1;
-  flex-shrink: 1;
-  flex-basis: 0;
-  padding: var(--space-s);
+$grid-columns: 12 !default;
 
-  @each $breakpoint in map-keys($grid-breakpoints) {
-    @include media-breakpoint-above($breakpoint) {
-      $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+.grid {
+  display: grid;
+  gap: var(--grid-gap, 0px);
 
-      &.is-narrow#{$infix} {
-        flex: 0 0 auto;
-        width: auto;
-      }
+  &:not(.is-auto) {
+    --grid-columns: #{$grid-columns};
+    grid-template-columns: repeat(var(--grid-columns), 1fr);
 
-      &.is-full#{$infix} {
-        flex: none;
-        width: 100%;
-      }
-
-      @for $i from 1 through 12 {
-        &.is-#{$i}#{$infix} {
-          flex: none;
-          width: percentage($i / 12);
-        }
-      }
+    > * {
+      grid-column: span var(--span, #{$grid-columns}) / span var(--span, #{$grid-columns});
     }
   }
+
+  .is-auto {
+    &.is-equal,
+    &.is-xs,
+    &.is-s,
+    &.is-m,
+    &.is-l,
+    &.is-xl {
+      grid-template-columns: repeat(auto-fit, minmax(var(--col-min-width), 1fr));
+    }
+  }
+
+  &.has-gap-xs { --grid-gap: var(--space-xs); }
+  &.has-gap-s  { --grid-gap: var(--space-s); }
+  &.has-gap-m  { --grid-gap: var(--space-m); }
+  &.has-gap-l  { --grid-gap: var(--space-l); }
+  &.has-gap-xl { --grid-gap: var(--space-xl); }
 }
 
-.columns {
-  display: flex;
-  flex-wrap: wrap;
-  margin-top: calc(var(--space-s) * -1);
-  margin-right: calc(var(--space-s) * -1);
-  margin-left: calc(var(--space-s) * -1);
+//
+// Breakpoints
+//
 
-  &:not(:last-child) {
-    margin-bottom: calc(var(--component-spacer) - var(--space-s));
-  }
+@each $breakpoint in map-keys($grid-breakpoints) {
+  @include media-breakpoint-above($breakpoint) {
+    $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
 
-  &:last-child {
-    margin-bottom: calc(var(--space-s) * -1);
-  }
+    .grid {
+      .is-auto {
+        &.is-equal#{$infix} { --col-min-width: 0; }
+        &.is-xs#{$infix}    { --col-min-width: 8rem; }
+        &.is-s#{$infix}     { --col-min-width: 10rem; }
+        &.is-m#{$infix}     { --col-min-width: 15rem; }
+        &.is-l#{$infix}     { --col-min-width: 20rem; }
+        &.is-xl#{$infix}    { --col-min-width: 25rem; }
+      }
 
-  //
-  // Modifiers
-  //
+      @for $i from 1 through $grid-columns {
+        > .span-#{$i}#{$infix}         { --span: #{$i}; }
+        > .span-start-#{$i}#{$infix}   { grid-column-start: #{$i}; }
+        > .span-end-#{$i + 1}#{$infix} { grid-column-end: #{$i + 1}; }
+      }
 
-  &.is-gapless {
-    margin-top: 0;
-    margin-right: 0;
-    margin-left: 0;
+      > .span-start#{$infix}           { grid-column-start: 1; }
+      > .span-end#{$infix}             { grid-column-end: -1; }
 
-    > .column {
-      margin: 0;
-      padding: 0 !important;
-    }
-
-    &:not(:last-child) {
-      margin-bottom: var(--component-spacer);
-    }
-
-    &:last-child {
-      margin-bottom: 0;
+      > .span-start-auto#{$infix}      { grid-column-start: auto; }
+      > .span-end-auto#{$infix}        { grid-column-end: auto; }
     }
   }
-
-  &.is-wrappless {
-    flex-wrap: nowrap;
-  }
-
-  &.is-centered {
-    justify-content: center;
-  }
-
-  &.is-vcentered {
-    align-items: center;
-  }
-
-  //
-  // Gap sizes
-  //
-
-  &.has-gap-xs,
-  &.has-gap-s,
-  &.has-gap-m,
-  &.has-gap-l,
-  &.has-gap-xl {
-    margin-right: calc(-1 * var(--column-gap));
-    margin-left: calc(-1 * var(--column-gap));
-
-    > .column {
-      padding-right: var(--column-gap);
-      padding-left: var(--column-gap);
-    }
-  }
-
-  &.has-gap-xs { --column-gap: var(--space-xs); }
-  &.has-gap-s  { --column-gap: var(--space-s); }
-  &.has-gap-m  { --column-gap: var(--space-m); }
-  &.has-gap-l  { --column-gap: var(--space-l); }
-  &.has-gap-xl { --column-gap: var(--space-xl); }
 }

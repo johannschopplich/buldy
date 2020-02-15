@@ -5,9 +5,9 @@
 $raster-columns: 12 !default;
 
 $raster-breakpoints: (
-  s: 0,
-  m: 640px,
-  l: 1024px
+  xs: 0,
+  sm: 640px,
+  lg: 1024px
 ) !default;
 
 .raster {
@@ -29,17 +29,24 @@ $raster-breakpoints: (
       $infix: breakpoint-infix($breakpoint, $raster-breakpoints);
 
       @for $i from 1 through $raster-columns {
-        &[columns#{$infix}="#{$i}"] { --grid-tc: repeat(#{$i}, 1fr); }
+        &[columns#{$infix}="#{$i}"] {
+          --grid-tc: repeat(#{$i}, 1fr);
+        }
       }
 
       > .cell {
         // span=start...
         @for $i from 1 through $raster-columns {
-          &[span#{$infix}^="#{$i}"] { --grid-cs: #{$i}; }
+          &[span#{$infix}^="#{$i}"] {
+            --grid-cs: #{$i};
+          }
         }
 
         // span=...+width, span=...-end
-        &[span#{$infix}$="+1"], &[span="1"] { --grid-ce: 1; }
+        &[span#{$infix}$="+1"],
+        &[span="1"] {
+          --grid-ce: 1;
+        }
 
         @for $i from 1 through $raster-columns {
           $min: $i - 1;
@@ -50,7 +57,9 @@ $raster-breakpoints: (
           }
         }
 
-        &[span#{$infix}$="-#{$raster-columns}"] { --grid-ce: #{$raster-columns + 1}; }
+        &[span#{$infix}$="-#{$raster-columns}"] {
+          --grid-ce: #{$raster-columns + 1};
+        }
 
         // Connect vars
         &[span#{$infix}] {
