@@ -1,5 +1,5 @@
 //
-// SCSS variables
+// Global Sass variables
 //
 
 $grid-breakpoints: (
@@ -18,11 +18,10 @@ $container-sizes: (
 ) !default;
 
 //
-// Custom properties
+// Global custom properties
 //
 
-:root,
-[data-theme="default"] {
+:root {
   // Main colors
   --color-primary:           hsl(17, 41%, 68%);
   --color-primary-hover:     hsl(17, 41%, 64%);
@@ -53,13 +52,6 @@ $container-sizes: (
   --color-contrast-medium:   hsl(0, 0%, 48%);
   --color-contrast-high:     hsl(0, 0%, 20%);
   --color-contrast-higher:   hsl(0, 0%, 12%);
-
-  // Semantic color definitions
-  --color-background:        var(--color-white);
-  --color-text:              var(--color-contrast-higher);
-  --color-border:            var(--color-contrast-lower);
-  --color-link:              var(--color-primary);
-  --color-link-hover:        var(--color-text);
 
   // Typography system
   --family-base:             system-ui, -apple-system, "Segoe UI", Roboto, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
@@ -103,6 +95,34 @@ $container-sizes: (
   // Radius
   --radius:                  0.25em;
   --radius-rounded:          50rem;
+}
+
+
+//
+// Semantic color definitions
+// Default and light theme
+//
+
+:root,
+[data-theme="default"] {
+  --color-background:        var(--color-white);
+  --color-text:              var(--color-contrast-higher);
+  --color-border:            var(--color-contrast-lower);
+  --color-link:              var(--color-primary);
+  --color-link-hover:        var(--color-text);
+}
+
+[data-theme="light"] {
+  --color-background:        var(--color-black);
+  --color-text:              var(--color-white);
+  --color-border:            var(--color-contrast-high);
+  --color-link:              var(--color-primary);
+  --color-link-hover:        var(--color-text);
+}
+
+[data-theme] {
+  color:                     var(--color-text);
+  background-color:          var(--color-background);
 }
 
 //
