@@ -49,7 +49,6 @@ $raster-breakpoints: (
         }
 
         @for $i from 1 through $raster-columns {
-          $min: $i - 1;
           &[span#{$infix}$="+#{$i}"],
           &[span#{$infix}$="-#{$i - 1}"],
           &[span#{$infix}="#{$i}"] {
