@@ -199,10 +199,6 @@ $utilities: (
     responsive: true,
     property: text-align,
     class: text,
-    values: (
-      left: left,
-      right: right,
-      centered: center,
-    )
+    values: left right center
   ),
 );

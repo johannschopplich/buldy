@@ -2834,7 +2834,7 @@ pre code {
   text-align: right !important;
 }
 
-.text-centered {
+.text-center {
   text-align: center !important;
 }
 
@@ -2871,7 +2871,7 @@ pre code {
     text-align: right !important;
   }
 
-  .text-centered\@sm {
+  .text-center\@sm {
     text-align: center !important;
   }
 }
@@ -2908,7 +2908,7 @@ pre code {
     text-align: right !important;
   }
 
-  .text-centered\@md {
+  .text-center\@md {
     text-align: center !important;
   }
 }
@@ -2945,7 +2945,7 @@ pre code {
     text-align: right !important;
   }
 
-  .text-centered\@lg {
+  .text-center\@lg {
     text-align: center !important;
   }
 }
@@ -2982,7 +2982,7 @@ pre code {
     text-align: right !important;
   }
 
-  .text-centered\@xl {
+  .text-center\@xl {
     text-align: center !important;
   }
 }
