@@ -1,3 +1,5 @@
+@import "../mixins/all";
+
 //
 // Raster grid subsystem (rsms.me/raster)
 //
@@ -18,7 +20,7 @@ $raster-breakpoints: (
   grid-template-columns: var(--grid-tc);
 
   // Cell or column
-  > .cell {
+  > * {
     -webkit-appearance: none;
     appearance: none;
     display: block;
@@ -26,7 +28,7 @@ $raster-breakpoints: (
 
   @each $breakpoint in map-keys($raster-breakpoints) {
     @include media-breakpoint-above($breakpoint, $raster-breakpoints) {
-      $infix: breakpoint-infix($breakpoint, $raster-breakpoints);
+      $infix: if(breakpoint-min($breakpoint, $raster-breakpoints) == null, "", "-#{$breakpoint}");
 
       @for $i from 1 through $raster-columns {
         &[columns#{$infix}="#{$i}"] {
@@ -34,49 +36,49 @@ $raster-breakpoints: (
         }
       }
 
-      > .cell {
+      > {
         // span=start...
         @for $i from 1 through $raster-columns {
-          &[span#{$infix}^="#{$i}"] {
+          [span#{$infix}^="#{$i}"] {
             --grid-cs: #{$i};
           }
         }
 
         // span=...+width, span=...-end
-        &[span#{$infix}$="+1"],
-        &[span="1"] {
+        [span#{$infix}$="+1"],
+        [span="1"] {
           --grid-ce: 1;
         }
 
         @for $i from 1 through $raster-columns {
-          &[span#{$infix}$="+#{$i}"],
-          &[span#{$infix}$="-#{$i - 1}"],
-          &[span#{$infix}="#{$i}"] {
+          [span#{$infix}$="+#{$i}"],
+          [span#{$infix}$="-#{$i - 1}"],
+          [span#{$infix}="#{$i}"] {
             --grid-ce: #{$i};
           }
         }
 
-        &[span#{$infix}$="-#{$raster-columns}"] {
+        [span#{$infix}$="-#{$raster-columns}"] {
           --grid-ce: #{$raster-columns + 1};
         }
 
         // Connect vars
-        &[span#{$infix}] {
+        [span#{$infix}] {
           grid-column-end: span var(--grid-ce);
         }
 
-        &[span#{$infix}*="+"],
-        &[span#{$infix}*="-"],
-        &[span#{$infix}*=".."] {
+        [span#{$infix}*="+"],
+        [span#{$infix}*="-"],
+        [span#{$infix}*=".."] {
           grid-column-start: var(--grid-cs);
         }
 
-        &[span#{$infix}*="-"],
-        &[span#{$infix}*=".."] {
+        [span#{$infix}*="-"],
+        [span#{$infix}*=".."] {
           grid-column-end: var(--grid-ce);
         }
 
-        &[span#{$infix}="row"] {
+        [span#{$infix}="row"] {
           grid-column: 1 / -1;
         }
       }
@@ -85,15 +87,15 @@ $raster-breakpoints: (
 
   &.is-debug {
     > * {
-      --color: rgba(248, 110, 91, 0.3);
+      --color: hsla(7, 92%, 66%, 0.3);
       background-image: linear-gradient(to bottom, var(--color) 0%, var(--color) 100%);
     }
 
-    > :nth-child(6n+2) { --color: rgba(103, 126, 208, 0.3); }
-    > :nth-child(6n+3) { --color: rgba(224, 174, 72, 0.3); }
-    > :nth-child(6n+4) { --color: rgba(77, 214, 115, 0.3); }
-    > :nth-child(6n+5) { --color: rgba(217, 103, 219, 0.3); }
-    > :nth-child(6n+6) { --color: rgba(94, 204, 211, 0.3); }
-    > :nth-child(6n+7) { --color: rgba(248, 110, 91, 0.3); }
+    > :nth-child(6n+2) { --color: hsla(227, 53%, 61%, 0.3); }
+    > :nth-child(6n+3) { --color: hsla(40, 71%, 58%, 0.3); }
+    > :nth-child(6n+4) { --color: hsla(137, 63%, 57%, 0.3); }
+    > :nth-child(6n+5) { --color: hsla(299, 62%, 63%, 0.3); }
+    > :nth-child(6n+6) { --color: hsla(184, 57%, 60%, 0.3); }
+    > :nth-child(6n+7) { --color: hsla(7, 92%, 66%, 0.3); }
   }
 }
