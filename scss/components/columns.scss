@@ -22,29 +22,29 @@ $columns: 12 !default;
   // Columns
   //
 
-  > * {
+  > .column {
     display: block;
     flex: 1 1 0;
-  }
 
-  @each $breakpoint in map-keys($grid-breakpoints) {
-    @include media-breakpoint-above($breakpoint) {
-      $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+    @each $breakpoint in map-keys($grid-breakpoints) {
+      @include media-breakpoint-above($breakpoint) {
+        $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
 
-      > .span-narrow#{$infix} {
-        flex: 0 0 auto;
-        width: auto;
-      }
+        &.is-narrow#{$infix} {
+          flex: 0 0 auto;
+          width: auto;
+        }
 
-      > .span-full#{$infix} {
-        flex: none;
-        width: 100%;
-      }
-
-      @for $i from 1 through $columns {
-        > .span-#{$i}#{$infix} {
+        &.is-full#{$infix} {
           flex: none;
-          width: percentage($i / 12);
+          width: 100%;
+        }
+
+        @for $i from 1 through $columns {
+          &.is-#{$i}#{$infix} {
+            flex: none;
+            width: percentage($i / 12);
+          }
         }
       }
     }

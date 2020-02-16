@@ -1080,294 +1080,294 @@ pre code {
 .columns.is-vcentered {
   align-items: center;
 }
-.columns > * {
+.columns > .column {
   display: block;
   flex: 1 1 0;
 }
-.columns > .span-narrow {
+.columns > .column.is-narrow {
   flex: 0 0 auto;
   width: auto;
 }
-.columns > .span-full {
+.columns > .column.is-full {
   flex: none;
   width: 100%;
 }
-.columns > .span-1 {
+.columns > .column.is-1 {
   flex: none;
   width: 8.3333333333%;
 }
-.columns > .span-2 {
+.columns > .column.is-2 {
   flex: none;
   width: 16.6666666667%;
 }
-.columns > .span-3 {
+.columns > .column.is-3 {
   flex: none;
   width: 25%;
 }
-.columns > .span-4 {
+.columns > .column.is-4 {
   flex: none;
   width: 33.3333333333%;
 }
-.columns > .span-5 {
+.columns > .column.is-5 {
   flex: none;
   width: 41.6666666667%;
 }
-.columns > .span-6 {
+.columns > .column.is-6 {
   flex: none;
   width: 50%;
 }
-.columns > .span-7 {
+.columns > .column.is-7 {
   flex: none;
   width: 58.3333333333%;
 }
-.columns > .span-8 {
+.columns > .column.is-8 {
   flex: none;
   width: 66.6666666667%;
 }
-.columns > .span-9 {
+.columns > .column.is-9 {
   flex: none;
   width: 75%;
 }
-.columns > .span-10 {
+.columns > .column.is-10 {
   flex: none;
   width: 83.3333333333%;
 }
-.columns > .span-11 {
+.columns > .column.is-11 {
   flex: none;
   width: 91.6666666667%;
 }
-.columns > .span-12 {
+.columns > .column.is-12 {
   flex: none;
   width: 100%;
 }
 @media (min-width: 640px) {
-  .columns > .span-narrow\@sm {
+  .columns > .column.is-narrow\@sm {
     flex: 0 0 auto;
     width: auto;
   }
-  .columns > .span-full\@sm {
+  .columns > .column.is-full\@sm {
     flex: none;
     width: 100%;
   }
-  .columns > .span-1\@sm {
+  .columns > .column.is-1\@sm {
     flex: none;
     width: 8.3333333333%;
   }
-  .columns > .span-2\@sm {
+  .columns > .column.is-2\@sm {
     flex: none;
     width: 16.6666666667%;
   }
-  .columns > .span-3\@sm {
+  .columns > .column.is-3\@sm {
     flex: none;
     width: 25%;
   }
-  .columns > .span-4\@sm {
+  .columns > .column.is-4\@sm {
     flex: none;
     width: 33.3333333333%;
   }
-  .columns > .span-5\@sm {
+  .columns > .column.is-5\@sm {
     flex: none;
     width: 41.6666666667%;
   }
-  .columns > .span-6\@sm {
+  .columns > .column.is-6\@sm {
     flex: none;
     width: 50%;
   }
-  .columns > .span-7\@sm {
+  .columns > .column.is-7\@sm {
     flex: none;
     width: 58.3333333333%;
   }
-  .columns > .span-8\@sm {
+  .columns > .column.is-8\@sm {
     flex: none;
     width: 66.6666666667%;
   }
-  .columns > .span-9\@sm {
+  .columns > .column.is-9\@sm {
     flex: none;
     width: 75%;
   }
-  .columns > .span-10\@sm {
+  .columns > .column.is-10\@sm {
     flex: none;
     width: 83.3333333333%;
   }
-  .columns > .span-11\@sm {
+  .columns > .column.is-11\@sm {
     flex: none;
     width: 91.6666666667%;
   }
-  .columns > .span-12\@sm {
+  .columns > .column.is-12\@sm {
     flex: none;
     width: 100%;
   }
 }
 @media (min-width: 768px) {
-  .columns > .span-narrow\@md {
+  .columns > .column.is-narrow\@md {
     flex: 0 0 auto;
     width: auto;
   }
-  .columns > .span-full\@md {
+  .columns > .column.is-full\@md {
     flex: none;
     width: 100%;
   }
-  .columns > .span-1\@md {
+  .columns > .column.is-1\@md {
     flex: none;
     width: 8.3333333333%;
   }
-  .columns > .span-2\@md {
+  .columns > .column.is-2\@md {
     flex: none;
     width: 16.6666666667%;
   }
-  .columns > .span-3\@md {
+  .columns > .column.is-3\@md {
     flex: none;
     width: 25%;
   }
-  .columns > .span-4\@md {
+  .columns > .column.is-4\@md {
     flex: none;
     width: 33.3333333333%;
   }
-  .columns > .span-5\@md {
+  .columns > .column.is-5\@md {
     flex: none;
     width: 41.6666666667%;
   }
-  .columns > .span-6\@md {
+  .columns > .column.is-6\@md {
     flex: none;
     width: 50%;
   }
-  .columns > .span-7\@md {
+  .columns > .column.is-7\@md {
     flex: none;
     width: 58.3333333333%;
   }
-  .columns > .span-8\@md {
+  .columns > .column.is-8\@md {
     flex: none;
     width: 66.6666666667%;
   }
-  .columns > .span-9\@md {
+  .columns > .column.is-9\@md {
     flex: none;
     width: 75%;
   }
-  .columns > .span-10\@md {
+  .columns > .column.is-10\@md {
     flex: none;
     width: 83.3333333333%;
   }
-  .columns > .span-11\@md {
+  .columns > .column.is-11\@md {
     flex: none;
     width: 91.6666666667%;
   }
-  .columns > .span-12\@md {
+  .columns > .column.is-12\@md {
     flex: none;
     width: 100%;
   }
 }
 @media (min-width: 1024px) {
-  .columns > .span-narrow\@lg {
+  .columns > .column.is-narrow\@lg {
     flex: 0 0 auto;
     width: auto;
   }
-  .columns > .span-full\@lg {
+  .columns > .column.is-full\@lg {
     flex: none;
     width: 100%;
   }
-  .columns > .span-1\@lg {
+  .columns > .column.is-1\@lg {
     flex: none;
     width: 8.3333333333%;
   }
-  .columns > .span-2\@lg {
+  .columns > .column.is-2\@lg {
     flex: none;
     width: 16.6666666667%;
   }
-  .columns > .span-3\@lg {
+  .columns > .column.is-3\@lg {
     flex: none;
     width: 25%;
   }
-  .columns > .span-4\@lg {
+  .columns > .column.is-4\@lg {
     flex: none;
     width: 33.3333333333%;
   }
-  .columns > .span-5\@lg {
+  .columns > .column.is-5\@lg {
     flex: none;
     width: 41.6666666667%;
   }
-  .columns > .span-6\@lg {
+  .columns > .column.is-6\@lg {
     flex: none;
     width: 50%;
   }
-  .columns > .span-7\@lg {
+  .columns > .column.is-7\@lg {
     flex: none;
     width: 58.3333333333%;
   }
-  .columns > .span-8\@lg {
+  .columns > .column.is-8\@lg {
     flex: none;
     width: 66.6666666667%;
   }
-  .columns > .span-9\@lg {
+  .columns > .column.is-9\@lg {
     flex: none;
     width: 75%;
   }
-  .columns > .span-10\@lg {
+  .columns > .column.is-10\@lg {
     flex: none;
     width: 83.3333333333%;
   }
-  .columns > .span-11\@lg {
+  .columns > .column.is-11\@lg {
     flex: none;
     width: 91.6666666667%;
   }
-  .columns > .span-12\@lg {
+  .columns > .column.is-12\@lg {
     flex: none;
     width: 100%;
   }
 }
 @media (min-width: 1280px) {
-  .columns > .span-narrow\@xl {
+  .columns > .column.is-narrow\@xl {
     flex: 0 0 auto;
     width: auto;
   }
-  .columns > .span-full\@xl {
+  .columns > .column.is-full\@xl {
     flex: none;
     width: 100%;
   }
-  .columns > .span-1\@xl {
+  .columns > .column.is-1\@xl {
     flex: none;
     width: 8.3333333333%;
   }
-  .columns > .span-2\@xl {
+  .columns > .column.is-2\@xl {
     flex: none;
     width: 16.6666666667%;
   }
-  .columns > .span-3\@xl {
+  .columns > .column.is-3\@xl {
     flex: none;
     width: 25%;
   }
-  .columns > .span-4\@xl {
+  .columns > .column.is-4\@xl {
     flex: none;
     width: 33.3333333333%;
   }
-  .columns > .span-5\@xl {
+  .columns > .column.is-5\@xl {
     flex: none;
     width: 41.6666666667%;
   }
-  .columns > .span-6\@xl {
+  .columns > .column.is-6\@xl {
     flex: none;
     width: 50%;
   }
-  .columns > .span-7\@xl {
+  .columns > .column.is-7\@xl {
     flex: none;
     width: 58.3333333333%;
   }
-  .columns > .span-8\@xl {
+  .columns > .column.is-8\@xl {
     flex: none;
     width: 66.6666666667%;
   }
-  .columns > .span-9\@xl {
+  .columns > .column.is-9\@xl {
     flex: none;
     width: 75%;
   }
-  .columns > .span-10\@xl {
+  .columns > .column.is-10\@xl {
     flex: none;
     width: 83.3333333333%;
   }
-  .columns > .span-11\@xl {
+  .columns > .column.is-11\@xl {
     flex: none;
     width: 91.6666666667%;
   }
-  .columns > .span-12\@xl {
+  .columns > .column.is-12\@xl {
     flex: none;
     width: 100%;
   }
@@ -2058,10 +2058,6 @@ pre code {
 
 .d-inline-flex {
   display: inline-flex !important;
-}
-
-.vw-100 {
-  width: 100vw !important;
 }
 
 .vh-100 {
@@ -2990,5 +2986,3 @@ pre code {
     text-align: center !important;
   }
 }
-
-/*# sourceMappingURL=buldy.css.map */

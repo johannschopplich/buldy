@@ -36,11 +36,6 @@ $utilities: (
   ),
 
   // Sizing
-  "viewport-width": (
-    property: width,
-    class: vw,
-    values: (100: 100vw)
-  ),
   "viewport-height": (
     property: height,
     class: vh,
@@ -127,41 +122,6 @@ $utilities: (
   ),
 
   // Flex
-  // "flex": (
-  //   responsive: true,
-  //   property: flex,
-  //   values: (fill: 1 1 auto)
-  // ),
-  // "flex-direction": (
-  //   responsive: true,
-  //   property: flex-direction,
-  //   class: flex,
-  //   values: row column
-  // ),
-  // "flex-grow": (
-  //   responsive: true,
-  //   property: flex-grow,
-  //   class: flex,
-  //   values: (
-  //     grow-0: 0,
-  //     grow-1: 1,
-  //   )
-  // ),
-  // "flex-shrink": (
-  //   responsive: true,
-  //   property: flex-shrink,
-  //   class: flex,
-  //   values: (
-  //     shrink-0: 0,
-  //     shrink-1: 1,
-  //   )
-  // ),
-  // "flex-wrap": (
-  //   responsive: true,
-  //   property: flex-wrap,
-  //   class: flex,
-  //   values: wrap nowrap
-  // ),
   "justify-content": (
     property: justify-content,
     values: (
