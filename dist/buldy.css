@@ -1703,33 +1703,6 @@ pre code {
   color: var(--color-contrast-medium);
   margin-top: calc(var(--space-xs) * var(--text-vspace-multiplier, 1));
 }
-@media (min-width: 640px) {
-  .content figure.is-pulled-left, .content figure.is-pulled-right {
-    width: 45%;
-  }
-  .content figure.is-pulled-left {
-    float: left;
-    margin-right: calc(var(--space-m) * var(--text-vspace-multiplier, 1));
-  }
-  .content figure.is-pulled-right {
-    float: right;
-    margin-left: calc(var(--space-m) * var(--text-vspace-multiplier, 1));
-  }
-}
-@media (min-width: 1280px) {
-  .content figure.is-pulled-left, .content figure.is-pulled-right {
-    width: 50%;
-  }
-  .content figure.is-outset {
-    width: calc(100% + 2 * var(--space-xxl));
-  }
-  .content figure.is-outset:not(.is-pulled-right) {
-    margin-left: calc(-1 * var(--space-xxl));
-  }
-  .content figure.is-outset.is-pulled-right {
-    margin-right: calc(-1 * var(--space-xxl));
-  }
-}
 
 .title {
   color: var(--color-contrast-higher);

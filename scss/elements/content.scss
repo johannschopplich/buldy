@@ -145,41 +145,5 @@
       color: var(--color-contrast-medium);
       margin-top: calc(var(--space-xs) * var(--text-vspace-multiplier, 1));
     }
-
-    @include media-breakpoint-above(sm) {
-      &.is-pulled-left,
-      &.is-pulled-right {
-        width: 45%;
-      }
-
-      &.is-pulled-left {
-        float: left;
-        margin-right: calc(var(--space-m) * var(--text-vspace-multiplier, 1));
-      }
-
-      &.is-pulled-right {
-        float: right;
-        margin-left: calc(var(--space-m) * var(--text-vspace-multiplier, 1));
-      }
-    }
-
-    @include media-breakpoint-above(xl) {
-      &.is-pulled-left,
-      &.is-pulled-right {
-        width: 50%;
-      }
-
-      &.is-outset {
-        width: calc(100% + 2 * var(--space-xxl));
-
-        &:not(.is-pulled-right) {
-          margin-left: calc(-1 * var(--space-xxl));
-        }
-
-        &.is-pulled-right {
-          margin-right: calc(-1 * var(--space-xxl));
-        }
-      }
-    }
   }
 }
