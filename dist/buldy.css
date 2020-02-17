@@ -35,13 +35,7 @@
   --color-red: hsl(348, 100%, 61%);
   --color-red-a50: hsla(348, 100%, 61%, 0.5);
   --color-white: hsl(0, 0%, 100%);
-  --color-black: hsl(0, 0%, 4%);
-  --color-contrast-lowest: hsl(0, 0%, 95%);
-  --color-contrast-lower: hsl(0, 0%, 82%);
-  --color-contrast-low: hsl(0, 0%, 70%);
-  --color-contrast-medium: hsl(0, 0%, 48%);
-  --color-contrast-high: hsl(0, 0%, 20%);
-  --color-contrast-higher: hsl(0, 0%, 12%);
+  --color-black: hsl(0, 0%, 0%);
   --family-base: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
   --family-heading: var(--family-base);
   --line-height-base: 1.4;
@@ -73,6 +67,12 @@
 
 :root,
 [data-theme=default] {
+  --color-contrast-lowest: hsl(0, 0%, 95%);
+  --color-contrast-lower: hsl(0, 0%, 82%);
+  --color-contrast-low: hsl(0, 0%, 70%);
+  --color-contrast-medium: hsl(0, 0%, 48%);
+  --color-contrast-high: hsl(0, 0%, 20%);
+  --color-contrast-higher: hsl(0, 0%, 12%);
   --color-background: var(--color-white);
   --color-text: var(--color-contrast-higher);
   --color-border: var(--color-contrast-lower);
@@ -80,7 +80,13 @@
   --color-link-hover: var(--color-text);
 }
 
-[data-theme=light] {
+[data-theme=dark] {
+  --color-contrast-lowest: hsl(0, 0%, 4%);
+  --color-contrast-lower: hsl(0, 0%, 20%);
+  --color-contrast-low: hsl(0, 0%, 48%);
+  --color-contrast-medium: hsl(0, 0%, 70%);
+  --color-contrast-high: hsl(0, 0%, 82%);
+  --color-contrast-higher: hsl(0, 0%, 95%);
   --color-background: var(--color-black);
   --color-text: var(--color-white);
   --color-border: var(--color-contrast-high);

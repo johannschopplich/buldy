@@ -24,15 +24,7 @@
 
   // Shades
   --color-white:             hsl(0, 0%, 100%);
-  --color-black:             hsl(0, 0%, 4%);
-
-  // Color contrast
-  --color-contrast-lowest:   hsl(0, 0%, 95%);
-  --color-contrast-lower:    hsl(0, 0%, 82%);
-  --color-contrast-low:      hsl(0, 0%, 70%);
-  --color-contrast-medium:   hsl(0, 0%, 48%);
-  --color-contrast-high:     hsl(0, 0%, 20%);
-  --color-contrast-higher:   hsl(0, 0%, 12%);
+  --color-black:             hsl(0, 0%, 0%);
 
   // Typography system
   --family-base:             system-ui, -apple-system, "Segoe UI", Roboto, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
@@ -85,6 +77,15 @@
 
 :root,
 [data-theme="default"] {
+  // Color contrast
+  --color-contrast-lowest:   hsl(0, 0%, 95%);
+  --color-contrast-lower:    hsl(0, 0%, 82%);
+  --color-contrast-low:      hsl(0, 0%, 70%);
+  --color-contrast-medium:   hsl(0, 0%, 48%);
+  --color-contrast-high:     hsl(0, 0%, 20%);
+  --color-contrast-higher:   hsl(0, 0%, 12%);
+
+  // Semantic color definitions
   --color-background:        var(--color-white);
   --color-text:              var(--color-contrast-higher);
   --color-border:            var(--color-contrast-lower);
@@ -92,7 +93,16 @@
   --color-link-hover:        var(--color-text);
 }
 
-[data-theme="light"] {
+[data-theme="dark"] {
+  // Color contrast
+  --color-contrast-lowest:   hsl(0, 0%, 4%);
+  --color-contrast-lower:    hsl(0, 0%, 20%);
+  --color-contrast-low:      hsl(0, 0%, 48%);
+  --color-contrast-medium:   hsl(0, 0%, 70%);
+  --color-contrast-high:     hsl(0, 0%, 82%);
+  --color-contrast-higher:   hsl(0, 0%, 95%);
+
+  // Semantic color definitions
   --color-background:        var(--color-black);
   --color-text:              var(--color-white);
   --color-border:            var(--color-contrast-high);
