@@ -1,11 +1,20 @@
 .content {
-  --line-height-multiplier: 1;
   --text-vspace-multiplier: 1;
 
   &:not(:last-child) {
     margin-bottom: var(--component-spacer);
   }
 
+  //
+  // Vertical spacing and line height
+  //
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
   p,
   pre,
   ul,
@@ -14,7 +23,7 @@
   table,
   dl {
     &:not(:last-child) {
-      margin-bottom: calc(var(--space-s) * var(--text-vspace-multiplier, 1));
+      margin-bottom: calc(var(--component-spacer) * var(--text-vspace-multiplier, 1));
     }
   }
 
@@ -22,7 +31,7 @@
   ul li,
   ol li,
   blockquote {
-    line-height: calc(var(--line-height-base) * var(--line-height-multiplier, 1));
+    line-height: var(--line-height-base);
   }
 
   hr {
@@ -33,11 +42,22 @@
   // Headings
   //
 
-  h1 { font-size: var(--text-1); }
-  h2 { font-size: var(--text-2); }
-  h3 { font-size: var(--text-3); }
-  h4 { font-size: var(--text-4); }
-  h5 { font-size: var(--text-5); }
+  h1,
+  h2,
+  h3,
+  h4 {
+    line-height: var(--line-height-heading);
+
+    &:not(:first-child) {
+      margin-top: calc(var(--space-xl) * var(--text-vspace-multiplier, 1));
+    }
+  }
+
+  h1 { font-size: var(--text-2); }
+  h2 { font-size: var(--text-3); }
+  h3 { font-size: var(--text-4); }
+  h4 { font-size: var(--text-5); }
+  h5 { font-size: var(--text-6); }
   h6 { font-size: var(--text-6); }
 
   h1,
@@ -47,21 +67,6 @@
   h5,
   h6 {
     font-weight: 600;
-  }
-
-  h1,
-  h2,
-  h3,
-  h4 {
-    line-height: var(--line-height-heading);
-
-    &:not(:first-child) {
-      margin-top: calc(var(--space-l) * var(--text-vspace-multiplier, 1));
-    }
-
-    &:not(:last-child) {
-      margin-bottom: calc(var(--space-m) * var(--text-vspace-multiplier, 1));
-    }
   }
 
   //
@@ -128,13 +133,5 @@
     figcaption {
       margin-top: calc(var(--space-xs) * var(--text-vspace-multiplier, 1));
     }
-  }
-
-  //
-  // Modifiers
-  //
-
-  &.is-article {
-    --line-height-multiplier: 1.25;
   }
 }

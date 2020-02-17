@@ -69,7 +69,6 @@
   --radius-rounded:          50rem;
 }
 
-
 //
 // Semantic color definitions
 // Default and light theme
@@ -95,7 +94,7 @@
 
 [data-theme="dark"] {
   // Color contrast
-  --color-contrast-lowest:   hsl(0, 0%, 4%);
+  --color-contrast-lowest:   hsl(0, 0%, 6%);
   --color-contrast-lower:    hsl(0, 0%, 20%);
   --color-contrast-low:      hsl(0, 0%, 48%);
   --color-contrast-medium:   hsl(0, 0%, 70%);
@@ -122,7 +121,6 @@
 @include media-breakpoint-above(md) {
   :root {
     --text-size-base:        1.15em;
-    --text-scale-ratio:      1.25;
     --space-unit:            1.15rem;
   }
 }
