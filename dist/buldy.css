@@ -1589,26 +1589,6 @@ pre code {
 .content:not(:last-child) {
   margin-bottom: var(--component-spacer);
 }
-.content.is-article {
-  --line-height-multiplier: 1.25;
-}
-.content p,
-.content ul li,
-.content ol li,
-.content blockquote {
-  line-height: calc(var(--line-height-base) * var(--line-height-multiplier, 1));
-}
-.content ul,
-.content ol {
-  padding: 0;
-  margin: 0;
-}
-.content h1:not(:last-child),
-.content h2:not(:last-child),
-.content h3:not(:last-child),
-.content h4:not(:last-child),
-.content h5:not(:last-child),
-.content h6:not(:last-child),
 .content p:not(:last-child),
 .content pre:not(:last-child),
 .content ul:not(:last-child),
@@ -1617,6 +1597,12 @@ pre code {
 .content table:not(:last-child),
 .content dl:not(:last-child) {
   margin-bottom: calc(var(--space-s) * var(--text-vspace-multiplier, 1));
+}
+.content p,
+.content ul li,
+.content ol li,
+.content blockquote {
+  line-height: calc(var(--line-height-base) * var(--line-height-multiplier, 1));
 }
 .content hr {
   margin: calc(var(--component-spacer) * var(--text-vspace-multiplier, 1)) auto;
@@ -1651,7 +1637,7 @@ pre code {
 .content h2,
 .content h3,
 .content h4 {
-  line-height: calc(var(--line-height-heading) * var(--line-height-multiplier, 1));
+  line-height: var(--line-height-heading);
 }
 .content h1:not(:first-child),
 .content h2:not(:first-child),
@@ -1659,12 +1645,20 @@ pre code {
 .content h4:not(:first-child) {
   margin-top: calc(var(--space-l) * var(--text-vspace-multiplier, 1));
 }
+.content h1:not(:last-child),
+.content h2:not(:last-child),
+.content h3:not(:last-child),
+.content h4:not(:last-child) {
+  margin-bottom: calc(var(--space-m) * var(--text-vspace-multiplier, 1));
+}
 .content li + li {
   margin-top: calc(var(--space-xxxs) * var(--text-vspace-multiplier, 1));
 }
 .content ul,
 .content ol,
 .content dd {
+  padding: 0;
+  margin-top: 0;
   margin-left: 2em;
 }
 .content ul {
@@ -1700,6 +1694,9 @@ pre code {
 }
 .content figure figcaption {
   margin-top: calc(var(--space-xs) * var(--text-vspace-multiplier, 1));
+}
+.content.is-article {
+  --line-height-multiplier: 1.25;
 }
 
 .title {

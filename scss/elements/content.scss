@@ -6,38 +6,6 @@
     margin-bottom: var(--component-spacer);
   }
 
-  //
-  // Modifiers (e.g. for articles)
-  //
-
-  &.is-article {
-    --line-height-multiplier: 1.25;
-  }
-
-  //
-  // Vertical spacing
-  //
-
-  p,
-  ul li,
-  ol li,
-  blockquote {
-    // color: var(--color-text);
-    line-height: calc(var(--line-height-base) * var(--line-height-multiplier, 1));
-  }
-
-  ul,
-  ol {
-    padding: 0;
-    margin: 0;
-  }
-
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6,
   p,
   pre,
   ul,
@@ -48,6 +16,13 @@
     &:not(:last-child) {
       margin-bottom: calc(var(--space-s) * var(--text-vspace-multiplier, 1));
     }
+  }
+
+  p,
+  ul li,
+  ol li,
+  blockquote {
+    line-height: calc(var(--line-height-base) * var(--line-height-multiplier, 1));
   }
 
   hr {
@@ -78,9 +53,14 @@
   h2,
   h3,
   h4 {
-    line-height: calc(var(--line-height-heading) * var(--line-height-multiplier, 1));
+    line-height: var(--line-height-heading);
+
     &:not(:first-child) {
       margin-top: calc(var(--space-l) * var(--text-vspace-multiplier, 1));
+    }
+
+    &:not(:last-child) {
+      margin-bottom: calc(var(--space-m) * var(--text-vspace-multiplier, 1));
     }
   }
 
@@ -99,6 +79,8 @@
   ul,
   ol,
   dd {
+    padding: 0;
+    margin-top: 0;
     margin-left: 2em;
   }
 
@@ -146,5 +128,13 @@
     figcaption {
       margin-top: calc(var(--space-xs) * var(--text-vspace-multiplier, 1));
     }
+  }
+
+  //
+  // Modifiers
+  //
+
+  &.is-article {
+    --line-height-multiplier: 1.25;
   }
 }
