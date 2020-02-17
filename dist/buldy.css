@@ -367,24 +367,6 @@ pre code {
   --grid-gap: var(--space-xl);
 }
 
-.grid.is-auto.is-equal {
-  --col-min-width: 0;
-}
-.grid.is-auto.is-xs {
-  --col-min-width: 8rem;
-}
-.grid.is-auto.is-s {
-  --col-min-width: 10rem;
-}
-.grid.is-auto.is-m {
-  --col-min-width: 15rem;
-}
-.grid.is-auto.is-l {
-  --col-min-width: 20rem;
-}
-.grid.is-auto.is-xl {
-  --col-min-width: 25rem;
-}
 .grid > .span-1 {
   --span: 1;
 }
@@ -505,26 +487,26 @@ pre code {
 .grid > .span-end-auto {
   grid-column-end: auto;
 }
+.grid.is-auto.is-equal {
+  --col-min-width: 0;
+}
+.grid.is-auto.is-xs {
+  --col-min-width: 8rem;
+}
+.grid.is-auto.is-s {
+  --col-min-width: 10rem;
+}
+.grid.is-auto.is-m {
+  --col-min-width: 15rem;
+}
+.grid.is-auto.is-l {
+  --col-min-width: 20rem;
+}
+.grid.is-auto.is-xl {
+  --col-min-width: 25rem;
+}
 
 @media (min-width: 640px) {
-  .grid.is-auto.is-equal\@sm {
-    --col-min-width: 0;
-  }
-  .grid.is-auto.is-xs\@sm {
-    --col-min-width: 8rem;
-  }
-  .grid.is-auto.is-s\@sm {
-    --col-min-width: 10rem;
-  }
-  .grid.is-auto.is-m\@sm {
-    --col-min-width: 15rem;
-  }
-  .grid.is-auto.is-l\@sm {
-    --col-min-width: 20rem;
-  }
-  .grid.is-auto.is-xl\@sm {
-    --col-min-width: 25rem;
-  }
   .grid > .span-1\@sm {
     --span: 1;
   }
@@ -645,26 +627,26 @@ pre code {
   .grid > .span-end-auto\@sm {
     grid-column-end: auto;
   }
-}
-@media (min-width: 768px) {
-  .grid.is-auto.is-equal\@md {
+  .grid.is-auto.is-equal\@sm {
     --col-min-width: 0;
   }
-  .grid.is-auto.is-xs\@md {
+  .grid.is-auto.is-xs\@sm {
     --col-min-width: 8rem;
   }
-  .grid.is-auto.is-s\@md {
+  .grid.is-auto.is-s\@sm {
     --col-min-width: 10rem;
   }
-  .grid.is-auto.is-m\@md {
+  .grid.is-auto.is-m\@sm {
     --col-min-width: 15rem;
   }
-  .grid.is-auto.is-l\@md {
+  .grid.is-auto.is-l\@sm {
     --col-min-width: 20rem;
   }
-  .grid.is-auto.is-xl\@md {
+  .grid.is-auto.is-xl\@sm {
     --col-min-width: 25rem;
   }
+}
+@media (min-width: 768px) {
   .grid > .span-1\@md {
     --span: 1;
   }
@@ -785,26 +767,26 @@ pre code {
   .grid > .span-end-auto\@md {
     grid-column-end: auto;
   }
-}
-@media (min-width: 1024px) {
-  .grid.is-auto.is-equal\@lg {
+  .grid.is-auto.is-equal\@md {
     --col-min-width: 0;
   }
-  .grid.is-auto.is-xs\@lg {
+  .grid.is-auto.is-xs\@md {
     --col-min-width: 8rem;
   }
-  .grid.is-auto.is-s\@lg {
+  .grid.is-auto.is-s\@md {
     --col-min-width: 10rem;
   }
-  .grid.is-auto.is-m\@lg {
+  .grid.is-auto.is-m\@md {
     --col-min-width: 15rem;
   }
-  .grid.is-auto.is-l\@lg {
+  .grid.is-auto.is-l\@md {
     --col-min-width: 20rem;
   }
-  .grid.is-auto.is-xl\@lg {
+  .grid.is-auto.is-xl\@md {
     --col-min-width: 25rem;
   }
+}
+@media (min-width: 1024px) {
   .grid > .span-1\@lg {
     --span: 1;
   }
@@ -925,26 +907,26 @@ pre code {
   .grid > .span-end-auto\@lg {
     grid-column-end: auto;
   }
-}
-@media (min-width: 1280px) {
-  .grid.is-auto.is-equal\@xl {
+  .grid.is-auto.is-equal\@lg {
     --col-min-width: 0;
   }
-  .grid.is-auto.is-xs\@xl {
+  .grid.is-auto.is-xs\@lg {
     --col-min-width: 8rem;
   }
-  .grid.is-auto.is-s\@xl {
+  .grid.is-auto.is-s\@lg {
     --col-min-width: 10rem;
   }
-  .grid.is-auto.is-m\@xl {
+  .grid.is-auto.is-m\@lg {
     --col-min-width: 15rem;
   }
-  .grid.is-auto.is-l\@xl {
+  .grid.is-auto.is-l\@lg {
     --col-min-width: 20rem;
   }
-  .grid.is-auto.is-xl\@xl {
+  .grid.is-auto.is-xl\@lg {
     --col-min-width: 25rem;
   }
+}
+@media (min-width: 1280px) {
   .grid > .span-1\@xl {
     --span: 1;
   }
@@ -1064,6 +1046,24 @@ pre code {
   }
   .grid > .span-end-auto\@xl {
     grid-column-end: auto;
+  }
+  .grid.is-auto.is-equal\@xl {
+    --col-min-width: 0;
+  }
+  .grid.is-auto.is-xs\@xl {
+    --col-min-width: 8rem;
+  }
+  .grid.is-auto.is-s\@xl {
+    --col-min-width: 10rem;
+  }
+  .grid.is-auto.is-m\@xl {
+    --col-min-width: 15rem;
+  }
+  .grid.is-auto.is-l\@xl {
+    --col-min-width: 20rem;
+  }
+  .grid.is-auto.is-xl\@xl {
+    --col-min-width: 25rem;
   }
 }
 .columns {

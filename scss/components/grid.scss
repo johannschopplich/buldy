@@ -40,15 +40,6 @@ $grid-columns: 12 !default;
     $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
 
     .grid {
-      &.is-auto {
-        &.is-equal#{$infix} { --col-min-width: 0; }
-        &.is-xs#{$infix}    { --col-min-width: 8rem; }
-        &.is-s#{$infix}     { --col-min-width: 10rem; }
-        &.is-m#{$infix}     { --col-min-width: 15rem; }
-        &.is-l#{$infix}     { --col-min-width: 20rem; }
-        &.is-xl#{$infix}    { --col-min-width: 25rem; }
-      }
-
       @for $i from 1 through $grid-columns {
         > .span-#{$i}#{$infix}         { --span: #{$i}; }
         > .span-start-#{$i}#{$infix}   { grid-column-start: #{$i}; }
@@ -60,6 +51,15 @@ $grid-columns: 12 !default;
 
       > .span-start-auto#{$infix}      { grid-column-start: auto; }
       > .span-end-auto#{$infix}        { grid-column-end: auto; }
+
+      &.is-auto {
+        &.is-equal#{$infix} { --col-min-width: 0; }
+        &.is-xs#{$infix}    { --col-min-width: 8rem; }
+        &.is-s#{$infix}     { --col-min-width: 10rem; }
+        &.is-m#{$infix}     { --col-min-width: 15rem; }
+        &.is-l#{$infix}     { --col-min-width: 20rem; }
+        &.is-xl#{$infix}    { --col-min-width: 25rem; }
+      }
     }
   }
 }
