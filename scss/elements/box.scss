@@ -1,9 +1,11 @@
 .box {
-  @extend %block;
-
   display: block;
   background-color: var(--color-background);
   border-radius: var(--radius);
   box-shadow: var(--shadow-m);
   padding: var(--component-spacer);
+
+  &:not(:last-child) {
+    margin-bottom: var(--component-spacer);
+  }
 }

@@ -2,7 +2,9 @@
   --line-height-multiplier: 1;
   --text-vspace-multiplier: 1;
 
-  @extend %block;
+  &:not(:last-child) {
+    margin-bottom: var(--component-spacer);
+  }
 
   //
   // Modifiers (e.g. for articles)
@@ -142,7 +144,6 @@
     }
 
     figcaption {
-      color: var(--color-contrast-medium);
       margin-top: calc(var(--space-xs) * var(--text-vspace-multiplier, 1));
     }
   }

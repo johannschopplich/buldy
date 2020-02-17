@@ -1,8 +1,6 @@
 $columns: 12 !default;
 
 .columns {
-  @extend %block;
-
   display: flex;
   flex-wrap: wrap;
 

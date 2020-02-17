@@ -1,5 +1,7 @@
 .block {
-  @extend %block;
+  &:not(:last-child) {
+    margin-bottom: var(--component-spacer);
+  }
 }
 
 .flow > * + * {

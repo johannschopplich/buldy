@@ -1,13 +1,3 @@
-@mixin block {
-  &:not(:last-child) {
-    margin-bottom: var(--component-spacer);
-  }
-}
-
-%block {
-  @include block;
-}
-
 @mixin control {
   -webkit-appearance: none;
   -moz-appearance: none;
