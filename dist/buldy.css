@@ -1549,6 +1549,9 @@ pre code {
   margin-left: auto;
   margin-right: auto;
 }
+.container.is-fullwidth {
+  width: 100%;
+}
 @media (min-width: 640px) {
   .container:not(.is-fluid) {
     max-width: 640px;
