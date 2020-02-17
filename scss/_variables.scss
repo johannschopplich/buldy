@@ -1,23 +1,4 @@
 //
-// Global Sass variables
-//
-
-$grid-breakpoints: (
-  xs: 0,
-  sm: 640px,
-  md: 768px,
-  lg: 1024px,
-  xl: 1280px,
-) !default;
-
-$container-sizes: (
-  sm: 640px,
-  md: 768px,
-  lg: 1024px,
-  xl: 1280px,
-) !default;
-
-//
 // Global custom properties
 //
 
@@ -87,10 +68,9 @@ $container-sizes: (
   --component-spacer:        var(--space-m);
 
   // Shadows
-  --shadow-xs:               0 1px 2px rgba(0, 0, 0, .1);
-  --shadow-s:                0 1px 2px rgba(0, 0, 0, .085), 0 1px 8px rgba(0, 0, 0, .1);
-  --shadow-m:                0 1px 8px rgba(0, 0, 0, .085), 0 8px 24px rgba(0, 0, 0, .1);
-  --shadow-l:                0 1px 8px rgba(0, 0, 0, .085), 0 16px 48px rgba(0, 0, 0, .085), 0 24px 60px rgba(0, 0, 0, .085);
+  // --shadow-s:                0 0.1px 0.3px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.12);
+  --shadow-m:                0 0.3px 0.4px rgba(0, 0, 0, 0.025), 0 0.9px 1.5px rgba(0, 0, 0, 0.05), 0 3.5px 6px rgba(0, 0, 0, 0.1);
+  // --shadow-l:                0 0.9px 1.5px rgba(0, 0, 0, 0.03), 0 3.1px 5.5px rgba(0, 0, 0, 0.08), 0 14px 25px rgba(0, 0, 0, 0.12);
 
   // Radius
   --radius:                  0.25em;

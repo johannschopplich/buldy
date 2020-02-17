@@ -24,6 +24,10 @@ $colors: (
 ) !default;
 
 $utilities: (
+  //
+  // General
+  //
+
   "position": (
     property: position,
     values: static relative absolute fixed sticky
@@ -35,7 +39,10 @@ $utilities: (
     values: none inline inline-block block flex inline-flex
   ),
 
+  //
   // Sizing
+  //
+
   "viewport-height": (
     property: height,
     class: vh,
@@ -47,7 +54,10 @@ $utilities: (
     values: (100: calc(var(--vh, 1vh) * 100))
   ),
 
+  //
   // Margin
+  //
+
   "margin": (
     property: margin,
     class: m,
@@ -84,7 +94,10 @@ $utilities: (
     values: map-merge($spacers, (auto: auto))
   ),
 
+  //
   // Padding
+  //
+
   "padding": (
     property: padding,
     class: p,
@@ -121,7 +134,10 @@ $utilities: (
     values: $spacers
   ),
 
+  //
   // Flex
+  //
+
   "justify-content": (
     property: justify-content,
     values: (
@@ -142,7 +158,10 @@ $utilities: (
     )
   ),
 
+  //
   // Text
+  //
+
   "color": (
     property: color,
     class: text,
