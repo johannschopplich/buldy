@@ -1086,6 +1086,10 @@ pre code {
   flex: 0 0 auto;
   width: auto;
 }
+.columns > .column.is-auto {
+  flex: 1 1 0;
+  width: auto;
+}
 .columns > .column.is-full {
   flex: none;
   width: 100%;
@@ -1141,6 +1145,10 @@ pre code {
 @media (min-width: 640px) {
   .columns > .column.is-narrow\@sm {
     flex: 0 0 auto;
+    width: auto;
+  }
+  .columns > .column.is-auto\@sm {
+    flex: 1 1 0;
     width: auto;
   }
   .columns > .column.is-full\@sm {
@@ -1201,6 +1209,10 @@ pre code {
     flex: 0 0 auto;
     width: auto;
   }
+  .columns > .column.is-auto\@md {
+    flex: 1 1 0;
+    width: auto;
+  }
   .columns > .column.is-full\@md {
     flex: none;
     width: 100%;
@@ -1259,6 +1271,10 @@ pre code {
     flex: 0 0 auto;
     width: auto;
   }
+  .columns > .column.is-auto\@lg {
+    flex: 1 1 0;
+    width: auto;
+  }
   .columns > .column.is-full\@lg {
     flex: none;
     width: 100%;
@@ -1315,6 +1331,10 @@ pre code {
 @media (min-width: 1280px) {
   .columns > .column.is-narrow\@xl {
     flex: 0 0 auto;
+    width: auto;
+  }
+  .columns > .column.is-auto\@xl {
+    flex: 1 1 0;
     width: auto;
   }
   .columns > .column.is-full\@xl {

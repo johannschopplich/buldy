@@ -33,6 +33,11 @@ $columns: 12 !default;
           width: auto;
         }
 
+        &.is-auto#{$infix} {
+          flex: 1 1 0;
+          width: auto;
+        }
+
         &.is-full#{$infix} {
           flex: none;
           width: 100%;
