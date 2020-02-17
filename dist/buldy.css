@@ -38,7 +38,7 @@
   --color-black: hsl(0, 0%, 0%);
   --family-base: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
   --family-heading: var(--family-base);
-  --line-height-base: 1.4;
+  --line-height-base: 1.5;
   --line-height-heading: 1.2;
   --text-size-base: 1em;
   --text-scale-ratio: 1.2;
