@@ -1715,6 +1715,9 @@ pre code {
 .content figure figcaption {
   margin-top: calc(var(--space-xs) * var(--text-vspace-multiplier, 1));
 }
+.content.is-medium {
+  font-size: 1.15em;
+}
 
 .title {
   color: var(--color-contrast-higher);
