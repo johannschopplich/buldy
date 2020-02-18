@@ -11,8 +11,8 @@ $spacers: (
 ) !default;
 
 $colors: (
-  white: var(--color-white),
-  black: var(--color-black),
+  white: white,
+  black: black,
   primary: var(--color-primary),
   accent: var(--color-accent),
   contrast-lowest: var(--color-contrast-lowest),
@@ -198,8 +198,8 @@ $utilities: (
     property: font-family,
     class: text,
     values: (
-      base: var(--family-base),
-      heading: var(--family-heading),
+      base: var(--font-family-base),
+      heading: var(--font-family-heading),
     )
   ),
   "font-weight": (

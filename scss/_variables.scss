@@ -15,20 +15,16 @@
   --color-accent-a50:        hsla(220, 90%, 56%, 0.5);
 
   // Feedback colors
-  --color-focus:             hsl(39, 100%, 70%);
-  --color-focus-a50:         hsla(39, 100%, 70%, 0.5);
+  // --color-focus:             hsl(39, 100%, 70%);
+  // --color-focus-a50:         hsla(39, 100%, 70%, 0.5);
   --color-green:             hsl(141, 71%, 48%);
   --color-green-a50:         hsla(141, 71%, 48%, 0.5);
   --color-red:               hsl(348, 100%, 61%);
   --color-red-a50:           hsla(348, 100%, 61%, 0.5);
 
-  // Shades
-  --color-white:             hsl(0, 0%, 100%);
-  --color-black:             hsl(0, 0%, 0%);
-
   // Typography system
-  --family-base:             system-ui, -apple-system, "Segoe UI", Roboto, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
-  --family-heading:          var(--family-base);
+  --font-family-base:        system-ui, -apple-system, "Segoe UI", Roboto, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  --font-family-heading:     var(--font-family-base);
   --line-height-base:        1.5;
   --line-height-heading:     1.2;
 
@@ -76,7 +72,7 @@
 
 :root,
 [data-theme="default"] {
-  // Color contrast
+  // Shades
   --color-contrast-lowest:   hsl(0, 0%, 95%);
   --color-contrast-lower:    hsl(0, 0%, 82%);
   --color-contrast-low:      hsl(0, 0%, 70%);
@@ -85,7 +81,7 @@
   --color-contrast-higher:   hsl(0, 0%, 12%);
 
   // Semantic color definitions
-  --color-background:        var(--color-white);
+  --color-background:        white;
   --color-text:              var(--color-contrast-higher);
   --color-border:            var(--color-contrast-lower);
   --color-link:              var(--color-primary);
@@ -93,7 +89,7 @@
 }
 
 [data-theme="dark"] {
-  // Color contrast
+  // Shades
   --color-contrast-lowest:   hsl(0, 0%, 6%);
   --color-contrast-lower:    hsl(0, 0%, 20%);
   --color-contrast-low:      hsl(0, 0%, 48%);
@@ -102,8 +98,8 @@
   --color-contrast-higher:   hsl(0, 0%, 95%);
 
   // Semantic color definitions
-  --color-background:        var(--color-black);
-  --color-text:              var(--color-white);
+  --color-background:        black
+  --color-text:              white;
   --color-border:            var(--color-contrast-high);
   --color-link:              var(--color-primary);
   --color-link-hover:        var(--color-text);

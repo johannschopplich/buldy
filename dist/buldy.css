@@ -28,16 +28,12 @@
   --color-accent-hover: hsl(220, 90%, 52%);
   --color-accent-active: hsl(220, 90%, 49%);
   --color-accent-a50: hsla(220, 90%, 56%, 0.5);
-  --color-focus: hsl(39, 100%, 70%);
-  --color-focus-a50: hsla(39, 100%, 70%, 0.5);
   --color-green: hsl(141, 71%, 48%);
   --color-green-a50: hsla(141, 71%, 48%, 0.5);
   --color-red: hsl(348, 100%, 61%);
   --color-red-a50: hsla(348, 100%, 61%, 0.5);
-  --color-white: hsl(0, 0%, 100%);
-  --color-black: hsl(0, 0%, 0%);
-  --family-base: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
-  --family-heading: var(--family-base);
+  --font-family-base: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  --font-family-heading: var(--font-family-base);
   --line-height-base: 1.5;
   --line-height-heading: 1.2;
   --text-size-base: 1em;
@@ -73,7 +69,7 @@
   --color-contrast-medium: hsl(0, 0%, 48%);
   --color-contrast-high: hsl(0, 0%, 20%);
   --color-contrast-higher: hsl(0, 0%, 12%);
-  --color-background: var(--color-white);
+  --color-background: white;
   --color-text: var(--color-contrast-higher);
   --color-border: var(--color-contrast-lower);
   --color-link: var(--color-primary);
@@ -87,8 +83,8 @@
   --color-contrast-medium: hsl(0, 0%, 70%);
   --color-contrast-high: hsl(0, 0%, 82%);
   --color-contrast-higher: hsl(0, 0%, 95%);
-  --color-background: var(--color-black);
-  --color-text: var(--color-white);
+  --color-background: black
+  --color-text: white;
   --color-border: var(--color-contrast-high);
   --color-link: var(--color-primary);
   --color-link-hover: var(--color-text);
@@ -290,7 +286,7 @@ html {
 }
 
 body {
-  font-family: var(--family-base);
+  font-family: var(--font-family-base);
   font-size: var(--text-size-base);
   line-height: var(--line-height-base);
   color: var(--color-text);
@@ -1804,22 +1800,23 @@ pre code {
   background-color: var(--color-contrast-lowest);
 }
 .button.is-primary, .button.is-accent {
+  --text: white;
   --color: var(--color-primary);
   --color-hover: var(--color-primary-hover);
   --color-active: var(--color-primary-active);
   --shadow: var(--color-primary-a50);
   background-color: var(--color);
   border-color: transparent;
-  color: var(--color-white);
+  color: var(--text);
 }
 .button.is-primary:hover, .button.is-accent:hover {
   background-color: var(--color-hover);
   border-color: transparent;
-  color: var(--color-white);
+  color: var(--text);
 }
 .button.is-primary:focus, .button.is-accent:focus {
   border-color: transparent;
-  color: var(--color-white);
+  color: var(--text);
 }
 .button.is-primary:focus:not(:active), .button.is-accent:focus:not(:active) {
   box-shadow: 0 0 0 3px var(--shadow);
@@ -1827,12 +1824,12 @@ pre code {
 .button.is-primary:active, .button.is-accent:active {
   background-color: var(--color-active);
   border-color: transparent;
-  color: var(--color-white);
+  color: var(--text);
 }
 .button.is-primary[disabled], .button.is-accent[disabled] {
   background-color: var(--color);
   border-color: transparent;
-  color: var(--color-white);
+  color: var(--text);
   box-shadow: none;
 }
 .button.is-primary.is-outlined, .button.is-accent.is-outlined {
@@ -1843,7 +1840,7 @@ pre code {
 .button.is-primary.is-outlined:hover, .button.is-primary.is-outlined:focus, .button.is-accent.is-outlined:hover, .button.is-accent.is-outlined:focus {
   background-color: var(--color);
   border-color: var(--color);
-  color: var(--color-white);
+  color: var(--text);
 }
 .button.is-primary.is-outlined[disabled], .button.is-accent.is-outlined[disabled] {
   background-color: transparent;
@@ -2671,11 +2668,11 @@ pre code {
 }
 
 .text-white {
-  color: var(--color-white) !important;
+  color: white !important;
 }
 
 .text-black {
-  color: var(--color-black) !important;
+  color: black !important;
 }
 
 .text-primary {
@@ -2711,11 +2708,11 @@ pre code {
 }
 
 .bg-white {
-  background-color: var(--color-white) !important;
+  background-color: white !important;
 }
 
 .bg-black {
-  background-color: var(--color-black) !important;
+  background-color: black !important;
 }
 
 .bg-primary {
@@ -2791,11 +2788,11 @@ pre code {
 }
 
 .text-base {
-  font-family: var(--family-base) !important;
+  font-family: var(--font-family-base) !important;
 }
 
 .text-heading {
-  font-family: var(--family-heading) !important;
+  font-family: var(--font-family-heading) !important;
 }
 
 .text-light {

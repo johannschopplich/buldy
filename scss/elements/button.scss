@@ -67,6 +67,7 @@
 
   &.is-primary,
   &.is-accent {
+    --text: white;
     --color: var(--color-primary);
     --color-hover: var(--color-primary-hover);
     --color-active: var(--color-primary-active);
@@ -74,17 +75,17 @@
 
     background-color: var(--color);
     border-color: transparent;
-    color: var(--color-white);
+    color: var(--text);
 
     &:hover {
       background-color: var(--color-hover);
       border-color: transparent;
-      color: var(--color-white);
+      color: var(--text);
     }
 
     &:focus {
       border-color: transparent;
-      color: var(--color-white);
+      color: var(--text);
       &:not(:active) {
         box-shadow: 0 0 0 3px var(--shadow);
       }
@@ -93,13 +94,13 @@
     &:active {
       background-color: var(--color-active);
       border-color: transparent;
-      color: var(--color-white);
+      color: var(--text);
     }
 
     &[disabled] {
       background-color: var(--color);
       border-color: transparent;
-      color: var(--color-white);
+      color: var(--text);
       box-shadow: none;
     }
 
@@ -116,7 +117,7 @@
       &:focus {
         background-color: var(--color);
         border-color: var(--color);
-        color: var(--color-white);
+        color: var(--text);
       }
 
       &[disabled] {
