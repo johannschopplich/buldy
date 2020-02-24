@@ -10,6 +10,8 @@ $grid-breakpoints: (
   xl: 1280px,
 ) !default;
 
+$grid-gaps: xxs, xs, s, m, l !default;
+
 $container-sizes: (
   sm: 640px,
   md: 768px,

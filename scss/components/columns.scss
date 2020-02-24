@@ -17,6 +17,22 @@ $columns: 12 !default;
   }
 
   //
+  // Gaps
+  //
+
+  @each $gap in $grid-gaps {
+    &.has-gap-#{$gap} {
+      margin-left:   calc(-1 * var(--gap-space, var(--space-#{$gap})));
+      margin-bottom: calc(-1 * var(--gap-space, var(--space-#{$gap})));
+
+      > .column {
+        padding-left:   var(--gap-space, var(--space-#{$gap}));
+        padding-bottom: var(--gap-space, var(--space-#{$gap}));
+      }
+    }
+  }
+
+  //
   // Columns
   //
 

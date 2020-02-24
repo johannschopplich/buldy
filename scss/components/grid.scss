@@ -24,11 +24,9 @@ $grid-columns: 12 !default;
     }
   }
 
-  &.has-gap-xs { --grid-gap: var(--space-xs); }
-  &.has-gap-s  { --grid-gap: var(--space-s); }
-  &.has-gap-m  { --grid-gap: var(--space-m); }
-  &.has-gap-l  { --grid-gap: var(--space-l); }
-  &.has-gap-xl { --grid-gap: var(--space-xl); }
+  @each $gap in $grid-gaps {
+    &.has-gap-#{$gap} { --grid-gap: var(--space-#{$gap}); }
+  }
 }
 
 //

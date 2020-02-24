@@ -349,6 +349,9 @@ pre code {
 .grid.is-auto.is-equal, .grid.is-auto.is-xs, .grid.is-auto.is-s, .grid.is-auto.is-m, .grid.is-auto.is-l, .grid.is-auto.is-xl {
   grid-template-columns: repeat(auto-fit, minmax(var(--col-min-width), 1fr));
 }
+.grid.has-gap-xxs {
+  --grid-gap: var(--space-xxs);
+}
 .grid.has-gap-xs {
   --grid-gap: var(--space-xs);
 }
@@ -360,9 +363,6 @@ pre code {
 }
 .grid.has-gap-l {
   --grid-gap: var(--space-l);
-}
-.grid.has-gap-xl {
-  --grid-gap: var(--space-xl);
 }
 
 .grid > .span-1 {
@@ -1073,6 +1073,46 @@ pre code {
 }
 .columns.is-vcentered {
   align-items: center;
+}
+.columns.has-gap-xxs {
+  margin-left: calc(-1 * var(--gap-space, var(--space-xxs)));
+  margin-bottom: calc(-1 * var(--gap-space, var(--space-xxs)));
+}
+.columns.has-gap-xxs > .column {
+  padding-left: var(--gap-space, var(--space-xxs));
+  padding-bottom: var(--gap-space, var(--space-xxs));
+}
+.columns.has-gap-xs {
+  margin-left: calc(-1 * var(--gap-space, var(--space-xs)));
+  margin-bottom: calc(-1 * var(--gap-space, var(--space-xs)));
+}
+.columns.has-gap-xs > .column {
+  padding-left: var(--gap-space, var(--space-xs));
+  padding-bottom: var(--gap-space, var(--space-xs));
+}
+.columns.has-gap-s {
+  margin-left: calc(-1 * var(--gap-space, var(--space-s)));
+  margin-bottom: calc(-1 * var(--gap-space, var(--space-s)));
+}
+.columns.has-gap-s > .column {
+  padding-left: var(--gap-space, var(--space-s));
+  padding-bottom: var(--gap-space, var(--space-s));
+}
+.columns.has-gap-m {
+  margin-left: calc(-1 * var(--gap-space, var(--space-m)));
+  margin-bottom: calc(-1 * var(--gap-space, var(--space-m)));
+}
+.columns.has-gap-m > .column {
+  padding-left: var(--gap-space, var(--space-m));
+  padding-bottom: var(--gap-space, var(--space-m));
+}
+.columns.has-gap-l {
+  margin-left: calc(-1 * var(--gap-space, var(--space-l)));
+  margin-bottom: calc(-1 * var(--gap-space, var(--space-l)));
+}
+.columns.has-gap-l > .column {
+  padding-left: var(--gap-space, var(--space-l));
+  padding-bottom: var(--gap-space, var(--space-l));
 }
 .columns > .column {
   display: block;
