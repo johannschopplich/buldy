@@ -1388,12 +1388,12 @@ pre code {
 }
 
 .modal {
+  display: none;
   position: fixed;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
-  display: none;
   align-items: center;
   flex-direction: column;
   justify-content: center;
@@ -1451,7 +1451,6 @@ pre code {
   flex-shrink: 0;
   font-size: 0;
   outline: none;
-  position: relative;
   vertical-align: top;
 }
 .modal-close::before, .modal-close::after {
