@@ -134,12 +134,4 @@
       margin-top: calc(var(--space-xs) * var(--text-vspace-multiplier, 1));
     }
   }
-
-  //
-  // Modifiers
-  //
-
-  &.is-medium {
-    font-size: 1.15em;
-  }
 }
