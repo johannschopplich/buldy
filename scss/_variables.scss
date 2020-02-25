@@ -39,6 +39,7 @@
   --text-2:                  calc(var(--text-3) * var(--text-scale-ratio));
   --text-4:                  calc(var(--text-5) * var(--text-scale-ratio));
   --text-1:                  calc(var(--text-2) * var(--text-scale-ratio));
+  --text-fluid:              calc(12px + 0.698vw);
 
   // Modular space scaling
   --space-unit:              1rem;

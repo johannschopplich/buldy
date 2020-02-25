@@ -45,6 +45,7 @@
   --text-2: calc(var(--text-3) * var(--text-scale-ratio));
   --text-4: calc(var(--text-5) * var(--text-scale-ratio));
   --text-1: calc(var(--text-2) * var(--text-scale-ratio));
+  --text-fluid: calc(12px + 0.698vw);
   --space-unit: 1rem;
   --space-xxxs: calc(0.25 * var(--space-unit));
   --space-xxs: calc(0.375 * var(--space-unit));
@@ -1984,6 +1985,10 @@ pre code {
   margin-top: var(--component-spacer);
 }
 
+.text-hero {
+  font-size: calc(var(--text-fluid) * 3);
+}
+
 .hover\:underline:hover {
   text-decoration: underline;
 }
@@ -2895,6 +2900,34 @@ pre code {
     display: inline-flex !important;
   }
 
+  .text-small\@sm {
+    font-size: var(--text-small) !important;
+  }
+
+  .text-6\@sm {
+    font-size: var(--text-6) !important;
+  }
+
+  .text-5\@sm {
+    font-size: var(--text-5) !important;
+  }
+
+  .text-4\@sm {
+    font-size: var(--text-4) !important;
+  }
+
+  .text-3\@sm {
+    font-size: var(--text-3) !important;
+  }
+
+  .text-2\@sm {
+    font-size: var(--text-2) !important;
+  }
+
+  .text-1\@sm {
+    font-size: var(--text-1) !important;
+  }
+
   .text-left\@sm {
     text-align: left !important;
   }
@@ -2930,6 +2963,34 @@ pre code {
 
   .d-inline-flex\@md {
     display: inline-flex !important;
+  }
+
+  .text-small\@md {
+    font-size: var(--text-small) !important;
+  }
+
+  .text-6\@md {
+    font-size: var(--text-6) !important;
+  }
+
+  .text-5\@md {
+    font-size: var(--text-5) !important;
+  }
+
+  .text-4\@md {
+    font-size: var(--text-4) !important;
+  }
+
+  .text-3\@md {
+    font-size: var(--text-3) !important;
+  }
+
+  .text-2\@md {
+    font-size: var(--text-2) !important;
+  }
+
+  .text-1\@md {
+    font-size: var(--text-1) !important;
   }
 
   .text-left\@md {
@@ -2969,6 +3030,34 @@ pre code {
     display: inline-flex !important;
   }
 
+  .text-small\@lg {
+    font-size: var(--text-small) !important;
+  }
+
+  .text-6\@lg {
+    font-size: var(--text-6) !important;
+  }
+
+  .text-5\@lg {
+    font-size: var(--text-5) !important;
+  }
+
+  .text-4\@lg {
+    font-size: var(--text-4) !important;
+  }
+
+  .text-3\@lg {
+    font-size: var(--text-3) !important;
+  }
+
+  .text-2\@lg {
+    font-size: var(--text-2) !important;
+  }
+
+  .text-1\@lg {
+    font-size: var(--text-1) !important;
+  }
+
   .text-left\@lg {
     text-align: left !important;
   }
@@ -3004,6 +3093,34 @@ pre code {
 
   .d-inline-flex\@xl {
     display: inline-flex !important;
+  }
+
+  .text-small\@xl {
+    font-size: var(--text-small) !important;
+  }
+
+  .text-6\@xl {
+    font-size: var(--text-6) !important;
+  }
+
+  .text-5\@xl {
+    font-size: var(--text-5) !important;
+  }
+
+  .text-4\@xl {
+    font-size: var(--text-4) !important;
+  }
+
+  .text-3\@xl {
+    font-size: var(--text-3) !important;
+  }
+
+  .text-2\@xl {
+    font-size: var(--text-2) !important;
+  }
+
+  .text-1\@xl {
+    font-size: var(--text-1) !important;
   }
 
   .text-left\@xl {
