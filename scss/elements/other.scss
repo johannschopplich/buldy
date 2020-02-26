@@ -4,6 +4,12 @@
   }
 }
 
+.title {
+  color: var(--color-contrast-higher);
+  line-height: var(--line-height-heading);
+  font-weight: 600;
+}
+
 .flow > * + * {
   margin-top: var(--component-spacer);
 }
