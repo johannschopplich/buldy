@@ -59,11 +59,10 @@
   --component-spacer: var(--space-m);
   --shadow-m: 0 0.3px 0.4px rgba(0, 0, 0, 0.025), 0 0.9px 1.5px rgba(0, 0, 0, 0.05), 0 3.5px 6px rgba(0, 0, 0, 0.1);
   --radius: 0.25em;
-  --radius-rounded: 50rem;
 }
 
 :root,
-[data-theme=default] {
+[data-theme=light] {
   --color-contrast-lowest: hsl(0, 0%, 95%);
   --color-contrast-lower: hsl(0, 0%, 82%);
   --color-contrast-low: hsl(0, 0%, 70%);
@@ -1485,7 +1484,7 @@ pre code {
   min-height: 40px;
   max-height: 40px;
   border: none;
-  border-radius: var(--radius-rounded);
+  border-radius: 50rem;
   cursor: pointer;
   pointer-events: auto;
   flex-grow: 0;

@@ -15,8 +15,6 @@
   --color-accent-a50:        hsla(220, 90%, 56%, 0.5);
 
   // Feedback colors
-  // --color-focus:             hsl(39, 100%, 70%);
-  // --color-focus-a50:         hsla(39, 100%, 70%, 0.5);
   --color-green:             hsl(141, 71%, 48%);
   --color-green-a50:         hsla(141, 71%, 48%, 0.5);
   --color-red:               hsl(348, 100%, 61%);
@@ -63,7 +61,6 @@
 
   // Radius
   --radius:                  0.25em;
-  --radius-rounded:          50rem;
 }
 
 //
@@ -72,7 +69,7 @@
 //
 
 :root,
-[data-theme="default"] {
+[data-theme="light"] {
   // Shades
   --color-contrast-lowest:   hsl(0, 0%, 95%);
   --color-contrast-lower:    hsl(0, 0%, 82%);
