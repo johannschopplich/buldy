@@ -5,6 +5,22 @@ $columns: 12 !default;
   flex-wrap: wrap;
 
   //
+  // Gaps
+  //
+
+  margin-left: calc(-1 * var(--gap, 0));
+  margin-bottom: calc(-1 * var(--gap, 0));
+
+  > .column {
+    padding-left: var(--gap, 0);
+    padding-bottom: var(--gap, 0);
+  }
+
+  @each $gap in $grid-gaps {
+    &.has-gap-#{$gap} { --gap: var(--space-#{$gap}); }
+  }
+
+  //
   // Modifiers
   //
 
@@ -14,22 +30,6 @@ $columns: 12 !default;
 
   &.is-vcentered {
     align-items: center;
-  }
-
-  //
-  // Gaps
-  //
-
-  @each $gap in $grid-gaps {
-    &.has-gap-#{$gap} {
-      margin-left:   calc(-1 * var(--gap-space, var(--space-#{$gap})));
-      margin-bottom: calc(-1 * var(--gap-space, var(--space-#{$gap})));
-
-      > .column {
-        padding-left:   var(--gap-space, var(--space-#{$gap}));
-        padding-bottom: var(--gap-space, var(--space-#{$gap}));
-      }
-    }
   }
 
   //
