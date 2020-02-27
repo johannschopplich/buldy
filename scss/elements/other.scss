@@ -4,6 +4,11 @@
   }
 }
 
+.section {
+  padding-top: var(--space-xl);
+  padding-bottom: var(--space-xl);
+}
+
 .title {
   color: var(--color-contrast-higher);
   line-height: var(--line-height-heading);
