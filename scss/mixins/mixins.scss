@@ -29,3 +29,15 @@
 %unselectable {
   @include unselectable;
 }
+
+@mixin transition($transition...) {
+  @if length($transition) == 0 {
+    transition: all 0.2s ease-in-out;
+  } @else {
+    transition: $transition;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    transition: none;
+  }
+}

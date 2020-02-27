@@ -11,7 +11,7 @@ html {
 
 body {
   font-family: var(--font-family-base);
-  font-size: var(--text-size-base);
+  font-size: var(--fluid-unit);
   line-height: var(--line-height-base);
   color: var(--color-text);
 }
@@ -57,7 +57,7 @@ mark {
 
 code {
   background-color: var(--color-contrast-lowest);
-  color: var(--color-red);
+  color: var(--color-danger);
   font-size: 0.875em;
   padding: var(--space-xxxs) var(--space-xs);
 }

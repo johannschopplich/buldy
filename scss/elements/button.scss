@@ -141,16 +141,16 @@
   //
 
   &.is-s {
-    font-size: calc(var(--text-size-base) - 0.2em);
+    font-size: calc(var(--fluid-unit) - 0.2em);
     padding: var(--space-xxs);
   }
 
   &.is-m {
-    font-size: calc(var(--text-size-base) + 0.2em);
+    font-size: calc(var(--fluid-unit) + 0.2em);
   }
 
   &.is-l {
-    font-size: calc(var(--text-size-base) + 0.4em);
+    font-size: calc(var(--fluid-unit) + 0.4em);
     padding: var(--space-s);
   }
 

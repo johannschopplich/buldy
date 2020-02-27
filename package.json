@@ -1,13 +1,13 @@
 {
   "name": "buldy",
   "description": "Modern CSS framework distilled from the best of larger frameworks",
-  "version": "1.4.1",
+  "version": "1.5.0",
   "main": "scss/buldy.scss",
   "style": "dist/buldy.min.css",
   "author": {
     "name": "Johann Schopplich",
     "email": "hello@johanns.design",
-    "url": "https://johanns.design"
+    "url": "https://johannschopplich.com"
   },
   "repository": {
     "type": "git",

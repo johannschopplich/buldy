@@ -15,10 +15,10 @@
   --color-accent-a50:        hsla(220, 90%, 56%, 0.5);
 
   // Feedback colors
-  --color-green:             hsl(141, 71%, 48%);
-  --color-green-a50:         hsla(141, 71%, 48%, 0.5);
-  --color-red:               hsl(348, 100%, 61%);
-  --color-red-a50:           hsla(348, 100%, 61%, 0.5);
+  --color-success:           hsl(141, 71%, 48%);
+  --color-success-a50:       hsla(141, 71%, 48%, 0.5);
+  --color-danger:            hsl(348, 100%, 61%);
+  --color-danger-a50:        hsla(348, 100%, 61%, 0.5);
 
   // Typography system
   --font-family-base:        system-ui, -apple-system, "Segoe UI", Roboto, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
@@ -26,46 +26,39 @@
   --line-height-base:        1.5;
   --line-height-heading:     1.25;
 
+  // Automated responsive resizing
+  --fluid-unit:              calc(16px + (18 - 16) * ((100vw - 320px) / (1280 - 320)));
+
   // Modular typography scaling
-  --text-size-base:          1rem;
   --text-scale-ratio:        1.2;
 
-  --text-s:                  calc(var(--text-size-base) / var(--text-scale-ratio));
-  --text-6:                  var(--text-size-base);
+  --text-s:                  calc(var(--text-6) / var(--text-scale-ratio));
+  --text-6:                  var(--fluid-unit);
   --text-5:                  calc(var(--text-6) * var(--text-scale-ratio));
   --text-3:                  calc(var(--text-4) * var(--text-scale-ratio));
   --text-2:                  calc(var(--text-3) * var(--text-scale-ratio));
   --text-4:                  calc(var(--text-5) * var(--text-scale-ratio));
   --text-1:                  calc(var(--text-2) * var(--text-scale-ratio));
-  --text-fluid:              calc(12px + 0.698vw);
 
-  // Modular space scaling
-  --space-unit:              1rem;
-
-  --space-xxxs:              calc(0.25  * var(--space-unit));
-  --space-xxs:               calc(0.375 * var(--space-unit));
-  --space-xs:                calc(0.5   * var(--space-unit));
-  --space-s:                 calc(0.75  * var(--space-unit));
-  --space-m:                 calc(1.25  * var(--space-unit));
-  --space-l:                 calc(2     * var(--space-unit));
-  --space-xl:                calc(3.25  * var(--space-unit));
-  --space-xxl:               calc(5.25  * var(--space-unit));
-  --space-xxxl:              calc(8.5   * var(--space-unit));
+  // Modular space scaling based on the Fibonacci sequence
+  --space-xxxs:              calc(0.25  * var(--fluid-unit));
+  --space-xxs:               calc(0.375 * var(--fluid-unit));
+  --space-xs:                calc(0.5   * var(--fluid-unit));
+  --space-s:                 calc(0.75  * var(--fluid-unit));
+  --space-m:                 calc(1.25  * var(--fluid-unit));
+  --space-l:                 calc(2     * var(--fluid-unit));
+  --space-xl:                calc(3.25  * var(--fluid-unit));
+  --space-xxl:               calc(5.25  * var(--fluid-unit));
+  --space-xxxl:              calc(8.5   * var(--fluid-unit));
 
   --component-spacer:        var(--space-m);
-
-  // Shadows
-  // --shadow-s:                0 0.1px 0.3px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.12);
-  --shadow-m:                0 0.3px 0.4px rgba(0, 0, 0, 0.025), 0 0.9px 1.5px rgba(0, 0, 0, 0.05), 0 3.5px 6px rgba(0, 0, 0, 0.1);
-  // --shadow-l:                0 0.9px 1.5px rgba(0, 0, 0, 0.03), 0 3.1px 5.5px rgba(0, 0, 0, 0.08), 0 14px 25px rgba(0, 0, 0, 0.12);
 
   // Radius
   --radius:                  0.25em;
 }
 
 //
-// Semantic color definitions
-// Default and light theme
+// Semantic color definitions and themes
 //
 
 :root,
@@ -106,15 +99,4 @@
 [data-theme] {
   color:                     var(--color-text);
   background-color:          var(--color-background);
-}
-
-//
-// Natural growing responsiveness
-//
-
-@include media-breakpoint-above(md) {
-  :root {
-    --text-size-base:        1.15rem;
-    --space-unit:            1.15rem;
-  }
 }

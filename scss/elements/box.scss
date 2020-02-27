@@ -1,8 +1,10 @@
 .box {
+  --shadow: 0 0.3px 0.4px rgba(0, 0, 0, 0.025), 0 0.9px 1.5px rgba(0, 0, 0, 0.05), 0 3.5px 6px rgba(0, 0, 0, 0.1);
+
   display: block;
   background-color: var(--color-background);
   border-radius: var(--radius);
-  box-shadow: var(--shadow-m);
+  box-shadow: var(--shadow);
   padding: var(--component-spacer);
 
   &:not(:last-child) {

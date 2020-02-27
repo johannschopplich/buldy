@@ -25,18 +25,18 @@
   }
 
   &.is-error {
-    border-color: var(--color-red);
+    border-color: var(--color-danger);
     &:focus,
     &:active {
-      box-shadow: 0 0 0 3px var(--color-red-a50);
+      box-shadow: 0 0 0 3px var(--color-danger-a50);
     }
   }
 
   &.is-success {
-    border-color: var(--color-green);
+    border-color: var(--color-success);
     &:focus,
     &:active {
-      box-shadow: 0 0 0 3px var(--color-green-a50);
+      box-shadow: 0 0 0 3px var(--color-success-a50);
     }
   }
 
@@ -52,9 +52,9 @@
   }
 
   &[aria-invalid="true"] {
-    border-color: var(--color-red);
+    border-color: var(--color-danger);
     &:focus {
-      box-shadow: 0 0 0 3px var(--color-red-a50);
+      box-shadow: 0 0 0 3px var(--color-danger-a50);
     }
   }
 }
@@ -75,10 +75,10 @@
   margin-top: var(--space-xs);
 
   &.is-error {
-    color: var(--color-red);
+    color: var(--color-danger);
   }
 
   &.is-success {
-    color: var(--color-green);
+    color: var(--color-success);
   }
 }
