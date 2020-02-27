@@ -27,10 +27,10 @@
   --line-height-heading:     1.25;
 
   // Modular typography scaling
-  --text-size-base:          1em;
+  --text-size-base:          1rem;
   --text-scale-ratio:        1.2;
 
-  --text-small:              calc(var(--text-size-base) / var(--text-scale-ratio));
+  --text-s:                  calc(var(--text-size-base) / var(--text-scale-ratio));
   --text-6:                  var(--text-size-base);
   --text-5:                  calc(var(--text-6) * var(--text-scale-ratio));
   --text-3:                  calc(var(--text-4) * var(--text-scale-ratio));
@@ -114,7 +114,7 @@
 
 @include media-breakpoint-above(md) {
   :root {
-    --text-size-base:        1.15em;
+    --text-size-base:        1.15rem;
     --space-unit:            1.15rem;
   }
 }
