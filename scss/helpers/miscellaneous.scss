@@ -11,20 +11,16 @@
   }
 }
 
-.marginless {
-  margin: 0 !important;
-}
-
-.paddingless {
-  padding: 0 !important;
-}
-
-.radiusless {
-  border-radius: 0 !important;
-}
-
-.shadowless {
-  box-shadow: none !important;
+.streched-link {
+  &::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    content: "";
+  }
 }
 
 .unselectable {
@@ -49,7 +45,7 @@
 }
 
 // A "full-bleed" helper variation, which doesn't need `calc()`.
-// .full-bleed {
+// .spans-full-width {
 //   width: 100vw;
 //   position: relative;
 //   left: 50%;
