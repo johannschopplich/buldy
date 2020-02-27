@@ -4,6 +4,18 @@
   }
 }
 
+.flow {
+  > * + * {
+    margin-top: var(--flow, var(--component-spacer));
+  }
+}
+
+.flow-h > * {
+  &:not(:last-child) {
+    margin-right: var(--flow-h, var(--component-spacer));
+  }
+}
+
 .section {
   padding-top: var(--space-xl);
   padding-bottom: var(--space-xl);
@@ -13,8 +25,4 @@
   color: var(--color-contrast-higher);
   line-height: var(--line-height-heading);
   font-weight: 600;
-}
-
-.flow > * + * {
-  margin-top: var(--component-spacer);
 }
