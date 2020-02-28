@@ -1731,14 +1731,6 @@ pre code {
   text-decoration: underline;
 }
 
-.inline-icon {
-  display: inline-flex;
-  align-items: center;
-}
-.inline-icon > *:nth-child(2) {
-  margin-left: var(--space-xxxs);
-}
-
 .streched-link::after {
   position: absolute;
   top: 0;

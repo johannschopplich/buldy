@@ -2,15 +2,6 @@
   text-decoration: underline;
 }
 
-.inline-icon {
-  display: inline-flex;
-  align-items: center;
-
-  > *:nth-child(2) {
-    margin-left: var(--space-xxxs);
-  }
-}
-
 .streched-link {
   &::after {
     position: absolute;
