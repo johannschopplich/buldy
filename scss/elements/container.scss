@@ -8,10 +8,10 @@
     width: 100%;
   }
 
-  @each $breakpoint in map-keys($container-sizes) {
-    $width: map-get($container-sizes, $breakpoint);
+  @each $breakpoint in map-keys($container-breakpoints) {
+    $width: map-get($container-breakpoints, $breakpoint);
 
-    @include media-breakpoint-above($breakpoint) {
+    @include media-breakpoint-above($breakpoint, $container-breakpoints) {
       &:not(.is-fluid) {
         max-width: $width;
       }
