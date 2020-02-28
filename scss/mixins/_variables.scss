@@ -7,14 +7,14 @@ $grid-breakpoints: (
   sm: 640px,
   md: 768px,
   lg: 1024px,
-  // xl: 1280px,
+  xl: 1280px,
 ) !default;
 
-$container-breakpoints: (
+$utility-breakpoints: (
+  xs: 0,
   sm: 640px,
   md: 768px,
-  lg: 1024px,
-  xl: 1280px,
+  lg: 1024px
 ) !default;
 
 $grid-gaps: xxs, xs, s, m, l !default;

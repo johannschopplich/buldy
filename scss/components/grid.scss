@@ -33,9 +33,9 @@ $grid-columns: 12 !default;
 // Breakpoints
 //
 
-@each $breakpoint in map-keys($grid-breakpoints) {
-  @include media-breakpoint-above($breakpoint) {
-    $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+@each $breakpoint in map-keys($utility-breakpoints) {
+  @include media-breakpoint-above($breakpoint, $utility-breakpoints) {
+    $infix: breakpoint-infix($breakpoint, $utility-breakpoints);
 
     .grid {
       @for $i from 1 through $grid-columns {

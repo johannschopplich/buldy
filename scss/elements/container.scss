@@ -8,17 +8,19 @@
     width: 100%;
   }
 
-  @each $breakpoint in map-keys($container-breakpoints) {
-    $width: map-get($container-breakpoints, $breakpoint);
+  @each $breakpoint in map-keys($grid-breakpoints) {
+    $width: map-get($grid-breakpoints, $breakpoint);
 
-    @include media-breakpoint-above($breakpoint, $container-breakpoints) {
-      &:not(.is-fluid) {
-        max-width: $width;
+    @if $width != 0 {
+      @include media-breakpoint-above($breakpoint) {
+        &:not(.is-fluid) {
+          max-width: $width;
+        }
       }
-    }
 
-    &.is-#{$breakpoint} {
-      max-width: $width !important;
+      &.is-#{$breakpoint} {
+        max-width: $width !important;
+      }
     }
   }
 }
