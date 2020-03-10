@@ -1820,6 +1820,10 @@ pre code {
   display: inline-flex !important;
 }
 
+.d-grid {
+  display: grid !important;
+}
+
 .vh-100 {
   height: calc(var(--vh, 1vh) * 100) !important;
 }
@@ -2623,6 +2627,10 @@ pre code {
     display: inline-flex !important;
   }
 
+  .d-grid\@sm {
+    display: grid !important;
+  }
+
   .text-s\@sm {
     font-size: var(--text-s) !important;
   }
@@ -2688,6 +2696,10 @@ pre code {
     display: inline-flex !important;
   }
 
+  .d-grid\@md {
+    display: grid !important;
+  }
+
   .text-s\@md {
     font-size: var(--text-s) !important;
   }
@@ -2751,6 +2763,10 @@ pre code {
 
   .d-inline-flex\@lg {
     display: inline-flex !important;
+  }
+
+  .d-grid\@lg {
+    display: grid !important;
   }
 
   .text-s\@lg {
