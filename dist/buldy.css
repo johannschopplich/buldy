@@ -36,24 +36,24 @@
   --font-family-heading: var(--font-family-base);
   --line-height-base: 1.5;
   --line-height-heading: 1.25;
-  --fluid-unit: calc(16px + (18 - 16) * ((100vw - 320px) / (1280 - 320)));
+  --fluid-base-size: calc(16px + (18 - 16) * ((100vw - 320px) / (1280 - 320)));
   --text-scale-ratio: 1.2;
   --text-s: calc(var(--text-6) / var(--text-scale-ratio));
-  --text-6: var(--fluid-unit);
+  --text-6: var(--fluid-base-size);
   --text-5: calc(var(--text-6) * var(--text-scale-ratio));
   --text-3: calc(var(--text-4) * var(--text-scale-ratio));
   --text-2: calc(var(--text-3) * var(--text-scale-ratio));
   --text-4: calc(var(--text-5) * var(--text-scale-ratio));
   --text-1: calc(var(--text-2) * var(--text-scale-ratio));
-  --space-xxxs: calc(0.25 * var(--fluid-unit));
-  --space-xxs: calc(0.375 * var(--fluid-unit));
-  --space-xs: calc(0.5 * var(--fluid-unit));
-  --space-s: calc(0.75 * var(--fluid-unit));
-  --space-m: calc(1.25 * var(--fluid-unit));
-  --space-l: calc(2 * var(--fluid-unit));
-  --space-xl: calc(3.25 * var(--fluid-unit));
-  --space-xxl: calc(5.25 * var(--fluid-unit));
-  --space-xxxl: calc(8.5 * var(--fluid-unit));
+  --space-xxxs: calc(0.25 * var(--fluid-base-size));
+  --space-xxs: calc(0.375 * var(--fluid-base-size));
+  --space-xs: calc(0.5 * var(--fluid-base-size));
+  --space-s: calc(0.75 * var(--fluid-base-size));
+  --space-m: calc(1.25 * var(--fluid-base-size));
+  --space-l: calc(2 * var(--fluid-base-size));
+  --space-xl: calc(3.25 * var(--fluid-base-size));
+  --space-xxl: calc(5.25 * var(--fluid-base-size));
+  --space-xxxl: calc(8.5 * var(--fluid-base-size));
   --component-spacer: var(--space-m);
   --radius: 0.25em;
 }
@@ -278,7 +278,7 @@ html {
 
 body {
   font-family: var(--font-family-base);
-  font-size: var(--fluid-unit);
+  font-size: var(--fluid-base-size);
   line-height: var(--line-height-base);
   color: var(--color-text);
 }
@@ -1621,14 +1621,14 @@ pre code {
   --shadow: var(--color-accent-a50);
 }
 .button.is-s {
-  font-size: calc(var(--fluid-unit) - 0.2em);
+  font-size: calc(var(--fluid-base-size) - 0.2em);
   padding: var(--space-xxs);
 }
 .button.is-m {
-  font-size: calc(var(--fluid-unit) + 0.2em);
+  font-size: calc(var(--fluid-base-size) + 0.2em);
 }
 .button.is-l {
-  font-size: calc(var(--fluid-unit) + 0.4em);
+  font-size: calc(var(--fluid-base-size) + 0.4em);
   padding: var(--space-s);
 }
 .button[disabled] {
