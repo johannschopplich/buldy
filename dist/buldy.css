@@ -1425,12 +1425,6 @@ pre code {
 .content dl:not(:last-child) {
   margin-bottom: calc(var(--component-spacer) * var(--text-vspace-multiplier, 1));
 }
-.content p,
-.content ul li,
-.content ol li,
-.content blockquote {
-  line-height: var(--line-height-base);
-}
 .content hr {
   margin: calc(var(--component-spacer) * var(--text-vspace-multiplier, 1)) auto;
 }
