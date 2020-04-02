@@ -35,7 +35,7 @@
   "devDependencies": {
     "clean-css-cli": "^4.3.0",
     "husky": "^4.2.3",
-    "sass": "^1.26.1"
+    "sass": "^1.26.3"
   },
   "files": [
     "dist/*.{css,map}",
