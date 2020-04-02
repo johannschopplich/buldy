@@ -1,10 +1,6 @@
 .content {
   --text-vspace-multiplier: 1;
 
-  &:not(:last-child) {
-    margin-bottom: var(--component-spacer);
-  }
-
   //
   // Vertical spacing and line height
   //
@@ -77,9 +73,11 @@
   ul,
   ol,
   dd {
-    padding: 0;
-    margin-top: 0;
-    margin-left: 2em;
+    &:not([class]) {
+      padding: 0;
+      margin-top: 0;
+      margin-left: 2em;
+    }
   }
 
   ul {

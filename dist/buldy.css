@@ -1407,9 +1407,6 @@ pre code {
 .content {
   --text-vspace-multiplier: 1;
 }
-.content:not(:last-child) {
-  margin-bottom: var(--component-spacer);
-}
 .content h1:not(:last-child),
 .content h2:not(:last-child),
 .content h3:not(:last-child),
@@ -1469,9 +1466,9 @@ pre code {
 .content li + li {
   margin-top: calc(var(--space-xxxs) * var(--text-vspace-multiplier, 1));
 }
-.content ul,
-.content ol,
-.content dd {
+.content ul:not([class]),
+.content ol:not([class]),
+.content dd:not([class]) {
   padding: 0;
   margin-top: 0;
   margin-left: 2em;
