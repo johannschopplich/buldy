@@ -1,4 +1,5 @@
 $grid-columns: 12 !default;
+$enable-all-span-helpers: false !default;
 
 .grid {
   display: grid;
@@ -39,16 +40,20 @@ $grid-columns: 12 !default;
 
     .grid {
       @for $i from 1 through $grid-columns {
-        > .span-#{$i}#{$infix}         { --span: #{$i}; }
-        > .span-start-#{$i}#{$infix}   { grid-column-start: #{$i}; }
-        > .span-end-#{$i + 1}#{$infix} { grid-column-end: #{$i + 1}; }
+        > .span-#{$i}#{$infix}           { --span: #{$i}; }
+        @if $enable-all-span-helpers == true {
+          > .span-start-#{$i}#{$infix}   { grid-column-start: #{$i}; }
+          > .span-end-#{$i + 1}#{$infix} { grid-column-end: #{$i + 1}; }
+        }
       }
 
-      > .span-start#{$infix}           { grid-column-start: 1; }
-      > .span-end#{$infix}             { grid-column-end: -1; }
+      @if $enable-all-span-helpers == true {
+        > .span-start#{$infix}           { grid-column-start: 1; }
+        > .span-end#{$infix}             { grid-column-end: -1; }
 
-      > .span-start-auto#{$infix}      { grid-column-start: auto; }
-      > .span-end-auto#{$infix}        { grid-column-end: auto; }
+        > .span-start-auto#{$infix}      { grid-column-start: auto; }
+        > .span-end-auto#{$infix}        { grid-column-end: auto; }
+      }
 
       &.is-auto {
         &.is-equal#{$infix} { --col-min-width: 0; }
