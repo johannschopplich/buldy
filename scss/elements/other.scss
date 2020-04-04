@@ -4,16 +4,12 @@
   }
 }
 
-.flow {
-  > * + * {
-    margin-top: var(--flow, var(--component-spacer));
-  }
+.flow > * + * {
+  margin-top: var(--flow, var(--component-spacer));
 }
 
-.flow-h > * {
-  &:not(:last-child) {
-    margin-right: var(--flow-h, var(--component-spacer));
-  }
+.flow-h > *:not(:last-child) {
+  margin-right: var(--flow-h, var(--component-spacer));
 }
 
 .section {
