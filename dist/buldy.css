@@ -83,6 +83,8 @@
   --color-background: black;
   --color-text: white;
   --color-border: var(--color-contrast-low);
+  --color-link: var(--color-primary);
+  --color-link-hover: var(--color-text);
 }
 
 [data-theme] {
