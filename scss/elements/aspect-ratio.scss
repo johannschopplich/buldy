@@ -9,10 +9,6 @@
     padding-bottom: calc(100% / (var(--aspect-ratio)));
   }
 
-  > img {
-    height: auto;
-  }
-
   > :first-child {
     position: absolute;
     top: 0;

@@ -1067,10 +1067,6 @@ pre code {
   display: block;
   padding-bottom: calc(100% / (var(--aspect-ratio)));
 }
-.aspect-ratio > img,
-[style*="--aspect-ratio"] > img {
-  height: auto;
-}
 .aspect-ratio > :first-child,
 [style*="--aspect-ratio"] > :first-child {
   position: absolute;
