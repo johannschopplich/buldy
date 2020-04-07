@@ -1076,8 +1076,8 @@ pre code {
   height: 100%;
 }
 
-.is-square::before,
-.is-1by1::before {
+.is-1by1::before,
+.is-square::before {
   padding-bottom: 100%;
 }
 
