@@ -6,8 +6,4 @@
   border-radius: var(--radius);
   box-shadow: var(--shadow);
   padding: var(--component-spacer);
-
-  &:not(:last-child) {
-    margin-bottom: var(--component-spacer);
-  }
 }

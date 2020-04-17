@@ -1052,9 +1052,6 @@ pre code {
   box-shadow: var(--shadow);
   padding: var(--component-spacer);
 }
-.box:not(:last-child) {
-  margin-bottom: var(--component-spacer);
-}
 
 .aspect-ratio,
 [style*="--aspect-ratio"] {
