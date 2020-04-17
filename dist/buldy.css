@@ -1124,10 +1124,6 @@ pre code {
   font-weight: 600;
 }
 
-.hover\:underline:hover {
-  text-decoration: underline;
-}
-
 .streched-link::after {
   position: absolute;
   top: 0;
