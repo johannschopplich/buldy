@@ -9,8 +9,8 @@
   box-shadow: none;
   vertical-align: top;
 }
-.button:focus, .control:focus {
-  outline-color: transparent;
+.button:focus, .control:focus, .button:active, .control:active {
+  outline: none;
 }
 
 .unselectable, .button, .modal-close {

@@ -9,10 +9,9 @@
   box-shadow: none;
   vertical-align: top;
 
-  &:focus {
-    // `box-shadow` is invisible in Windows high-contrast mode, so we need to add
-    // a transparent outline, which actually does show up in high-contrast mode.
-    outline-color: transparent;
+  &:focus,
+  &:active {
+    outline: none;
   }
 }
 
