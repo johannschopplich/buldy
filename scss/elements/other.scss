@@ -6,7 +6,7 @@
 
 .flow,
 .space-v {
-  > *&:not(:last-child) {
+  > *:not(:last-child) {
     margin-bottom: var(--space, var(--component-spacer));
   }
 }

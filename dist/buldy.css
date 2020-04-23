@@ -1109,13 +1109,13 @@ pre code {
   margin-bottom: var(--component-spacer);
 }
 
-.flow > * + *,
-.space-v > * + * {
-  margin-top: var(--space, var(--component-spacer));
+.flow > *:not(:last-child),
+.space-v > *:not(:last-child) {
+  margin-bottom: var(--space, var(--component-spacer));
 }
 
 .flow-h > *:not(:last-child),
-.space-x > *:not(:last-child) {
+.space-h > *:not(:last-child) {
   margin-right: var(--space, var(--component-spacer));
 }
 
