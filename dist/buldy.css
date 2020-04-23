@@ -816,7 +816,14 @@ pre code {
 }
 
 .content {
+  --line-height-multiplier: 1;
   --text-vspace-multiplier: 1;
+}
+.content p,
+.content ul li,
+.content ol li,
+.content blockquote {
+  line-height: calc(var(--line-height-base) * var(--line-height-multiplier, 1));
 }
 .content h1:not(:last-child),
 .content h2:not(:last-child),
@@ -840,7 +847,7 @@ pre code {
 .content h2,
 .content h3,
 .content h4 {
-  line-height: var(--line-height-heading);
+  line-height: calc(var(--line-height-heading) * var(--line-height-multiplier, 1));
 }
 .content h1:not(:first-child),
 .content h2:not(:first-child),
@@ -1102,12 +1109,14 @@ pre code {
   margin-bottom: var(--component-spacer);
 }
 
-.flow > * + * {
-  margin-top: var(--flow, var(--component-spacer));
+.space-v > * + *,
+.space-y > * + * {
+  margin-top: var(--space, var(--component-spacer));
 }
 
-.flow-h > *:not(:last-child) {
-  margin-right: var(--flow-h, var(--component-spacer));
+.space-h > *:not(:last-child),
+.space-x > *:not(:last-child) {
+  margin-right: var(--space, var(--component-spacer));
 }
 
 .section {
