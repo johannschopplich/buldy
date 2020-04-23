@@ -27,14 +27,8 @@
     "css-compile": "sass --no-source-map scss/buldy.scss dist/buldy.css && sass --no-source-map scss/components/raster.scss dist/raster.css",
     "css-minify": "cleancss --level 1 --output dist/buldy.min.css dist/buldy.css && cleancss --level 1 --output dist/raster.min.css dist/raster.css"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "npm run build"
-    }
-  },
   "devDependencies": {
     "clean-css-cli": "^4.3.0",
-    "husky": "^4.2.3",
     "sass": "^1.26.3"
   },
   "files": [
