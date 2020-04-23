@@ -1,9 +1,17 @@
 .content {
+  --line-height-multiplier: 1;
   --text-vspace-multiplier: 1;
 
   //
   // Vertical spacing and line height
   //
+
+  p,
+  ul li,
+  ol li,
+  blockquote {
+    line-height: calc(var(--line-height-base) * var(--line-height-multiplier, 1));
+  }
 
   h1,
   h2,
@@ -35,7 +43,7 @@
   h2,
   h3,
   h4 {
-    line-height: var(--line-height-heading);
+    line-height: calc(var(--line-height-heading) * var(--line-height-multiplier, 1));
 
     &:not(:first-child) {
       margin-top: calc(var(--space-xl) * var(--text-vspace-multiplier, 1));
