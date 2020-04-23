@@ -4,15 +4,15 @@
   }
 }
 
-.space-v,
-.space-y {
-  > * + * {
-    margin-top: var(--space, var(--component-spacer));
+.flow,
+.space-v {
+  > *&:not(:last-child) {
+    margin-bottom: var(--space, var(--component-spacer));
   }
 }
 
-.space-h,
-.space-x {
+.flow-h,
+.space-h {
   > *:not(:last-child) {
     margin-right: var(--space, var(--component-spacer));
   }
