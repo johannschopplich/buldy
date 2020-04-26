@@ -1,31 +1,14 @@
 {
   "name": "buldy",
-  "description": "Modern CSS framework distilled from the best of larger frameworks",
   "version": "1.6.0",
+  "description": "Modern CSS framework distilled from the best of larger frameworks",
   "main": "scss/buldy.scss",
   "style": "dist/buldy.min.css",
-  "author": {
-    "name": "Johann Schopplich",
-    "email": "mail@johannschopplich.com",
-    "url": "https://johannschopplich.com"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/johannschopplich/buldy.git"
-  },
-  "license": "MIT",
-  "keywords": [
-    "css",
-    "scss",
-    "grid",
-    "mobile-first",
-    "responsive",
-    "framework"
-  ],
   "scripts": {
     "build": "npm run css-compile && npm run css-minify",
     "css-compile": "sass --no-source-map scss/buldy.scss dist/buldy.css && sass --no-source-map scss/components/raster.scss dist/raster.css",
-    "css-minify": "cleancss --level 1 --output dist/buldy.min.css dist/buldy.css && cleancss --level 1 --output dist/raster.min.css dist/raster.css"
+    "css-minify": "cleancss --level 1 --output dist/buldy.min.css dist/buldy.css && cleancss --level 1 --output dist/raster.min.css dist/raster.css",
+    "test": "echo \"No test specified\""
   },
   "devDependencies": {
     "clean-css-cli": "^4.3.0",
@@ -34,5 +17,23 @@
   "files": [
     "dist/*.{css,map}",
     "scss/**/*.scss"
-  ]
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/johannschopplich/buldy.git"
+  },
+  "keywords": [
+    "css",
+    "scss",
+    "grid",
+    "mobile-first",
+    "responsive",
+    "framework"
+  ],
+  "author": "Johann Schopplich <mail@johannschopplich.com> (https://johannschopplich.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/johannschopplich/buldy/issues"
+  },
+  "homepage": "https://github.com/johannschopplich/buldy#readme"
 }
