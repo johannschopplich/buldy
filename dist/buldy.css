@@ -36,7 +36,6 @@
   --font-family-heading: var(--font-family-base);
   --line-height-base: 1.5;
   --line-height-heading: 1.25;
-  --fluid-base-size: calc(16px + (18 - 16) * ((100vw - 320px) / (1280 - 320)));
   --text-scale-ratio: 1.2;
   --text-s: calc(var(--text-6) / var(--text-scale-ratio));
   --text-6: var(--fluid-base-size);
@@ -58,6 +57,20 @@
   --radius: 0.25em;
 }
 
+:root {
+  --fluid-base-size: 16px;
+}
+
+@media (min-width: 320px) {
+  :root {
+    --fluid-base-size: calc(16px + 2 * ((100vw - 320px) / (1280 - 320)));
+  }
+}
+@media (min-width: 1280px) {
+  :root {
+    --fluid-base-size: 18px;
+  }
+}
 :root,
 [data-theme=light] {
   --color-contrast-lowest: hsl(0, 0%, 95%);

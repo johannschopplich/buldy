@@ -26,9 +26,6 @@
   --line-height-base:        1.5;
   --line-height-heading:     1.25;
 
-  // Automated responsive resizing
-  --fluid-base-size:         calc(16px + (18 - 16) * ((100vw - 320px) / (1280 - 320)));
-
   // Modular typography scaling
   --text-scale-ratio:        1.2;
 
@@ -55,6 +52,27 @@
 
   // Radius
   --radius:                  0.25em;
+}
+
+//
+// Automated responsive resizing
+//
+
+:root {
+  --fluid-base-size:         16px;
+}
+
+@media (min-width: 320px) {
+  :root {
+    // calc([minimum size] + ([maximum size] - [minimum size]) * ((100vw - [minimum viewport width]) / ([maximum viewport width] - [minimum viewport width])));
+    --fluid-base-size:       calc(16px + 2 * ((100vw - 320px) / (1280 - 320)));
+  }
+}
+
+@media (min-width: 1280px) {
+  :root {
+    --fluid-base-size:       18px;
+  }
 }
 
 //
