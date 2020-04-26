@@ -15,11 +15,11 @@
 The framework serves the following purposes:
 
 - ⚡️&nbsp; Everything you need to create a solid project
-- 📐️&nbsp; **Typography system** where all font sizes are intertwined
+- 📖&nbsp; **Typography system** where all font sizes are intertwined
 - 📐️&nbsp; Powerful **responsive spacing system** using multipliers of a unit value
 - 🌈&nbsp; Easily editable and extendable CSS variables
 - 🏗&nbsp; A handful of elements, components &amp; utilities
-- 📖&nbsp; No preprocessor necessary — [just plug'n'play](https://github.com/jschopplich/buldy/blob/master/dist/buldy.css)
+- 🎯&nbsp; No preprocessor necessary — [just plug'n'play](https://github.com/jschopplich/buldy/blob/master/dist/buldy.css)
 - ✅&nbsp; Good Semantics
 
 Buldy is a CSS framework. As such, the sole output is a single CSS file: [buldy.css](https://github.com/jschopplich/buldy/blob/master/dist/buldy.css)
