@@ -1,4 +1,5 @@
 $columns: 12 !default;
+$gaps: xs, s, m, l !default;
 
 .columns {
   display: flex;
@@ -16,7 +17,7 @@ $columns: 12 !default;
     padding-bottom: var(--gap, 0);
   }
 
-  @each $gap in $grid-gaps {
+  @each $gap in $gaps {
     &.has-gap-#{$gap} { --gap: var(--space-#{$gap}); }
   }
 

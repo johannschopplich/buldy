@@ -1,7 +1,6 @@
 .button {
   @extend %control;
   @extend %unselectable;
-
   justify-content: center;
   background-color: var(--color-background);
   border-color: var(--color-contrast-lower);

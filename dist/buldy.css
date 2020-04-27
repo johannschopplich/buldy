@@ -345,9 +345,6 @@ pre code {
   padding-left: var(--gap, 0);
   padding-bottom: var(--gap, 0);
 }
-.columns.has-gap-xxs {
-  --gap: var(--space-xxs);
-}
 .columns.has-gap-xs {
   --gap: var(--space-xs);
 }
@@ -709,10 +706,11 @@ pre code {
 }
 
 .control {
+  max-width: 100%;
   width: 100%;
   justify-content: flex-start;
   background-color: var(--color-background);
-  border-color: var(--color-contrast-lower);
+  border-color: var(--color-contrast-low);
   color: var(--color-text);
   padding: var(--space-xxs) var(--space-xs);
   transition: box-shadow 0.15s ease-in-out;
@@ -722,10 +720,7 @@ pre code {
     transition: none;
   }
 }
-.control:hover {
-  border-color: var(--color-contrast-low);
-}
-.control:focus, .control:active {
+.control:focus {
   border-color: var(--color-primary);
   box-shadow: 0 0 0 3px var(--color-primary-a50);
 }
@@ -733,39 +728,38 @@ pre code {
   color: var(--color-contrast-low);
   opacity: 1;
 }
-.control.is-error {
+.control[aria-invalid=true], .control.is-error {
   border-color: var(--color-danger);
 }
-.control.is-error:focus, .control.is-error:active {
+.control[aria-invalid=true]:focus, .control.is-error:focus {
   box-shadow: 0 0 0 3px var(--color-danger-a50);
 }
 .control.is-success {
   border-color: var(--color-success);
 }
-.control.is-success:focus, .control.is-success:active {
+.control.is-success:focus {
   box-shadow: 0 0 0 3px var(--color-success-a50);
-}
-.control[readonly] {
-  box-shadow: none;
 }
 .control[disabled] {
   background-color: var(--color-contrast-lowest);
   border-color: var(--color-contrast-lowest);
-  color: var(--color-contrast-low);
-  box-shadow: none;
+  color: var(--color-contrast-medium);
 }
-.control[aria-invalid=true] {
-  border-color: var(--color-danger);
-}
-.control[aria-invalid=true]:focus {
-  box-shadow: 0 0 0 3px var(--color-danger-a50);
+.control.is-fullwidth {
+  display: block;
+  width: 100%;
 }
 
-.legend {
-  color: var(--color-text);
-  line-height: var(--line-height-heading);
-  font-size: var(--text-5);
-  margin-bottom: var(--space-xxs);
+textarea.control {
+  display: block;
+  min-width: 100%;
+}
+textarea.control:not([rows]) {
+  max-height: 40em;
+  min-height: 8em;
+}
+textarea.control[rows] {
+  height: initial;
 }
 
 .label {

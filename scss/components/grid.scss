@@ -1,4 +1,5 @@
 $grid-columns: 12 !default;
+$grid-gaps: xs, s, m, l !default;
 
 .grid {
   display: grid;

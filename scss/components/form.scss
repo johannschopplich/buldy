@@ -1,20 +1,15 @@
 .control {
   @extend %control;
-
+  max-width: 100%;
   width: 100%;
   justify-content: flex-start;
   background-color: var(--color-background);
-  border-color: var(--color-contrast-lower);
+  border-color: var(--color-contrast-low);
   color: var(--color-text);
   padding: var(--space-xxs) var(--space-xs);
   @include transition(/*border-color 0.15s ease-in-out,*/ box-shadow 0.15s ease-in-out);
 
-  &:hover {
-    border-color: var(--color-contrast-low);
-  }
-
-  &:focus,
-  &:active {
+  &:focus {
     border-color: var(--color-primary);
     box-shadow: 0 0 0 3px var(--color-primary-a50);
   }
@@ -24,46 +19,49 @@
     opacity: 1;
   }
 
+  &[aria-invalid="true"],
   &.is-error {
     border-color: var(--color-danger);
-    &:focus,
-    &:active {
+    &:focus {
       box-shadow: 0 0 0 3px var(--color-danger-a50);
     }
   }
 
   &.is-success {
     border-color: var(--color-success);
-    &:focus,
-    &:active {
+    &:focus {
       box-shadow: 0 0 0 3px var(--color-success-a50);
     }
-  }
-
-  &[readonly] {
-    box-shadow: none;
   }
 
   &[disabled] {
     background-color: var(--color-contrast-lowest);
     border-color: var(--color-contrast-lowest);
-    color: var(--color-contrast-low);
-    box-shadow: none;
+    color: var(--color-contrast-medium);
   }
 
-  &[aria-invalid="true"] {
-    border-color: var(--color-danger);
-    &:focus {
-      box-shadow: 0 0 0 3px var(--color-danger-a50);
-    }
+  //
+  // Modifiers
+  //
+
+  &.is-fullwidth {
+    display: block;
+    width: 100%;
   }
 }
 
-.legend {
-  color: var(--color-text);
-  line-height: var(--line-height-heading);
-  font-size: var(--text-5);
-  margin-bottom: var(--space-xxs);
+textarea.control {
+  display: block;
+  min-width: 100%;
+
+  &:not([rows]) {
+    max-height: 40em;
+    min-height: 8em;
+  }
+
+  &[rows] {
+    height: initial;
+  }
 }
 
 .label {
