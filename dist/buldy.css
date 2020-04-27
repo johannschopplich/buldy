@@ -7,7 +7,6 @@
   border: 1px solid transparent;
   border-radius: var(--radius);
   box-shadow: none;
-  vertical-align: top;
 }
 .button:focus, .control:focus, .button:active, .control:active {
   outline: none;
@@ -710,7 +709,6 @@ pre code {
 }
 
 .control {
-  max-width: 100%;
   width: 100%;
   justify-content: flex-start;
   background-color: var(--color-background);
@@ -744,7 +742,7 @@ pre code {
 .control.is-success:focus {
   box-shadow: 0 0 0 3px var(--color-success-a50);
 }
-.control[disabled] {
+.control[disabled], .control[readonly] {
   background-color: var(--color-contrast-lowest);
   border-color: var(--color-contrast-lowest);
   color: var(--color-contrast-medium);
@@ -755,11 +753,11 @@ pre code {
 }
 .control.is-inline {
   display: inline;
+  width: auto;
 }
 
 textarea.control {
   display: block;
-  min-width: 100%;
 }
 textarea.control:not([rows]) {
   max-height: 40em;
@@ -936,7 +934,7 @@ textarea.control[rows] {
 .button {
   justify-content: center;
   background-color: var(--color-background);
-  border-color: var(--color-contrast-lower);
+  border-color: var(--color-contrast-low);
   color: var(--color-text);
   line-height: 1;
   padding: var(--space-xs);
@@ -950,7 +948,7 @@ textarea.control[rows] {
   }
 }
 .button:hover {
-  border-color: var(--color-contrast-low);
+  border-color: var(--color-text);
   color: var(--color-text);
 }
 .button:focus {
@@ -961,8 +959,9 @@ textarea.control[rows] {
   box-shadow: 0 0 0 3px var(--color-primary-a50);
 }
 .button:active {
+  background-color: var(--color-text);
   border-color: var(--color-text);
-  color: var(--color-text);
+  color: var(--color-background);
 }
 .button.is-text, .button.is-link {
   background-color: transparent;
@@ -982,16 +981,16 @@ textarea.control[rows] {
 }
 .button.is-primary, .button.is-accent {
   --text: white;
-  --color: var(--color-primary);
-  --color-hover: var(--color-primary-hover);
-  --color-active: var(--color-primary-active);
+  --bg: var(--color-primary);
+  --bg-hover: var(--color-primary-hover);
+  --bg-active: var(--color-primary-active);
   --shadow: var(--color-primary-a50);
-  background-color: var(--color);
+  background-color: var(--bg);
   border-color: transparent;
   color: var(--text);
 }
 .button.is-primary:hover, .button.is-accent:hover {
-  background-color: var(--color-hover);
+  background-color: var(--bg-hover);
   border-color: transparent;
   color: var(--text);
 }
@@ -1003,36 +1002,36 @@ textarea.control[rows] {
   box-shadow: 0 0 0 3px var(--shadow);
 }
 .button.is-primary:active, .button.is-accent:active {
-  background-color: var(--color-active);
+  background-color: var(--bg-active);
   border-color: transparent;
   color: var(--text);
 }
 .button.is-primary[disabled], .button.is-accent[disabled] {
-  background-color: var(--color);
+  background-color: var(--bg);
   border-color: transparent;
   color: var(--text);
   box-shadow: none;
 }
 .button.is-primary.is-outlined, .button.is-accent.is-outlined {
   background-color: transparent;
-  border-color: var(--color);
-  color: var(--color);
+  border-color: var(--bg);
+  color: var(--bg);
 }
 .button.is-primary.is-outlined:hover, .button.is-primary.is-outlined:focus, .button.is-accent.is-outlined:hover, .button.is-accent.is-outlined:focus {
-  background-color: var(--color);
-  border-color: var(--color);
+  background-color: var(--bg);
+  border-color: var(--bg);
   color: var(--text);
 }
 .button.is-primary.is-outlined[disabled], .button.is-accent.is-outlined[disabled] {
   background-color: transparent;
-  border-color: var(--color);
-  color: var(--color);
+  border-color: var(--bg);
+  color: var(--bg);
   box-shadow: none;
 }
 .button.is-accent {
-  --color: var(--color-accent);
-  --color-hover: var(--color-accent-hover);
-  --color-active: var(--color-accent-active);
+  --bg: var(--color-accent);
+  --bg-hover: var(--color-accent-hover);
+  --bg-active: var(--color-accent-active);
   --shadow: var(--color-accent-a50);
 }
 .button.is-s {

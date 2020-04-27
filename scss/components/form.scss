@@ -4,7 +4,6 @@
 
 .control {
   @extend %control;
-  max-width: 100%;
   width: 100%;
   justify-content: flex-start;
   background-color: var(--color-background);
@@ -38,7 +37,8 @@
     }
   }
 
-  &[disabled] {
+  &[disabled],
+  &[readonly] {
     background-color: var(--color-contrast-lowest);
     border-color: var(--color-contrast-lowest);
     color: var(--color-contrast-medium);
@@ -55,12 +55,12 @@
 
   &.is-inline {
     display: inline;
+    width: auto;
   }
 }
 
 textarea.control {
   display: block;
-  min-width: 100%;
 
   &:not([rows]) {
     max-height: 40em;

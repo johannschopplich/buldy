@@ -3,7 +3,7 @@
   @extend %unselectable;
   justify-content: center;
   background-color: var(--color-background);
-  border-color: var(--color-contrast-lower);
+  border-color: var(--color-contrast-low);
   color: var(--color-text);
   line-height: 1;
   padding: var(--space-xs);
@@ -12,7 +12,7 @@
   @include transition(/*color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out,*/ box-shadow 0.15s ease-in-out);
 
   &:hover {
-    border-color: var(--color-contrast-low);
+    border-color: var(--color-text);
     color: var(--color-text);
   }
 
@@ -25,8 +25,9 @@
   }
 
   &:active {
+    background-color: var(--color-text);
     border-color: var(--color-text);
-    color: var(--color-text);
+    color: var(--color-background);
   }
 
   //
@@ -67,17 +68,17 @@
   &.is-primary,
   &.is-accent {
     --text: white;
-    --color: var(--color-primary);
-    --color-hover: var(--color-primary-hover);
-    --color-active: var(--color-primary-active);
+    --bg: var(--color-primary);
+    --bg-hover: var(--color-primary-hover);
+    --bg-active: var(--color-primary-active);
     --shadow: var(--color-primary-a50);
 
-    background-color: var(--color);
+    background-color: var(--bg);
     border-color: transparent;
     color: var(--text);
 
     &:hover {
-      background-color: var(--color-hover);
+      background-color: var(--bg-hover);
       border-color: transparent;
       color: var(--text);
     }
@@ -91,13 +92,13 @@
     }
 
     &:active {
-      background-color: var(--color-active);
+      background-color: var(--bg-active);
       border-color: transparent;
       color: var(--text);
     }
 
     &[disabled] {
-      background-color: var(--color);
+      background-color: var(--bg);
       border-color: transparent;
       color: var(--text);
       box-shadow: none;
@@ -109,29 +110,29 @@
 
     &.is-outlined {
       background-color: transparent;
-      border-color: var(--color);
-      color: var(--color);
+      border-color: var(--bg);
+      color: var(--bg);
 
       &:hover,
       &:focus {
-        background-color: var(--color);
-        border-color: var(--color);
+        background-color: var(--bg);
+        border-color: var(--bg);
         color: var(--text);
       }
 
       &[disabled] {
         background-color: transparent;
-        border-color: var(--color);
-        color: var(--color);
+        border-color: var(--bg);
+        color: var(--bg);
         box-shadow: none;
       }
     }
   }
 
   &.is-accent {
-    --color: var(--color-accent);
-    --color-hover: var(--color-accent-hover);
-    --color-active: var(--color-accent-active);
+    --bg: var(--color-accent);
+    --bg-hover: var(--color-accent-hover);
+    --bg-active: var(--color-accent-active);
     --shadow: var(--color-accent-a50);
   }
 
