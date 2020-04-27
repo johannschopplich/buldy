@@ -705,6 +705,10 @@ pre code {
   background-color: rgba(0, 0, 0, 0.4);
 }
 
+.label {
+  margin-bottom: var(--space-xxs);
+}
+
 .control {
   max-width: 100%;
   width: 100%;
@@ -749,6 +753,9 @@ pre code {
   display: block;
   width: 100%;
 }
+.control.is-inline {
+  display: inline;
+}
 
 textarea.control {
   display: block;
@@ -760,10 +767,6 @@ textarea.control:not([rows]) {
 }
 textarea.control[rows] {
   height: initial;
-}
-
-.label {
-  margin-bottom: var(--space-xxs);
 }
 
 .help {

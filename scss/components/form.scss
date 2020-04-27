@@ -1,3 +1,7 @@
+.label {
+  margin-bottom: var(--space-xxs);
+}
+
 .control {
   @extend %control;
   max-width: 100%;
@@ -48,6 +52,10 @@
     display: block;
     width: 100%;
   }
+
+  &.is-inline {
+    display: inline;
+  }
 }
 
 textarea.control {
@@ -62,10 +70,6 @@ textarea.control {
   &[rows] {
     height: initial;
   }
-}
-
-.label {
-  margin-bottom: var(--space-xxs);
 }
 
 .help {
