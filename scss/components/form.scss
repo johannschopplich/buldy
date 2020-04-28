@@ -14,7 +14,7 @@
 
   &:focus {
     border-color: var(--color-primary);
-    box-shadow: 0 0 0 3px var(--color-primary-a50);
+    box-shadow: 0 0 0 3px var(--color-primary-lucent);
   }
 
   &::placeholder {
@@ -26,14 +26,14 @@
   &.is-error {
     border-color: var(--color-danger);
     &:focus {
-      box-shadow: 0 0 0 3px var(--color-danger-a50);
+      box-shadow: 0 0 0 3px var(--color-danger-lucent);
     }
   }
 
   &.is-success {
     border-color: var(--color-success);
     &:focus {
-      box-shadow: 0 0 0 3px var(--color-success-a50);
+      box-shadow: 0 0 0 3px var(--color-success-lucent);
     }
   }
 

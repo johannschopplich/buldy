@@ -20,17 +20,17 @@
 
 :root {
   --color-primary: hsl(224, 58%, 50%);
-  --color-primary-hover: hsl(224, 58%, 55%);
-  --color-primary-active: hsl(224, 58%, 60%);
-  --color-primary-a50: hsla(224, 58%, 50%, 0.5);
+  --color-primary-hover: hsl(224, 58%, 58%);
+  --color-primary-active: hsl(224, 58%, 66%);
+  --color-primary-lucent: hsla(224, 58%, 50%, 0.35);
   --color-accent: hsl(357, 43%, 63%);
-  --color-accent-hover: hsl(357, 43%, 68%);
-  --color-accent-active: hsl(357, 43%, 73%);
-  --color-accent-a50: hsla(357, 43%, 63%, 0.5);
+  --color-accent-hover: hsl(357, 43%, 71%);
+  --color-accent-active: hsl(357, 43%, 79%);
+  --color-accent-lucent: hsla(357, 43%, 63%, 0.35);
   --color-success: hsl(141, 71%, 48%);
-  --color-success-a50: hsla(141, 71%, 48%, 0.5);
+  --color-success-lucent: hsla(141, 71%, 48%, 0.35);
   --color-danger: hsl(348, 100%, 61%);
-  --color-danger-a50: hsla(348, 100%, 61%, 0.5);
+  --color-danger-lucent: hsla(348, 100%, 61%, 0.35);
   --font-family-base: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
   --font-family-heading: var(--font-family-base);
   --line-height-base: 1.5;
@@ -724,7 +724,7 @@ pre code {
 }
 .control:focus {
   border-color: var(--color-primary);
-  box-shadow: 0 0 0 3px var(--color-primary-a50);
+  box-shadow: 0 0 0 3px var(--color-primary-lucent);
 }
 .control::placeholder {
   color: var(--color-contrast-low);
@@ -734,13 +734,13 @@ pre code {
   border-color: var(--color-danger);
 }
 .control[aria-invalid=true]:focus, .control.is-error:focus {
-  box-shadow: 0 0 0 3px var(--color-danger-a50);
+  box-shadow: 0 0 0 3px var(--color-danger-lucent);
 }
 .control.is-success {
   border-color: var(--color-success);
 }
 .control.is-success:focus {
-  box-shadow: 0 0 0 3px var(--color-success-a50);
+  box-shadow: 0 0 0 3px var(--color-success-lucent);
 }
 .control[disabled], .control[readonly] {
   background-color: var(--color-contrast-lowest);
@@ -956,7 +956,7 @@ textarea.control[rows] {
   color: var(--color-text);
 }
 .button:focus:not(:active) {
-  box-shadow: 0 0 0 3px var(--color-primary-a50);
+  box-shadow: 0 0 0 3px var(--color-primary-lucent);
 }
 .button:active {
   background-color: var(--color-text);
@@ -984,7 +984,7 @@ textarea.control[rows] {
   --bg: var(--color-primary);
   --bg-hover: var(--color-primary-hover);
   --bg-active: var(--color-primary-active);
-  --shadow: var(--color-primary-a50);
+  --shadow: var(--color-primary-lucent);
   background-color: var(--bg);
   border-color: transparent;
   color: var(--text);
@@ -1032,7 +1032,7 @@ textarea.control[rows] {
   --bg: var(--color-accent);
   --bg-hover: var(--color-accent-hover);
   --bg-active: var(--color-accent-active);
-  --shadow: var(--color-accent-a50);
+  --shadow: var(--color-accent-lucent);
 }
 .button.is-s {
   font-size: var(--text-s);

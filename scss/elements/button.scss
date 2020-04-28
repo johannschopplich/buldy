@@ -20,7 +20,7 @@
     border-color: var(--color-primary);
     color: var(--color-text);
     &:not(:active) {
-      box-shadow: 0 0 0 3px var(--color-primary-a50);
+      box-shadow: 0 0 0 3px var(--color-primary-lucent);
     }
   }
 
@@ -71,7 +71,7 @@
     --bg: var(--color-primary);
     --bg-hover: var(--color-primary-hover);
     --bg-active: var(--color-primary-active);
-    --shadow: var(--color-primary-a50);
+    --shadow: var(--color-primary-lucent);
 
     background-color: var(--bg);
     border-color: transparent;
@@ -133,7 +133,7 @@
     --bg: var(--color-accent);
     --bg-hover: var(--color-accent-hover);
     --bg-active: var(--color-accent-active);
-    --shadow: var(--color-accent-a50);
+    --shadow: var(--color-accent-lucent);
   }
 
   //

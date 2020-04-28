@@ -5,20 +5,20 @@
 :root {
   // Main colors
   --color-primary:           hsl(224, 58%, 50%);
-  --color-primary-hover:     hsl(224, 58%, 55%);
-  --color-primary-active:    hsl(224, 58%, 60%);
-  --color-primary-a50:       hsla(224, 58%, 50%, 0.5);
+  --color-primary-hover:     hsl(224, 58%, 58%);
+  --color-primary-active:    hsl(224, 58%, 66%);
+  --color-primary-lucent:    hsla(224, 58%, 50%, 0.35);
 
   --color-accent:            hsl(357, 43%, 63%);
-  --color-accent-hover:      hsl(357, 43%, 68%);
-  --color-accent-active:     hsl(357, 43%, 73%);
-  --color-accent-a50:        hsla(357, 43%, 63%, 0.5);
+  --color-accent-hover:      hsl(357, 43%, 71%);
+  --color-accent-active:     hsl(357, 43%, 79%);
+  --color-accent-lucent:     hsla(357, 43%, 63%, 0.35);
 
   // Feedback colors
   --color-success:           hsl(141, 71%, 48%);
-  --color-success-a50:       hsla(141, 71%, 48%, 0.5);
+  --color-success-lucent:    hsla(141, 71%, 48%, 0.35);
   --color-danger:            hsl(348, 100%, 61%);
-  --color-danger-a50:        hsla(348, 100%, 61%, 0.5);
+  --color-danger-lucent:     hsla(348, 100%, 61%, 0.35);
 
   // Typography system
   --font-family-base:        system-ui, -apple-system, "Segoe UI", Roboto, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
