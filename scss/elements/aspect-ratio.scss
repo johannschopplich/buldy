@@ -1,12 +1,13 @@
 .aspect-ratio,
 [style*="--aspect-ratio"] {
+  --calculated: calc(var(--aspect-ratio));
   position: relative;
   display: block;
 
   &::before {
     content: "";
     display: block;
-    padding-bottom: calc(100% / (var(--aspect-ratio)));
+    padding-bottom: calc(100% / var(--calculated));
   }
 
   > :first-child {

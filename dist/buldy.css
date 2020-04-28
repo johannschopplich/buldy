@@ -1068,6 +1068,7 @@ textarea.control[rows] {
 
 .aspect-ratio,
 [style*="--aspect-ratio"] {
+  --calculated: calc(var(--aspect-ratio));
   position: relative;
   display: block;
 }
@@ -1075,7 +1076,7 @@ textarea.control[rows] {
 [style*="--aspect-ratio"]::before {
   content: "";
   display: block;
-  padding-bottom: calc(100% / (var(--aspect-ratio)));
+  padding-bottom: calc(100% / var(--calculated));
 }
 .aspect-ratio > :first-child,
 [style*="--aspect-ratio"] > :first-child {
