@@ -26,6 +26,10 @@
   --line-height-base:        1.5;
   --line-height-heading:     1.25;
 
+  // Fluid typography scaling
+  --font-size-min:           16;
+  --font-size-max:           18;
+
   // Modular typography scaling
   --text-scale-ratio:        1.2;
 
@@ -52,27 +56,6 @@
 
   // Radius
   --radius:                  0.25em;
-}
-
-//
-// Automated responsive resizing
-//
-
-:root {
-  font-size:                 16px;
-}
-
-@media (min-width: 320px) {
-  :root {
-    // calc([minimum size] + ([maximum size] - [minimum size]) * ((100vw - [minimum viewport width]) / ([maximum viewport width] - [minimum viewport width])));
-    font-size:               calc(16px + 2 * ((100vw - 320px) / (1280 - 320)));
-  }
-}
-
-@media (min-width: 1280px) {
-  :root {
-    font-size:               18px;
-  }
 }
 
 //
