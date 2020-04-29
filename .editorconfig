@@ -1,4 +1,4 @@
-[*.{css,scss,js,ts,vue,json,html,php,md,yml}]
+[*.{html,css,js,ts,json,md}]
 indent_style = space
 indent_size = 2
 end_of_line = lf
@@ -8,6 +8,3 @@ insert_final_newline = true
 [*.md]
 indent_size = 4
 trim_trailing_whitespace = false
-
-[*.php]
-indent_size = 4
