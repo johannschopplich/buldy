@@ -20,19 +20,16 @@
   --color-danger:            hsl(348, 100%, 61%);
   --color-danger-lucent:     hsla(348, 100%, 61%, 0.35);
 
-  // Typography system
+  // Fluid typography system
+  --font-size-min:           16;
+  --font-size-max:           18;
   --font-family-base:        system-ui, -apple-system, "Segoe UI", Roboto, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
   --font-family-heading:     var(--font-family-base);
   --line-height-base:        1.5;
   --line-height-heading:     1.25;
 
-  // Fluid typography scaling
-  --font-size-min:           16;
-  --font-size-max:           18;
-
   // Modular typography scaling
   --text-scale-ratio:        1.2;
-
   --text-s:                  calc(var(--text-6) / var(--text-scale-ratio));
   --text-6:                  1rem;
   --text-5:                  calc(var(--text-6) * var(--text-scale-ratio));

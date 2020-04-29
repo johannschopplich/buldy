@@ -1,9 +1,15 @@
 //
-// Automated responsive resizing
+// Document
 //
 
 html {
+  background-color: var(--color-background, white);
+  min-width: 320px;
+  // Automated responsive resizing
   font-size: calc(var(--font-size-min) * 1px);
+  // Show y scrollbar to prevent page width jumping
+  overflow-x: hidden;
+  overflow-y: scroll;
 }
 
 @media (min-width: 320px) {
@@ -17,17 +23,6 @@ html {
   html {
     font-size: calc(var(--font-size-max) * 1px);
   }
-}
-
-//
-// Document
-//
-
-html {
-  background-color: var(--color-background, white);
-  min-width: 320px;
-  overflow-x: hidden;
-  overflow-y: scroll;
 }
 
 body {
