@@ -6,7 +6,7 @@ html {
   background-color: var(--color-background, white);
   min-width: 320px;
   // Automated responsive resizing
-  font-size: calc(var(--font-size-min) * 1px);
+  font-size: calc(var(--fluid-min-size) * 1px);
   // Show y scrollbar to prevent page width jumping
   overflow-x: hidden;
   overflow-y: scroll;
@@ -15,13 +15,13 @@ html {
 @media (min-width: 320px) {
   html {
     // calc([minimum size] + ([maximum size] - [minimum size]) * ((100vw - [minimum viewport width]) / ([maximum viewport width] - [minimum viewport width])));
-    font-size: calc(calc(var(--font-size-min) * 1px) + (var(--font-size-max) - var(--font-size-min)) * ((100vw - 320px) / (1280 - 320)));
+    font-size: calc(calc(var(--fluid-min-size) * 1px) + (var(--fluid-max-size) - var(--fluid-min-size)) * ((100vw - 320px) / (1280 - 320)));
   }
 }
 
 @media (min-width: 1280px) {
   html {
-    font-size: calc(var(--font-size-max) * 1px);
+    font-size: calc(var(--fluid-max-size) * 1px);
   }
 }
 
