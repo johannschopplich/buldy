@@ -74,13 +74,13 @@
 }
 
 [data-theme=dark] {
-  --color-contrast-lowest: hsl(0, 0%, 6%);
-  --color-contrast-lower: hsl(0, 0%, 20%);
+  --color-contrast-lowest: hsl(0, 0%, 14%);
+  --color-contrast-lower: hsl(0, 0%, 22%);
   --color-contrast-low: hsl(0, 0%, 48%);
   --color-contrast-medium: hsl(0, 0%, 70%);
   --color-contrast-high: hsl(0, 0%, 82%);
   --color-contrast-higher: hsl(0, 0%, 95%);
-  --color-background: black;
+  --color-background: hsl(0, 0%, 10%);
   --color-text: white;
   --color-border: var(--color-contrast-low);
   --color-link: var(--color-primary);
@@ -1132,6 +1132,7 @@ textarea.control[rows] {
 
 .title {
   color: var(--color-contrast-higher);
+  font-family: var(--font-family-heading);
   line-height: var(--line-height-heading);
   font-weight: 600;
 }
