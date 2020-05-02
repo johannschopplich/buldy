@@ -15,8 +15,10 @@
     "sass": "^1.26.5"
   },
   "files": [
-    "dist/*.{css,map}",
-    "scss/**/*.scss"
+    "dist",
+    "scss",
+    "LICENSE",
+    "README.md"
   ],
   "repository": {
     "type": "git",

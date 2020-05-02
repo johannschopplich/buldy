@@ -4,15 +4,13 @@
   }
 }
 
-.flow,
-.space-v {
+.stack-v {
   > *:not(:last-child) {
     margin-bottom: var(--space, var(--component-spacer));
   }
 }
 
-.flow-h,
-.space-h {
+.stack-h {
   > *:not(:last-child) {
     margin-right: var(--space, var(--component-spacer));
   }
