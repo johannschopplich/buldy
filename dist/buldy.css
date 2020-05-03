@@ -822,6 +822,7 @@ textarea.control[rows] {
 .content {
   --line-height-multiplier: 1;
   --text-vspace-multiplier: 1;
+  overflow-wrap: break-word;
 }
 .content p,
 .content ul li,
