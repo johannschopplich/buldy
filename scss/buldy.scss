@@ -1,18 +1,17 @@
 @import "mixins/all";
 
 // Base
-@import "variables";
+@import "base/variables";
 @import "base/reset";
 @import "base/generic";
 
 // Components
-// @import "components/grid";
+@import "components/container";
 @import "components/columns";
-@import "components/modal";
 @import "components/form";
+@import "components/modal";
 
 // Elements
-@import "elements/container";
 @import "elements/content";
 @import "elements/button";
 @import "elements/box";
