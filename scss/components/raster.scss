@@ -4,7 +4,18 @@
 // Raster grid subsystem (rsms.me/raster)
 //
 
-$raster-columns: 12 !default;
+$raster-element: ".raster" !default;
+$grid-attribute: columns !default;
+$cell-attribute: span !default;
+$columns: 12 !default;
+$default-cols: 4 !default;
+
+$small-breakpoint: 600px;
+$small-suffix: s;
+$large-breakpoint: 1600px;
+$large-suffix: l;
+
+$include-debug: true !default;
 
 $raster-breakpoints: (
   xs: 0,
@@ -12,8 +23,8 @@ $raster-breakpoints: (
   lg: 1024px
 ) !default;
 
-.raster {
-  --grid-tc: repeat(4, 1fr); // Template columns
+#{$raster-element} {
+  --grid-tc: repeat(#{$default-cols}, 1fr); // Template columns
   --grid-cs: 1; // Column start
   --grid-ce: -1; // Column end
   display: grid;
@@ -30,72 +41,74 @@ $raster-breakpoints: (
     @include media-breakpoint-above($breakpoint, $raster-breakpoints) {
       $infix: if(breakpoint-min($breakpoint, $raster-breakpoints) == null, "", "-#{$breakpoint}");
 
-      @for $i from 1 through $raster-columns {
-        &[columns#{$infix}="#{$i}"] {
+      @for $i from 1 through $columns {
+        &[#{$grid-attribute}#{$infix}="#{$i}"] {
           --grid-tc: repeat(#{$i}, 1fr);
         }
       }
 
       > {
         // span=start...
-        @for $i from 1 through $raster-columns {
-          [span#{$infix}^="#{$i}"] {
+        @for $i from 1 through $columns {
+          [#{$cell-attribute}#{$infix}^="#{$i}"] {
             --grid-cs: #{$i};
           }
         }
 
         // span=...+width, span=...-end
-        [span#{$infix}$="+1"],
-        [span="1"] {
+        [#{$cell-attribute}#{$infix}$="+1"],
+        [#{$cell-attribute}="1"] {
           --grid-ce: 1;
         }
 
-        @for $i from 1 through $raster-columns {
-          [span#{$infix}$="+#{$i}"],
-          [span#{$infix}$="-#{$i - 1}"],
-          [span#{$infix}="#{$i}"] {
+        @for $i from 1 through $columns {
+          [#{$cell-attribute}#{$infix}$="+#{$i}"],
+          [#{$cell-attribute}#{$infix}$="-#{$i - 1}"],
+          [#{$cell-attribute}#{$infix}="#{$i}"] {
             --grid-ce: #{$i};
           }
         }
 
-        [span#{$infix}$="-#{$raster-columns}"] {
-          --grid-ce: #{$raster-columns + 1};
+        [#{$cell-attribute}#{$infix}$="-#{$columns}"] {
+          --grid-ce: #{$columns + 1};
         }
 
         // Connect vars
-        [span#{$infix}] {
+        [#{$cell-attribute}#{$infix}] {
           grid-column-end: span var(--grid-ce);
         }
 
-        [span#{$infix}*="+"],
-        [span#{$infix}*="-"],
-        [span#{$infix}*=".."] {
+        [#{$cell-attribute}#{$infix}*="+"],
+        [#{$cell-attribute}#{$infix}*="-"],
+        [#{$cell-attribute}#{$infix}*=".."] {
           grid-column-start: var(--grid-cs);
         }
 
-        [span#{$infix}*="-"],
-        [span#{$infix}*=".."] {
+        [#{$cell-attribute}#{$infix}*="-"],
+        [#{$cell-attribute}#{$infix}*=".."] {
           grid-column-end: var(--grid-ce);
         }
 
-        [span#{$infix}="row"] {
+        [#{$cell-attribute}#{$infix}="row"] {
           grid-column: 1 / -1;
         }
       }
     }
   }
 
-  &.is-debug {
-    > * {
-      --color: hsla(7, 92%, 66%, 0.3);
-      background-image: linear-gradient(to bottom, var(--color) 0%, var(--color) 100%);
-    }
+  @if $include-debug {
+    &.is-debug {
+      > * {
+        --color: hsla(7, 92%, 66%, 0.3);
+        background-image: linear-gradient(to bottom, var(--color) 0%, var(--color) 100%);
+      }
 
-    > :nth-child(6n+2) { --color: hsla(227, 53%, 61%, 0.3); }
-    > :nth-child(6n+3) { --color: hsla(40, 71%, 58%, 0.3); }
-    > :nth-child(6n+4) { --color: hsla(137, 63%, 57%, 0.3); }
-    > :nth-child(6n+5) { --color: hsla(299, 62%, 63%, 0.3); }
-    > :nth-child(6n+6) { --color: hsla(184, 57%, 60%, 0.3); }
-    > :nth-child(6n+7) { --color: hsla(7, 92%, 66%, 0.3); }
+      > :nth-child(6n+2) { --color: hsla(227, 53%, 61%, 0.3); }
+      > :nth-child(6n+3) { --color: hsla(40, 71%, 58%, 0.3); }
+      > :nth-child(6n+4) { --color: hsla(137, 63%, 57%, 0.3); }
+      > :nth-child(6n+5) { --color: hsla(299, 62%, 63%, 0.3); }
+      > :nth-child(6n+6) { --color: hsla(184, 57%, 60%, 0.3); }
+      > :nth-child(6n+7) { --color: hsla(7, 92%, 66%, 0.3); }
+    }
   }
 }

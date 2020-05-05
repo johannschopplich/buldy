@@ -1167,10 +1167,8 @@ textarea.control[rows] {
 }
 
 .content-centered {
-  display: flex;
-}
-.content-centered > *:only-child {
-  margin: auto;
+  display: grid;
+  place-items: center;
 }
 
 .sr-only {

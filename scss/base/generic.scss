@@ -5,9 +5,9 @@
 html {
   background-color: var(--color-background, white);
   min-width: 320px;
-  // Automated responsive resizing
+  // Set base font size for automated responsive resizing.
   font-size: calc(var(--fluid-min-size) * 1px);
-  // Show y scrollbar to prevent page width jumping
+  // Show vertical scrollbar to prevent page width jumping.
   overflow-x: hidden;
   overflow-y: scroll;
 }
@@ -40,6 +40,14 @@ hr {
   margin: var(--component-spacer) 0;
   opacity: 1;
 }
+
+//
+// Focus
+//
+
+// :focus:not(:focus-visible) {
+//   outline: none;
+// }
 
 //
 // Links

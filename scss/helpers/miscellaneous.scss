@@ -31,28 +31,7 @@
   margin-left: calc(50% - 50vw);
 }
 
-// A "full-bleed" helper variation, which doesn't need `calc()`.
-// .spans-full-width {
-//   width: 100vw;
-//   position: relative;
-//   left: 50%;
-//   right: 50%;
-//   margin-left: -50vw;
-//   margin-right: -50vw;
-// }
-
-// Place all descendants in the center.
-// .content-centered {
-//   display: grid;
-//   place-items: center;
-// }
-
-// A more resilient version for only one descendant
-// to place all descendants in the center.
 .content-centered {
-  display: flex;
-
-  & > *:only-child {
-    margin: auto;
-  }
+  display: grid;
+  place-items: center;
 }
