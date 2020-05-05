@@ -4,6 +4,7 @@
   }
 }
 
+.stack,
 .stack-v {
   > *:not(:last-child) {
     margin-bottom: var(--space, var(--component-spacer));

@@ -1,6 +1,6 @@
-@import "mixins/all";
-
 // Base
+@import "base/breakpoints";
+@import "base/mixins";
 @import "base/variables";
 @import "base/reset";
 @import "base/generic";

@@ -1118,6 +1118,7 @@ textarea.control[rows] {
   margin-bottom: var(--component-spacer);
 }
 
+.stack > *:not(:last-child),
 .stack-v > *:not(:last-child) {
   margin-bottom: var(--space, var(--component-spacer));
 }
