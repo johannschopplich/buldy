@@ -16,11 +16,12 @@
 @import "elements/button";
 @import "elements/box";
 @import "elements/aspect-ratio";
-@import "elements/other";
+@import "elements/title";
 
 // Helpers
-@import "helpers/miscellaneous";
+@import "helpers/layout";
 @import "helpers/accessibility";
+@import "helpers/miscellaneous";
 
 // Utilities
 @import "utilities/api";

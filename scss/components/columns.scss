@@ -1,5 +1,5 @@
 $columns: 12 !default;
-$gaps: xs, s, m, l !default;
+$column-gaps: xs, s, m, l !default;
 
 .columns {
   display: flex;
@@ -17,7 +17,7 @@ $gaps: xs, s, m, l !default;
     padding-bottom: var(--gap, 0);
   }
 
-  @each $gap in $gaps {
+  @each $gap in $column-gaps {
     &.has-gap-#{$gap} { --gap: var(--space-#{$gap}); }
   }
 

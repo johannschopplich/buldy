@@ -12,6 +12,10 @@
   outline: none;
 }
 
+.block:not(:last-child) {
+  margin-bottom: var(--component-spacer);
+}
+
 .unselectable, .button, .modal-close {
   -webkit-touch-callout: none;
   -webkit-user-select: none;
@@ -1114,8 +1118,11 @@ textarea.control[rows] {
   padding-bottom: 50%;
 }
 
-.block:not(:last-child) {
-  margin-bottom: var(--component-spacer);
+.title {
+  color: var(--color-contrast-higher);
+  font-family: var(--font-family-heading);
+  line-height: var(--line-height-heading);
+  font-weight: 600;
 }
 
 .stack > *:not(:last-child),
@@ -1132,11 +1139,16 @@ textarea.control[rows] {
   padding-bottom: var(--space-xl);
 }
 
-.title {
-  color: var(--color-contrast-higher);
-  font-family: var(--font-family-heading);
-  line-height: var(--line-height-heading);
-  font-weight: 600;
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: auto;
+  clip: rect(0 0 0 0);
+  border: 0;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
 .streched-link::after {
@@ -1169,18 +1181,6 @@ textarea.control[rows] {
 .content-centered {
   display: grid;
   place-items: center;
-}
-
-.sr-only {
-  position: absolute;
-  width: 1px;
-  height: auto;
-  clip: rect(0 0 0 0);
-  border: 0;
-  padding: 0;
-  margin: 0;
-  overflow: hidden;
-  white-space: nowrap;
 }
 
 .position-static {
