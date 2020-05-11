@@ -110,6 +110,8 @@ h4,
 h5,
 h6,
 p,
+ul[class],
+ol[class],
 pre,
 figure,
 blockquote,
@@ -156,7 +158,6 @@ ul[class],
 ol[class] {
   list-style: none;
   padding: 0;
-  margin: 0;
 }
 
 b,
@@ -902,19 +903,8 @@ textarea.control[rows] {
   margin-top: 0;
   margin-left: 2em;
 }
-.content ul {
-  list-style-type: disc;
-  list-style-type: disc outside;
-}
 .content ul ul {
-  list-style-type: circle;
   margin-top: calc(var(--space-xs) * var(--text-vspace-multiplier, 1));
-}
-.content ul ul ul {
-  list-style-type: square;
-}
-.content ol {
-  list-style-type: decimal;
 }
 .content blockquote {
   background-color: var(--color-contrast-lowest);

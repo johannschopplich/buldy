@@ -89,22 +89,8 @@
     }
   }
 
-  ul {
-    list-style-type: disc;
-    list-style-type: disc outside;
-
-    ul {
-      list-style-type: circle;
-      margin-top: calc(var(--space-xs) * var(--text-vspace-multiplier, 1));
-
-      ul {
-        list-style-type: square;
-      }
-    }
-  }
-
-  ol {
-    list-style-type: decimal;
+  ul ul {
+    margin-top: calc(var(--space-xs) * var(--text-vspace-multiplier, 1));
   }
 
   blockquote {

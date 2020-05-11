@@ -19,6 +19,8 @@ h4,
 h5,
 h6,
 p,
+ul[class],
+ol[class],
 pre,
 figure,
 blockquote,
@@ -82,22 +84,15 @@ a:not([class]) {
   text-decoration-skip-ink: auto;
 }
 
-// Remove the outline on focused links.
-// a:active {
-//   outline-width: 0;
-// }
-
 //
 // Text-level semantics
 //
 
+// Remove list styles and padding on `ul`, `ol` elements with a class attribute.
 ul[class],
 ol[class] {
-  // Remove list style.
   list-style: none;
-  // Remove default spacing.
   padding: 0;
-  margin: 0;
 }
 
 // Add the correct font weight in Chrome, Edge, and Safari.
