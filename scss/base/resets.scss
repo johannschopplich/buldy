@@ -79,7 +79,7 @@ hr {
 // Links
 //
 
-// Anchor elements that don't have a class get default styles.
+// Add default styles to anchor elements without a class.
 a:not([class]) {
   text-decoration-skip-ink: auto;
 }
@@ -88,11 +88,15 @@ a:not([class]) {
 // Text-level semantics
 //
 
-// Remove list styles and spacing.
 ul,
 ol {
-  list-style: none;
   padding: 0;
+}
+
+// Remove list styles only on lists with a class attribute.
+ul[class],
+ol[class] {
+  list-style: none;
 }
 
 // Add the correct font weight in Chrome, Edge, and Safari.
