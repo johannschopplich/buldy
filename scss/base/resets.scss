@@ -19,8 +19,8 @@ h4,
 h5,
 h6,
 p,
-ul[class],
-ol[class],
+ul,
+ol,
 pre,
 figure,
 blockquote,
@@ -88,9 +88,9 @@ a:not([class]) {
 // Text-level semantics
 //
 
-// Remove list styles and padding on `ul`, `ol` elements with a class attribute.
-ul[class],
-ol[class] {
+// Remove list styles and spacing.
+ul,
+ol {
   list-style: none;
   padding: 0;
 }

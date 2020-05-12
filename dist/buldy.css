@@ -110,8 +110,8 @@ h4,
 h5,
 h6,
 p,
-ul[class],
-ol[class],
+ul,
+ol,
 pre,
 figure,
 blockquote,
@@ -154,8 +154,8 @@ a:not([class]) {
   text-decoration-skip-ink: auto;
 }
 
-ul[class],
-ol[class] {
+ul,
+ol {
   list-style: none;
   padding: 0;
 }
@@ -899,8 +899,6 @@ textarea.control[rows] {
 .content ul:not([class]),
 .content ol:not([class]),
 .content dd:not([class]) {
-  padding: 0;
-  margin-top: 0;
   margin-left: 2em;
 }
 .content ul ul {
