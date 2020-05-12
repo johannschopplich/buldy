@@ -1,0 +1,16 @@
+html {
+  font-size: calc(var(--fluid-min-size) * 1px);
+}
+
+@media (min-width: 320px) {
+  html {
+    // calc([minimum size] + ([maximum size] - [minimum size]) * ((100vw - [minimum viewport width]) / ([maximum viewport width] - [minimum viewport width])));
+    font-size: calc(calc(var(--fluid-min-size) * 1px) + (var(--fluid-max-size) - var(--fluid-min-size)) * ((100vw - 320px) / (1280 - 320)));
+  }
+}
+
+@media (min-width: 1280px) {
+  html {
+    font-size: calc(var(--fluid-max-size) * 1px);
+  }
+}

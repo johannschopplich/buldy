@@ -59,7 +59,7 @@
 // Semantic color definitions & themes
 //
 
-:root,
+:root:not([data-theme]),
 [data-theme="light"] {
   // Shades
   --color-contrast-lowest:   hsl(0, 0%, 95%);
@@ -92,9 +92,4 @@
   --color-border:            var(--color-contrast-low);
   --color-link:              var(--color-primary);
   --color-link-hover:        var(--color-text);
-}
-
-[data-theme] {
-  color:                     var(--color-text);
-  background-color:          var(--color-background);
 }
