@@ -1,0 +1,35 @@
+// Elegantly scale type and space without breakpoints
+//
+// Using `calc()` and viewport units, `font-size` and other properties can adjust their size
+// based on the size of the screen. So rather than always being the same size, or jumping from one
+// size to the next at media queries, the size can be fluid.
+//
+// The default implementation scales the `font-size` from a minimum of 16px (at a 320px viewport)
+// to a maximum of 18px (at a 1280px viewport).
+
+$fluid-min-width: 320px !default;
+$fluid-max-width: 1280px !default;
+
+@function strip-unit($value) {
+  @return $value / ($value * 0 + 1);
+}
+
+@mixin fluid-scale($property, $min-font-size, $max-font-size, $min-width: $fluid-min-width, $max-width: $fluid-max-width) {
+  $u1: unit($min-width);
+  $u2: unit($max-width);
+
+  @if $u1 == $u2 {
+    & {
+      #{$property}: $min-font-size;
+
+      @media (min-width: $min-width) {
+        // calc([minimum size] + ([maximum size] - [minimum size]) * ((100vw - [minimum viewport width]) / ([maximum viewport width] - [minimum viewport width])));
+        #{$property}: calc(#{$min-font-size} + (#{$max-font-size} - #{$min-font-size}) * ((100vw - #{$min-width}) / #{strip-unit($max-width - $min-width)}));
+      }
+
+      @media (min-width: $max-width) {
+        #{$property}: $max-font-size;
+      }
+    }
+  }
+}
