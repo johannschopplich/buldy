@@ -1,28 +1,30 @@
+// Config
+@import "config/breakpoints";
+@import "config/fluid-scales";
+@import "config/mixins";
+
 // Base
-@import "base/breakpoints";
-@import "base/mixins";
 @import "base/resets";
-@import "variables";
+@import "base/variables";
 @import "base/themes";
-@import "base/fluid-type";
 @import "base/generic";
 
 // Components
-@import "components/container";
 @import "components/columns";
+@import "components/container";
 @import "components/form";
 @import "components/modal";
 
 // Elements
-@import "elements/content";
-@import "elements/button";
-@import "elements/box";
 @import "elements/aspect-ratio";
+@import "elements/box";
+@import "elements/button";
+@import "elements/content";
 @import "elements/title";
 
 // Helpers
-@import "helpers/layout";
 @import "helpers/accessibility";
+@import "helpers/layout";
 @import "helpers/miscellaneous";
 
 // Utilities

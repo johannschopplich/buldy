@@ -44,6 +44,7 @@
   @extend %unselectable;
   -webkit-appearance: none;
   -moz-appearance: none;
+  appearance: none;
   display: inline-block;
   position: fixed;
   top: 20px;
