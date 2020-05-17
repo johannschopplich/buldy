@@ -40,7 +40,7 @@ $grid-gaps: xs, s, m, l !default;
 
     .grid {
       @for $i from 1 through $grid-columns {
-        > .span-#{$i}#{$infix}           { --span: #{$i}; }
+        > .span-#{$i}#{$infix}         { --span: #{$i}; }
         > .span-start-#{$i}#{$infix}   { grid-column-start: #{$i}; }
         > .span-end-#{$i + 1}#{$infix} { grid-column-end: #{$i + 1}; }
       }

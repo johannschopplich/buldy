@@ -1,7 +1,3 @@
-.block {
-  @extend %block;
-}
-
 .stack,
 .stack-v {
   > *:not(:last-child) {
@@ -13,9 +9,4 @@
   > *:not(:last-child) {
     margin-right: var(--space, var(--component-spacer));
   }
-}
-
-.section {
-  padding-top: var(--space-xl);
-  padding-bottom: var(--space-xl);
 }
