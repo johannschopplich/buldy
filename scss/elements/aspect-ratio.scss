@@ -1,6 +1,35 @@
+//
+// Responsive embeds
+//
+
 .aspect-ratio,
 [style*="--aspect-ratio"] {
   --calculated: calc(var(--aspect-ratio));
+  position: relative;
+  display: block;
+
+  &::before {
+    content: "";
+    display: block;
+    padding-bottom: calc(100% / var(--calculated));
+  }
+
+  > :first-child {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+//
+// Auto-expanding responsive embeds
+//
+
+.min-aspect-ratio,
+[style*="--min-aspect-ratio"] {
+  --calculated: calc(var(--min-aspect-ratio));
   display: grid;
 
   &::before {
@@ -16,7 +45,7 @@
 }
 
 //
-// Pre-defined horizonral ratios
+// Pre-defined horizontal ratios
 //
 
 .is-1by1::before,
