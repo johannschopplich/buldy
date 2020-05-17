@@ -48,8 +48,8 @@
 // Pre-defined horizontal ratios
 //
 
-.is-1by1::before,
-.is-square::before { padding-bottom: 100%; }
+.is-square::before,
+.is-1by1::before   { padding-bottom: 100%; }
 .is-5by4::before   { padding-bottom: 80%; }
 .is-4by3::before   { padding-bottom: 75%; }
 .is-3by2::before   { padding-bottom: 66.6666%; }

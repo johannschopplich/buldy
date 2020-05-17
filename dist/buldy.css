@@ -736,8 +736,8 @@ pre code {
   grid-area: 1/1/1/1;
 }
 
-.is-1by1::before,
-.is-square::before {
+.is-square::before,
+.is-1by1::before {
   padding-bottom: 100%;
 }
 
@@ -996,7 +996,7 @@ pre code {
 }
 
 .label {
-  margin-bottom: var(--space-xxs);
+  padding-bottom: var(--space-xxs);
 }
 
 .control {
@@ -1203,13 +1203,13 @@ textarea.control[rows] {
 }
 
 .streched-link::after {
+  content: "";
   position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
   z-index: 1;
-  content: "";
 }
 
 .position-static {

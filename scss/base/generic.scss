@@ -3,7 +3,7 @@
 //
 
 html {
-  @include fluid-scale('font-size', calc(var(--fluid-min-size) * 1px), calc(var(--fluid-max-size) * 1px));
+  @include fluid-scale(calc(var(--fluid-min-size) * 1px), calc(var(--fluid-max-size) * 1px));
   background-color: var(--color-background, white);
   min-width: 320px;
   overflow-x: hidden;

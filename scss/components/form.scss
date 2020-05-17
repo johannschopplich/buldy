@@ -1,6 +1,14 @@
+//
+// Labels
+//
+
 .label {
-  margin-bottom: var(--space-xxs);
+  padding-bottom: var(--space-xxs);
 }
+
+//
+// Textual form controls
+//
 
 .control {
   @extend %control;
@@ -10,7 +18,7 @@
   border-color: var(--color-contrast-low);
   color: var(--color-text);
   padding: var(--space-xxs) var(--space-xs);
-  @include transition(/*border-color 0.15s ease-in-out,*/ box-shadow 0.15s ease-in-out);
+  @include transition(box-shadow 0.15s ease-in-out);
 
   &:focus {
     border-color: var(--color-primary);

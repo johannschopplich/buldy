@@ -9,7 +9,7 @@
   padding: var(--space-xs);
   text-align: center;
   white-space: nowrap;
-  @include transition(/*color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out,*/ box-shadow 0.15s ease-in-out);
+  @include transition(box-shadow 0.15s ease-in-out);
 
   &:hover {
     border-color: var(--color-text);
@@ -31,7 +31,7 @@
   }
 
   //
-  // Text & link variation
+  // Text & link buttons
   //
 
   &.is-text,
@@ -62,7 +62,7 @@
   }
 
   //
-  // Colors
+  // Colored buttons
   //
 
   &.is-primary,

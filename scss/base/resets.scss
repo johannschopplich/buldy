@@ -142,7 +142,7 @@ svg {
   vertical-align: middle;
 }
 
-// Restrict sizing to the page width.
+// Keep images and videos from scaling beyond the width of their parents.
 img,
 video {
   // Set a maximum relative to the parent.
