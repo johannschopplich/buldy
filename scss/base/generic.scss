@@ -3,6 +3,7 @@
 //
 
 html {
+  @include fluid-scale('font-size', calc(var(--fluid-min-size) * 1px), calc(var(--fluid-max-size) * 1px));
   background-color: var(--color-background, white);
   min-width: 320px;
   overflow-x: hidden;
@@ -30,14 +31,6 @@ hr {
 }
 
 //
-// Focus
-//
-
-// :focus:not(:focus-visible) {
-//   outline: none;
-// }
-
-//
 // Links
 //
 
@@ -51,12 +44,16 @@ a {
   }
 }
 
+// :focus:not(:focus-visible) {
+//   outline: none;
+// }
+
 //
 // Text-level semantics
 //
 
 mark {
-  background-color: hsl(46, 100%, 91%);
+  background-color: hsl(46, 100%, 85%);
   color: inherit;
 }
 
