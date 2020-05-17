@@ -32,6 +32,8 @@ dd {
 html {
   // Correct the line height.
   line-height: 1.15;
+  // Enable smooth scrolling using user-agent-defined timing.
+  // scroll-behavior: smooth;
   // Remove the grey highlight on links in iOS.
   -webkit-tap-highlight-color: transparent;
   // Prevent adjustments of font size after orientation changes in iOS.
@@ -88,6 +90,7 @@ a:not([class]) {
 // Text-level semantics
 //
 
+// Remove spacing on list elements.
 ul,
 ol {
   padding: 0;
@@ -154,10 +157,27 @@ svg:not([fill]) {
   fill: currentColor;
 }
 
-// Blur images when they have no alt attribute.
-// img:not([alt]) {
-//   filter: blur(10px);
-// }
+//
+// Tabular data
+//
+
+// Prevent double borders.
+table {
+  border-collapse: collapse;
+}
+
+th {
+  // Matches default `<td>` alignment by inheriting `text-align`.
+  text-align: inherit;
+  // Fix alignment for Safari.
+  text-align: -webkit-match-parent;
+}
+
+// Remove default padding of table cells.
+td,
+th {
+  padding: 0;
+}
 
 //
 // Forms
@@ -235,6 +255,7 @@ textarea {
 select {
   -webkit-appearance: none;
   -moz-appearance: none;
+  appearance: none;
   background: no-repeat right center / 1em;
   border-radius: 0;
   padding-right: 1em;
