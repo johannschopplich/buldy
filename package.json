@@ -12,7 +12,7 @@
   },
   "devDependencies": {
     "clean-css-cli": "^4.3.0",
-    "sass": "^1.26.5"
+    "sass": "^1.26.9"
   },
   "files": [
     "dist",
@@ -32,7 +32,7 @@
     "responsive",
     "framework"
   ],
-  "author": "Johann Schopplich <mail@johannschopplich.com> (https://johannschopplich.com)",
+  "author": "Johann Schopplich <pkg@johannschopplich.com> (https://johannschopplich.com)",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/johannschopplich/buldy/issues"
