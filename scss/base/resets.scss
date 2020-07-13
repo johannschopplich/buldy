@@ -132,6 +132,18 @@ small {
   font-size: 0.875em;
 }
 
+// Prevent `sub` and `sup` elements from affecting the line height.
+sub,
+sup {
+  position: relative;
+  font-size: 0.75em;
+  line-height: 0;
+  vertical-align: baseline;
+}
+
+sub { bottom: -.25em; }
+sup { top: -.5em; }
+
 //
 // Embedded content
 //

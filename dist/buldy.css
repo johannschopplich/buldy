@@ -114,6 +114,22 @@ small {
   font-size: 0.875em;
 }
 
+sub,
+sup {
+  position: relative;
+  font-size: 0.75em;
+  line-height: 0;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
 img,
 svg {
   vertical-align: middle;
