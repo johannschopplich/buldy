@@ -716,8 +716,7 @@ pre code {
 .aspect-ratio,
 [style*="--aspect-ratio"] {
   --calculated: calc(var(--aspect-ratio));
-  position: relative;
-  display: block;
+  display: grid;
 }
 .aspect-ratio::before,
 [style*="--aspect-ratio"]::before {
@@ -725,31 +724,32 @@ pre code {
   display: block;
   padding-bottom: calc(100% / var(--calculated));
 }
+.aspect-ratio::before,
 .aspect-ratio > :first-child,
+[style*="--aspect-ratio"]::before,
 [style*="--aspect-ratio"] > :first-child {
+  grid-area: 1/1/1/1;
+}
+
+.aspect-ratio-fixed,
+[style*="--aspect-ratio-fixed"] {
+  --calculated: calc(var(--aspect-ratio-fixed));
+  position: relative;
+  display: block;
+}
+.aspect-ratio-fixed::before,
+[style*="--aspect-ratio-fixed"]::before {
+  content: "";
+  display: block;
+  padding-bottom: calc(100% / var(--calculated));
+}
+.aspect-ratio-fixed > :first-child,
+[style*="--aspect-ratio-fixed"] > :first-child {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-}
-
-.min-aspect-ratio,
-[style*="--min-aspect-ratio"] {
-  --calculated: calc(var(--min-aspect-ratio));
-  display: grid;
-}
-.min-aspect-ratio::before,
-[style*="--min-aspect-ratio"]::before {
-  content: "";
-  display: block;
-  padding-bottom: calc(100% / var(--calculated));
-}
-.min-aspect-ratio::before,
-.min-aspect-ratio > :first-child,
-[style*="--min-aspect-ratio"]::before,
-[style*="--min-aspect-ratio"] > :first-child {
-  grid-area: 1/1/1/1;
 }
 
 .is-square::before,

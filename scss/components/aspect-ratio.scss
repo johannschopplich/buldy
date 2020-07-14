@@ -1,10 +1,31 @@
 //
-// Responsive embeds
+// Auto-expanding responsive embeds
 //
 
 .aspect-ratio,
 [style*="--aspect-ratio"] {
   --calculated: calc(var(--aspect-ratio));
+  display: grid;
+
+  &::before {
+    content: "";
+    display: block;
+    padding-bottom: calc(100% / var(--calculated));
+  }
+
+  &::before,
+  > :first-child {
+    grid-area: 1 / 1 / 1 / 1;
+  }
+}
+
+//
+// Fixed responsive embeds
+//
+
+.aspect-ratio-fixed,
+[style*="--aspect-ratio-fixed"] {
+  --calculated: calc(var(--aspect-ratio-fixed));
   position: relative;
   display: block;
 
@@ -20,27 +41,6 @@
     left: 0;
     width: 100%;
     height: 100%;
-  }
-}
-
-//
-// Auto-expanding responsive embeds
-//
-
-.min-aspect-ratio,
-[style*="--min-aspect-ratio"] {
-  --calculated: calc(var(--min-aspect-ratio));
-  display: grid;
-
-  &::before {
-    content: "";
-    display: block;
-    padding-bottom: calc(100% / var(--calculated));
-  }
-
-  &::before,
-  > :first-child {
-    grid-area: 1 / 1 / 1 / 1;
   }
 }
 
