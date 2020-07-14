@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./assets/logo.svg" alt="Logo of Buldy framework" width="114" height="114">
+  <img src="./assets/logo.svg" alt="Logo of Buldy framework" height="114">
 </p>
 
 <h3 align="center">Buldy</h3>
