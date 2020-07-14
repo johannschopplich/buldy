@@ -1220,6 +1220,18 @@ textarea.control[rows] {
   font-weight: 600;
 }
 
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: auto;
+  clip: rect(0 0 0 0);
+  border: 0;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
 .contained {
   object-fit: contain !important;
 }
@@ -1240,18 +1252,6 @@ textarea.control[rows] {
 .centered-content {
   display: grid;
   place-items: center;
-}
-
-.sr-only {
-  position: absolute;
-  width: 1px;
-  height: auto;
-  clip: rect(0 0 0 0);
-  border: 0;
-  padding: 0;
-  margin: 0;
-  overflow: hidden;
-  white-space: nowrap;
 }
 
 .streched-link::after {
