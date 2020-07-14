@@ -1,0 +1,17 @@
+[data-js-focus-visible] {
+  // Hide the focus indicator if the element receives focus via the mouse,
+  // but still show up on keyboard focus.
+  :focus:not([data-focus-visible-added]) {
+    outline: none;
+  }
+
+  // Custom focus indicator for keyboard focus for anchors and buttons.
+  // Display the browser's default focus indicator for everything else.
+  a,
+  button {
+    &[data-focus-visible-added] {
+      outline: 2px solid currentColor;
+      outline-offset: 2px;
+    }
+  }
+}

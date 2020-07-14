@@ -378,6 +378,15 @@ pre code {
   padding: 0;
 }
 
+[data-js-focus-visible] :focus:not([data-focus-visible-added]) {
+  outline: none;
+}
+[data-js-focus-visible] a[data-focus-visible-added],
+[data-js-focus-visible] button[data-focus-visible-added] {
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
+}
+
 .columns {
   display: flex;
   flex-wrap: wrap;
