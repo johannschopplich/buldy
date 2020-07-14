@@ -26,9 +26,9 @@
 @import "components/title";
 
 // Helpers
-@import "helpers/accessibility";
 @import "helpers/block";
 @import "helpers/miscellaneous";
+@import "helpers/screen-reader-only";
 @import "helpers/stretched-link";
 
 // Utilities

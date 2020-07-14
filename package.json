@@ -1,13 +1,13 @@
 {
   "name": "buldy",
-  "version": "1.6.0",
+  "version": "1.7.0",
   "description": "Modern CSS framework distilled from the best of larger frameworks",
   "main": "scss/buldy.scss",
   "style": "dist/buldy.min.css",
   "scripts": {
-    "build": "npm run css:compile && npm run css:minify",
     "css:compile": "sass --no-source-map scss/buldy.scss dist/buldy.css && sass --no-source-map scss/components/raster.scss dist/raster.css",
     "css:minify": "cleancss --output dist/buldy.min.css dist/buldy.css && cleancss --output dist/raster.min.css dist/raster.css",
+    "build": "npm run css:compile && npm run css:minify",
     "test": "echo \"No test specified\""
   },
   "devDependencies": {
