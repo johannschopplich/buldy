@@ -1186,6 +1186,33 @@ textarea.control[rows] {
   background-color: rgba(0, 0, 0, 0.4);
 }
 
+.table {
+  width: 100%;
+  color: var(--color-text);
+  vertical-align: top;
+}
+.table th,
+.table td {
+  padding: var(--space-xxxs);
+  border-bottom: 1px solid var(--color-contrast-lowest);
+}
+.table tbody {
+  vertical-align: inherit;
+}
+.table thead th {
+  vertical-align: bottom;
+  border-bottom-color: var(--color-text);
+}
+.table.is-borderless th,
+.table.is-borderless td,
+.table.is-borderless thead th,
+.table.is-borderless tbody + tbody {
+  border: 0;
+}
+.table.is-striped tbody tr:nth-of-type(odd) {
+  background-color: var(--color-contrast-lowest);
+}
+
 .title {
   color: var(--color-contrast-higher);
   font-family: var(--font-family-heading);

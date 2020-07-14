@@ -1,0 +1,35 @@
+.table {
+  width: 100%;
+  color: var(--color-text);
+  vertical-align: top;
+
+  th,
+  td {
+    padding: var(--space-xxxs);
+    border-bottom: 1px solid var(--color-contrast-lowest);
+  }
+
+  tbody {
+    vertical-align: inherit;
+  }
+
+  thead th {
+    vertical-align: bottom;
+    border-bottom-color: var(--color-text);
+  }
+
+  &.is-borderless {
+    th,
+    td,
+    thead th,
+    tbody + tbody {
+      border: 0;
+    }
+  }
+
+  &.is-striped {
+    tbody tr:nth-of-type(odd) {
+      background-color: var(--color-contrast-lowest);
+    }
+  }
+}
