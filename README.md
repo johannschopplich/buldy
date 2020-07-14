@@ -37,7 +37,7 @@ Some notes about the folder structure with some additional comments on important
 <details>
 <summary><b>Expand folder tree</b></summary>
 
-```
+```sh
 buldy/scss/
 |
 |   # Core mixin configuration
