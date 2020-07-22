@@ -1,12 +1,15 @@
-// Make element visually invisible but still accessible to screen-readers.
+// Visually hide an element, but leave it available for screen readers.
+// @link https://github.com/h5bp/html5-boilerplate/blob/master/dist/css/main.css
+// @link https://github.com/h5bp/main.css/issues/12#issuecomment-451965809
+// @link https://gist.github.com/nickcolley/19b80ed24d0364cfd3afd3b1b49c4014
 .sr-only {
   position: absolute;
   width: 1px;
-  height: auto;
-  clip: rect(0 0 0 0);
+  height: 1px;
   border: 0;
   padding: 0;
   margin: 0;
+  clip-path: inset(50%);
   overflow: hidden;
   white-space: nowrap;
 }

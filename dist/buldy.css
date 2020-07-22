@@ -1223,11 +1223,11 @@ textarea.control[rows] {
 .sr-only {
   position: absolute;
   width: 1px;
-  height: auto;
-  clip: rect(0 0 0 0);
+  height: 1px;
   border: 0;
   padding: 0;
   margin: 0;
+  clip-path: inset(50%);
   overflow: hidden;
   white-space: nowrap;
 }
