@@ -23,202 +23,206 @@ $colors: (
   contrast-higher: var(--color-contrast-higher),
 ) !default;
 
-$utilities: (
-  //
-  // General
-  //
+$utilities: () !default;
+$utilities: map-merge(
+  (
+    //
+    // General
+    //
 
-  "position": (
-    property: position,
-    values: static relative absolute fixed sticky
-  ),
-  "display": (
-    responsive: true,
-    property: display,
-    class: d,
-    values: none inline inline-block block flex inline-flex grid
-  ),
+    "position": (
+      property: position,
+      values: static relative absolute fixed sticky
+    ),
+    "display": (
+      responsive: true,
+      property: display,
+      class: d,
+      values: none inline inline-block block flex inline-flex grid
+    ),
 
-  //
-  // Sizing
-  //
+    //
+    // Sizing
+    //
 
-  "viewport-height": (
-    property: height,
-    class: vh,
-    values: (100: calc(var(--vh, 1vh) * 100))
-  ),
-  "min-viewport-height": (
-    property: min-height,
-    class: min-vh,
-    values: (100: calc(var(--vh, 1vh) * 100))
-  ),
+    "viewport-height": (
+      property: height,
+      class: vh,
+      values: (100: calc(var(--vh, 1vh) * 100))
+    ),
+    "min-viewport-height": (
+      property: min-height,
+      class: min-vh,
+      values: (100: calc(var(--vh, 1vh) * 100))
+    ),
 
-  //
-  // Margin
-  //
+    //
+    // Margin
+    //
 
-  "margin": (
-    property: margin,
-    class: m,
-    values: map-merge($spacers, (auto: auto))
-  ),
-  "margin-x": (
-    property: margin-right margin-left,
-    class: mx,
-    values: map-merge($spacers, (auto: auto))
-  ),
-  "margin-y": (
-    property: margin-top margin-bottom,
-    class: my,
-    values: map-merge($spacers, (auto: auto))
-  ),
-  "margin-top": (
-    property: margin-top,
-    class: mt,
-    values: map-merge($spacers, (auto: auto))
-  ),
-  "margin-right": (
-    property: margin-right,
-    class: mr,
-    values: map-merge($spacers, (auto: auto))
-  ),
-  "margin-bottom": (
-    property: margin-bottom,
-    class: mb,
-    values: map-merge($spacers, (auto: auto))
-  ),
-  "margin-left": (
-    property: margin-left,
-    class: ml,
-    values: map-merge($spacers, (auto: auto))
-  ),
+    "margin": (
+      property: margin,
+      class: m,
+      values: map-merge($spacers, (auto: auto))
+    ),
+    "margin-x": (
+      property: margin-right margin-left,
+      class: mx,
+      values: map-merge($spacers, (auto: auto))
+    ),
+    "margin-y": (
+      property: margin-top margin-bottom,
+      class: my,
+      values: map-merge($spacers, (auto: auto))
+    ),
+    "margin-top": (
+      property: margin-top,
+      class: mt,
+      values: map-merge($spacers, (auto: auto))
+    ),
+    "margin-right": (
+      property: margin-right,
+      class: mr,
+      values: map-merge($spacers, (auto: auto))
+    ),
+    "margin-bottom": (
+      property: margin-bottom,
+      class: mb,
+      values: map-merge($spacers, (auto: auto))
+    ),
+    "margin-left": (
+      property: margin-left,
+      class: ml,
+      values: map-merge($spacers, (auto: auto))
+    ),
 
-  //
-  // Padding
-  //
+    //
+    // Padding
+    //
 
-  "padding": (
-    property: padding,
-    class: p,
-    values: $spacers
-  ),
-  "padding-x": (
-    property: padding-right padding-left,
-    class: px,
-    values: $spacers
-  ),
-  "padding-y": (
-    property: padding-top padding-bottom,
-    class: py,
-    values: $spacers
-  ),
-  "padding-top": (
-    property: padding-top,
-    class: pt,
-    values: $spacers
-  ),
-  "padding-right": (
-    property: padding-right,
-    class: pr,
-    values: $spacers
-  ),
-  "padding-bottom": (
-    property: padding-bottom,
-    class: pb,
-    values: $spacers
-  ),
-  "padding-left": (
-    property: padding-left,
-    class: pl,
-    values: $spacers
-  ),
+    "padding": (
+      property: padding,
+      class: p,
+      values: $spacers
+    ),
+    "padding-x": (
+      property: padding-right padding-left,
+      class: px,
+      values: $spacers
+    ),
+    "padding-y": (
+      property: padding-top padding-bottom,
+      class: py,
+      values: $spacers
+    ),
+    "padding-top": (
+      property: padding-top,
+      class: pt,
+      values: $spacers
+    ),
+    "padding-right": (
+      property: padding-right,
+      class: pr,
+      values: $spacers
+    ),
+    "padding-bottom": (
+      property: padding-bottom,
+      class: pb,
+      values: $spacers
+    ),
+    "padding-left": (
+      property: padding-left,
+      class: pl,
+      values: $spacers
+    ),
 
-  //
-  // Flex
-  //
+    //
+    // Flex
+    //
 
-  "justify-content": (
-    property: justify-content,
-    values: (
-      start: flex-start,
-      end: flex-end,
-      center: center,
-      between: space-between,
-      around: space-around,
-    )
-  ),
-  "align-items": (
-    property: align-items,
-    values: (
-      start: flex-start,
-      end: flex-end,
-      center: center,
-      stretch: stretch,
-    )
-  ),
+    "justify-content": (
+      property: justify-content,
+      values: (
+        start: flex-start,
+        end: flex-end,
+        center: center,
+        between: space-between,
+        around: space-around,
+      )
+    ),
+    "align-items": (
+      property: align-items,
+      values: (
+        start: flex-start,
+        end: flex-end,
+        center: center,
+        stretch: stretch,
+      )
+    ),
 
-  //
-  // Text
-  //
+    //
+    // Text
+    //
 
-  "color": (
-    property: color,
-    class: text,
-    values: $colors
+    "color": (
+      property: color,
+      class: text,
+      values: $colors
+    ),
+    "background-color": (
+      property: background-color,
+      class: bg,
+      values: $colors
+    ),
+    "line-height": (
+      property: line-height,
+      class: lh,
+      values: (
+        1: 1,
+        base: var(--line-height-base),
+        heading: var(--line-height-heading)
+      )
+    ),
+    "font-size": (
+      responsive: true,
+      property: font-size,
+      class: text,
+      values: (
+        s: var(--text-s),
+        6: var(--text-6),
+        5: var(--text-5),
+        4: var(--text-4),
+        3: var(--text-3),
+        2: var(--text-2),
+        1: var(--text-1),
+      )
+    ),
+    "font-family": (
+      property: font-family,
+      class: text,
+      values: (
+        base: var(--font-family-base),
+        heading: var(--font-family-heading),
+      )
+    ),
+    "font-weight": (
+      property: font-weight,
+      class: text,
+      values: (
+        light: 300,
+        normal: 400,
+        medium: 500,
+        semibold: 600,
+        bold: 700,
+        bolder: 800,
+      )
+    ),
+    "text-align": (
+      responsive: true,
+      property: text-align,
+      class: text,
+      values: left right center
+    ),
   ),
-  "background-color": (
-    property: background-color,
-    class: bg,
-    values: $colors
-  ),
-  "line-height": (
-    property: line-height,
-    class: lh,
-    values: (
-      1: 1,
-      base: var(--line-height-base),
-      heading: var(--line-height-heading)
-    )
-  ),
-  "font-size": (
-    responsive: true,
-    property: font-size,
-    class: text,
-    values: (
-      s: var(--text-s),
-      6: var(--text-6),
-      5: var(--text-5),
-      4: var(--text-4),
-      3: var(--text-3),
-      2: var(--text-2),
-      1: var(--text-1),
-    )
-  ),
-  "font-family": (
-    property: font-family,
-    class: text,
-    values: (
-      base: var(--font-family-base),
-      heading: var(--font-family-heading),
-    )
-  ),
-  "font-weight": (
-    property: font-weight,
-    class: text,
-    values: (
-      light: 300,
-      normal: 400,
-      medium: 500,
-      semibold: 600,
-      bold: 700,
-      bolder: 800,
-    )
-  ),
-  "text-align": (
-    responsive: true,
-    property: text-align,
-    class: text,
-    values: left right center
-  ),
+  $utilities
 );
