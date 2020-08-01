@@ -1,6 +1,6 @@
 {
   "name": "buldy",
-  "version": "1.7.0",
+  "version": "2.0.0",
   "description": "Modern CSS framework distilled from the best of larger frameworks",
   "main": "scss/buldy.scss",
   "style": "dist/buldy.min.css",
