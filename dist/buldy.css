@@ -714,12 +714,14 @@ pre code {
 }
 
 .stack > *:not(:last-child),
-.stack-v > *:not(:last-child) {
-  margin-bottom: var(--space, var(--component-spacer));
+.stack-v > *:not(:last-child),
+[style*="--stack-v"] > *:not(:last-child) {
+  margin-bottom: var(--stack-v, var(--component-spacer));
 }
 
-.stack-h > *:not(:last-child) {
-  margin-right: var(--space, var(--component-spacer));
+.stack-h > *:not(:last-child),
+[style*="--stack-h"] > *:not(:last-child) {
+  margin-right: var(--stack-h, var(--component-spacer));
 }
 
 .aspect-ratio,
