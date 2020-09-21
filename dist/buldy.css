@@ -383,8 +383,8 @@ pre code {
 }
 [data-js-focus-visible] a[data-focus-visible-added],
 [data-js-focus-visible] button[data-focus-visible-added] {
-  outline: 2px solid currentColor;
-  outline-offset: 2px;
+  outline: 5px auto Highlight;
+  outline: 5px auto -webkit-focus-ring-color;
 }
 
 .columns {
@@ -763,28 +763,27 @@ pre code {
   height: 100%;
 }
 
-.is-square::before,
-.is-1by1::before {
+.is-1\:1::before {
   padding-bottom: 100%;
 }
 
-.is-5by4::before {
+.is-5\:4::before {
   padding-bottom: 80%;
 }
 
-.is-4by3::before {
+.is-4\:3::before {
   padding-bottom: 75%;
 }
 
-.is-3by2::before {
+.is-3\:2::before {
   padding-bottom: 66.6666%;
 }
 
-.is-16by9::before {
+.is-16\:9::before {
   padding-bottom: 56.25%;
 }
 
-.is-2by1::before {
+.is-2\:1::before {
   padding-bottom: 50%;
 }
 
