@@ -1219,6 +1219,8 @@ textarea.control[rows] {
   font-weight: 600;
 }
 
+[visually-hidden],
+.visually-hidden,
 .sr-only {
   position: absolute;
   width: 1px;
@@ -1243,7 +1245,7 @@ textarea.control[rows] {
   border-radius: var(--radius);
 }
 
-.spans-fullwidth {
+.span-fullwidth {
   width: 100vw;
   margin-left: calc(50% - 50vw);
 }
