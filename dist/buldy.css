@@ -253,8 +253,6 @@ select:not([multiple]):not([size]) {
   --font-family-heading: var(--font-family-base);
   --line-height-base: 1.5;
   --line-height-heading: 1.25;
-  --fluid-min-size: 16;
-  --fluid-max-size: 18;
   --text-scale-ratio: 1.2;
   --text-s: calc(var(--text-6) / var(--text-scale-ratio));
   --text-6: 1rem;
@@ -311,23 +309,13 @@ select:not([multiple]):not([size]) {
 }
 
 html {
-  background-color: var(--color-background, white);
   min-width: 320px;
+  background-color: var(--color-background, white);
   overflow-x: hidden;
   overflow-y: scroll;
 }
 html {
-  font-size: calc(var(--fluid-min-size) * 1px);
-}
-@media (min-width: 320px) {
-  html {
-    font-size: calc(calc(var(--fluid-min-size) * 1px) + (calc(var(--fluid-max-size) * 1px) - calc(var(--fluid-min-size) * 1px)) * ((100vw - 320px) / 960));
-  }
-}
-@media (min-width: 1280px) {
-  html {
-    font-size: calc(var(--fluid-max-size) * 1px);
-  }
+  font-size: max(16px, min(15.3333333333px + 0.2083333333vw, 18px));
 }
 
 body {

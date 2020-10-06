@@ -27,10 +27,6 @@
   --line-height-base:        1.5;
   --line-height-heading:     1.25;
 
-  // Fluid type and space scales
-  --fluid-min-size:          16;
-  --fluid-max-size:          18;
-
   --text-scale-ratio:        1.2;
   --text-s:                  calc(var(--text-6) / var(--text-scale-ratio));
   --text-6:                  1rem;
