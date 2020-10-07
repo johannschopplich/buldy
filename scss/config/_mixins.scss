@@ -6,13 +6,14 @@ $fluid-max-width: 1280px !default;
 @mixin fluid-scale($min, $max, $property: font-size) {
   $slope: ($max - $min) / ($fluid-max-width - $fluid-min-width);
   $yAxisIntersection: -$fluid-min-width * $slope + $min;
-  $preferredValue: $yAxisIntersection + " + " + ($slope * 100) + "vw";
+  $preferredValue: $yAxisIntersection + " + " + $slope * 100 + "vw";
 
   & {
-    #{$property}:
-      // clamp(#{$min}, #{$preferredValue}, #{$max});
-      // Safari only supports `clamp()` since version 13.7
-      max(#{$min}, min(#{$preferredValue}, #{$max}));
+    #{$property}: clamp(#{$min}, #{$preferredValue}, #{$max});
+
+    @supports not (font-size: clamp(1rem, 2vw, 2rem)) {
+      #{$property}: #{$min};
+    }
   }
 }
 
