@@ -315,11 +315,11 @@ html {
   overflow-y: scroll;
 }
 html {
-  font-size: clamp(16px, 15.3333333333px + 0.2083333333vw, 18px);
+  font-size: 16px;
 }
-@supports not (font-size: clamp(1rem, 2vw, 2rem)) {
+@supports (font-size: clamp(1rem, 2vw, 2rem)) {
   html {
-    font-size: 16px;
+    font-size: clamp(16px, 15.3333333333px + 0.2083333333vw, 18px);
   }
 }
 

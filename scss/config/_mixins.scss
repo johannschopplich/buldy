@@ -9,10 +9,10 @@ $fluid-max-width: 1280px !default;
   $preferredValue: $yAxisIntersection + " + " + $slope * 100 + "vw";
 
   & {
-    #{$property}: clamp(#{$min}, #{$preferredValue}, #{$max});
+    #{$property}: #{$min};
 
-    @supports not (font-size: clamp(1rem, 2vw, 2rem)) {
-      #{$property}: #{$min};
+    @supports (font-size: clamp(1rem, 2vw, 2rem)) {
+      #{$property}: clamp(#{$min}, #{$preferredValue}, #{$max});
     }
   }
 }
