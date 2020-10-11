@@ -745,7 +745,7 @@ pre code {
 
 .content-area {
   display: grid;
-  grid-template-columns: 1fr min(var(--width, 65ch), calc(100% - 2 * var(--component-spacer))) 1fr;
+  grid-template-columns: 1fr min(var(--content-width, 65ch), calc(100% - 2 * var(--component-spacer))) 1fr;
 }
 .content-area > * {
   grid-column: 2;
