@@ -6,6 +6,11 @@
 
 // Show focus styles on keyboard focus.
 :focus-visible {
-  outline: 5px auto Highlight;
-  outline: 5px auto -webkit-focus-ring-color;
+  // 1. Browser's native focus styles:
+  // outline: 5px auto Highlight;
+  // outline: 5px auto -webkit-focus-ring-color;
+
+  // 2. Custom browser focus styles:
+  outline: 2px solid currentColor;
+  outline-offset: 1px;
 }

@@ -29,7 +29,7 @@ $fluid-max-width: 1280px !default;
   box-shadow: none;
 
   &:focus,
-  &:active {
+  &:focus-visible {
     outline: none;
   }
 }
