@@ -1,0 +1,32 @@
+.content-area {
+  display: grid;
+  grid-template-columns:
+    1fr
+    min(
+      var(--width, 65ch),
+      calc(100% - 2 * var(--component-spacer))
+    )
+    1fr;
+
+  > * {
+    grid-column: 2;
+  }
+
+  @each $breakpoint in map-keys($grid-breakpoints) {
+    $width: map-get($grid-breakpoints, $breakpoint);
+
+    @if $width != 0 {
+      &.is-#{$breakpoint} {
+        --width: #{$width};
+      }
+    }
+  }
+
+  .full-bleed {
+    grid-column: 1 / -1;
+    width: 100%;
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

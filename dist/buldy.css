@@ -371,11 +371,11 @@ pre code {
   padding: 0;
 }
 
-[data-js-focus-visible] :focus:not([data-focus-visible-added]) {
+:focus:not(:focus-visible) {
   outline: none;
 }
-[data-js-focus-visible] a[data-focus-visible-added],
-[data-js-focus-visible] button[data-focus-visible-added] {
+
+:focus-visible {
   outline: 5px auto Highlight;
   outline: 5px auto -webkit-focus-ring-color;
 }
@@ -699,6 +699,33 @@ pre code {
 }
 .container.is-xl {
   max-width: 1280px !important;
+}
+
+.content-area {
+  display: grid;
+  grid-template-columns: 1fr min(var(--width, 65ch), calc(100% - 2 * var(--component-spacer))) 1fr;
+}
+.content-area > * {
+  grid-column: 2;
+}
+.content-area.is-sm {
+  --width: 640px;
+}
+.content-area.is-md {
+  --width: 768px;
+}
+.content-area.is-lg {
+  --width: 1024px;
+}
+.content-area.is-xl {
+  --width: 1280px;
+}
+.content-area .full-bleed {
+  grid-column: 1/-1;
+  width: 100%;
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .section {
