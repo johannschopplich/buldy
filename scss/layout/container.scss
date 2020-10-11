@@ -1,6 +1,7 @@
 .container {
   position: relative;
   width: calc(100% - 2 * var(--component-spacer));
+  max-width: map-get($grid-breakpoints, "xl");
   margin-left: auto;
   margin-right: auto;
 
@@ -12,14 +13,8 @@
     $width: map-get($grid-breakpoints, $breakpoint);
 
     @if $width != 0 {
-      @include media-breakpoint-above($breakpoint) {
-        &:not(.is-fluid) {
-          max-width: $width;
-        }
-      }
-
       &.is-#{$breakpoint} {
-        max-width: $width !important;
+        max-width: $width;
       }
     }
   }
