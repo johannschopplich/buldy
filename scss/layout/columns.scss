@@ -18,7 +18,9 @@ $column-gaps: xs, s, m, l !default;
   }
 
   @each $gap in $column-gaps {
-    &.has-gap-#{$gap} { --gap: var(--space-#{$gap}); }
+    &.has-gap-#{$gap} {
+      --gap: var(--space-#{$gap});
+    }
   }
 
   //
@@ -41,9 +43,9 @@ $column-gaps: xs, s, m, l !default;
     display: block;
     flex: 1 1 0;
 
-    @each $breakpoint in map-keys($utility-breakpoints) {
-      @include media-breakpoint-above($breakpoint, $utility-breakpoints) {
-        $infix: breakpoint-infix($breakpoint, $utility-breakpoints);
+    @each $breakpoint in map-keys($grid-breakpoints) {
+      @include media-breakpoint-above($breakpoint, $grid-breakpoints) {
+        $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
 
         &.#{$infix}is-narrow {
           flex: 0 0 auto;

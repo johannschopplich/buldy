@@ -14,13 +14,6 @@ $grid-breakpoints: (
   xl: 1280px,
 ) !default;
 
-$utility-breakpoints: (
-  xs: 0,
-  sm: 640px,
-  md: 768px,
-  lg: 1024px
-) !default;
-
 // Name of the next breakpoint, or null for the last breakpoint.
 //
 //    >> breakpoint-next(sm)
