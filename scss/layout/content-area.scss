@@ -12,16 +12,6 @@
     grid-column: 2;
   }
 
-  @each $breakpoint in map-keys($grid-breakpoints) {
-    $width: map-get($grid-breakpoints, $breakpoint);
-
-    @if $width != 0 {
-      &.is-#{$breakpoint} {
-        --width: #{$width};
-      }
-    }
-  }
-
   .full-bleed {
     grid-column: 1 / -1;
     width: 100%;

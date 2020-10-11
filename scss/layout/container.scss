@@ -1,7 +1,6 @@
 .container {
   position: relative;
   width: calc(100% - 2 * var(--component-spacer));
-  max-width: map-get($grid-breakpoints, "xl");
   margin-left: auto;
   margin-right: auto;
 

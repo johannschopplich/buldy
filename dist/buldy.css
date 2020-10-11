@@ -9,7 +9,7 @@
   border-radius: var(--radius);
   box-shadow: none;
 }
-.control:focus, .button:focus, .control:active, .button:active {
+.control:focus, .button:focus, .control:focus-visible, .button:focus-visible {
   outline: none;
 }
 
@@ -376,8 +376,8 @@ pre code {
 }
 
 :focus-visible {
-  outline: 5px auto Highlight;
-  outline: 5px auto -webkit-focus-ring-color;
+  outline: 2px solid currentColor;
+  outline-offset: 1px;
 }
 
 .columns {
@@ -658,6 +658,68 @@ pre code {
     width: 100%;
   }
 }
+@media (min-width: 1280px) {
+  .columns > .column.xl\:is-narrow {
+    flex: 0 0 auto;
+    width: auto;
+  }
+  .columns > .column.xl\:is-auto {
+    flex: 1 1 0;
+    width: auto;
+  }
+  .columns > .column.xl\:is-full {
+    flex: none;
+    width: 100%;
+  }
+  .columns > .column.xl\:is-1 {
+    flex: none;
+    width: 8.3333333333%;
+  }
+  .columns > .column.xl\:is-2 {
+    flex: none;
+    width: 16.6666666667%;
+  }
+  .columns > .column.xl\:is-3 {
+    flex: none;
+    width: 25%;
+  }
+  .columns > .column.xl\:is-4 {
+    flex: none;
+    width: 33.3333333333%;
+  }
+  .columns > .column.xl\:is-5 {
+    flex: none;
+    width: 41.6666666667%;
+  }
+  .columns > .column.xl\:is-6 {
+    flex: none;
+    width: 50%;
+  }
+  .columns > .column.xl\:is-7 {
+    flex: none;
+    width: 58.3333333333%;
+  }
+  .columns > .column.xl\:is-8 {
+    flex: none;
+    width: 66.6666666667%;
+  }
+  .columns > .column.xl\:is-9 {
+    flex: none;
+    width: 75%;
+  }
+  .columns > .column.xl\:is-10 {
+    flex: none;
+    width: 83.3333333333%;
+  }
+  .columns > .column.xl\:is-11 {
+    flex: none;
+    width: 91.6666666667%;
+  }
+  .columns > .column.xl\:is-12 {
+    flex: none;
+    width: 100%;
+  }
+}
 
 .container {
   position: relative;
@@ -668,37 +730,17 @@ pre code {
 .container.is-fullwidth {
   width: 100%;
 }
-@media (min-width: 640px) {
-  .container:not(.is-fluid) {
-    max-width: 640px;
-  }
-}
 .container.is-sm {
-  max-width: 640px !important;
-}
-@media (min-width: 768px) {
-  .container:not(.is-fluid) {
-    max-width: 768px;
-  }
+  max-width: 640px;
 }
 .container.is-md {
-  max-width: 768px !important;
-}
-@media (min-width: 1024px) {
-  .container:not(.is-fluid) {
-    max-width: 1024px;
-  }
+  max-width: 768px;
 }
 .container.is-lg {
-  max-width: 1024px !important;
-}
-@media (min-width: 1280px) {
-  .container:not(.is-fluid) {
-    max-width: 1280px;
-  }
+  max-width: 1024px;
 }
 .container.is-xl {
-  max-width: 1280px !important;
+  max-width: 1280px;
 }
 
 .content-area {
@@ -707,18 +749,6 @@ pre code {
 }
 .content-area > * {
   grid-column: 2;
-}
-.content-area.is-sm {
-  --width: 640px;
-}
-.content-area.is-md {
-  --width: 768px;
-}
-.content-area.is-lg {
-  --width: 1024px;
-}
-.content-area.is-xl {
-  --width: 1280px;
 }
 .content-area .full-bleed {
   grid-column: 1/-1;
@@ -2315,6 +2345,75 @@ textarea.control[rows] {
   }
 
   .lg\:text-center {
+    text-align: center !important;
+  }
+}
+@media (min-width: 1280px) {
+  .xl\:d-none {
+    display: none !important;
+  }
+
+  .xl\:d-inline {
+    display: inline !important;
+  }
+
+  .xl\:d-inline-block {
+    display: inline-block !important;
+  }
+
+  .xl\:d-block {
+    display: block !important;
+  }
+
+  .xl\:d-flex {
+    display: flex !important;
+  }
+
+  .xl\:d-inline-flex {
+    display: inline-flex !important;
+  }
+
+  .xl\:d-grid {
+    display: grid !important;
+  }
+
+  .xl\:text-s {
+    font-size: var(--text-s) !important;
+  }
+
+  .xl\:text-6 {
+    font-size: var(--text-6) !important;
+  }
+
+  .xl\:text-5 {
+    font-size: var(--text-5) !important;
+  }
+
+  .xl\:text-4 {
+    font-size: var(--text-4) !important;
+  }
+
+  .xl\:text-3 {
+    font-size: var(--text-3) !important;
+  }
+
+  .xl\:text-2 {
+    font-size: var(--text-2) !important;
+  }
+
+  .xl\:text-1 {
+    font-size: var(--text-1) !important;
+  }
+
+  .xl\:text-left {
+    text-align: left !important;
+  }
+
+  .xl\:text-right {
+    text-align: right !important;
+  }
+
+  .xl\:text-center {
     text-align: center !important;
   }
 }
