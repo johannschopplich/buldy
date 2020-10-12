@@ -997,6 +997,7 @@ pre code {
   margin-bottom: calc(var(--component-spacer) * var(--text-vspace-multiplier, 1));
 }
 .content hr {
+  width: 100%;
   margin: calc(var(--component-spacer) * var(--text-vspace-multiplier, 1)) auto;
 }
 .content h1,

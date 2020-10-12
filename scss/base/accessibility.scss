@@ -1,4 +1,4 @@
-// Hide focus styles if they're not needed, for example,  when an element
+// Hide focus styles if they're not needed, for example, when an element
 // receives focus via the mouse.
 :focus:not(:focus-visible) {
   outline: none;
