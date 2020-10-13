@@ -272,6 +272,7 @@ select:not([multiple]):not([size]) {
   --space-xxxl: 8.5rem;
   --component-spacer: var(--space-m);
   --radius: 0.25em;
+  --content-length: 65ch;
 }
 
 :root:not([data-theme]),
@@ -730,6 +731,9 @@ pre code {
 .container.is-fullwidth {
   width: 100%;
 }
+.container.for-content {
+  max-width: var(--content-length);
+}
 .container.is-sm {
   max-width: 640px;
 }
@@ -745,7 +749,7 @@ pre code {
 
 .content-area {
   display: grid;
-  grid-template-columns: 1fr min(var(--content-width, 65ch), calc(100% - 2 * var(--component-spacer))) 1fr;
+  grid-template-columns: 1fr min(var(--content-length), calc(100% - 2 * var(--component-spacer))) 1fr;
 }
 .content-area > * {
   grid-column: 2;

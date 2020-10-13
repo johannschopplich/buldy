@@ -8,6 +8,10 @@
     width: 100%;
   }
 
+  &.for-content {
+    max-width: var(--content-length);
+  }
+
   @each $breakpoint in map-keys($grid-breakpoints) {
     $width: map-get($grid-breakpoints, $breakpoint);
 
