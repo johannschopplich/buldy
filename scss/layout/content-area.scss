@@ -19,4 +19,17 @@
     margin-left: auto;
     margin-right: auto;
   }
+
+  // Alternative implementation:
+
+  // > * {
+  //   position: relative;
+  //   margin: auto;
+  //   max-width: var(--content-length);
+  // }
+
+  // img {
+  //   display: block;
+  //   max-width: 1440px;
+  // }
 }
