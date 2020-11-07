@@ -1,11 +1,3 @@
-// Breakpoint viewport sizes and media queries
-//
-// Breakpoints are defined as a map of (name: minimum width), order from small to large:
-//
-//    (xs: 0, sm: 640px, md: 768px, lg: 1024px, xl: 1280px)
-//
-// The map defined in the `$grid-breakpoints` global variable is used as the `$breakpoints` argument by default.
-
 $grid-breakpoints: (
   xs: 0,
   sm: 640px,
@@ -15,13 +7,6 @@ $grid-breakpoints: (
 ) !default;
 
 // Name of the next breakpoint, or null for the last breakpoint.
-//
-//    >> breakpoint-next(sm)
-//    md
-//    >> breakpoint-next(sm, (xs: 0, sm: 640px, md: 768px, lg: 1024px, xl: 1280px))
-//    md
-//    >> breakpoint-next(sm, $breakpoint-names: (xs sm md lg xl))
-//    md
 @function breakpoint-next($name, $breakpoints: $grid-breakpoints, $breakpoint-names: map-keys($breakpoints)) {
   $n: index($breakpoint-names, $name);
   @if not $n {
@@ -31,9 +16,6 @@ $grid-breakpoints: (
 }
 
 // Minimum breakpoint width. Null for the smallest (first) breakpoint.
-//
-//    >> breakpoint-min(sm, (xs: 0, sm: 640px, md: 768px, lg: 1024px, xl: 1280px))
-//    640px
 @function breakpoint-min($name, $breakpoints: $grid-breakpoints) {
   $min: map-get($breakpoints, $name);
   @return if($min != 0, $min, null);
@@ -41,13 +23,11 @@ $grid-breakpoints: (
 
 // Maximum breakpoint width. Null for the largest (last) breakpoint.
 // The maximum value is calculated as the minimum of the next one less 0.02px
-// to work around the limitations of `min-` and `max-` prefixes and viewports with fractional widths.
-// See https://www.w3.org/TR/mediaqueries-4/#mq-min-max
+// to work around the limitations of `min-` and `max-` prefixes and viewports
+// with fractional widths.
+// @see https://www.w3.org/TR/mediaqueries-4/#mq-min-max
 // Uses 0.02px rather than 0.01px to work around a current rounding bug in Safari.
-// See https://bugs.webkit.org/show_bug.cgi?id=178261
-//
-//    >> breakpoint-max(sm, (xs: 0, sm: 640px, md: 768px, lg: 1024px, xl: 1280px))
-//    639.98px
+// @see https://bugs.webkit.org/show_bug.cgi?id=178261
 @function breakpoint-max($name, $breakpoints: $grid-breakpoints) {
   $max: map-get($breakpoints, $name);
   @return if($max and $max > 0, $max - .02, null);
@@ -55,11 +35,6 @@ $grid-breakpoints: (
 
 // Returns a blank string if smallest breakpoint, otherwise returns the name with a dash in front.
 // Useful for making responsive utilities.
-//
-//    >> breakpoint-infix(xs, (xs: 0, sm: 640px, md: 768px, lg: 1024px, xl: 1280px))
-//    ""  (Returns a blank string)
-//    >> breakpoint-infix(sm, (xs: 0, sm: 640px, md: 768px, lg: 1024px, xl: 1280px))
-//    "sm:"
 @function breakpoint-infix($name, $breakpoints: $grid-breakpoints) {
   @return if(breakpoint-min($name, $breakpoints) == null, "", "#{$name}\\:");
 }
