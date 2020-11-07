@@ -9,7 +9,7 @@
   padding: var(--space-xs);
   text-align: center;
   white-space: nowrap;
-  @include transition(box-shadow 0.15s ease-in-out);
+  @include transition(box-shadow 150ms ease-in-out);
 
   &:hover {
     border-color: var(--color-text);

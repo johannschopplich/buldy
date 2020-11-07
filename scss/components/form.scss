@@ -18,7 +18,7 @@
   border-color: var(--color-contrast-low);
   color: var(--color-text);
   padding: var(--space-xxs) var(--space-xs);
-  @include transition(box-shadow 0.15s ease-in-out);
+  @include transition(box-shadow 150ms ease-in-out);
 
   &:focus {
     border-color: var(--color-primary);

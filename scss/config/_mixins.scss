@@ -59,13 +59,7 @@ $fluid-max-width: 1280px !default;
 }
 
 @mixin transition($transition...) {
-  @if length($transition) == 0 {
-    transition: all 0.2s ease-in-out;
-  } @else {
+  @media (prefers-reduced-motion: no-preference) {
     transition: $transition;
-  }
-
-  @media (prefers-reduced-motion: reduce) {
-    transition: none;
   }
 }
