@@ -857,11 +857,10 @@ pre code {
   padding: var(--space-xs);
   text-align: center;
   white-space: nowrap;
-  transition: box-shadow 0.15s ease-in-out;
 }
-@media (prefers-reduced-motion: reduce) {
+@media (prefers-reduced-motion: no-preference) {
   .button {
-    transition: none;
+    transition: box-shadow 150ms ease-in-out;
   }
 }
 .button:hover {
@@ -1085,11 +1084,10 @@ pre code {
   border-color: var(--color-contrast-low);
   color: var(--color-text);
   padding: var(--space-xxs) var(--space-xs);
-  transition: box-shadow 0.15s ease-in-out;
 }
-@media (prefers-reduced-motion: reduce) {
+@media (prefers-reduced-motion: no-preference) {
   .control {
-    transition: none;
+    transition: box-shadow 150ms ease-in-out;
   }
 }
 .control:focus {
