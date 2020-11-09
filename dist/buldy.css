@@ -1308,7 +1308,7 @@ textarea.control[rows] {
   place-items: center;
 }
 
-.streched-link::after {
+.stretched-link::after {
   content: "";
   position: absolute;
   top: 0;
