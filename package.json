@@ -12,8 +12,7 @@
   },
   "devDependencies": {
     "clean-css-cli": "^4.3.0",
-    "sass": "^1.29.0",
-    "vitepress": "^0.7.3"
+    "sass": "^1.29.0"
   },
   "files": [
     "dist",

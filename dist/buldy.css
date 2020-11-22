@@ -317,11 +317,7 @@ html {
 }
 html {
   font-size: 16px;
-}
-@supports (font-size: clamp(1rem, 2vw, 2rem)) {
-  html {
-    font-size: clamp(16px, 15.3333333333px + 0.2083333333vw, 18px);
-  }
+  font-size: clamp(16px, 15.3333333333px + 0.2083333333vw, 18px);
 }
 
 body {
@@ -788,9 +784,9 @@ pre code {
   padding-bottom: calc(100% / var(--calculated));
 }
 .aspect-ratio::before,
-.aspect-ratio > :first-child,
+.aspect-ratio > *,
 [style*="--aspect-ratio"]::before,
-[style*="--aspect-ratio"] > :first-child {
+[style*="--aspect-ratio"] > * {
   grid-area: 1/1/1/1;
 }
 
@@ -806,8 +802,8 @@ pre code {
   display: block;
   padding-bottom: calc(100% / var(--calculated));
 }
-.aspect-ratio-fixed > :first-child,
-[style*="--aspect-ratio-fixed"] > :first-child {
+.aspect-ratio-fixed > *,
+[style*="--aspect-ratio-fixed"] > * {
   position: absolute;
   top: 0;
   left: 0;
@@ -1286,14 +1282,6 @@ textarea.control[rows] {
   white-space: nowrap;
 }
 
-.contained {
-  object-fit: contain !important;
-}
-
-.covered {
-  object-fit: cover !important;
-}
-
 .rounded {
   border-radius: var(--radius);
 }
@@ -1303,6 +1291,7 @@ textarea.control[rows] {
   margin-left: calc(50% - 50vw);
 }
 
+.content-centered,
 .centered-content {
   display: grid;
   place-items: center;

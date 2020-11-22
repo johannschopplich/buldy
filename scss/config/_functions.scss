@@ -10,9 +10,6 @@ $fluid-max-width: 1280px !default;
 
   & {
     #{$property}: #{$min};
-
-    @supports (font-size: clamp(1rem, 2vw, 2rem)) {
-      #{$property}: clamp(#{$min}, #{$preferredValue}, #{$max});
-    }
+    #{$property}: clamp(#{$min}, #{$preferredValue}, #{$max});
   }
 }
