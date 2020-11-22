@@ -14,7 +14,7 @@
   }
 
   &::before,
-  > :first-child {
+  > * {
     grid-area: 1 / 1 / 1 / 1;
   }
 }
@@ -35,7 +35,7 @@
     padding-bottom: calc(100% / var(--calculated));
   }
 
-  > :first-child {
+  > * {
     position: absolute;
     top: 0;
     left: 0;
