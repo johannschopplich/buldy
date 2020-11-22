@@ -2,14 +2,6 @@
   @extend %unselectable;
 }
 
-.contained {
-  object-fit: contain !important;
-}
-
-.covered {
-  object-fit: cover !important;
-}
-
 .rounded {
   border-radius: var(--radius);
 }
@@ -19,6 +11,7 @@
   margin-left: calc(50% - 50vw);
 }
 
+.content-centered,
 .centered-content {
   display: grid;
   place-items: center;
