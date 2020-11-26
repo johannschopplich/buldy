@@ -140,6 +140,12 @@ $utilities: map-merge(
     // Flex
     //
 
+    "flex-wrap": (
+      responsive: true,
+      property: flex-wrap,
+      class: flex,
+      values: wrap nowrap
+    ),
     "justify-content": (
       property: justify-content,
       values: (
