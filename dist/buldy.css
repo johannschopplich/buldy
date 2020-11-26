@@ -1286,12 +1286,11 @@ textarea.control[rows] {
   border-radius: var(--radius);
 }
 
-.span-fullwidth {
+.stretched-fullwidth {
   width: 100vw;
   margin-left: calc(50% - 50vw);
 }
 
-.content-centered,
 .centered-content {
   display: grid;
   place-items: center;
@@ -1933,6 +1932,14 @@ textarea.control[rows] {
   padding-left: var(--space-xxxl) !important;
 }
 
+.flex-wrap {
+  flex-wrap: wrap !important;
+}
+
+.flex-nowrap {
+  flex-wrap: nowrap !important;
+}
+
 .justify-content-start {
   justify-content: flex-start !important;
 }
@@ -2162,6 +2169,14 @@ textarea.control[rows] {
     display: grid !important;
   }
 
+  .sm\:flex-wrap {
+    flex-wrap: wrap !important;
+  }
+
+  .sm\:flex-nowrap {
+    flex-wrap: nowrap !important;
+  }
+
   .sm\:text-s {
     font-size: var(--text-s) !important;
   }
@@ -2229,6 +2244,14 @@ textarea.control[rows] {
 
   .md\:d-grid {
     display: grid !important;
+  }
+
+  .md\:flex-wrap {
+    flex-wrap: wrap !important;
+  }
+
+  .md\:flex-nowrap {
+    flex-wrap: nowrap !important;
   }
 
   .md\:text-s {
@@ -2300,6 +2323,14 @@ textarea.control[rows] {
     display: grid !important;
   }
 
+  .lg\:flex-wrap {
+    flex-wrap: wrap !important;
+  }
+
+  .lg\:flex-nowrap {
+    flex-wrap: nowrap !important;
+  }
+
   .lg\:text-s {
     font-size: var(--text-s) !important;
   }
@@ -2367,6 +2398,14 @@ textarea.control[rows] {
 
   .xl\:d-grid {
     display: grid !important;
+  }
+
+  .xl\:flex-wrap {
+    flex-wrap: wrap !important;
+  }
+
+  .xl\:flex-nowrap {
+    flex-wrap: nowrap !important;
   }
 
   .xl\:text-s {
