@@ -1,0 +1,66 @@
+$grid-columns: 12 !default;
+$grid-gaps: xs, s, m, l !default;
+$auto-grid-sizes: (
+  s: 8rem,
+  m: 12rem,
+  l: 16rem,
+  xl: 20rem
+) !default;
+
+.grid {
+  display: grid;
+  gap: var(--grid-gap, 0px);
+
+  &:not([class*="is-auto-"]) {
+    --grid-columns: #{$grid-columns};
+    grid-template-columns: repeat(var(--grid-columns), 1fr);
+
+    > * {
+      grid-column: span var(--span, #{$grid-columns}) / span var(--span, #{$grid-columns});
+    }
+  }
+
+  &[class*="is-auto-"] {
+    grid-template-columns: repeat(auto-fit, minmax(var(--grid-auto-min), 1fr));
+  }
+
+  @each $min-key, $min-value in $auto-grid-sizes {
+    &.is-auto-#{$min-key} {
+      --grid-auto-min: #{$min-value};
+    }
+  }
+
+  @each $gap in $grid-gaps {
+    &.has-gap-#{$gap} {
+      --grid-gap: var(--space-#{$gap});
+    }
+  }
+}
+
+//
+// Breakpoints
+//
+
+@each $breakpoint in map-keys($grid-breakpoints) {
+  @include media-breakpoint-above($breakpoint) {
+    $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+
+    .grid {
+      &.#{$infix}has-same-column-sizes {
+        grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
+      }
+    }
+
+    @for $i from 1 through $grid-columns {
+      .#{$infix}span-#{$i}         { --span: #{$i}; }
+      .#{$infix}span-start-#{$i}   { grid-column-start: #{$i}; }
+      .#{$infix}span-end-#{$i + 1} { grid-column-end: #{$i + 1}; }
+    }
+
+    .#{$infix}span-start           { grid-column-start: 1; }
+    .#{$infix}span-end             { grid-column-end: -1; }
+
+    .#{$infix}span-start-auto      { grid-column-start: auto; }
+    .#{$infix}span-end-auto        { grid-column-end: auto; }
+  }
+}
