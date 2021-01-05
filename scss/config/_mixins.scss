@@ -10,7 +10,8 @@
   box-shadow: none;
 
   &:focus,
-  &:focus-visible {
+  &:focus-visible,
+  &:active {
     outline: none;
   }
 }
