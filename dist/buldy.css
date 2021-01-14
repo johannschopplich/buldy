@@ -257,9 +257,9 @@ select:not([multiple]):not([size]) {
   --text-s: calc(var(--text-6) / var(--text-scale-ratio));
   --text-6: 1rem;
   --text-5: calc(var(--text-6) * var(--text-scale-ratio));
+  --text-4: calc(var(--text-5) * var(--text-scale-ratio));
   --text-3: calc(var(--text-4) * var(--text-scale-ratio));
   --text-2: calc(var(--text-3) * var(--text-scale-ratio));
-  --text-4: calc(var(--text-5) * var(--text-scale-ratio));
   --text-1: calc(var(--text-2) * var(--text-scale-ratio));
   --space-xxxs: 0.25rem;
   --space-xxs: 0.375rem;

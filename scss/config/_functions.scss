@@ -4,12 +4,19 @@ $fluid-max-width: 1280px !default;
 // Linearly scale CSS properties with units based on the viewport
 // @see https://css-tricks.com/linearly-scale-font-size-with-css-clamp-based-on-the-viewport/
 @mixin fluid-scale($min, $max, $property: font-size) {
-  $slope: ($max - $min) / ($fluid-max-width - $fluid-min-width);
-  $yAxisIntersection: -$fluid-min-width * $slope + $min;
-  $preferredValue: $yAxisIntersection + " + " + $slope * 100 + "vw";
+  $u1: unit($min);
+  $u2: unit($max);
+  $u3: unit($fluid-min-width);
+  $u4: unit($fluid-max-width);
 
-  & {
-    #{$property}: #{$min};
-    #{$property}: clamp(#{$min}, #{$preferredValue}, #{$max});
+  @if $u1 == $u2 and $u1 == $u3 and $u1 == $u4 {
+    $slope: ($max - $min) / ($fluid-max-width - $fluid-min-width);
+    $yAxisIntersection: -$fluid-min-width * $slope + $min;
+    $preferredValue: $yAxisIntersection + " + " + $slope * 100 + "vw";
+
+    & {
+      #{$property}: #{$min};
+      #{$property}: clamp(#{$min}, #{$preferredValue}, #{$max});
+    }
   }
 }
