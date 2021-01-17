@@ -254,7 +254,7 @@ select:not([multiple]):not([size]) {
   --line-height-base: 1.5;
   --line-height-heading: 1.25;
   --text-scale-ratio: 1.2;
-  --text-s: calc(var(--text-6) / var(--text-scale-ratio));
+  --text-7: calc(var(--text-6) / var(--text-scale-ratio));
   --text-6: 1rem;
   --text-5: calc(var(--text-6) * var(--text-scale-ratio));
   --text-4: calc(var(--text-5) * var(--text-scale-ratio));
@@ -947,7 +947,7 @@ pre code {
   --shadow: var(--color-accent-lucent);
 }
 .button.is-s {
-  font-size: var(--text-s);
+  font-size: var(--text-7);
   padding: var(--space-xxs);
 }
 .button.is-m {
@@ -1132,7 +1132,7 @@ textarea.control[rows] {
 }
 
 .help {
-  font-size: var(--text-s);
+  font-size: var(--text-7);
   margin-top: var(--space-xs);
 }
 .help.is-error {
@@ -2069,7 +2069,7 @@ textarea.control[rows] {
 }
 
 .text-s {
-  font-size: var(--text-s) !important;
+  font-size: var(--text-7) !important;
 }
 
 .text-6 {
@@ -2178,7 +2178,7 @@ textarea.control[rows] {
   }
 
   .sm\:text-s {
-    font-size: var(--text-s) !important;
+    font-size: var(--text-7) !important;
   }
 
   .sm\:text-6 {
@@ -2255,7 +2255,7 @@ textarea.control[rows] {
   }
 
   .md\:text-s {
-    font-size: var(--text-s) !important;
+    font-size: var(--text-7) !important;
   }
 
   .md\:text-6 {
@@ -2332,7 +2332,7 @@ textarea.control[rows] {
   }
 
   .lg\:text-s {
-    font-size: var(--text-s) !important;
+    font-size: var(--text-7) !important;
   }
 
   .lg\:text-6 {
@@ -2409,7 +2409,7 @@ textarea.control[rows] {
   }
 
   .xl\:text-s {
-    font-size: var(--text-s) !important;
+    font-size: var(--text-7) !important;
   }
 
   .xl\:text-6 {
