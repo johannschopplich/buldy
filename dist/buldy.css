@@ -2068,7 +2068,7 @@ textarea.control[rows] {
   line-height: var(--line-height-heading) !important;
 }
 
-.text-s {
+.text-7 {
   font-size: var(--text-7) !important;
 }
 
@@ -2177,7 +2177,7 @@ textarea.control[rows] {
     flex-wrap: nowrap !important;
   }
 
-  .sm\:text-s {
+  .sm\:text-7 {
     font-size: var(--text-7) !important;
   }
 
@@ -2254,7 +2254,7 @@ textarea.control[rows] {
     flex-wrap: nowrap !important;
   }
 
-  .md\:text-s {
+  .md\:text-7 {
     font-size: var(--text-7) !important;
   }
 
@@ -2331,7 +2331,7 @@ textarea.control[rows] {
     flex-wrap: nowrap !important;
   }
 
-  .lg\:text-s {
+  .lg\:text-7 {
     font-size: var(--text-7) !important;
   }
 
@@ -2408,7 +2408,7 @@ textarea.control[rows] {
     flex-wrap: nowrap !important;
   }
 
-  .xl\:text-s {
+  .xl\:text-7 {
     font-size: var(--text-7) !important;
   }
 
