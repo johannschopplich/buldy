@@ -45,8 +45,8 @@
     }
   }
 
-  &[disabled],
-  &[readonly] {
+  &:read-only,
+  &:disabled {
     background-color: var(--color-contrast-lowest);
     border-color: var(--color-contrast-lowest);
     color: var(--color-contrast-medium);

@@ -880,7 +880,7 @@ pre code {
   border-color: transparent;
   color: var(--color-text);
 }
-.button.is-text[disabled], .button.is-link[disabled] {
+.button.is-text:disabled, .button.is-link:disabled {
   background-color: transparent;
   border-color: transparent;
   box-shadow: none;
@@ -918,7 +918,7 @@ pre code {
   border-color: transparent;
   color: var(--text);
 }
-.button.is-primary[disabled], .button.is-accent[disabled] {
+.button.is-primary:disabled, .button.is-accent:disabled {
   background-color: var(--bg);
   border-color: transparent;
   color: var(--text);
@@ -934,7 +934,7 @@ pre code {
   border-color: var(--bg);
   color: var(--text);
 }
-.button.is-primary.is-outlined[disabled], .button.is-accent.is-outlined[disabled] {
+.button.is-primary.is-outlined:disabled, .button.is-accent.is-outlined:disabled {
   background-color: transparent;
   border-color: var(--bg);
   color: var(--bg);
@@ -957,7 +957,7 @@ pre code {
   font-size: var(--text-4);
   padding: var(--space-s);
 }
-.button[disabled] {
+.button:disabled {
   background-color: var(--color-background);
   border-color: var(--color-contrast-lower);
   color: var(--color-text);
@@ -1106,7 +1106,7 @@ pre code {
 .control.is-success:focus {
   box-shadow: 0 0 0 3px var(--color-success-lucent);
 }
-.control[disabled], .control[readonly] {
+.control:read-only, .control:disabled {
   background-color: var(--color-contrast-lowest);
   border-color: var(--color-contrast-lowest);
   color: var(--color-contrast-medium);
