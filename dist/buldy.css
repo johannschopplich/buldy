@@ -720,9 +720,15 @@ pre code {
 
 .container {
   position: relative;
+}
+.container:not(.is-decentered) {
   width: calc(100% - 2 * var(--component-spacer));
   margin-left: auto;
   margin-right: auto;
+}
+.container.is-decentered {
+  padding-left: var(--component-spacer);
+  padding-right: var(--component-spacer);
 }
 .container.is-fullwidth {
   width: 100%;

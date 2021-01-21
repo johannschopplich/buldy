@@ -1,8 +1,15 @@
 .container {
   position: relative;
-  width: calc(100% - 2 * var(--component-spacer));
-  margin-left: auto;
-  margin-right: auto;
+  &:not(.is-decentered) {
+    width: calc(100% - 2 * var(--component-spacer));
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  &.is-decentered {
+    padding-left: var(--component-spacer);
+    padding-right: var(--component-spacer);
+  }
 
   &.is-fullwidth {
     width: 100%;
