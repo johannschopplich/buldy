@@ -11,7 +11,11 @@
   margin-left: calc(50% - 50vw);
 }
 
+// https://web.dev/centering-in-css/
 .centered-content {
-  display: grid;
-  place-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1ch;
 }
