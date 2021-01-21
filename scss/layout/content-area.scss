@@ -3,7 +3,7 @@
   grid-template-columns:
     1fr
     min(
-      var(--content-length),
+      var(--content-width),
       calc(100% - 2 * var(--component-spacer))
     )
     1fr;
@@ -25,7 +25,7 @@
   // > * {
   //   position: relative;
   //   margin: auto;
-  //   max-width: var(--content-length);
+  //   max-width: var(--content-width);
   // }
 
   // img {

@@ -272,7 +272,7 @@ select:not([multiple]):not([size]) {
   --space-xxxl: 8.5rem;
   --component-spacer: var(--space-m);
   --radius: 0.25em;
-  --content-length: 65ch;
+  --content-width: 65ch;
 }
 
 :root:not([data-theme]),
@@ -728,7 +728,7 @@ pre code {
   width: 100%;
 }
 .container.for-content {
-  max-width: var(--content-length);
+  max-width: var(--content-width);
 }
 .container.is-sm {
   max-width: 640px;
@@ -745,7 +745,7 @@ pre code {
 
 .content-area {
   display: grid;
-  grid-template-columns: 1fr min(var(--content-length), calc(100% - 2 * var(--component-spacer))) 1fr;
+  grid-template-columns: 1fr min(var(--content-width), calc(100% - 2 * var(--component-spacer))) 1fr;
 }
 .content-area > * {
   grid-column: 2;
@@ -1296,6 +1296,7 @@ textarea.control[rows] {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  gap: 1ch;
 }
 
 .stretched-link::after {

@@ -9,7 +9,7 @@
   }
 
   &.for-content {
-    max-width: var(--content-length);
+    max-width: var(--content-width);
   }
 
   @each $breakpoint in map-keys($grid-breakpoints) {
@@ -22,3 +22,8 @@
     }
   }
 }
+
+// Alternative container implementation
+// .container {
+//   padding: 0 max(var(--component-spacer), 50vw - var(--content-width) / 2);
+// }
