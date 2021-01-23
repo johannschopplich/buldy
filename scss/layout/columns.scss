@@ -5,12 +5,20 @@ $columns: 12 !default;
   flex-wrap: wrap;
 
   //
-  // Modifiers
+  // Gaps
   //
 
-  &.has-gap {
-    gap: var(--column-gap, 1ch);
+  margin-left: calc(-1 * var(--column-gap, 0));
+  margin-bottom: calc(-1 * var(--column-gap, 0));
+
+  > .column {
+    padding-left: var(--column-gap, 0);
+    padding-bottom: var(--column-gap, 0);
   }
+
+  //
+  // Modifiers
+  //
 
   &.is-centered {
     justify-content: center;

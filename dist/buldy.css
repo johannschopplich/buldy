@@ -380,9 +380,12 @@ pre code {
 .columns {
   display: flex;
   flex-wrap: wrap;
+  margin-left: calc(-1 * var(--column-gap, 0));
+  margin-bottom: calc(-1 * var(--column-gap, 0));
 }
-.columns.has-gap {
-  gap: var(--column-gap, 1ch);
+.columns > .column {
+  padding-left: var(--column-gap, 0);
+  padding-bottom: var(--column-gap, 0);
 }
 .columns.is-centered {
   justify-content: center;
