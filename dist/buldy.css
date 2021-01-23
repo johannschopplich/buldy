@@ -380,24 +380,9 @@ pre code {
 .columns {
   display: flex;
   flex-wrap: wrap;
-  margin-left: calc(-1 * var(--gap, 0));
-  margin-bottom: calc(-1 * var(--gap, 0));
 }
-.columns > .column {
-  padding-left: var(--gap, 0);
-  padding-bottom: var(--gap, 0);
-}
-.columns.has-gap-xs {
-  --gap: var(--space-xs);
-}
-.columns.has-gap-s {
-  --gap: var(--space-s);
-}
-.columns.has-gap-m {
-  --gap: var(--space-m);
-}
-.columns.has-gap-l {
-  --gap: var(--space-l);
+.columns.has-gap {
+  gap: var(--column-gap, 1ch);
 }
 .columns.is-centered {
   justify-content: center;

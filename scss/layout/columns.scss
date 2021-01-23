@@ -1,31 +1,16 @@
 $columns: 12 !default;
-$column-gaps: xs, s, m, l !default;
 
 .columns {
   display: flex;
   flex-wrap: wrap;
 
   //
-  // Gaps
-  //
-
-  margin-left: calc(-1 * var(--gap, 0));
-  margin-bottom: calc(-1 * var(--gap, 0));
-
-  > .column {
-    padding-left: var(--gap, 0);
-    padding-bottom: var(--gap, 0);
-  }
-
-  @each $gap in $column-gaps {
-    &.has-gap-#{$gap} {
-      --gap: var(--space-#{$gap});
-    }
-  }
-
-  //
   // Modifiers
   //
+
+  &.has-gap {
+    gap: var(--column-gap, 1ch);
+  }
 
   &.is-centered {
     justify-content: center;
