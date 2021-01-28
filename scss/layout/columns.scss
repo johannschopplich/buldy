@@ -9,7 +9,7 @@ $columns: 12 !default;
   //
 
   &.has-gap {
-    gap: var(--column-gap, 0);
+    gap: var(--column-gap, 1ch);
   }
 
   &.is-centered {

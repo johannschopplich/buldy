@@ -386,7 +386,7 @@ pre code {
   flex-wrap: wrap;
 }
 .columns.has-gap {
-  gap: var(--column-gap, 0);
+  gap: var(--column-gap, 1ch);
 }
 .columns.is-centered {
   justify-content: center;
