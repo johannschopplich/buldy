@@ -164,7 +164,7 @@ input,
 select,
 textarea {
   font: inherit;
-  letter-spacing: inherit;
+  line-height: inherit;
   margin: 0;
 }
 
@@ -199,6 +199,14 @@ label {
 
 textarea {
   resize: vertical;
+}
+
+[type=search] {
+  -webkit-appearance: textfield;
+  outline-offset: -2px;
+}
+[type=search]::-webkit-search-decoration {
+  -webkit-appearance: none;
 }
 
 button,
