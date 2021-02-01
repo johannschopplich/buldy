@@ -811,14 +811,14 @@ pre code {
   max-width: 1440px;
 }
 
-.content-area {
+.content-field {
   display: grid;
-  grid-template-columns: 1fr min(var(--content-width), calc(100% - 2 * var(--component-spacer))) 1fr;
+  grid-template-columns: 1fr min(var(--content-width), 100% - 2 * var(--component-spacer)) 1fr;
 }
-.content-area > * {
+.content-field > * {
   grid-column: 2;
 }
-.content-area .full-bleed {
+.content-field .full-bleed {
   grid-column: 1/-1;
   width: 100%;
   max-width: 1440px;
