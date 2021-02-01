@@ -1,40 +1,30 @@
 .content {
-  --line-height-multiplier: 1;
-  --text-vspace-multiplier: 1;
   overflow-wrap: break-word;
 
   //
-  // Vertical spacing and line height
+  // Vertical block spacing
   //
 
-  p,
-  ul li,
-  ol li,
-  blockquote {
-    line-height: calc(var(--line-height-base) * var(--line-height-multiplier, 1));
+  > *:not(:last-child) {
+    margin-bottom: calc(var(--component-spacer) * var(--block-vspace-multiplier, 1));
   }
 
   h1,
   h2,
   h3,
-  h4,
-  h5,
-  h6,
-  p,
-  pre,
-  ul,
-  ol,
-  blockquote,
-  table,
-  dl {
-    &:not(:last-child) {
-      margin-bottom: calc(var(--component-spacer) * var(--text-vspace-multiplier, 1));
+  h4 {
+    &:not(:first-child) {
+      margin-top: calc(var(--space-xl) * var(--block-vspace-multiplier, 1));
     }
   }
 
   hr {
     width: 100%;
-    margin: calc(var(--component-spacer) * var(--text-vspace-multiplier, 1)) auto;
+    margin-left: auto;
+    margin-right: auto;
+    &:not(:first-child) {
+      margin-top: calc(var(--component-spacer) * var(--block-vspace-multiplier, 1));
+    }
   }
 
   //
@@ -45,11 +35,7 @@
   h2,
   h3,
   h4 {
-    line-height: calc(var(--line-height-heading) * var(--line-height-multiplier, 1));
-
-    &:not(:first-child) {
-      margin-top: calc(var(--space-xl) * var(--text-vspace-multiplier, 1));
-    }
+    line-height: var(--line-height-heading);
   }
 
   h1 { font-size: var(--text-2); }
@@ -73,7 +59,7 @@
   //
 
   li + li {
-    margin-top: calc(var(--space-xxxs) * var(--text-vspace-multiplier, 1));
+    margin-top: calc(var(--space-xxxs) * var(--block-vspace-multiplier, 1));
   }
 
   //
@@ -89,7 +75,7 @@
   }
 
   ul ul {
-    margin-top: calc(var(--space-xs) * var(--text-vspace-multiplier, 1));
+    margin-top: calc(var(--space-xs) * var(--block-vspace-multiplier, 1));
   }
 
   blockquote {
@@ -103,20 +89,13 @@
     // margin-right: 2em;
     // margin-left: 2em;
 
-    &:not(:first-child) {
-      margin-top: calc(var(--component-spacer) * var(--text-vspace-multiplier, 1));
-    }
-
-    &:not(:last-child) {
-      margin-bottom: calc(var(--component-spacer) * var(--text-vspace-multiplier, 1));
-    }
-
     img {
       display: inline-block;
     }
 
     figcaption {
-      margin-top: calc(var(--space-xs) * var(--text-vspace-multiplier, 1));
+      margin-top: calc(var(--space-xs) * var(--block-vspace-multiplier, 1));
+      line-height: var(--line-height-heading);
     }
   }
 }

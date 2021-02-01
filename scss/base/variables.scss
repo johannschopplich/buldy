@@ -24,8 +24,8 @@
   // Typography
   --font-family-base:        system-ui, -apple-system, "Segoe UI", Roboto, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
   --font-family-heading:     var(--font-family-base);
-  --line-height-base:        1.5;
-  --line-height-heading:     1.25;
+  --line-height-base:        calc(1ex / 0.32);
+  --line-height-heading:     calc(1ex / 0.42);
 
   --text-scale-ratio:        1.2;
   --text-7:                  calc(var(--text-6) / var(--text-scale-ratio));
