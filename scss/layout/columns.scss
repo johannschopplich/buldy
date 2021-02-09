@@ -34,23 +34,19 @@ $columns: 12 !default;
 
         &.#{$infix}is-narrow {
           flex: 0 0 auto;
-          width: auto;
         }
 
         &.#{$infix}is-auto {
           flex: 1;
-          width: auto;
         }
 
         &.#{$infix}is-full {
-          flex: none;
-          width: 100%;
+          flex: 0 0 100%;
         }
 
         @for $i from 1 through $columns {
           &.#{$infix}is-#{$i} {
-            flex: none;
-            width: percentage($i / 12);
+            flex: 0 0 percentage($i / 12);
           }
         }
       }
