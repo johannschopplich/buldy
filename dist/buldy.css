@@ -380,6 +380,10 @@ pre code {
   padding: 0;
 }
 
+button {
+  touch-action: manipulation;
+}
+
 :focus:not(:focus-visible) {
   outline: none;
 }

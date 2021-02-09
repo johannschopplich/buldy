@@ -81,3 +81,11 @@ pre {
     padding: 0;
   }
 }
+
+//
+// User experience
+//
+
+button {
+  touch-action: manipulation;
+}
