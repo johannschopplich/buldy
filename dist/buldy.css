@@ -404,14 +404,14 @@ pre code {
 }
 .columns > .column {
   display: block;
-  flex: 1 1 0;
+  flex: 1;
 }
 .columns > .column.is-narrow {
   flex: 0 0 auto;
   width: auto;
 }
 .columns > .column.is-auto {
-  flex: 1 1 0;
+  flex: 1;
   width: auto;
 }
 .columns > .column.is-full {
@@ -472,7 +472,7 @@ pre code {
     width: auto;
   }
   .columns > .column.sm\:is-auto {
-    flex: 1 1 0;
+    flex: 1;
     width: auto;
   }
   .columns > .column.sm\:is-full {
@@ -534,7 +534,7 @@ pre code {
     width: auto;
   }
   .columns > .column.md\:is-auto {
-    flex: 1 1 0;
+    flex: 1;
     width: auto;
   }
   .columns > .column.md\:is-full {
@@ -596,7 +596,7 @@ pre code {
     width: auto;
   }
   .columns > .column.lg\:is-auto {
-    flex: 1 1 0;
+    flex: 1;
     width: auto;
   }
   .columns > .column.lg\:is-full {
@@ -658,7 +658,7 @@ pre code {
     width: auto;
   }
   .columns > .column.xl\:is-auto {
-    flex: 1 1 0;
+    flex: 1;
     width: auto;
   }
   .columns > .column.xl\:is-full {

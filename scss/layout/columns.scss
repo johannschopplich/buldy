@@ -26,7 +26,7 @@ $columns: 12 !default;
 
   > .column {
     display: block;
-    flex: 1 1 0;
+    flex: 1; // Shorthand for `flex: 1 1 0`
 
     @each $breakpoint in map-keys($grid-breakpoints) {
       @include media-breakpoint-above($breakpoint, $grid-breakpoints) {
@@ -38,7 +38,7 @@ $columns: 12 !default;
         }
 
         &.#{$infix}is-auto {
-          flex: 1 1 0;
+          flex: 1;
           width: auto;
         }
 

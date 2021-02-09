@@ -24,11 +24,12 @@ $raster-breakpoints: (
 ) !default;
 
 #{$raster-element} {
-  --grid-tc: repeat(#{$default-cols}, 1fr); // Template columns
-  --grid-cs: 1; // Column start
-  --grid-ce: -1; // Column end
+  --grid-template-columns: repeat(#{$default-cols}, 1fr);
+  --grid-column-start: 1;
+  --grid-column-end: -1;
+
   display: grid;
-  grid-template-columns: var(--grid-tc);
+  grid-template-columns: var(--grid-template-columns);
 
   // Cell or column
   > * {
@@ -43,7 +44,7 @@ $raster-breakpoints: (
 
       @for $i from 1 through $columns {
         &[#{$grid-attribute}#{$infix}="#{$i}"] {
-          --grid-tc: repeat(#{$i}, 1fr);
+          --grid-template-columns: repeat(#{$i}, 1fr);
         }
       }
 
@@ -51,42 +52,42 @@ $raster-breakpoints: (
         // span=start...
         @for $i from 1 through $columns {
           [#{$cell-attribute}#{$infix}^="#{$i}"] {
-            --grid-cs: #{$i};
+            --grid-column-start: #{$i};
           }
         }
 
         // span=...+width, span=...-end
         [#{$cell-attribute}#{$infix}$="+1"],
         [#{$cell-attribute}="1"] {
-          --grid-ce: 1;
+          --grid-column-end: 1;
         }
 
         @for $i from 1 through $columns {
           [#{$cell-attribute}#{$infix}$="+#{$i}"],
           [#{$cell-attribute}#{$infix}$="-#{$i - 1}"],
           [#{$cell-attribute}#{$infix}="#{$i}"] {
-            --grid-ce: #{$i};
+            --grid-column-end: #{$i};
           }
         }
 
         [#{$cell-attribute}#{$infix}$="-#{$columns}"] {
-          --grid-ce: #{$columns + 1};
+          --grid-column-end: #{$columns + 1};
         }
 
         // Connect vars
         [#{$cell-attribute}#{$infix}] {
-          grid-column-end: span var(--grid-ce);
+          grid-column-end: span var(--grid-column-end);
         }
 
         [#{$cell-attribute}#{$infix}*="+"],
         [#{$cell-attribute}#{$infix}*="-"],
         [#{$cell-attribute}#{$infix}*=".."] {
-          grid-column-start: var(--grid-cs);
+          grid-column-start: var(--grid-column-start);
         }
 
         [#{$cell-attribute}#{$infix}*="-"],
         [#{$cell-attribute}#{$infix}*=".."] {
-          grid-column-end: var(--grid-ce);
+          grid-column-end: var(--grid-column-end);
         }
 
         [#{$cell-attribute}#{$infix}="row"] {
