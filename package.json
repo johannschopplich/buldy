@@ -5,8 +5,8 @@
   "main": "scss/buldy.scss",
   "style": "dist/buldy.min.css",
   "scripts": {
-    "build:core": "sass --style=compressed --no-source-map scss/buldy.scss dist/buldy.css",
-    "build:raster": "sass --style=compressed --no-source-map scss/layout/raster.scss dist/raster.css",
+    "build:core": "sass --no-source-map scss/buldy.scss dist/buldy.css && sass --style=compressed --no-source-map scss/buldy.scss dist/buldy.min.css",
+    "build:raster": "sass --no-source-map scss/layout/raster.scss dist/raster.css && sass --style=compressed --no-source-map scss/layout/raster.scss dist/raster.min.css",
     "build": "npm run build:core && npm run build:raster",
     "test": "echo \"No test specified\""
   },
