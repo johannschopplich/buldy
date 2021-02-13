@@ -5,14 +5,13 @@
   "main": "scss/buldy.scss",
   "style": "dist/buldy.min.css",
   "scripts": {
-    "css:compile": "sass --no-source-map scss/buldy.scss dist/buldy.css && sass --no-source-map scss/layout/raster.scss dist/raster.css",
-    "css:minify": "cleancss --output dist/buldy.min.css dist/buldy.css && cleancss --output dist/raster.min.css dist/raster.css",
-    "build": "npm run css:compile && npm run css:minify",
+    "build:core": "sass --style=compressed --no-source-map scss/buldy.scss dist/buldy.css",
+    "build:raster": "sass --style=compressed --no-source-map scss/layout/raster.scss dist/raster.css",
+    "build": "npm run build:core && npm run build:raster",
     "test": "echo \"No test specified\""
   },
   "devDependencies": {
-    "clean-css-cli": "^4.3.0",
-    "sass": "^1.32.6"
+    "sass": "^1.32.7"
   },
   "files": [
     "dist",
