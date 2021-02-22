@@ -768,6 +768,7 @@ button {
 [style*="--aspect-ratio"] {
   --calculated: calc(var(--aspect-ratio));
   display: grid;
+  grid-template-areas: "stack";
 }
 .aspect-ratio::before,
 [style*="--aspect-ratio"]::before {
@@ -779,7 +780,7 @@ button {
 .aspect-ratio > *,
 [style*="--aspect-ratio"]::before,
 [style*="--aspect-ratio"] > * {
-  grid-area: 1/1/1/1;
+  grid-area: stack;
 }
 
 .aspect-ratio-fixed,

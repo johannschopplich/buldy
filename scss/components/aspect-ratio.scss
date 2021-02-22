@@ -15,6 +15,7 @@ $aspect-ratios: (
 [style*="--aspect-ratio"] {
   --calculated: calc(var(--aspect-ratio));
   display: grid;
+  grid-template-areas: "stack";
 
   &::before {
     content: "";
@@ -24,7 +25,7 @@ $aspect-ratios: (
 
   &::before,
   > * {
-    grid-area: 1 / 1 / 1 / 1;
+    grid-area: stack;
   }
 }
 
