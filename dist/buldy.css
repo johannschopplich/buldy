@@ -340,7 +340,7 @@ body {
 
 hr {
   background-color: var(--color-border);
-  margin: var(--component-spacer) 0;
+  margin: var(--component-spacer) auto;
   opacity: 1;
 }
 
@@ -965,7 +965,7 @@ button {
   overflow-wrap: break-word;
 }
 .content > *:not(:last-child) {
-  margin-bottom: calc(var(--component-spacer) * var(--block-vspace-multiplier, 1));
+  margin-bottom: calc(var(--space-m) * var(--block-vspace-multiplier, 1));
 }
 .content h1:not(:first-child),
 .content h2:not(:first-child),
@@ -975,11 +975,7 @@ button {
 }
 .content hr {
   width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-}
-.content hr:not(:first-child) {
-  margin-top: calc(var(--component-spacer) * var(--block-vspace-multiplier, 1));
+  margin: calc(var(--space-m) * var(--block-vspace-multiplier, 1)) auto;
 }
 .content h1,
 .content h2,

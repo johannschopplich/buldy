@@ -6,7 +6,7 @@
   //
 
   > *:not(:last-child) {
-    margin-bottom: calc(var(--component-spacer) * var(--block-vspace-multiplier, 1));
+    margin-bottom: calc(var(--space-m) * var(--block-vspace-multiplier, 1));
   }
 
   h1,
@@ -20,11 +20,7 @@
 
   hr {
     width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-    &:not(:first-child) {
-      margin-top: calc(var(--component-spacer) * var(--block-vspace-multiplier, 1));
-    }
+    margin: calc(var(--space-m) * var(--block-vspace-multiplier, 1)) auto;
   }
 
   //
