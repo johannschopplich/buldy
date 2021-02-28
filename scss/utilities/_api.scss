@@ -1,18 +1,20 @@
-@import "generator";
-@import "utilities";
+@use "sass:map";
+@use "../abstracts/breakpoints";
+@use "generator";
+@use "utilities";
 
 // Loop over each breakpoint.
-@each $breakpoint in map-keys($grid-breakpoints) {
+@each $breakpoint in map.keys(breakpoints.$map) {
   // Generate media query if needed.
-  @include media-breakpoint-above($breakpoint, $grid-breakpoints) {
-    $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+  @include breakpoints.media-above($breakpoint, breakpoints.$map) {
+    $infix: breakpoints.infix($breakpoint, breakpoints.$map);
 
     // Loop over each utility property.
-    @each $key, $utility in $utilities {
+    @each $key, $utility in utilities.$utilities {
       // The utility can be disabled with `false`, thus check if the utility is a map first.
       // Only proceed if responsive media queries are enabled or if it's the base media query.
-      @if type-of($utility) == "map" and (map-get($utility, responsive) or $infix == "") {
-        @include generate-utility($utility, $infix);
+      @if type-of($utility) == "map" and (map.get($utility, responsive) or $infix == "") {
+        @include generator.generate-utility($utility, $infix);
       }
     }
   }

@@ -19,8 +19,8 @@
 - 🏸&nbsp; Everything you need to create a solid project
 - 📖&nbsp; Typography system where all font sizes are intertwined
 - 📐️&nbsp; Powerful responsive spacing system using multipliers of a unit value
-- 🏗&nbsp; Easily editable and extendable CSS variables
-- 🍱&nbsp; A handful of elements, components &amp; utilities
+- 🏗&nbsp; Easily editable and extendable CSS custom properties
+- 🍱&nbsp; A handful of elements, components & utilities
 - 🎯&nbsp; No preprocessor necessary — [just plug'n'play](https://github.com/johannschopplich/buldy/blob/master/dist/buldy.css)
 - ✅&nbsp; Good Semantics
 
@@ -28,7 +28,7 @@
 
 Buldy is a CSS framework. As such, the sole output is a single CSS file: [buldy.css](https://github.com/johannschopplich/buldy/blob/master/dist/buldy.css)
 
-You can use that file out of the box and adapt it to your needs by changing the corresponding colors, typography, spacing and much more CSS variables.
+You can use that file out of the box and adapt it to your needs by changing the corresponding colors, typography, spacing and much more CSS custom properties.
 
 ## Folder Structure — What's Included?
 
@@ -40,16 +40,16 @@ Some notes about the folder structure with some additional comments on important
 ```sh
 buldy/scss/
 |
-|   # Core mixin configuration
-├── config/
+|   # Core functions and mixin configuration
+├── abstracts/
 |   |
-|   |   # Breakpoint viewport sizes & responsiveness helpers like `@media-breakpoint-above()`
+|   |   # Breakpoint viewport sizes and functions for responsiveness
 |   ├── _breakpoints.scss
 |   |
-|   |   # Elegantly scales type and space without breakpoints
-|   ├── _fluid-scales.scss
+|   |   # Functions like fluid type to elegantly scale type and space w/o breakpoints
+|   ├── _functions.scss
 |   |
-|   |   # Global Sass mixins for various components
+|   |   # Sass mixins for various components
 |   └── _mixins.scss
 |
 |   # Main stem of the framework
@@ -60,7 +60,7 @@ buldy/scss/
 |   |   # and Jonathan Neal's [`sanitize.css`](https://github.com/csstools/sanitize.css/blob/master/sanitize.css)
 |   ├── resets.scss
 |   |
-|   |   # Fluid type and space scales, semantic color definitions, themes & more CSS variables
+|   |   # Custom properties Fluid type and space scales, semantic color definitions, themes and more
 |   ├── variables.scss
 |   |
 |   |   # Scoped theme containers via `[data-theme]` 
@@ -69,8 +69,7 @@ buldy/scss/
 |   |   # Extends standalone resets with further generic opiniated styles
 |   ├── generic.scss
 |   |
-|   |   # Support for `:focus-visible` polyfill
-|   |   # See: https://github.com/WICG/focus-visible
+|   |   # Support for `:focus-visible`
 |   └── accessibility.scss
 |
 |   # Design the structure of your webpage with these CSS classes
@@ -81,6 +80,9 @@ buldy/scss/
 |   |
 |   |   # Simple container to center content horizontally
 |   ├── container.scss
+|   |
+|   |   # Sass port of the [Raster Grid System](https://rsms.me/raster/) by Rasmus Andersson
+|   ├── raster.scss
 |   |
 |   |   # Simple container to divide your page into sections 
 |   ├── section.scss
@@ -109,9 +111,6 @@ buldy/scss/
 |   |   # Classic modal overlay
 |   ├── modal.scss
 |   |
-|   |   # Sass port of the [Raster Grid System](https://rsms.me/raster/) by Rasmus Andersson
-|   ├── raster.scss
-|   |
 |   |   # Simple headings to add depth to your page
 |   └── title.scss
 |
@@ -125,7 +124,7 @@ buldy/scss/
 |   ├── miscellaneous.scss
 |   |
 |   |   # Hide content visually but make it available for screen readers
-|   ├── screen-reader-only.scss
+|   ├── screen-reader.scss
 |   |
 |   |   # Make any element clickable by stretching”a nested link
 |   └── stretched-link.scss

@@ -1235,20 +1235,6 @@ textarea.control[rows] {
   font-weight: 600;
 }
 
-[visually-hidden],
-.visually-hidden,
-.sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  border: 0;
-  padding: 0;
-  margin: 0;
-  clip-path: inset(50%);
-  overflow: hidden;
-  white-space: nowrap;
-}
-
 .rounded {
   border-radius: var(--radius);
 }
@@ -1264,6 +1250,20 @@ textarea.control[rows] {
   align-items: center;
   justify-content: center;
   gap: 1ch;
+}
+
+[visually-hidden],
+.visually-hidden,
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  clip-path: inset(50%);
+  overflow: hidden;
+  white-space: nowrap;
 }
 
 .stretched-link::after {

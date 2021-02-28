@@ -1,4 +1,8 @@
-$grid-breakpoints: (
+@use "sass:list";
+@use "sass:map";
+@use "sass:string";
+
+$map: (
   xs: 0,
   sm: 640px,
   md: 768px,
@@ -8,17 +12,17 @@ $grid-breakpoints: (
 ) !default;
 
 // Name of the next breakpoint, or null for the last breakpoint.
-@function breakpoint-next($name, $breakpoints: $grid-breakpoints, $breakpoint-names: map-keys($breakpoints)) {
-  $n: index($breakpoint-names, $name);
+@function next($name, $breakpoints: $map, $breakpoint-names: map.keys($breakpoints)) {
+  $n: list.index($breakpoint-names, $name);
   @if not $n {
     @error "breakpoint `#{$name}` not found in `#{$breakpoints}`";
   }
-  @return if($n < length($breakpoint-names), nth($breakpoint-names, $n + 1), null);
+  @return if($n < list.length($breakpoint-names), list.nth($breakpoint-names, $n + 1), null);
 }
 
 // Minimum breakpoint width. Null for the smallest (first) breakpoint.
-@function breakpoint-min($name, $breakpoints: $grid-breakpoints) {
-  $min: map-get($breakpoints, $name);
+@function min($name, $breakpoints: $map) {
+  $min: map.get($breakpoints, $name);
   @return if($min != 0, $min, null);
 }
 
@@ -29,21 +33,21 @@ $grid-breakpoints: (
 // @see https://www.w3.org/TR/mediaqueries-4/#mq-min-max
 // Uses 0.02px rather than 0.01px to work around a current rounding bug in Safari.
 // @see https://bugs.webkit.org/show_bug.cgi?id=178261
-@function breakpoint-max($name, $breakpoints: $grid-breakpoints) {
-  $max: map-get($breakpoints, $name);
+@function max($name, $breakpoints: $map) {
+  $max: map.get($breakpoints, $name);
   @return if($max and $max > 0, $max - .02, null);
 }
 
 // Returns a blank string if smallest breakpoint, otherwise returns the name with a dash in front.
 // Useful for making responsive utilities.
-@function breakpoint-infix($name, $breakpoints: $grid-breakpoints) {
-  @return if(breakpoint-min($name, $breakpoints) == null, "", "#{$name}\\:");
+@function infix($name, $breakpoints: $map) {
+  @return if(min($name, $breakpoints) == null, "", "#{$name}\\:");
 }
 
 // Media of at least the minimum breakpoint width. No query for the smallest breakpoint.
 // Makes the @content apply to the given breakpoint and wider.
-@mixin media-breakpoint-above($name, $breakpoints: $grid-breakpoints) {
-  $min: breakpoint-min($name, $breakpoints);
+@mixin media-above($name, $breakpoints: $map) {
+  $min: min($name, $breakpoints);
   @if $min {
     @media (min-width: $min) {
       @content;
@@ -55,8 +59,8 @@ $grid-breakpoints: (
 
 // Media of at most the maximum breakpoint width. No query for the largest breakpoint.
 // Makes the @content apply to the given breakpoint and narrower.
-@mixin media-breakpoint-below($name, $breakpoints: $grid-breakpoints) {
-  $max: breakpoint-max($name, $breakpoints);
+@mixin media-below($name, $breakpoints: $map) {
+  $max: max($name, $breakpoints);
   @if $max {
     @media (max-width: $max) {
       @content;

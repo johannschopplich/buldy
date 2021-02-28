@@ -1,4 +1,5 @@
-@import "../config/breakpoints";
+@use "sass:map";
+@use "../abstracts/breakpoints";
 
 //
 // Raster grid subsystem (rsms.me/raster)
@@ -38,9 +39,9 @@ $raster-breakpoints: (
     display: block;
   }
 
-  @each $breakpoint in map-keys($raster-breakpoints) {
-    @include media-breakpoint-above($breakpoint, $raster-breakpoints) {
-      $infix: if(breakpoint-min($breakpoint, $raster-breakpoints) == null, "", "-#{$breakpoint}");
+  @each $breakpoint in map.keys($raster-breakpoints) {
+    @include breakpoints.media-above($breakpoint, $raster-breakpoints) {
+      $infix: if(breakpoints.min($breakpoint, $raster-breakpoints) == null, "", "-#{$breakpoint}");
 
       @for $i from 1 through $columns {
         &[#{$grid-attribute}#{$infix}="#{$i}"] {

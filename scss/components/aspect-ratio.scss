@@ -1,3 +1,5 @@
+@use "../abstracts/functions";
+
 $aspect-ratios: (
   "1:1": 100%,
   "5:4": 80%,
@@ -59,7 +61,8 @@ $aspect-ratios: (
 //
 
 @each $ratio, $percentage in $aspect-ratios {
-  .is-#{str-replace($ratio, ":", "\\:")}::before {
+  $modifier: functions.replace($ratio, ":", "\\:");
+  .is-#{$modifier}::before {
     padding-bottom: $percentage;
   }
 }

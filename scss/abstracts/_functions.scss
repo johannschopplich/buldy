@@ -1,0 +1,36 @@
+@use "sass:math";
+@use "sass:string";
+
+$fluid-minvw: 320px !default;
+$fluid-maxvw: 1280px !default;
+
+// Linearly scale CSS properties with units based on the viewport
+// @see https://css-tricks.com/linearly-scale-font-size-with-css-clamp-based-on-the-viewport/
+@mixin fluid-scale($min, $max, $property: font-size) {
+  $u1: math.unit($min);
+  $u2: math.unit($max);
+  $u3: math.unit($fluid-minvw);
+  $u4: math.unit($fluid-maxvw);
+
+  @if $u1 == $u2 and $u1 == $u3 and $u1 == $u4 {
+    $slope: ($max - $min) / ($fluid-maxvw - $fluid-minvw);
+    $yAxisIntersection: -$fluid-minvw * $slope + $min;
+    $preferredValue: $yAxisIntersection + " + " + $slope * 100 + "vw";
+
+    & {
+      #{$property}: #{$min};
+      #{$property}: clamp(#{$min}, #{$preferredValue}, #{$max});
+    }
+  }
+}
+
+// Replace `$search` with `$replace` in `$string`
+@function replace($string, $search, $replace: "") {
+  $index: string.index($string, $search);
+
+  @if $index {
+    @return string.slice($string, 1, $index - 1) + $replace + replace(string.slice($string, $index + string.length($search)), $search, $replace);
+  }
+
+  @return $string;
+}

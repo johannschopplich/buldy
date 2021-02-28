@@ -15,18 +15,10 @@
   }
 }
 
-%control {
-  @include control;
-}
-
 @mixin block {
   &:not(:last-child) {
     margin-bottom: var(--component-spacer);
   }
-}
-
-%block {
-  @include block;
 }
 
 @mixin unselectable {
@@ -35,12 +27,25 @@
   user-select: none;
 }
 
-%unselectable {
-  @include unselectable;
-}
-
 @mixin transition($transition...) {
   @media (prefers-reduced-motion: no-preference) {
     transition: $transition;
   }
 }
+
+//
+// Selector placeholders
+//
+
+%control {
+  @include control;
+}
+
+%block {
+  @include block;
+}
+
+%unselectable {
+  @include unselectable;
+}
+

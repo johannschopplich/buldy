@@ -1,36 +1,36 @@
 // Config
-@import "config/breakpoints";
-@import "config/functions";
-@import "config/mixins";
+@use "abstracts/breakpoints";
+@use "abstracts/functions";
+@use "abstracts/mixins";
 
 // Base
-@import "base/resets";
-@import "base/variables";
-@import "base/themes";
-@import "base/generic";
-@import "base/accessibility";
+@use "base/resets";
+@use "base/variables";
+@use "base/themes";
+@use "base/generic";
+@use "base/accessibility";
 
 // Layout
-@import "layout/columns";
-@import "layout/container";
-@import "layout/section";
-@import "layout/stack";
+@use "layout/columns";
+@use "layout/container";
+@use "layout/section";
+@use "layout/stack";
 
 // Components
-@import "components/aspect-ratio";
-@import "components/box";
-@import "components/button";
-@import "components/content";
-@import "components/form";
-@import "components/modal";
-@import "components/table";
-@import "components/title";
+@use "components/aspect-ratio";
+@use "components/box";
+@use "components/button";
+@use "components/content";
+@use "components/form";
+@use "components/modal";
+@use "components/table";
+@use "components/title";
 
 // Helpers
-@import "helpers/accessibility";
-@import "helpers/block";
-@import "helpers/miscellaneous";
-@import "helpers/stretched-link";
+@use "helpers/block";
+@use "helpers/miscellaneous";
+@use "helpers/screen-reader";
+@use "helpers/stretched-link";
 
 // Utilities
-@import "utilities/api";
+@use "utilities/api";

@@ -1,3 +1,6 @@
+@use "../abstracts/breakpoints";
+@use "../abstracts/mixins";
+
 .modal {
   display: none;
   position: fixed;
@@ -33,7 +36,7 @@
   margin: 0 20px;
   overflow: auto;
 
-  @include media-breakpoint-above(md) {
+  @include breakpoints.media-above(md) {
     width: 640px;
     max-height: calc(100vh - 40px);
     margin: 0 auto;

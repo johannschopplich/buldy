@@ -1,3 +1,6 @@
+@use "sass:map";
+@use "../abstracts/breakpoints";
+
 $grid-columns: 12 !default;
 $grid-gaps: xs, s, m, l !default;
 $auto-grid-sizes: (
@@ -41,9 +44,9 @@ $auto-grid-sizes: (
 // Breakpoints
 //
 
-@each $breakpoint in map-keys($grid-breakpoints) {
-  @include media-breakpoint-above($breakpoint) {
-    $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+@each $breakpoint in map.keys(breakpoints.$map) {
+  @include breakpoints.media-above($breakpoint) {
+    $infix: breakpoints.infix($breakpoint, breakpoints.$map);
 
     .grid {
       &.#{$infix}has-same-column-sizes {
