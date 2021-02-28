@@ -25,8 +25,8 @@ $colors: (
   contrast-higher: var(--color-contrast-higher),
 ) !default;
 
-$utilities: () !default;
-$utilities: map.merge(
+$custom: () !default;
+$export: map.merge(
   (
     //
     // General
@@ -65,37 +65,37 @@ $utilities: map.merge(
     "margin": (
       property: margin,
       class: m,
-      values: map-merge($spacers, (auto: auto))
+      values: map.merge($spacers, (auto: auto))
     ),
     "margin-x": (
       property: margin-right margin-left,
       class: mx,
-      values: map-merge($spacers, (auto: auto))
+      values: map.merge($spacers, (auto: auto))
     ),
     "margin-y": (
       property: margin-top margin-bottom,
       class: my,
-      values: map-merge($spacers, (auto: auto))
+      values: map.merge($spacers, (auto: auto))
     ),
     "margin-top": (
       property: margin-top,
       class: mt,
-      values: map-merge($spacers, (auto: auto))
+      values: map.merge($spacers, (auto: auto))
     ),
     "margin-right": (
       property: margin-right,
       class: mr,
-      values: map-merge($spacers, (auto: auto))
+      values: map.merge($spacers, (auto: auto))
     ),
     "margin-bottom": (
       property: margin-bottom,
       class: mb,
-      values: map-merge($spacers, (auto: auto))
+      values: map.merge($spacers, (auto: auto))
     ),
     "margin-left": (
       property: margin-left,
       class: ml,
-      values: map-merge($spacers, (auto: auto))
+      values: map.merge($spacers, (auto: auto))
     ),
 
     //
@@ -232,5 +232,5 @@ $utilities: map.merge(
       values: left right center
     ),
   ),
-  $utilities
+  $custom
 );
