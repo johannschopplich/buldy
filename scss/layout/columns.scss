@@ -1,4 +1,5 @@
 @use "sass:map";
+@use "sass:math";
 @use "../abstracts/breakpoints";
 
 $columns: 12 !default;
@@ -31,9 +32,9 @@ $columns: 12 !default;
     display: block;
     flex: 1; // Shorthand for `flex: 1 1 0`
 
-    @each $breakpoint in map.keys(breakpoints.$map) {
-      @include breakpoints.media-above($breakpoint, breakpoints.$map) {
-        $infix: breakpoints.infix($breakpoint, breakpoints.$map);
+    @each $breakpoint in map.keys(breakpoints.$default) {
+      @include breakpoints.media-above($breakpoint, breakpoints.$default) {
+        $infix: breakpoints.infix($breakpoint, breakpoints.$default);
 
         &.#{$infix}is-narrow {
           flex: 0 0 auto;
@@ -53,7 +54,7 @@ $columns: 12 !default;
         @for $i from 1 through $columns {
           &.#{$infix}is-#{$i} {
             flex: none;
-            width: percentage($i / 12);
+            width: math.percentage($i / 12);
           }
         }
       }

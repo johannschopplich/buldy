@@ -22,8 +22,8 @@
     max-width: var(--content-width);
   }
 
-  @each $breakpoint in map.keys(breakpoints.$map) {
-    $width: map.get(breakpoints.$map, $breakpoint);
+  @each $breakpoint in map.keys(breakpoints.$default) {
+    $width: map.get(breakpoints.$default, $breakpoint);
 
     @if $width != 0 {
       &.is-#{$breakpoint} {

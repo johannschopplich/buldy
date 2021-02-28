@@ -44,9 +44,9 @@ $auto-grid-sizes: (
 // Breakpoints
 //
 
-@each $breakpoint in map.keys(breakpoints.$map) {
+@each $breakpoint in map.keys(breakpoints.$default) {
   @include breakpoints.media-above($breakpoint) {
-    $infix: breakpoints.infix($breakpoint, breakpoints.$map);
+    $infix: breakpoints.infix($breakpoint, breakpoints.$default);
 
     .grid {
       &.#{$infix}has-same-column-sizes {
