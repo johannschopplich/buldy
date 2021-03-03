@@ -1,12 +1,9 @@
 @use "sass:math";
 @use "sass:string";
 
-$fluid-minvw: 320px !default;
-$fluid-maxvw: 1280px !default;
-
 // Linearly scale CSS properties with units based on the viewport
 // @see https://css-tricks.com/linearly-scale-font-size-with-css-clamp-based-on-the-viewport/
-@mixin fluid-scale($min, $max, $property: font-size) {
+@mixin fluid-scale($min, $max, $property: font-size, $fluid-minvw: 320px, $fluid-maxvw: 1280px) {
   $u1: math.unit($min);
   $u2: math.unit($max);
   $u3: math.unit($fluid-minvw);
