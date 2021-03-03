@@ -69,40 +69,40 @@
 
   &.is-primary,
   &.is-accent {
-    --text: white;
-    --bg: var(--color-primary);
-    --bg-hover: var(--color-primary-hover);
-    --bg-active: var(--color-primary-active);
-    --shadow: var(--color-primary-lucent);
+    --button-color: white;
+    --button-background: var(--color-primary);
+    --button-background-hover: var(--color-primary-hover);
+    --button-background-active: var(--color-primary-active);
+    --button-shadow: var(--color-primary-lucent);
 
-    background-color: var(--bg);
+    background-color: var(--button-background);
     border-color: transparent;
-    color: var(--text);
+    color: var(--button-color);
 
     &:hover {
-      background-color: var(--bg-hover);
+      background-color: var(--button-background-hover);
       border-color: transparent;
-      color: var(--text);
+      color: var(--button-color);
     }
 
     &:focus {
       border-color: transparent;
-      color: var(--text);
+      color: var(--button-color);
       &:not(:active) {
-        box-shadow: 0 0 0 3px var(--shadow);
+        box-shadow: 0 0 0 3px var(--button-shadow);
       }
     }
 
     &:active {
-      background-color: var(--bg-active);
+      background-color: var(--button-background-active);
       border-color: transparent;
-      color: var(--text);
+      color: var(--button-color);
     }
 
     &:disabled {
-      background-color: var(--bg);
+      background-color: var(--button-background);
       border-color: transparent;
-      color: var(--text);
+      color: var(--button-color);
       box-shadow: none;
     }
 
@@ -112,30 +112,30 @@
 
     &.is-outlined {
       background-color: transparent;
-      border-color: var(--bg);
-      color: var(--bg);
+      border-color: var(--button-background);
+      color: var(--button-background);
 
       &:hover,
       &:focus {
-        background-color: var(--bg);
-        border-color: var(--bg);
-        color: var(--text);
+        background-color: var(--button-background);
+        border-color: var(--button-background);
+        color: var(--button-color);
       }
 
       &:disabled {
         background-color: transparent;
-        border-color: var(--bg);
-        color: var(--bg);
+        border-color: var(--button-background);
+        color: var(--button-background);
         box-shadow: none;
       }
     }
   }
 
   &.is-accent {
-    --bg: var(--color-accent);
-    --bg-hover: var(--color-accent-hover);
-    --bg-active: var(--color-accent-active);
-    --shadow: var(--color-accent-lucent);
+    --button-background: var(--color-accent);
+    --button-background-hover: var(--color-accent-hover);
+    --button-background-active: var(--color-accent-active);
+    --button-shadow: var(--color-accent-lucent);
   }
 
   //
