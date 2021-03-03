@@ -887,59 +887,59 @@ button {
   background-color: var(--color-contrast-lowest);
 }
 .button.is-primary, .button.is-accent {
-  --text: white;
-  --bg: var(--color-primary);
-  --bg-hover: var(--color-primary-hover);
-  --bg-active: var(--color-primary-active);
-  --shadow: var(--color-primary-lucent);
-  background-color: var(--bg);
+  --button-color: white;
+  --button-background: var(--color-primary);
+  --button-background-hover: var(--color-primary-hover);
+  --button-background-active: var(--color-primary-active);
+  --button-shadow: var(--color-primary-lucent);
+  background-color: var(--button-background);
   border-color: transparent;
-  color: var(--text);
+  color: var(--button-color);
 }
 .button.is-primary:hover, .button.is-accent:hover {
-  background-color: var(--bg-hover);
+  background-color: var(--button-background-hover);
   border-color: transparent;
-  color: var(--text);
+  color: var(--button-color);
 }
 .button.is-primary:focus, .button.is-accent:focus {
   border-color: transparent;
-  color: var(--text);
+  color: var(--button-color);
 }
 .button.is-primary:focus:not(:active), .button.is-accent:focus:not(:active) {
-  box-shadow: 0 0 0 3px var(--shadow);
+  box-shadow: 0 0 0 3px var(--button-shadow);
 }
 .button.is-primary:active, .button.is-accent:active {
-  background-color: var(--bg-active);
+  background-color: var(--button-background-active);
   border-color: transparent;
-  color: var(--text);
+  color: var(--button-color);
 }
 .button.is-primary:disabled, .button.is-accent:disabled {
-  background-color: var(--bg);
+  background-color: var(--button-background);
   border-color: transparent;
-  color: var(--text);
+  color: var(--button-color);
   box-shadow: none;
 }
 .button.is-primary.is-outlined, .button.is-accent.is-outlined {
   background-color: transparent;
-  border-color: var(--bg);
-  color: var(--bg);
+  border-color: var(--button-background);
+  color: var(--button-background);
 }
 .button.is-primary.is-outlined:hover, .button.is-primary.is-outlined:focus, .button.is-accent.is-outlined:hover, .button.is-accent.is-outlined:focus {
-  background-color: var(--bg);
-  border-color: var(--bg);
-  color: var(--text);
+  background-color: var(--button-background);
+  border-color: var(--button-background);
+  color: var(--button-color);
 }
 .button.is-primary.is-outlined:disabled, .button.is-accent.is-outlined:disabled {
   background-color: transparent;
-  border-color: var(--bg);
-  color: var(--bg);
+  border-color: var(--button-background);
+  color: var(--button-background);
   box-shadow: none;
 }
 .button.is-accent {
-  --bg: var(--color-accent);
-  --bg-hover: var(--color-accent-hover);
-  --bg-active: var(--color-accent-active);
-  --shadow: var(--color-accent-lucent);
+  --button-background: var(--color-accent);
+  --button-background-hover: var(--color-accent-hover);
+  --button-background-active: var(--color-accent-active);
+  --button-shadow: var(--color-accent-lucent);
 }
 .button.is-s {
   font-size: var(--text-7);
