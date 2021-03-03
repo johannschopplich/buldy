@@ -6,7 +6,7 @@
 
 html {
   // Scales the `font-size` from a minimum of 16px (at a 320px viewport) to a
-  // maximum of 18px (at a 1280px viewport).
+  // maximum of 18px (at a 1280px viewport)
   @include functions.fluid-scale(16px, 18px);
   min-width: 320px;
   background-color: var(--color-background, white);

@@ -3,14 +3,14 @@
 //
 
 // Add border box sizing so that `width` is not affected by
-// `padding` or `border`.
+// `padding` or `border`
 *,
 *::before,
 *::after {
   box-sizing: border-box;
 }
 
-// Remove default margin.
+// Remove default margin
 body,
 h1,
 h2,
@@ -30,18 +30,16 @@ dd {
 }
 
 html {
-  // Correct the line height.
+  // Correct the line height
   line-height: 1.15;
-  // Enable smooth scrolling using user-agent-defined timing.
-  // scroll-behavior: smooth;
-  // Remove the grey highlight on links in iOS.
+  // Remove the grey highlight on links in iOS
   -webkit-tap-highlight-color: transparent;
-  // Prevent adjustments of font size after orientation changes in iOS.
+  // Prevent adjustments of font size after orientation changes in iOS
   -webkit-text-size-adjust: 100%;
 }
 
 body {
-  // Improve consistency of default fonts.
+  // Improve consistency of default fonts
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
 }
 
@@ -49,7 +47,7 @@ body {
 // Sections
 //
 
-// Normalize all headings to text-level size.
+// Normalize all headings to text-level size
 h1,
 h2,
 h3,
@@ -71,7 +69,7 @@ hr {
   opacity: 0.25;
 
   // Set correct height and prevent the `size` attribute to make
-  // the `hr` look like an input field.
+  // the `hr` look like an input field
   &:not([size]) {
     height: 1px;
   }
@@ -81,7 +79,7 @@ hr {
 // Links
 //
 
-// Add default styles to anchor elements without a class.
+// Add default styles to anchor elements without a class
 a:not([class]) {
   text-decoration-skip-ink: auto;
 }
@@ -90,30 +88,30 @@ a:not([class]) {
 // Text-level semantics
 //
 
-// Remove spacing on list elements.
+// Remove spacing on list elements
 ul,
 ol {
   padding: 0;
 }
 
-// Remove list styles only on lists with a class attribute.
+// Remove list styles only on lists with a class attribute
 ul[class],
 ol[class] {
   list-style: none;
 }
 
-// Add the correct font weight in Chrome, Edge, and Safari.
+// Add the correct font weight in Chrome, Edge, and Safari
 b,
 strong {
   font-weight: bolder;
 }
 
 abbr[title] {
-  // Add the correct text decoration.
+  // Add the correct text decoration
   text-decoration: underline dotted;
-  // Add explicit cursor to indicate changed behavior.
+  // Add explicit cursor to indicate changed behavior
   cursor: help;
-  // Prevent the text-decoration to be skipped.
+  // Prevent the text-decoration to be skipped
   text-decoration-skip-ink: none;
 }
 
@@ -121,18 +119,18 @@ code,
 kbd,
 samp,
 pre {
-  // Correct the odd `em` font sizing.
+  // Correct the odd `em` font sizing
   font-size: 1em;
-  // Correct the inheritance and scaling of font size.
+  // Correct the inheritance and scaling of font size
   font-family: "Menlo", "Consolas", "Roboto Mono", "Ubuntu Monospace", "Liberation Mono", monospace, "Apple Color Emoji", "Segoe UI Emoji";
 }
 
-// Add the correct font size.
+// Add the correct font size
 small {
   font-size: 0.875em;
 }
 
-// Prevent `sub` and `sup` elements from affecting the line height.
+// Prevent `sub` and `sup` elements from affecting the line height
 sub,
 sup {
   position: relative;
@@ -148,23 +146,23 @@ sup { top: -.5em; }
 // Embedded content
 //
 
-// Change the alignment on media elements.
+// Change the alignment on media elements
 img,
 svg {
   vertical-align: middle;
 }
 
-// Keep images and videos from scaling beyond the width of their parents.
+// Keep images and videos from scaling beyond the width of their parents
 img,
 video {
-  // Set a maximum relative to the parent.
+  // Set a maximum relative to the parent
   max-width: 100%;
   // Override the height to `auto`, otherwise the elements will be stretched
-  // when setting a width and height attribute on them.
+  // when setting a width and height attribute on them
   height: auto;
 }
 
-// Change the fill color to match the text color.
+// Change the fill color to match the text color
 svg:not([fill]) {
   fill: currentColor;
 }
@@ -173,19 +171,19 @@ svg:not([fill]) {
 // Tabular data
 //
 
-// Prevent double borders.
+// Prevent double borders
 table {
   border-collapse: collapse;
 }
 
 th {
-  // Matches default `<td>` alignment by inheriting `text-align`.
+  // Matches default `<td>` alignment by inheriting `text-align`
   text-align: inherit;
-  // Fix alignment for Safari.
+  // Fix alignment for Safari
   text-align: -webkit-match-parent;
 }
 
-// Remove default padding of table cells.
+// Remove default padding of table cells
 td,
 th {
   padding: 0;
@@ -199,10 +197,10 @@ button,
 input,
 select,
 textarea {
-  // Inherit fonts for controls.
+  // Inherit fonts for controls
   font: inherit;
   line-height: inherit;
-  // Remove the margin on controls in Firefox and Safari.
+  // Remove the margin on controls in Firefox and Safari
   margin: 0;
 }
 
@@ -210,17 +208,17 @@ button,
 [type="button"],
 [type="reset"],
 [type="submit"] {
-  // Correct the inability to style buttons in iOS and Safari.
+  // Correct the inability to style buttons in iOS and Safari
   -webkit-appearance: button;
 
-  // Add "hand" cursor to non-disabled button elements.
+  // Add "hand" cursor to non-disabled button elements
   &:not(:disabled) {
     cursor: pointer;
   }
 }
 
 // Remove inner border and padding from Firefox, but don't
-// restore the outline like Normalize.
+// restore the outline like Normalize
 ::-moz-focus-inner {
   padding: 0;
   border-style: none;
@@ -228,33 +226,33 @@ button,
 
 fieldset {
   // Browsers set a default `min-width: min-content;` on fieldsets,
-  // unlike e.g. `<div>`s, which have `min-width: 0;` by default.
-  // Make fieldsets behave more like a standard block element.
+  // unlike e.g. `<div>`s, which have `min-width: 0;` by default
+  // Make fieldsets behave more like a standard block element
   min-width: 0;
   // Reset the default outline behavior of fieldsets so
-  // they don't affect page layout.
+  // they don't affect page layout
   border: 0;
   padding: 0;
   margin: 0;
 }
 
-// Allow labels to use `margin` for spacing.
+// Allow labels to use `margin` for spacing
 label {
   display: inline-block;
 }
 
-// Change the resize direction.
+// Change the resize direction
 textarea {
   resize: vertical;
 }
 
 [type="search"] {
-  // Correct the odd appearance in Chrome and Safari.
+  // Correct the odd appearance in Chrome and Safari
   -webkit-appearance: textfield;
-  // Correct the outline style in Safari.
+  // Correct the outline style in Safari
   outline-offset: -2px;
 
-  // Remove the inner padding in Chrome and Safari on macOS.
+  // Remove the inner padding in Chrome and Safari on macOS
   &::-webkit-search-decoration {
     -webkit-appearance: none;
   }
@@ -264,7 +262,7 @@ textarea {
 // Sanitize forms (optional and opinionated)
 //
 
-// Change the inconsistent appearance.
+// Change the inconsistent appearance
 button,
 input,
 select,
@@ -275,7 +273,7 @@ textarea {
   padding: 0.25em 0.375em;
 }
 
-// Change the inconsistent appearance.
+// Change the inconsistent appearance
 select {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -284,7 +282,7 @@ select {
   border-radius: 0;
   padding-right: 1em;
 
-  // Change the inconsistent appearance (opinionated).
+  // Change the inconsistent appearance (opinionated)
   &:not([multiple]):not([size]) {
     background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='4'%3E%3Cpath d='M4 0h6L7 4'/%3E%3C/svg%3E");
   }
@@ -294,18 +292,18 @@ select {
 // Accessibility
 //
 
-// Change the cursor on busy elements.
+// Change the cursor on busy elements
 [aria-busy="true"] {
   cursor: progress;
 }
 
-// Change the cursor on control elements.
+// Change the cursor on control elements
 [aria-controls] {
   cursor: pointer;
 }
 
 // Change the cursor on disabled, not-editable, or otherwise
-// inoperable elements.
+// inoperable elements
 [aria-disabled="true"],
 [disabled] {
   cursor: not-allowed;

@@ -11,7 +11,7 @@ $default: (
   // xxl: 1440px,
 ) !default;
 
-// Name of the next breakpoint, or null for the last breakpoint.
+// Name of the next breakpoint, or null for the last breakpoint
 @function next($name, $breakpoints: $default, $breakpoint-names: map.keys($breakpoints)) {
   $n: list.index($breakpoint-names, $name);
   @if not $n {
@@ -20,32 +20,33 @@ $default: (
   @return if($n < list.length($breakpoint-names), list.nth($breakpoint-names, $n + 1), null);
 }
 
-// Minimum breakpoint width. Null for the smallest (first) breakpoint.
+// Minimum breakpoint width, or null for the smallest (first) breakpoint
 @function min($name, $breakpoints: $default) {
   $min: map.get($breakpoints, $name);
   @return if($min != 0, $min, null);
 }
 
-// Maximum breakpoint width. Null for the largest (last) breakpoint.
+// Maximum breakpoint width, or null for the largest (last) breakpoint
 // The maximum value is calculated as the minimum of the next one less 0.02px
 // to work around the limitations of `min-` and `max-` prefixes and viewports
-// with fractional widths.
+// with fractional widths
 // @see https://www.w3.org/TR/mediaqueries-4/#mq-min-max
-// Uses 0.02px rather than 0.01px to work around a current rounding bug in Safari.
+// Uses 0.02px rather than 0.01px to work around a current rounding bug in Safari
 // @see https://bugs.webkit.org/show_bug.cgi?id=178261
 @function max($name, $breakpoints: $default) {
   $max: map.get($breakpoints, $name);
   @return if($max and $max > 0, $max - .02, null);
 }
 
-// Returns a blank string if smallest breakpoint, otherwise returns the name with a dash in front.
-// Useful for making responsive utilities.
+// Returns a blank string if smallest breakpoint, otherwise returns the name with a dash in front
+// Useful for making responsive utilities
 @function infix($name, $breakpoints: $default) {
   @return if(min($name, $breakpoints) == null, "", "#{$name}\\:");
 }
 
-// Media of at least the minimum breakpoint width. No query for the smallest breakpoint.
-// Makes the @content apply to the given breakpoint and wider.
+// Media of at least the minimum breakpoint width
+// No query for the smallest breakpoint
+// Makes the @content apply to the given breakpoint and wider
 @mixin media-above($name, $breakpoints: $default) {
   $min: min($name, $breakpoints);
   @if $min {
@@ -57,8 +58,9 @@ $default: (
   }
 }
 
-// Media of at most the maximum breakpoint width. No query for the largest breakpoint.
-// Makes the @content apply to the given breakpoint and narrower.
+// Media of at most the maximum breakpoint width
+// No query for the largest breakpoint
+// Makes the @content apply to the given breakpoint and narrower
 @mixin media-below($name, $breakpoints: $default) {
   $max: max($name, $breakpoints);
   @if $max {

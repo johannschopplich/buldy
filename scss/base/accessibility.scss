@@ -1,16 +1,16 @@
 // Hide focus styles if they're not needed, for example,
-// when an element receives focus via the mouse.
+// when an element receives focus via the mouse
 :focus:not(:focus-visible) {
   outline: none;
 }
 
-// Show focus styles on keyboard focus.
+// Show focus styles on keyboard focus
 :focus-visible {
-  // (1) Browser's native focus styles:
+  // (1) Browser's native focus styles
   // outline: 5px auto Highlight;
   // outline: 5px auto -webkit-focus-ring-color;
 
-  // (2) Custom focus styles:
+  // (2) Custom focus styles
   outline: 2px dashed currentColor;
   outline-offset: 1px;
 }
