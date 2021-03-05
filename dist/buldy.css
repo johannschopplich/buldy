@@ -134,6 +134,10 @@ th {
   padding: 0;
 }
 
+button:focus:not(:focus-visible) {
+  outline: 0;
+}
+
 button,
 input,
 select,
@@ -825,9 +829,6 @@ button {
   border-radius: var(--radius);
   box-shadow: none;
 }
-.control:focus, .button:focus, .control:focus-visible, .button:focus-visible {
-  outline: none;
-}
 
 .block:not(:last-child) {
   margin-bottom: var(--component-spacer);
@@ -861,6 +862,7 @@ button {
 .button:focus {
   border-color: var(--color-primary);
   color: var(--color-text);
+  outline: none;
 }
 .button:focus:not(:active) {
   box-shadow: 0 0 0 3px var(--color-primary-lucent);
@@ -1059,6 +1061,7 @@ button {
 .control:focus {
   border-color: var(--color-primary);
   box-shadow: 0 0 0 3px var(--color-primary-lucent);
+  outline: none;
 }
 .control::placeholder {
   color: var(--color-contrast-low);
@@ -1094,11 +1097,8 @@ textarea.control {
   display: block;
 }
 textarea.control:not([rows]) {
-  max-height: 40em;
   min-height: 8em;
-}
-textarea.control[rows] {
-  height: initial;
+  max-height: 40em;
 }
 
 .help {

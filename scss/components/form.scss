@@ -25,6 +25,7 @@
   &:focus {
     border-color: var(--color-primary);
     box-shadow: 0 0 0 3px var(--color-primary-lucent);
+    outline: none;
   }
 
   &::placeholder {
@@ -73,12 +74,8 @@ textarea.control {
   display: block;
 
   &:not([rows]) {
-    max-height: 40em;
     min-height: 8em;
-  }
-
-  &[rows] {
-    height: initial;
+    max-height: 40em;
   }
 }
 

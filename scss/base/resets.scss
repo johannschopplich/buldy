@@ -193,6 +193,12 @@ th {
 // Forms
 //
 
+// Explicitly remove focus outline in Chromium when it shouldn't be
+// visible (e.g. as result of mouse click or touch tap)
+button:focus:not(:focus-visible) {
+  outline: 0;
+}
+
 button,
 input,
 select,

@@ -21,6 +21,7 @@
   &:focus {
     border-color: var(--color-primary);
     color: var(--color-text);
+    outline: none;
     &:not(:active) {
       box-shadow: 0 0 0 3px var(--color-primary-lucent);
     }
