@@ -134,13 +134,10 @@ th {
   padding: 0;
 }
 
-button:focus:not(:focus-visible) {
-  outline: 0;
-}
-
 button,
 input,
 select,
+optgroup,
 textarea {
   font: inherit;
   line-height: inherit;
@@ -210,11 +207,16 @@ select:not([multiple]):not([size]) {
   background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='4'%3E%3Cpath d='M4 0h6L7 4'/%3E%3C/svg%3E");
 }
 
+button:focus:not(:focus-visible) {
+  outline: 0;
+}
+
 [aria-busy=true] {
   cursor: progress;
 }
 
-[aria-controls] {
+[aria-controls],
+[role=button] {
   cursor: pointer;
 }
 

@@ -193,15 +193,10 @@ th {
 // Forms
 //
 
-// Explicitly remove focus outline in Chromium when it shouldn't be
-// visible (e.g. as result of mouse click or touch tap)
-button:focus:not(:focus-visible) {
-  outline: 0;
-}
-
 button,
 input,
 select,
+optgroup,
 textarea {
   // Inherit fonts for controls
   font: inherit;
@@ -298,18 +293,26 @@ select {
 // Accessibility
 //
 
-// Change the cursor on busy elements
+// Explicitly remove focus outline in Chromium when it shouldn't be
+// visible (e.g. as result of mouse click or touch tap)
+button:focus:not(:focus-visible) {
+  outline: 0;
+}
+
+// Set the cursor on busy elements
 [aria-busy="true"] {
   cursor: progress;
 }
 
-// Change the cursor on control elements
-[aria-controls] {
+// Set the cursor on control elements and
+// non-`<button>` buttons
+[aria-controls],
+[role="button"] {
   cursor: pointer;
 }
 
-// Change the cursor on disabled, not-editable, or otherwise
-// inoperable elements
+// Set the cursor on disabled, not-editable,
+// or otherwise inoperable elements
 [aria-disabled="true"],
 [disabled] {
   cursor: not-allowed;
