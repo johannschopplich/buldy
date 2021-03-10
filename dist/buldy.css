@@ -42,28 +42,8 @@ h6 {
   font-weight: normal;
 }
 
-hr {
-  color: inherit;
-  background-color: currentColor;
-  border: 0;
-  opacity: 0.25;
-}
-hr:not([size]) {
-  height: 1px;
-}
-
 a:not([class]) {
   text-decoration-skip-ink: auto;
-}
-
-ul,
-ol {
-  padding: 0;
-}
-
-ul[class],
-ol[class] {
-  list-style: none;
 }
 
 b,
@@ -105,6 +85,26 @@ sup {
   top: -0.5em;
 }
 
+ul,
+ol {
+  padding: 0;
+}
+
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+hr {
+  color: inherit;
+  background-color: currentColor;
+  border: 0;
+  opacity: 0.25;
+}
+hr:not([size]) {
+  height: 1px;
+}
+
 img,
 svg {
   vertical-align: middle;
@@ -118,6 +118,11 @@ video {
 
 svg:not([fill]) {
   fill: currentColor;
+}
+
+summary {
+  cursor: pointer;
+  display: list-item;
 }
 
 table {

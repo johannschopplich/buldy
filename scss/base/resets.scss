@@ -44,7 +44,7 @@ body {
 }
 
 //
-// Sections
+// Heading content
 //
 
 // Normalize all headings to text-level size
@@ -59,45 +59,12 @@ h6 {
 }
 
 //
-// Content grouping
-//
-
-hr {
-  color: inherit;
-  background-color: currentColor;
-  border: 0;
-  opacity: 0.25;
-
-  // Set correct height and prevent the `size` attribute to make
-  // the `hr` look like an input field
-  &:not([size]) {
-    height: 1px;
-  }
-}
-
-//
-// Links
+// Flow content
 //
 
 // Add default styles to anchor elements without a class
 a:not([class]) {
   text-decoration-skip-ink: auto;
-}
-
-//
-// Text-level semantics
-//
-
-// Remove spacing on list elements
-ul,
-ol {
-  padding: 0;
-}
-
-// Remove list styles only on lists with a class attribute
-ul[class],
-ol[class] {
-  list-style: none;
 }
 
 // Add the correct font weight in Chrome, Edge, and Safari
@@ -142,6 +109,31 @@ sup {
 sub { bottom: -.25em; }
 sup { top: -.5em; }
 
+// Remove spacing on list elements
+ul,
+ol {
+  padding: 0;
+}
+
+// Remove list styles only on lists with a class attribute
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+hr {
+  color: inherit;
+  background-color: currentColor;
+  border: 0;
+  opacity: 0.25;
+
+  // Set correct height and prevent the `size` attribute to make
+  // the `hr` look like an input field
+  &:not([size]) {
+    height: 1px;
+  }
+}
+
 //
 // Embedded content
 //
@@ -168,6 +160,16 @@ svg:not([fill]) {
 }
 
 //
+// Interactive content
+//
+
+summary {
+  cursor: pointer;
+  // Add the correct display in all browsers
+  display: list-item;
+}
+
+//
 // Tabular data
 //
 
@@ -190,7 +192,7 @@ th {
 }
 
 //
-// Forms
+// Form-associated content
 //
 
 button,
