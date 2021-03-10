@@ -3,17 +3,23 @@
 @use "../abstracts/breakpoints";
 
 $columns: 12 !default;
+$gaps: s, m, l !default;
 
 .columns {
   display: flex;
   flex-wrap: wrap;
+  // Emulated gap until Safari supports Flexbox gap
+  margin-left: calc(-1 * var(--column-gap, 0));
+  margin-bottom: calc(-1 * var(--column-gap, 0));
+  // Use gap property instead once supported in Safari
+  // gap: var(--column-gap, 0);
 
   //
   // Modifiers
   //
 
   &.has-gap {
-    gap: var(--column-gap, 1ch);
+    --column-gap: 1ch;
   }
 
   &.is-centered {
@@ -25,12 +31,24 @@ $columns: 12 !default;
   }
 
   //
+  // Gaps
+  //
+
+  @each $gap in $gaps {
+    &.has-gap-#{$gap} {
+      --column-gap: var(--space-#{$gap});
+    }
+  }
+
+  //
   // Columns
   //
 
   > .column {
     display: block;
     flex: 1; // Shorthand for `flex: 1 1 0`
+    padding-left: var(--column-gap, 0);
+    padding-bottom: var(--column-gap, 0);
 
     @each $breakpoint in map.keys(breakpoints.$default) {
       @include breakpoints.media-above($breakpoint, breakpoints.$default) {

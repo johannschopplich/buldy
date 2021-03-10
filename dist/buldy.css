@@ -380,9 +380,11 @@ button {
 .columns {
   display: flex;
   flex-wrap: wrap;
+  margin-left: calc(-1 * var(--column-gap, 0));
+  margin-bottom: calc(-1 * var(--column-gap, 0));
 }
 .columns.has-gap {
-  gap: var(--column-gap, 1ch);
+  --column-gap: 1ch;
 }
 .columns.is-centered {
   justify-content: center;
@@ -390,9 +392,20 @@ button {
 .columns.is-vcentered {
   align-items: center;
 }
+.columns.has-gap-s {
+  --column-gap: var(--space-s);
+}
+.columns.has-gap-m {
+  --column-gap: var(--space-m);
+}
+.columns.has-gap-l {
+  --column-gap: var(--space-l);
+}
 .columns > .column {
   display: block;
   flex: 1;
+  padding-left: var(--column-gap, 0);
+  padding-bottom: var(--column-gap, 0);
 }
 .columns > .column.is-narrow {
   flex: 0 0 auto;
