@@ -3,15 +3,15 @@
 
 // Linearly scale CSS properties with units based on the viewport
 // @see https://css-tricks.com/linearly-scale-font-size-with-css-clamp-based-on-the-viewport/
-@mixin fluid-scale($min, $max, $property: font-size, $fluid-minvw: 320px, $fluid-maxvw: 1280px) {
+@mixin fluid-scale($min, $max, $property: font-size, $minvw: 320px, $maxvw: 1280px) {
   $u1: math.unit($min);
   $u2: math.unit($max);
-  $u3: math.unit($fluid-minvw);
-  $u4: math.unit($fluid-maxvw);
+  $u3: math.unit($minvw);
+  $u4: math.unit($maxvw);
 
   @if $u1 == $u2 and $u1 == $u3 and $u1 == $u4 {
-    $slope: ($max - $min) / ($fluid-maxvw - $fluid-minvw);
-    $yAxisIntersection: -$fluid-minvw * $slope + $min;
+    $slope: math.div($max - $min, $maxvw - $minvw);
+    $yAxisIntersection: -$minvw * $slope + $min;
     $preferredValue: $yAxisIntersection + " + " + $slope * 100 + "vw";
 
     & {

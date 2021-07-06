@@ -11,7 +11,7 @@
     "test": "echo \"No test specified\""
   },
   "devDependencies": {
-    "sass": "^1.32.8"
+    "sass": "^1.35.1"
   },
   "files": [
     "dist",
@@ -19,10 +19,6 @@
     "LICENSE",
     "README.md"
   ],
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/johannschopplich/buldy.git"
-  },
   "keywords": [
     "css",
     "scss",
@@ -33,6 +29,10 @@
   ],
   "author": "Johann Schopplich <pkg@johannschopplich.com> (https://johannschopplich.com)",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/johannschopplich/buldy.git"
+  },
   "bugs": {
     "url": "https://github.com/johannschopplich/buldy/issues"
   },

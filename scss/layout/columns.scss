@@ -72,7 +72,9 @@ $gaps: s, m, l !default;
         @for $i from 1 through $columns {
           &.#{$infix}is-#{$i} {
             flex: none;
-            width: math.percentage($i / 12);
+            width: math.percentage(
+              math.div($i, 12)
+            );
           }
         }
       }
