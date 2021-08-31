@@ -10,7 +10,20 @@
   box-sizing: border-box;
 }
 
-// Remove default margin
+html {
+  // Change the line height
+  line-height: 1.15;
+  // Remove the grey highlight on links in iOS
+  -webkit-tap-highlight-color: transparent;
+  // Prevent adjustments of font size after orientation changes in iOS
+  -webkit-text-size-adjust: 100%;
+}
+
+//
+// Sections
+//
+
+// Remove the default margin
 body,
 h1,
 h2,
@@ -29,23 +42,14 @@ dd {
   margin: 0;
 }
 
-html {
-  // Correct the line height
-  line-height: 1.15;
-  // Remove the grey highlight on links in iOS
-  -webkit-tap-highlight-color: transparent;
-  // Prevent adjustments of font size after orientation changes in iOS
-  -webkit-text-size-adjust: 100%;
-}
-
 body {
-  // Improve consistency of default fonts
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  // Fill the viewport block
+  block-size: -webkit-fill-available;
+  block-size: -moz-available;
+  block-size: stretch;
+  // Use the default user interface font
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
-
-//
-// Heading content
-//
 
 // Normalize all headings to text-level size
 h1,
@@ -67,12 +71,6 @@ a:not([class]) {
   text-decoration-skip-ink: auto;
 }
 
-// Add the correct font weight in Chrome, Edge, and Safari
-b,
-strong {
-  font-weight: bolder;
-}
-
 abbr[title] {
   // Add the correct text decoration
   text-decoration: underline dotted;
@@ -82,6 +80,12 @@ abbr[title] {
   text-decoration-skip-ink: none;
 }
 
+// Add the correct font weight in Chrome, Edge, and Safari
+b,
+strong {
+  font-weight: bolder;
+}
+
 code,
 kbd,
 samp,
@@ -89,7 +93,7 @@ pre {
   // Correct the odd `em` font sizing
   font-size: 1em;
   // Correct the inheritance and scaling of font size
-  font-family: "Menlo", "Consolas", "Roboto Mono", "Ubuntu Monospace", "Liberation Mono", monospace, "Apple Color Emoji", "Segoe UI Emoji";
+  font-family: "Menlo", "Consolas", "Roboto Mono", "Ubuntu Monospace", "Liberation Mono", monospace, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
 // Add the correct font size
@@ -139,14 +143,22 @@ hr {
 //
 
 // Change the alignment on media elements
+audio,
+canvas,
+iframe,
 img,
-svg {
+svg,
+video {
   vertical-align: middle;
 }
 
-// Keep images and videos from scaling beyond the width of their parents
+// Restrict sizing beyond the width of their parents
+iframe,
 img,
-video {
+input,
+video,
+select,
+textarea {
   // Set a maximum relative to the parent
   max-width: 100%;
   // Override the height to `auto`, otherwise the elements will be stretched
@@ -157,16 +169,6 @@ video {
 // Change the fill color to match the text color
 svg:not([fill]) {
   fill: currentColor;
-}
-
-//
-// Interactive content
-//
-
-summary {
-  cursor: pointer;
-  // Add the correct display in all browsers
-  display: list-item;
 }
 
 //
@@ -220,16 +222,30 @@ button,
   }
 }
 
-// Remove inner border and padding from Firefox, but don't
-// restore the outline like Normalize
-::-moz-focus-inner {
-  padding: 0;
-  border-style: none;
+// Change the inconsistent appearance
+button,
+input,
+select,
+textarea {
+  background-color: transparent;
+  border: 1px solid WindowFrame;
+  color: inherit;
+  padding: 0.25em 0.375em;
+}
+
+// Change the inconsistent appearance
+select {
+  appearance: none;
+  border-radius: 0;
+  padding-right: 1em;
+
+  // Change the inconsistent appearance
+  &:not([multiple]) {
+    background: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='4'%3E%3Cpath d='M4 0h6L7 4'/%3E%3C/svg%3E") no-repeat right center / 1em;
+  }
 }
 
 fieldset {
-  // Browsers set a default `min-width: min-content;` on fieldsets,
-  // unlike e.g. `<div>`s, which have `min-width: 0;` by default
   // Make fieldsets behave more like a standard block element
   min-width: 0;
   // Reset the default outline behavior of fieldsets so
@@ -249,71 +265,21 @@ textarea {
   resize: vertical;
 }
 
-[type="search"] {
-  // Correct the odd appearance in Chrome and Safari
-  -webkit-appearance: textfield;
-  // Correct the outline style in Safari
-  outline-offset: -2px;
-
-  // Remove the inner padding in Chrome and Safari on macOS
-  &::-webkit-search-decoration {
-    -webkit-appearance: none;
-  }
-}
-
-//
-// Sanitize forms (optional and opinionated)
-//
-
-// Change the inconsistent appearance
-button,
-input,
-select,
-textarea {
-  background-color: transparent;
-  border: 1px solid WindowFrame;
-  color: inherit;
-  padding: 0.25em 0.375em;
-}
-
-// Change the inconsistent appearance
-select {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  background: no-repeat right center / 1em;
-  border-radius: 0;
-  padding-right: 1em;
-
-  // Change the inconsistent appearance (opinionated)
-  &:not([multiple]):not([size]) {
-    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='4'%3E%3Cpath d='M4 0h6L7 4'/%3E%3C/svg%3E");
-  }
-}
-
 //
 // Accessibility
 //
 
-// Explicitly remove focus outline in Chromium when it shouldn't be
-// visible (e.g. as result of mouse click or touch tap)
-button:focus:not(:focus-visible) {
-  outline: 0;
-}
-
-// Set the cursor on busy elements
+// Change the cursor on busy elements
 [aria-busy="true"] {
   cursor: progress;
 }
 
-// Set the cursor on control elements and
-// non-`<button>` buttons
-[aria-controls],
-[role="button"] {
+// Change the cursor on control elements
+[aria-controls] {
   cursor: pointer;
 }
 
-// Set the cursor on disabled, not-editable,
+// Change the cursor on disabled, not-editable,
 // or otherwise inoperable elements
 [aria-disabled="true"],
 [disabled] {
