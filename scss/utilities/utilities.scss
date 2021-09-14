@@ -50,12 +50,12 @@ $export: map.merge(
     "viewport-height": (
       property: height,
       class: vh,
-      values: (100: calc(var(--vh, 1vh) * 100))
+      values: (100: 100vh)
     ),
     "min-viewport-height": (
       property: min-height,
       class: min-vh,
-      values: (100: calc(var(--vh, 1vh) * 100))
+      values: (100: 100vh)
     ),
 
     //
