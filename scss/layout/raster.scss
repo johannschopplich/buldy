@@ -34,14 +34,13 @@ $raster-breakpoints: (
 
   // Cell or column
   > * {
-    -webkit-appearance: none;
     appearance: none;
     display: block;
   }
 
   @each $breakpoint in map.keys($raster-breakpoints) {
     @include breakpoints.media-above($breakpoint, $raster-breakpoints) {
-      $infix: if(breakpoints.min($breakpoint, $raster-breakpoints) == null, "", "-#{$breakpoint}");
+      $infix: if(breakpoints.minimum($breakpoint, $raster-breakpoints) == null, "", "-#{$breakpoint}");
 
       @for $i from 1 through $columns {
         &[#{$grid-attribute}#{$infix}="#{$i}"] {

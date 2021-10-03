@@ -6,7 +6,6 @@
   grid-template-columns: var(--grid-template-columns);
 }
 .raster > * {
-  -webkit-appearance: none;
   appearance: none;
   display: block;
 }
