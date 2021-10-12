@@ -7,7 +7,7 @@ $auto-grid-sizes: (
   s: 8rem,
   m: 12rem,
   l: 16rem,
-  xl: 20rem
+  xl: 20rem,
 ) !default;
 
 .grid {
@@ -19,7 +19,8 @@ $auto-grid-sizes: (
     grid-template-columns: repeat(var(--grid-columns), 1fr);
 
     > * {
-      grid-column: span var(--span, #{$grid-columns}) / span var(--span, #{$grid-columns});
+      grid-column: span var(--span, #{$grid-columns}) / span
+        var(--span, #{$grid-columns});
     }
   }
 
@@ -55,15 +56,29 @@ $auto-grid-sizes: (
     }
 
     @for $i from 1 through $grid-columns {
-      .#{$infix}span-#{$i}         { --span: #{$i}; }
-      .#{$infix}span-start-#{$i}   { grid-column-start: #{$i}; }
-      .#{$infix}span-end-#{$i + 1} { grid-column-end: #{$i + 1}; }
+      .#{$infix}span-#{$i} {
+        --span: #{$i};
+      }
+      .#{$infix}span-start-#{$i} {
+        grid-column-start: #{$i};
+      }
+      .#{$infix}span-end-#{$i + 1} {
+        grid-column-end: #{$i + 1};
+      }
     }
 
-    .#{$infix}span-start           { grid-column-start: 1; }
-    .#{$infix}span-end             { grid-column-end: -1; }
+    .#{$infix}span-start {
+      grid-column-start: 1;
+    }
+    .#{$infix}span-end {
+      grid-column-end: -1;
+    }
 
-    .#{$infix}span-start-auto      { grid-column-start: auto; }
-    .#{$infix}span-end-auto        { grid-column-end: auto; }
+    .#{$infix}span-start-auto {
+      grid-column-start: auto;
+    }
+    .#{$infix}span-end-auto {
+      grid-column-end: auto;
+    }
   }
 }

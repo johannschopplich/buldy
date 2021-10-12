@@ -2,7 +2,6 @@
   "name": "buldy",
   "version": "2.1.0",
   "description": "Modern CSS framework distilled from the best of larger frameworks",
-  "main": "scss/buldy.scss",
   "style": "dist/buldy.min.css",
   "scripts": {
     "build:core": "sass --no-source-map scss/buldy.scss dist/buldy.css && sass --style=compressed --no-source-map scss/buldy.scss dist/buldy.min.css",

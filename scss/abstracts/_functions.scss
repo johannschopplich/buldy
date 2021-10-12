@@ -3,7 +3,13 @@
 
 // Linearly scale CSS properties with units based on the viewport
 // @see https://css-tricks.com/linearly-scale-font-size-with-css-clamp-based-on-the-viewport/
-@mixin fluid-scale($min, $max, $property: font-size, $minvw: 320px, $maxvw: 1280px) {
+@mixin fluid-scale(
+  $min,
+  $max,
+  $property: font-size,
+  $minvw: 320px,
+  $maxvw: 1280px
+) {
   $u1: math.unit($min);
   $u2: math.unit($max);
   $u3: math.unit($minvw);
@@ -26,7 +32,12 @@
   $index: string.index($string, $search);
 
   @if $index {
-    @return string.slice($string, 1, $index - 1) + $replace + replace(string.slice($string, $index + string.length($search)), $search, $replace);
+    @return string.slice($string, 1, $index - 1) + $replace +
+      replace(
+        string.slice($string, $index + string.length($search)),
+        $search,
+        $replace
+      );
   }
 
   @return $string;

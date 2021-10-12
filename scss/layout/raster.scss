@@ -21,7 +21,7 @@ $include-debug: true !default;
 $raster-breakpoints: (
   xs: 0,
   sm: 640px,
-  lg: 1024px
+  lg: 1024px,
 ) !default;
 
 #{$raster-element} {
@@ -40,7 +40,11 @@ $raster-breakpoints: (
 
   @each $breakpoint in map.keys($raster-breakpoints) {
     @include breakpoints.media-above($breakpoint, $raster-breakpoints) {
-      $infix: if(breakpoints.minimum($breakpoint, $raster-breakpoints) == null, "", "-#{$breakpoint}");
+      $infix: if(
+        breakpoints.minimum($breakpoint, $raster-breakpoints) == null,
+        "",
+        "-#{$breakpoint}"
+      );
 
       @for $i from 1 through $columns {
         &[#{$grid-attribute}#{$infix}="#{$i}"] {
@@ -101,15 +105,31 @@ $raster-breakpoints: (
     &.is-debug {
       > * {
         --color: hsla(7, 92%, 66%, 0.3);
-        background-image: linear-gradient(to bottom, var(--color) 0%, var(--color) 100%);
+        background-image: linear-gradient(
+          to bottom,
+          var(--color) 0%,
+          var(--color) 100%
+        );
       }
 
-      > :nth-child(6n+2) { --color: hsla(227, 53%, 61%, 0.3); }
-      > :nth-child(6n+3) { --color: hsla(40, 71%, 58%, 0.3); }
-      > :nth-child(6n+4) { --color: hsla(137, 63%, 57%, 0.3); }
-      > :nth-child(6n+5) { --color: hsla(299, 62%, 63%, 0.3); }
-      > :nth-child(6n+6) { --color: hsla(184, 57%, 60%, 0.3); }
-      > :nth-child(6n+7) { --color: hsla(7, 92%, 66%, 0.3); }
+      > :nth-child(6n + 2) {
+        --color: hsla(227, 53%, 61%, 0.3);
+      }
+      > :nth-child(6n + 3) {
+        --color: hsla(40, 71%, 58%, 0.3);
+      }
+      > :nth-child(6n + 4) {
+        --color: hsla(137, 63%, 57%, 0.3);
+      }
+      > :nth-child(6n + 5) {
+        --color: hsla(299, 62%, 63%, 0.3);
+      }
+      > :nth-child(6n + 6) {
+        --color: hsla(184, 57%, 60%, 0.3);
+      }
+      > :nth-child(6n + 7) {
+        --color: hsla(7, 92%, 66%, 0.3);
+      }
     }
   }
 }
