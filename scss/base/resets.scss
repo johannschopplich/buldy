@@ -63,7 +63,36 @@ h6 {
 }
 
 //
-// Flow content
+// Grouping content
+//
+
+// Remove list styles only on lists with a class attribute
+ul[class],
+ol[class] {
+  list-style-type: none;
+}
+
+// Remove spacing on list elements
+ul,
+ol {
+  padding: 0;
+}
+
+hr {
+  color: inherit;
+  background-color: currentColor;
+  border: 0;
+  opacity: 0.25;
+
+  // Set correct height and prevent the `size` attribute to make
+  // the `hr` look like an input field
+  &:not([size]) {
+    height: 1px;
+  }
+}
+
+//
+// Grouping content
 //
 
 // Add default styles to anchor elements without a class
@@ -112,31 +141,6 @@ sup {
 
 sub { bottom: -.25em; }
 sup { top: -.5em; }
-
-// Remove spacing on list elements
-ul,
-ol {
-  padding: 0;
-}
-
-// Remove list styles only on lists with a class attribute
-ul[class],
-ol[class] {
-  list-style: none;
-}
-
-hr {
-  color: inherit;
-  background-color: currentColor;
-  border: 0;
-  opacity: 0.25;
-
-  // Set correct height and prevent the `size` attribute to make
-  // the `hr` look like an input field
-  &:not([size]) {
-    height: 1px;
-  }
-}
 
 //
 // Embedded content
@@ -188,8 +192,8 @@ th {
 }
 
 // Remove default padding of table cells
-td,
-th {
+th,
+td {
   padding: 0;
 }
 
@@ -197,15 +201,11 @@ th {
 // Form-associated content
 //
 
+// Remove the margin on controls in Firefox and Safari
 button,
 input,
 select,
-optgroup,
 textarea {
-  // Inherit fonts for controls
-  font: inherit;
-  line-height: inherit;
-  // Remove the margin on controls in Firefox and Safari
   margin: 0;
 }
 
@@ -222,29 +222,6 @@ button,
   }
 }
 
-// Change the inconsistent appearance
-button,
-input,
-select,
-textarea {
-  background-color: transparent;
-  border: 1px solid WindowFrame;
-  color: inherit;
-  padding: 0.25em 0.375em;
-}
-
-// Change the inconsistent appearance
-select {
-  appearance: none;
-  border-radius: 0;
-  padding-right: 1em;
-
-  // Change the inconsistent appearance
-  &:not([multiple]) {
-    background: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='4'%3E%3Cpath d='M4 0h6L7 4'/%3E%3C/svg%3E") no-repeat right center / 1em;
-  }
-}
-
 fieldset {
   // Make fieldsets behave more like a standard block element
   min-width: 0;
@@ -258,6 +235,18 @@ fieldset {
 // Allow labels to use `margin` for spacing
 label {
   display: inline-block;
+}
+
+// Change the inconsistent appearance
+button,
+input,
+select,
+textarea {
+  background-color: transparent;
+  border: 1px solid WindowFrame;
+  color: inherit;
+  font: inherit;
+  padding: 0.25em 0.375em;
 }
 
 // Change the resize direction

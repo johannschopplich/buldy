@@ -10,7 +10,7 @@
     "test": "echo \"No test specified\""
   },
   "devDependencies": {
-    "sass": "^1.42.1"
+    "sass": "^1.43.2"
   },
   "files": [
     "dist",

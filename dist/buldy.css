@@ -45,6 +45,26 @@ h6 {
   font-weight: normal;
 }
 
+ul[class],
+ol[class] {
+  list-style-type: none;
+}
+
+ul,
+ol {
+  padding: 0;
+}
+
+hr {
+  color: inherit;
+  background-color: currentColor;
+  border: 0;
+  opacity: 0.25;
+}
+hr:not([size]) {
+  height: 1px;
+}
+
 a:not([class]) {
   text-decoration-skip-ink: auto;
 }
@@ -88,26 +108,6 @@ sup {
   top: -0.5em;
 }
 
-ul,
-ol {
-  padding: 0;
-}
-
-ul[class],
-ol[class] {
-  list-style: none;
-}
-
-hr {
-  color: inherit;
-  background-color: currentColor;
-  border: 0;
-  opacity: 0.25;
-}
-hr:not([size]) {
-  height: 1px;
-}
-
 audio,
 canvas,
 iframe,
@@ -140,18 +140,15 @@ th {
   text-align: -webkit-match-parent;
 }
 
-td,
-th {
+th,
+td {
   padding: 0;
 }
 
 button,
 input,
 select,
-optgroup,
 textarea {
-  font: inherit;
-  line-height: inherit;
   margin: 0;
 }
 
@@ -168,25 +165,6 @@ button:not(:disabled),
   cursor: pointer;
 }
 
-button,
-input,
-select,
-textarea {
-  background-color: transparent;
-  border: 1px solid WindowFrame;
-  color: inherit;
-  padding: 0.25em 0.375em;
-}
-
-select {
-  appearance: none;
-  border-radius: 0;
-  padding-right: 1em;
-}
-select:not([multiple]) {
-  background: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='4'%3E%3Cpath d='M4 0h6L7 4'/%3E%3C/svg%3E") no-repeat right center/1em;
-}
-
 fieldset {
   min-width: 0;
   border: 0;
@@ -196,6 +174,17 @@ fieldset {
 
 label {
   display: inline-block;
+}
+
+button,
+input,
+select,
+textarea {
+  background-color: transparent;
+  border: 1px solid WindowFrame;
+  color: inherit;
+  font: inherit;
+  padding: 0.25em 0.375em;
 }
 
 textarea {
